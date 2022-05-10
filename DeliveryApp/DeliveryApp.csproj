@@ -55,6 +55,9 @@
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
+    <Compile Include="Recursos\botonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modelos\Administrador.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Detalle.cs" />
@@ -210,6 +213,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vista\PedidosEntrantes.resx">
       <DependentUpon>PedidosEntrantes.cs</DependentUpon>
@@ -227,8 +231,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Imagenes\" />
+    <None Include="Resources\Carrito de compra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel2.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-09 211231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-09 212045.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
