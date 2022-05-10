@@ -187,6 +187,9 @@
     <Compile Include="Vista\Registro3.Designer.cs">
       <DependentUpon>Registro3.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\Carrito.resx">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
