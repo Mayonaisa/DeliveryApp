@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Controladores;
+using DeliveryApp.Vista;
+using DeliveryApp.Modelos; //Son los modelos
 
 namespace DeliveryApp.Vista
 {
     public partial class MenuCliente : Form
     {
-        public MenuCliente()
+        
+        public MenuCliente(Cliente cli)
         {
+            
             InitializeComponent();
+        }
+
+        private void MenuCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

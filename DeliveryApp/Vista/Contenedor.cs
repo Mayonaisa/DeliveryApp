@@ -22,15 +22,15 @@ namespace DeliveryApp.Vista
 
         private void Contenedor_Load(object sender, EventArgs e)
         {
-            LoginUsuario LoginUsuarioV = new LoginUsuario(PanelContenedor);
-            PanelContenedor.Width = LoginUsuarioV.Width;
-            PanelContenedor.Height = LoginUsuarioV.Height;
+            PantallaInicio Inicio = new PantallaInicio(PanelContenedor);
+            PanelContenedor.Width = Inicio.Width;
+            PanelContenedor.Height = Inicio.Height;
             this.AutoSize = true;
-            LoginUsuarioV.FormBorderStyle = FormBorderStyle.None;
-            LoginUsuarioV.TopLevel = false;
-            PanelContenedor.Controls.Add(LoginUsuarioV);
-            LoginUsuarioV.Dock = DockStyle.Fill;
-            LoginUsuarioV.Show();
+            Inicio.FormBorderStyle = FormBorderStyle.None;
+            Inicio.TopLevel = false;
+            PanelContenedor.Controls.Add(Inicio);
+            Inicio.Dock = DockStyle.Fill;
+            Inicio.Show();
         }
 
         public void Desplegar (Form f)

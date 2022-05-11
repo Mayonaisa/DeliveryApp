@@ -15,9 +15,11 @@ namespace DeliveryApp.Vista
     public partial class MenuRecepcionista : Form
     {
         Recepcionista recepcionista;
-        public MenuRecepcionista(Recepcionista Rep)
+        Panel contenedor=new Panel();
+        public MenuRecepcionista(Recepcionista Rep, Panel p)
         {
-            recepcionista = Rep;    
+            recepcionista = Rep;
+            contenedor = p;
             InitializeComponent();
         }
 
@@ -34,6 +36,25 @@ namespace DeliveryApp.Vista
             PedidosEntrantes PedEnt = new PedidosEntrantes(recepcionista);
             PedEnt.ShowDialog();
             this.Close();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void Desplegar(Form f)
+        {
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = f.Width;
+            contenedor.Height = f.Height;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            contenedor.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
         }
     }
 }
