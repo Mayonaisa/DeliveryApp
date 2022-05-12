@@ -45,18 +45,26 @@ namespace DeliveryApp.Vista
         }
         public void Desplegar(Form f)
         {
-            if (contenedor.Controls.Count > 0)
+            if (ContenedorCatalogos.Controls.Count > 0)
             {
-                contenedor.Controls.RemoveAt(0);
+                ContenedorCatalogos.Controls.RemoveAt(0);
             }
-            contenedor.Width = f.Width;
-            contenedor.Height = f.Height;
+            ContenedorCatalogos.Width = f.Width;
+            ContenedorCatalogos.Height = f.Height;
             f.FormBorderStyle = FormBorderStyle.None;
             f.TopLevel = false;
-            contenedor.Controls.Add(f);
+            ContenedorCatalogos.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
         }
 
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            MenuRecepcionista Men = new MenuRecepcionista(empleado,ContenedorCatalogos);
+            //ContenedorCatalogos.Controls.RemoveAt(0);
+            Desplegar(Men);
+
+        }
     }
 }

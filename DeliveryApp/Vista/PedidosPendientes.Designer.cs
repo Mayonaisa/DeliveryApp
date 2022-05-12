@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fech = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aceptar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -99,30 +99,12 @@
             this.NCasa,
             this.Fech,
             this.Aceptar});
-            this.dgvPedidos.Location = new System.Drawing.Point(5, -14);
+            this.dgvPedidos.Location = new System.Drawing.Point(5, -1);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersWidth = 51;
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.Size = new System.Drawing.Size(1078, 476);
             this.dgvPedidos.TabIndex = 0;
-            // 
-            // botonRedondo1
-            // 
-            this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
-            this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botonRedondo1.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
-            this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gainsboro;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Gainsboro;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.White;
-            this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
-            this.botonRedondo1.TabIndex = 1;
-            this.botonRedondo1.Text = "Consulta";
-            this.botonRedondo1.TextColor = System.Drawing.Color.White;
-            this.botonRedondo1.UseVisualStyleBackColor = false;
-            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // IdOrden
             // 
@@ -234,6 +216,24 @@
             this.Aceptar.MinimumWidth = 6;
             this.Aceptar.Name = "Aceptar";
             this.Aceptar.Width = 125;
+            // 
+            // botonRedondo1
+            // 
+            this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
+            this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.botonRedondo1.ForeColor = System.Drawing.Color.White;
+            this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.White;
+            this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
+            this.botonRedondo1.TabIndex = 1;
+            this.botonRedondo1.Text = "Consulta";
+            this.botonRedondo1.TextColor = System.Drawing.Color.White;
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // PedidosPendientes
             // 

@@ -32,10 +32,7 @@ namespace DeliveryApp.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PedidosEntrantes PedEnt = new PedidosEntrantes(recepcionista);
-            PedEnt.ShowDialog();
-            this.Close();
+
         }
 
         private void panel3_Click(object sender, EventArgs e)
@@ -69,7 +66,9 @@ namespace DeliveryApp.Vista
 
         private void panel8_Click(object sender, EventArgs e)
         {
-            
+            PedidosPendientes PedPen = new PedidosPendientes(recepcionista,contenedor);
+            Desplegar(PedPen);
+
         }
     }
 }
