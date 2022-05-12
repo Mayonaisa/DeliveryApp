@@ -31,9 +31,10 @@ namespace DeliveryApp.Vista
 
         private void ContenedorEmpleado_Load(object sender, EventArgs e)
         {
-            MenuRecepcionista RMenu = new MenuRecepcionista(empleado,contenedor);
-            Desplegar(RMenu);
-            
+            MenuRecepcionista RMenu = new MenuRecepcionista(empleado, contenedor);
+            ContenedorCatalogos.Controls.Add(RMenu);
+
+
         }
         public void Desplegar(Form f)
         {

@@ -30,15 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambiarContraseña));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.pbxFondo = new System.Windows.Forms.PictureBox();
-            this.txtCorreo = new ePOSOne.btnProduct.Button_WOC();
             this.btnInicio = new ePOSOne.btnProduct.Button_WOC();
+            this.pbxFondo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFondo)).BeginInit();
@@ -46,10 +48,13 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblMensaje);
@@ -60,13 +65,48 @@
             this.panel1.Size = new System.Drawing.Size(544, 749);
             this.panel1.TabIndex = 7;
             // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(150, 402);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(262, 28);
+            this.textBox3.TabIndex = 17;
+            this.textBox3.Text = "Confirmar Contraseña ";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(150, 367);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(262, 28);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Text = "Contraseña nueva";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(150, 312);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(262, 28);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "Correo";
+            // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(205, 443);
+            this.label1.Location = new System.Drawing.Point(195, 541);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 14;
@@ -75,22 +115,24 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(103, 172);
+            this.label4.Location = new System.Drawing.Point(44, 181);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(369, 58);
+            this.label4.Size = new System.Drawing.Size(455, 51);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Inicio de sesión";
+            this.label4.Text = "Cambio de contraseña";
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(0, 10);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(543, 137);
@@ -98,12 +140,14 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(165, 45);
+            this.label3.Location = new System.Drawing.Point(153, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 58);
             this.label3.TabIndex = 7;
@@ -111,24 +155,48 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(122, 51);
+            this.panel2.Location = new System.Drawing.Point(101, 45);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(46, 46);
             this.panel2.TabIndex = 8;
             // 
             // lblMensaje
             // 
-            this.lblMensaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblMensaje.ForeColor = System.Drawing.Color.Black;
-            this.lblMensaje.Location = new System.Drawing.Point(168, 433);
+            this.lblMensaje.Location = new System.Drawing.Point(160, 433);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 5;
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.BorderColor = System.Drawing.Color.Transparent;
+            this.btnInicio.ButtonColor = System.Drawing.Color.Red;
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(135, 474);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.OnHoverBorderColor = System.Drawing.Color.Silver;
+            this.btnInicio.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnInicio.OnHoverTextColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInicio.Size = new System.Drawing.Size(277, 64);
+            this.btnInicio.TabIndex = 9;
+            this.btnInicio.Text = "Enviar solicitud";
+            this.btnInicio.TextColor = System.Drawing.Color.White;
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // pbxFondo
             // 
@@ -137,47 +205,9 @@
             this.pbxFondo.Location = new System.Drawing.Point(0, 0);
             this.pbxFondo.Name = "pbxFondo";
             this.pbxFondo.Size = new System.Drawing.Size(1430, 831);
-            this.pbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxFondo.TabIndex = 8;
             this.pbxFondo.TabStop = false;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCorreo.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txtCorreo.ButtonColor = System.Drawing.Color.WhiteSmoke;
-            this.txtCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.Transparent;
-            this.txtCorreo.Location = new System.Drawing.Point(140, 267);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.txtCorreo.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.txtCorreo.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.txtCorreo.Size = new System.Drawing.Size(280, 64);
-            this.txtCorreo.TabIndex = 13;
-            this.txtCorreo.Text = "Correo electrónico";
-            this.txtCorreo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.txtCorreo.UseVisualStyleBackColor = true;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInicio.BorderColor = System.Drawing.Color.Silver;
-            this.btnInicio.ButtonColor = System.Drawing.Color.Red;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(143, 366);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnInicio.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnInicio.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnInicio.Size = new System.Drawing.Size(277, 64);
-            this.btnInicio.TabIndex = 9;
-            this.btnInicio.Text = "Enviar solicitud";
-            this.btnInicio.TextColor = System.Drawing.Color.White;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // CambiarContraseña
             // 
@@ -202,7 +232,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private ePOSOne.btnProduct.Button_WOC txtCorreo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
@@ -210,5 +239,8 @@
         private System.Windows.Forms.Label lblMensaje;
         private ePOSOne.btnProduct.Button_WOC btnInicio;
         private System.Windows.Forms.PictureBox pbxFondo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

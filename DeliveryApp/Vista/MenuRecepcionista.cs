@@ -56,5 +56,10 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

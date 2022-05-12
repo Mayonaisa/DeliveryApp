@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,22 +73,13 @@
             this.panel2.Size = new System.Drawing.Size(1086, 509);
             this.panel2.TabIndex = 5;
             // 
-            // panel3
+            // panel6
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.panel3.Location = new System.Drawing.Point(85, 76);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(259, 141);
-            this.panel3.TabIndex = 0;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.panel4.Location = new System.Drawing.Point(421, 76);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(259, 141);
-            this.panel4.TabIndex = 1;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.panel6.Location = new System.Drawing.Point(789, 291);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(259, 141);
+            this.panel6.TabIndex = 4;
             // 
             // panel5
             // 
@@ -98,14 +89,6 @@
             this.panel5.Size = new System.Drawing.Size(259, 141);
             this.panel5.TabIndex = 1;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.panel6.Location = new System.Drawing.Point(789, 291);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(259, 141);
-            this.panel6.TabIndex = 4;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
@@ -114,6 +97,14 @@
             this.panel7.Size = new System.Drawing.Size(259, 141);
             this.panel7.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.panel4.Location = new System.Drawing.Point(421, 76);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(259, 141);
+            this.panel4.TabIndex = 1;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
@@ -121,6 +112,16 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(259, 141);
             this.panel8.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.panel3.Location = new System.Drawing.Point(85, 76);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(259, 141);
+            this.panel3.TabIndex = 0;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // MenuRecepcionista
             // 

@@ -27,7 +27,8 @@ namespace DeliveryApp.Vista
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-
+            PantallaInicio Menu = new PantallaInicio(contenedor);
+            Desplegar(Menu);
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -27,11 +27,16 @@ namespace DeliveryApp.Modelos
             //Contraseña = contraseña;
             //Correo = correo;
 
-			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+            //SqlConnection conx = new SqlConnection(
+            //	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+            //	);
+
+            SqlConnection conx = new SqlConnection(
+				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
-			conx.Open();
+             
+            conx.Open();
 
 			SqlCommand consulta = new SqlCommand("SELECT idUsuario, correo, contraseña FROM Persona,Usuario WHERE contraseña = '"+ contraseña +"'" + " AND correo = '" + correo + "'"+"AND idPersona=idUsuario", conx);
 
@@ -90,8 +95,12 @@ namespace DeliveryApp.Modelos
 		//}
 		public bool BuscarRecepcionista(Usuario User)
         {
+			//SqlConnection conx = new SqlConnection(
+			//	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+			//	);
+
 			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();
@@ -115,9 +124,12 @@ namespace DeliveryApp.Modelos
 		}
 		public bool BuscarCliente(Usuario User)
 		{
+			//SqlConnection conx = new SqlConnection(
+			//	"Data Source=DESKTOP-I0PHDQ6" +
+			//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
+			//	);
 			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6" +
-                ";Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();

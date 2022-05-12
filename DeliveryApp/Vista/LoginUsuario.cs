@@ -12,64 +12,24 @@ using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
 using DeliveryApp.Modelos; //Son los modelos
 
+
+
 namespace DeliveryApp
 {
     public partial class LoginUsuario : Form
     {
-        Panel contenedor = new Panel();
+        System.Windows.Forms.Panel contenedor = new System.Windows.Forms.Panel();
         Usuario usuario = new Usuario();
-        public LoginUsuario(Panel p)
+        public LoginUsuario(System.Windows.Forms.Panel p)
         {
             contenedor = p;
+            
             InitializeComponent();
         }
 
         private void LoginUsuario_Load(object sender, EventArgs e)
         {
-            
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string correo= textBox1.Text;
-            string contraseña = textBox2.Text;
-            string mensaje = "";
-            
-            Recepcionista recepcionista=new Recepcionista(); ;
-            Cliente cliente = new Cliente(); 
-            
-            if (Login.validarUsuario(contraseña,correo, ref mensaje, ref usuario))
-            {
-                 if (Login.BuscarCliente(ref mensaje,ref usuario,ref cliente))
-                {
-                    Pantalla_Principal vistaPrincipal = new Pantalla_Principal(cliente);
-
-                    this.Hide();
-                    //vistaPrincipal.ShowDialog();
-                    //Contenedor Cont = new Contenedor();
-                    //Cont.Desplegar(vistaPrincipal);
-                    Desplegar(vistaPrincipal);
-                    this.Close();
-
-
-
-                }
-                 else if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
-                {
-                    MenuRecepcionista MenuRep = new MenuRecepcionista(recepcionista,contenedor);
-
-                    this.Hide();
-                    //MenuRep.ShowDialog();
-                    Desplegar(MenuRep);
-                    this.Close();
-                }
-               
-            }
-            else
-            {
-                lblMensaje.Text = mensaje;
-            }
-            //MenuRecepcionista Recep = new MenuRecepcionista();
         }
 
         public void Desplegar(Form f)
@@ -102,10 +62,43 @@ namespace DeliveryApp
 
         }
 
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_WOC1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            CambiarContraseña Cambio = new CambiarContraseña(usuario, contenedor);
+            Desplegar(Cambio);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            PantallaInicio menu = new PantallaInicio(contenedor);
+            Desplegar(menu);
+        }
+
         private void button_WOC1_Click(object sender, EventArgs e)
         {
-            string correo = textBox1.Text;
-            string contraseña = textBox2.Text;
+            string correo = tbxCorreo.Text;
+            string contraseña = tbxCon.Text;
             string mensaje = "";
             Usuario usuario = new Usuario();
             Recepcionista recepcionista = new Recepcionista(); ;
@@ -129,7 +122,7 @@ namespace DeliveryApp
                 }
                 else if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
                 {
-                    MenuRecepcionista MenuRep = new MenuRecepcionista(recepcionista,contenedor);
+                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista,contenedor);
 
                     this.Hide();
                     //MenuRep.ShowDialog();
@@ -143,22 +136,6 @@ namespace DeliveryApp
                 lblMensaje.Text = mensaje;
             }
             //MenuRecepcionista Recep = new MenuRecepcionista();
-        }
-
-        private void txtcorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            CambiarContraseña Cambio = new CambiarContraseña(usuario,contenedor);
-            Desplegar(Cambio);
         }
     }
 }
