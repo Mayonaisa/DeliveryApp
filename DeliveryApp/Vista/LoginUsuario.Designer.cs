@@ -156,7 +156,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblResultado);
             this.panel1.Controls.Add(this.tbxCon);
@@ -168,10 +168,12 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(452, 74);
+            this.panel1.Location = new System.Drawing.Point(688, 207);
+            this.panel1.MaximumSize = new System.Drawing.Size(544, 749);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 666);
+            this.panel1.Size = new System.Drawing.Size(544, 749);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblResultado
             // 
@@ -310,11 +312,12 @@
             // 
             // lblOlvidar
             // 
+            this.lblOlvidar.BackColor = System.Drawing.Color.White;
             this.lblOlvidar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblOlvidar.Image = ((System.Drawing.Image)(resources.GetObject("lblOlvidar.Image")));
             this.lblOlvidar.Location = new System.Drawing.Point(0, 0);
             this.lblOlvidar.Name = "lblOlvidar";
-            this.lblOlvidar.Size = new System.Drawing.Size(1900, 1080);
+            this.lblOlvidar.Size = new System.Drawing.Size(1920, 1080);
             this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.lblOlvidar.TabIndex = 8;
             this.lblOlvidar.TabStop = false;
@@ -324,7 +327,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1900, 1080);
+            this.BackColor = System.Drawing.Color.IndianRed;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblOlvidar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

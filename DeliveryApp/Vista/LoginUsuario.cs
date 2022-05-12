@@ -137,5 +137,10 @@ namespace DeliveryApp
             }
             //MenuRecepcionista Recep = new MenuRecepcionista();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
