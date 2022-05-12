@@ -47,8 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblOlvidar = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
@@ -156,8 +156,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblResultado);
             this.panel1.Controls.Add(this.tbxCon);
@@ -224,8 +223,6 @@
             // 
             // button_WOC1
             // 
-            this.button_WOC1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_WOC1.BorderColor = System.Drawing.Color.Transparent;
             this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,8 +241,6 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -258,8 +253,6 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,29 +265,12 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(1, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(543, 137);
             this.panel4.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(147, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(295, 58);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "DeliveryApp";
             // 
             // panel5
             // 
@@ -306,6 +282,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(46, 46);
             this.panel5.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(147, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(295, 58);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "DeliveryApp";
             // 
             // label8
             // 
@@ -325,7 +314,7 @@
             this.lblOlvidar.Image = ((System.Drawing.Image)(resources.GetObject("lblOlvidar.Image")));
             this.lblOlvidar.Location = new System.Drawing.Point(0, 0);
             this.lblOlvidar.Name = "lblOlvidar";
-            this.lblOlvidar.Size = new System.Drawing.Size(1430, 831);
+            this.lblOlvidar.Size = new System.Drawing.Size(1900, 1080);
             this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.lblOlvidar.TabIndex = 8;
             this.lblOlvidar.TabStop = false;
@@ -334,9 +323,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1430, 831);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1900, 1080);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblOlvidar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginUsuario";
             this.Text = "LoginUsuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
