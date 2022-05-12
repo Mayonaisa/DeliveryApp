@@ -31,8 +31,15 @@ namespace DeliveryApp.Vista
 
         private void ContenedorEmpleado_Load(object sender, EventArgs e)
         {
-            MenuRecepcionista RMenu = new MenuRecepcionista(empleado, contenedor);
-            ContenedorCatalogos.Controls.Add(RMenu);
+            MenuRecepcionista Inicio = new MenuRecepcionista(empleado,ContenedorCatalogos);
+            ContenedorCatalogos.Width = Inicio.Width;
+            ContenedorCatalogos.Height = Inicio.Height;
+            //this.AutoSize = true;
+            Inicio.FormBorderStyle = FormBorderStyle.None;
+            Inicio.TopLevel = false;
+            ContenedorCatalogos.Controls.Add(Inicio);
+            Inicio.Dock = DockStyle.Fill;
+            Inicio.Show();
 
 
         }

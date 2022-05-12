@@ -61,5 +61,15 @@ namespace DeliveryApp.Vista
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -67,6 +67,9 @@
     <Compile Include="Modelos\Recepcionista.cs" />
     <Compile Include="Modelos\Repartidor.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
+    <Compile Include="Recursos\botonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Vista\CambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +188,12 @@
     <Compile Include="Vista\PedidosEntrantes.Designer.cs">
       <DependentUpon>PedidosEntrantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\PedidosPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PedidosPendientes.Designer.cs">
+      <DependentUpon>PedidosPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\PedidosEntrantes.resx">
       <DependentUpon>PedidosEntrantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PedidosPendientes.resx">
+      <DependentUpon>PedidosPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
