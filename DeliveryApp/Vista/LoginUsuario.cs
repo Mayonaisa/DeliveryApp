@@ -42,12 +42,13 @@ namespace DeliveryApp
                  if (Login.BuscarCliente(ref mensaje,ref usuario,ref cliente))
                 {
                     Pantalla_Principal vistaPrincipal = new Pantalla_Principal(cliente);
+                    MenuCliente MenuClienteV = new MenuCliente(contenedor);
 
                     this.Hide();
                     //vistaPrincipal.ShowDialog();
                     //Contenedor Cont = new Contenedor();
                     //Cont.Desplegar(vistaPrincipal);
-                    Desplegar(vistaPrincipal);
+                    Desplegar(MenuClienteV);
                     this.Close();
 
 

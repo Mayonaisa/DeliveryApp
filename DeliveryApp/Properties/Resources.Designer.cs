@@ -83,6 +83,36 @@ namespace DeliveryApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_194713 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 194713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_212152 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 212152", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_213108 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 213108", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carrito_de_compra {
             get {
                 object obj = ResourceManager.GetObject("Carrito de compra", resourceCulture);

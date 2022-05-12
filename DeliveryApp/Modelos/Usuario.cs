@@ -28,7 +28,7 @@ namespace DeliveryApp.Modelos
             //Correo = correo;
 
 			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();
@@ -91,7 +91,7 @@ namespace DeliveryApp.Modelos
 		public bool BuscarRecepcionista(Usuario User)
         {
 			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();
@@ -116,7 +116,7 @@ namespace DeliveryApp.Modelos
 		public bool BuscarCliente(Usuario User)
 		{
 			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-I0PHDQ6" +
+				"Data Source=DESKTOP-HFCLC9N" +
                 ";Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 

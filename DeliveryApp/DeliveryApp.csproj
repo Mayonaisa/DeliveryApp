@@ -196,8 +196,14 @@
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistorialPedidos.resx">
+      <DependentUpon>HistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuCliente.resx">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuRecepcionista.resx">
       <DependentUpon>MenuRecepcionista.cs</DependentUpon>
@@ -231,7 +237,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 194713.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Carrito de compra.png" />
   </ItemGroup>
@@ -243,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Captura de pantalla 2022-05-09 212045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
