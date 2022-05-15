@@ -46,6 +46,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblDes);
@@ -56,7 +57,7 @@
             this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Controls.Add(this.btnInicio);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(514, 45);
+            this.panel1.Location = new System.Drawing.Point(688, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 749);
             this.panel1.TabIndex = 7;
@@ -197,13 +198,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaInicio";
             this.Text = "PantallaInicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PantallaInicio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

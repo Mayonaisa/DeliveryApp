@@ -54,6 +54,7 @@ namespace DeliveryApp.Vista
             f.FormBorderStyle = FormBorderStyle.None;
             f.TopLevel = false;
             ContenedorCatalogos.Controls.Add(f);
+            //f.StartPosition = FormStartPosition.CenterParent;
             f.Dock = DockStyle.Fill;
             f.Show();
         }
@@ -64,6 +65,11 @@ namespace DeliveryApp.Vista
             MenuRecepcionista Men = new MenuRecepcionista(empleado,ContenedorCatalogos);
             //ContenedorCatalogos.Controls.RemoveAt(0);
             Desplegar(Men);
+
+        }
+
+        private void ContenedorCatalogos_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

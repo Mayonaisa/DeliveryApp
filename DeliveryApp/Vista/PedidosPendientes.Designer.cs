@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +45,8 @@
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fech = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aceptar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -61,24 +61,24 @@
             this.panel2.Size = new System.Drawing.Size(1086, 565);
             this.panel2.TabIndex = 8;
             // 
-            // panel1
+            // botonRedondo1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(12, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1086, 16);
-            this.panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 29);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Pedidos pendientes";
+            this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
+            this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.ForeColor = System.Drawing.Color.White;
+            this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.White;
+            this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
+            this.botonRedondo1.TabIndex = 1;
+            this.botonRedondo1.Text = "Consulta";
+            this.botonRedondo1.TextColor = System.Drawing.Color.White;
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // dgvPedidos
             // 
@@ -217,23 +217,24 @@
             this.Aceptar.Name = "Aceptar";
             this.Aceptar.Width = 125;
             // 
-            // botonRedondo1
+            // panel1
             // 
-            this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
-            this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botonRedondo1.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
-            this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gainsboro;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Gainsboro;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.White;
-            this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
-            this.botonRedondo1.TabIndex = 1;
-            this.botonRedondo1.Text = "Consulta";
-            this.botonRedondo1.TextColor = System.Drawing.Color.White;
-            this.botonRedondo1.UseVisualStyleBackColor = false;
-            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
+            this.panel1.Location = new System.Drawing.Point(12, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1086, 16);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Pedidos pendientes";
             // 
             // PedidosPendientes
             // 
@@ -244,8 +245,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PedidosPendientes";
             this.Text = "PedidosPendientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
