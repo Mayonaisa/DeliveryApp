@@ -156,22 +156,22 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1635, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.Size = new System.Drawing.Size(84, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "fecha";
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(1737, 3);
+            this.panel3.Location = new System.Drawing.Point(1359, 52);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 40);
             this.panel3.TabIndex = 2;
@@ -179,18 +179,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 8);
+            this.label3.Location = new System.Drawing.Point(30, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.Size = new System.Drawing.Size(128, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Empleado";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::DeliveryApp.Properties.Resources.logo7;
             this.pictureBox1.Location = new System.Drawing.Point(1593, 8);
             this.pictureBox1.Name = "pictureBox1";

@@ -70,5 +70,15 @@ namespace DeliveryApp.Vista
             Desplegar(PedPen);
 
         }
+
+        private void btnEmpleados_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
