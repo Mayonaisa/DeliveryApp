@@ -39,11 +39,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.lblResultado = new System.Windows.Forms.Label();
             this.tbxCon = new System.Windows.Forms.TextBox();
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -68,7 +68,6 @@
             this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Regresar al inicio";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -80,7 +79,6 @@
             this.label5.Size = new System.Drawing.Size(148, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "¿Olvidaste contraseña?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -127,7 +125,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(46, 46);
             this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblMensaje
             // 
@@ -158,11 +155,11 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.botonRedondo1);
             this.panel1.Controls.Add(this.lblResultado);
             this.panel1.Controls.Add(this.tbxCon);
             this.panel1.Controls.Add(this.tbxCorreo);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.button_WOC1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel4);
@@ -174,6 +171,27 @@
             this.panel1.Size = new System.Drawing.Size(544, 749);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // botonRedondo1
+            // 
+            this.botonRedondo1.BackColor = System.Drawing.Color.Red;
+            this.botonRedondo1.ButtonColor = System.Drawing.Color.Red;
+            this.botonRedondo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.Location = new System.Drawing.Point(138, 412);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.Size = new System.Drawing.Size(277, 64);
+            this.botonRedondo1.TabIndex = 25;
+            this.botonRedondo1.Text = "Iniciar sesión";
+            this.botonRedondo1.TextColor = System.Drawing.Color.White;
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // lblResultado
             // 
@@ -222,24 +240,6 @@
             this.label9.Text = "¿Olvidó contraseña?";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(138, 411);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC1.Size = new System.Drawing.Size(277, 64);
-            this.button_WOC1.TabIndex = 20;
-            this.button_WOC1.Text = "Iniciar sesión";
-            this.button_WOC1.TextColor = System.Drawing.Color.White;
-            this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
             // label2
             // 
@@ -349,7 +349,6 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private ePOSOne.btnProduct.Button_WOC btnInicio;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
@@ -365,11 +364,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxCon;
         private System.Windows.Forms.TextBox tbxCorreo;
         private System.Windows.Forms.Label lblResultado;
+        private Recursos.botonRedondo botonRedondo1;
     }
 }
 

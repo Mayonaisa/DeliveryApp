@@ -47,41 +47,6 @@ namespace DeliveryApp
             f.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_WOC2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void txtcorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button_WOC1_Click_1(object sender, EventArgs e)
-        {
-           
-        }
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -95,7 +60,12 @@ namespace DeliveryApp
             Desplegar(menu);
         }
 
-        private void button_WOC1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void botonRedondo1_Click(object sender, EventArgs e)
         {
             string correo = tbxCorreo.Text;
             string contraseña = tbxCon.Text;
@@ -122,7 +92,7 @@ namespace DeliveryApp
                 }
                 else if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
                 {
-                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista,contenedor);
+                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista, contenedor);
 
                     this.Hide();
                     //MenuRep.ShowDialog();
@@ -135,12 +105,6 @@ namespace DeliveryApp
             {
                 lblMensaje.Text = mensaje;
             }
-            //MenuRecepcionista Recep = new MenuRecepcionista();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

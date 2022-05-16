@@ -25,11 +25,6 @@ namespace DeliveryApp.Vista
             InitializeComponent();
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            PantallaInicio Menu = new PantallaInicio(contenedor);
-            Desplegar(Menu);
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,6 +45,12 @@ namespace DeliveryApp.Vista
             contenedor.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
+        }
+
+        private void botonRedondo1_Click(object sender, EventArgs e)
+        {
+            PantallaInicio Menu = new PantallaInicio(contenedor);
+            Desplegar(Menu);
         }
     }
 }

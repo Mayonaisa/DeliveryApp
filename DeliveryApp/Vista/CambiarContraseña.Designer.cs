@@ -36,11 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.btnInicio = new ePOSOne.btnProduct.Button_WOC();
             this.pbxFondo = new System.Windows.Forms.PictureBox();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFondo)).BeginInit();
@@ -48,9 +48,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.botonRedondo1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -58,7 +58,6 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblMensaje);
-            this.panel1.Controls.Add(this.btnInicio);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(443, 41);
             this.panel1.Name = "panel1";
@@ -138,6 +137,17 @@
             this.panel3.Size = new System.Drawing.Size(543, 137);
             this.panel3.TabIndex = 11;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(101, 45);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(46, 46);
+            this.panel2.TabIndex = 8;
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -153,17 +163,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "DeliveryApp";
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(101, 45);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(46, 46);
-            this.panel2.TabIndex = 8;
-            // 
             // lblMensaje
             // 
             this.lblMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -176,28 +175,6 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 5;
             // 
-            // btnInicio
-            // 
-            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnInicio.BorderColor = System.Drawing.Color.Transparent;
-            this.btnInicio.ButtonColor = System.Drawing.Color.Red;
-            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(135, 474);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.OnHoverBorderColor = System.Drawing.Color.Silver;
-            this.btnInicio.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnInicio.OnHoverTextColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInicio.Size = new System.Drawing.Size(277, 64);
-            this.btnInicio.TabIndex = 9;
-            this.btnInicio.Text = "Enviar solicitud";
-            this.btnInicio.TextColor = System.Drawing.Color.White;
-            this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
             // pbxFondo
             // 
             this.pbxFondo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -208,6 +185,25 @@
             this.pbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxFondo.TabIndex = 8;
             this.pbxFondo.TabStop = false;
+            // 
+            // botonRedondo1
+            // 
+            this.botonRedondo1.BackColor = System.Drawing.Color.Red;
+            this.botonRedondo1.ButtonColor = System.Drawing.Color.Red;
+            this.botonRedondo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.Location = new System.Drawing.Point(134, 474);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.botonRedondo1.Size = new System.Drawing.Size(277, 64);
+            this.botonRedondo1.TabIndex = 26;
+            this.botonRedondo1.Text = "Enviar solicitud";
+            this.botonRedondo1.TextColor = System.Drawing.Color.White;
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // CambiarContraseña
             // 
@@ -237,10 +233,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblMensaje;
-        private ePOSOne.btnProduct.Button_WOC btnInicio;
         private System.Windows.Forms.PictureBox pbxFondo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private Recursos.botonRedondo botonRedondo1;
     }
 }

@@ -39,20 +39,10 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        private void botonRedondo1_Click(object sender, EventArgs e)
         {
             LoginUsuario Login = new LoginUsuario(contenedor);
             Desplegar(Login);
-        }
-
-        private void label1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
