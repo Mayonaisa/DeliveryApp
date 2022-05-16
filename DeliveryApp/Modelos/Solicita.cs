@@ -44,5 +44,8 @@ namespace DeliveryApp.Modelos
             
         }
 
+        public string IdCliente { get => idCliente; set => idCliente = value; }
+        public string Fech { get => fech; set => fech = value; }
+        public string OrdenId1 { get => OrdenId; set => OrdenId = value; }
     }
 }

@@ -38,5 +38,9 @@ namespace DeliveryApp.Modelos
             }
             conx.Close();
         }
+
+        public string IdOrden { get => idOrden; set => idOrden = value; }
+        public string Estatus { get => estatus; set => estatus = value; }
+        public string IdDetalle { get => idDetalle; set => idDetalle = value; }
     }
 }
