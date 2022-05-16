@@ -21,7 +21,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT idUsuario, correo, contraseña FROM Persona,Usuario WHERE contraseña = "+"AND idPersona=idUsuario", conx);
+            SqlCommand consulta = new SqlCommand("SELECT idCliente, fechaSolicitud, idOrden FROM Solicita", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();

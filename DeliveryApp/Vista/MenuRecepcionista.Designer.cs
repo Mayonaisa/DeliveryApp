@@ -36,7 +36,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -46,7 +45,6 @@
             this.pbxPed = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -87,7 +85,6 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel7);
@@ -130,7 +127,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(597, 111);
             this.panel4.Name = "panel4";
@@ -147,18 +143,6 @@
             this.panel8.Size = new System.Drawing.Size(383, 186);
             this.panel8.TabIndex = 2;
             this.panel8.Click += new System.EventHandler(this.panel8_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(121, 611);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 42);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pedidos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -270,16 +254,6 @@
             this.btnEmpleados.UseVisualStyleBackColor = true;
             this.btnEmpleados.MouseEnter += new System.EventHandler(this.btnEmpleados_MouseEnter);
             // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(381, 183);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // MenuRecepcionista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,7 +267,6 @@
             this.Name = "MenuRecepcionista";
             this.Text = "LoginRecepcionista";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -322,7 +295,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbxPed;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -330,6 +302,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.Button button2;
     }
 }
