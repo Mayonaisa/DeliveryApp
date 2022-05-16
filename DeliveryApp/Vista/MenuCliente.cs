@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Modelos;
 
 namespace DeliveryApp.Vista
 {
@@ -124,6 +125,11 @@ namespace DeliveryApp.Vista
             this.Hide();
             Desplegar(HistorialV);
             this.Close();
+        }
+
+        private void botonRedondo16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

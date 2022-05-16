@@ -72,9 +72,6 @@
     <Compile Include="Modelos\Repartidor.cs" />
     <Compile Include="Modelos\Solicita.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
-    <Compile Include="Recursos\botonRedondo.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Vista\CambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>

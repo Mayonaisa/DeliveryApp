@@ -78,7 +78,7 @@ namespace DeliveryApp
             {
                 if (Login.BuscarCliente(ref mensaje, ref usuario, ref cliente))
                 {
-                    MenuCliente vistaPrincipal = new MenuCliente(cliente);
+                    MenuCliente vistaPrincipal = new MenuCliente(contenedor);
 
                     this.Hide();
                     //vistaPrincipal.ShowDialog();
@@ -144,7 +144,7 @@ namespace DeliveryApp
             {
                 if (Login.BuscarCliente(ref mensaje, ref usuario, ref cliente))
                 {
-                    MenuCliente vistaPrincipal = new MenuCliente(cliente);
+                    MenuCliente vistaPrincipal = new MenuCliente(contenedor);
 
                     this.Hide();
                     //vistaPrincipal.ShowDialog();

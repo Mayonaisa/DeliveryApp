@@ -13,6 +13,7 @@ namespace DeliveryApp.Vista
     public partial class HistorialPedidos : Form
     {
         Panel contenedor = new Panel();
+        
         public HistorialPedidos(Panel p)
         {
             contenedor = p;
