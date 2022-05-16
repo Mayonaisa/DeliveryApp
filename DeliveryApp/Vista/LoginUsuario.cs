@@ -130,5 +130,34 @@ namespace DeliveryApp
 
             }
         }
+
+        private void botonRedondo3_Click(object sender, EventArgs e)
+        {
+            string correo = "Roberto_1@hotmail.com";
+            string contraseña = "Roberto1234_1";
+            string mensaje = "";
+            Usuario usuario = new Usuario();
+            Recepcionista recepcionista = new Recepcionista(); ;
+            Cliente cliente = new Cliente();
+
+            if (Login.validarUsuario(contraseña, correo, ref mensaje, ref usuario))
+            {
+                if (Login.BuscarCliente(ref mensaje, ref usuario, ref cliente))
+                {
+                    MenuCliente vistaPrincipal = new MenuCliente(cliente);
+
+                    this.Hide();
+                    //vistaPrincipal.ShowDialog();
+                    //Contenedor Cont = new Contenedor();
+                    //Cont.Desplegar(vistaPrincipal);
+                    Desplegar(vistaPrincipal);
+                    this.Close();
+
+
+
+                }
+
+            }
+        }
     }
 }
