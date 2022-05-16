@@ -58,6 +58,9 @@
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
+    <Compile Include="Recursos\botonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modelos\Administrador.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Detalle.cs" />
@@ -214,6 +217,9 @@
     <Compile Include="Vista\Registro3.Designer.cs">
       <DependentUpon>Registro3.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\Carrito.resx">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ContenedorEmpleado.resx">
       <DependentUpon>ContenedorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistorialPedidos.resx">
+      <DependentUpon>HistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
@@ -272,6 +281,25 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 194713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carrito de compra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel2.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-09 211231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-09 212045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
     <Content Include="Imagenes\delicious-food-frame-top-view.png" />
     <Content Include="Imagenes\logo1.png" />
     <Content Include="Imagenes\logo2.png" />
