@@ -80,5 +80,16 @@ namespace DeliveryApp.Vista
         {
             
         }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
+            Desplegar(PedPen);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

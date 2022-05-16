@@ -106,5 +106,29 @@ namespace DeliveryApp
                 lblMensaje.Text = mensaje;
             }
         }
+
+        private void botonRedondo2_Click(object sender, EventArgs e)
+        {
+            string correo = "Paola_30@hotmail.com";
+            string contraseña = "Paola1234_30";
+            string mensaje = "";
+            Usuario usuario = new Usuario();
+            Recepcionista recepcionista = new Recepcionista(); ;
+            Cliente cliente = new Cliente();
+
+            if (Login.validarUsuario(contraseña, correo, ref mensaje, ref usuario))
+            {
+                if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
+                {
+                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista, contenedor);
+
+                    this.Hide();
+                    //MenuRep.ShowDialog();
+                    Desplegar(MenuRep);
+                    this.Close();
+                }
+
+            }
+        }
     }
 }

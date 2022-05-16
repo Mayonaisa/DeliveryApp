@@ -17,11 +17,25 @@ namespace DeliveryApp.Vista
     {
         Recepcionista Rep=new Recepcionista();
         Panel contenedor=new Panel();
+        Pedido pedidos;
+        ConsultarPedido Consulta;
+        string Mensaje;
         public PedidosPendientes(Recepcionista r, Panel p)
         {
             Rep = r;
             contenedor = p;
+            
+            //Dgv;
             InitializeComponent();
+            dgvPedidos.CellClick += dgvPedidos_CellClick;
+        }
+        private void dgvPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //metodo que se creara dinamicamente para
+            //if (e.ColumnIndex == dgvPedidos.Columns["boton"].Index)
+            //{
+                
+            //}
         }
         public void Desplegar(Form f)
         {
@@ -37,8 +51,30 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
+
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
+            dgvPedidos.Rows.Clear();
+            ConsultarPedido.ObtenerPedido(ref pedidos,ref Mensaje);
+
+            DataGridViewButtonColumn Aceptar = new DataGridViewButtonColumn();
+            Aceptar.UseColumnTextForButtonValue=true;
+            Aceptar.Text = "Aceptar";
+            Aceptar.Name ="estatusPed";
+            dgvPedidos.Columns.Add(Aceptar);
+
+            int cantidad=0;
+            ConsultarPedido.cantidadPedidos(ref cantidad);
+            int i = 0;
+
+            while (i<cantidad)
+            {
+                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus,"NA","NA",pedidos.Persona1[i],pedidos.Solicitud[i].Fecha);
+                i++;
+            }
+            
+
+
 
         }
     }

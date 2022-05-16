@@ -31,6 +31,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,15 +40,13 @@
             this.Repa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vehi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaSolici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ciu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fech = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aceptar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -92,12 +92,12 @@
             this.Repa,
             this.Vehi,
             this.Clie,
+            this.fechaSolici,
             this.Ciu,
             this.C1,
             this.C2,
             this.Colo,
             this.NCasa,
-            this.Fech,
             this.Aceptar});
             this.dgvPedidos.Location = new System.Drawing.Point(5, -1);
             this.dgvPedidos.Name = "dgvPedidos";
@@ -105,6 +105,25 @@
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.Size = new System.Drawing.Size(1078, 476);
             this.dgvPedidos.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
+            this.panel1.Location = new System.Drawing.Point(12, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1086, 16);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Pedidos pendientes";
             // 
             // IdOrden
             // 
@@ -162,6 +181,14 @@
             this.Clie.ReadOnly = true;
             this.Clie.Width = 125;
             // 
+            // fechaSolici
+            // 
+            this.fechaSolici.HeaderText = "Fecha solicitud";
+            this.fechaSolici.MinimumWidth = 6;
+            this.fechaSolici.Name = "fechaSolici";
+            this.fechaSolici.ReadOnly = true;
+            this.fechaSolici.Width = 125;
+            // 
             // Ciu
             // 
             this.Ciu.HeaderText = "Ciudad";
@@ -202,39 +229,12 @@
             this.NCasa.ReadOnly = true;
             this.NCasa.Width = 125;
             // 
-            // Fech
-            // 
-            this.Fech.HeaderText = "Fecha";
-            this.Fech.MinimumWidth = 6;
-            this.Fech.Name = "Fech";
-            this.Fech.ReadOnly = true;
-            this.Fech.Width = 125;
-            // 
             // Aceptar
             // 
             this.Aceptar.HeaderText = "";
             this.Aceptar.MinimumWidth = 6;
             this.Aceptar.Name = "Aceptar";
             this.Aceptar.Width = 125;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(12, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1086, 16);
-            this.panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 29);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Pedidos pendientes";
             // 
             // PedidosPendientes
             // 
@@ -270,12 +270,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Repa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vehi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaSolici;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciu;
         private System.Windows.Forms.DataGridViewTextBoxColumn C1;
         private System.Windows.Forms.DataGridViewTextBoxColumn C2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NCasa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fech;
         private System.Windows.Forms.DataGridViewTextBoxColumn Aceptar;
     }
 }
