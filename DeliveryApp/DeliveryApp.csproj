@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\Consultar Catalogo.cs" />
+    <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
     <Compile Include="Controladores\Login.cs" />
     <Compile Include="Controladores\Carrito.cs" />
@@ -60,8 +61,10 @@
     <Compile Include="Modelos\Administrador.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Detalle.cs" />
+    <Compile Include="Modelos\DetalleTieneProducto.cs" />
     <Compile Include="Modelos\Orden.cs" />
     <Compile Include="Modelos\Pedido.cs" />
+    <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Modelos\Recepcionista.cs" />
     <Compile Include="Modelos\Repartidor.cs" />
     <Compile Include="Modelos\Solicita.cs" />
@@ -80,6 +83,12 @@
     </Compile>
     <Compile Include="Vista\Carrito.Designer.cs">
       <DependentUpon>Carrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CatalogoDetalleTieneProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CatalogoDetalleTieneProducto.Designer.cs">
+      <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Configuración.cs">
       <SubType>Form</SubType>
@@ -128,12 +137,6 @@
     </Compile>
     <Compile Include="Vista\MenuCatalogoEmpleados.Designer.cs">
       <DependentUpon>MenuCatalogoEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoPedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoPedidos.Designer.cs">
-      <DependentUpon>MenuCatalogoPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuCatalogoProductos.cs">
       <SubType>Form</SubType>
@@ -214,6 +217,9 @@
     <EmbeddedResource Include="Vista\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CatalogoDetalleTieneProducto.resx">
+      <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuCatalogoProductos.resx">
+      <DependentUpon>MenuCatalogoProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuCliente.resx">
       <DependentUpon>MenuCliente.cs</DependentUpon>

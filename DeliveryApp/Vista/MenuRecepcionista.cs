@@ -91,5 +91,11 @@ namespace DeliveryApp.Vista
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            CatalogoDetalleTieneProducto CatDetPed = new CatalogoDetalleTieneProducto(recepcionista, contenedor);
+            Desplegar(CatDetPed);
+        }
     }
 }

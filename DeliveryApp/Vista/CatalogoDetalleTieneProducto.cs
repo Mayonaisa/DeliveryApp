@@ -7,22 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Controladores;
+using DeliveryApp.Modelos;
 
 namespace DeliveryApp.Vista
 {
-    
-    public partial class PantallaInicio : Form
+    public partial class CatalogoDetalleTieneProducto : Form
     {
+        Recepcionista Rep = new Recepcionista();
         Panel contenedor = new Panel();
-        public PantallaInicio(Panel p)
+        Pedido pedidos;
+        DetalleTieneProducto DetPed;
+        public CatalogoDetalleTieneProducto(Recepcionista r, Panel p)
         {
+            Rep = r;
             contenedor = p;
             InitializeComponent();
-        }
-
-        private void PantallaInicio_Load(object sender, EventArgs e)
-        {
-
         }
         public void Desplegar(Form f)
         {
@@ -38,21 +38,22 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
-
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            LoginUsuario Login = new LoginUsuario(contenedor);
-            Desplegar(Login);
-        }
+            string Mensaje=null;
+            dgvPedidos.Rows.Clear();
+            ConsultarDetalleTieneProducto.ObtenerDetalleproducto(ref DetPed,ref Mensaje);
 
-        private void label1_MouseMove(object sender, MouseEventArgs e)
-        {
-            label1.ForeColor = Color.AliceBlue;
-        }
+            int cantidad = 0;
+            ConsultarDetalleTieneProducto.cantidadPedidos(ref cantidad);
+            int i = 0;
 
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            label1.ForeColor = Color.Gray;
+            while (i < cantidad)
+            {
+                dgvPedidos.Rows.Add(DetPed.IdDetalle[i],DetPed.Cantidad1[i],DetPed.Idproducto[i]);
+                i++;
+            }
+
         }
     }
 }

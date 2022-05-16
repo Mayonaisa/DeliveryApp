@@ -13,6 +13,7 @@ namespace DeliveryApp.Modelos
         List <Detalle> detalle;
         List <Solicita> solicitud;
         List <string> Persona;
+        int cantidad;
 
         string iOrden;
         string iDetalle;
@@ -57,7 +58,9 @@ namespace DeliveryApp.Modelos
             orden = new List<Orden>();
             Persona = new List<string>();
 
-            while (resultado.Read() && i<40)
+            cantidad = Cantidad();
+
+            while (resultado.Read() && i<cantidad)
             {
                 solicitud.Add(new Solicita());
                 detalle.Add(new Detalle());

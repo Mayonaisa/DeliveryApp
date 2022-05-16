@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
             this.lblIntro = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 749);
             this.panel1.TabIndex = 7;
+            // 
+            // botonRedondo1
+            // 
+            this.botonRedondo1.BackColor = System.Drawing.Color.Red;
+            this.botonRedondo1.ButtonColor = System.Drawing.Color.Red;
+            this.botonRedondo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.Location = new System.Drawing.Point(134, 543);
+            this.botonRedondo1.Name = "botonRedondo1";
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.Size = new System.Drawing.Size(277, 64);
+            this.botonRedondo1.TabIndex = 18;
+            this.botonRedondo1.Text = "Iniciar sesión";
+            this.botonRedondo1.TextColor = System.Drawing.Color.White;
+            this.botonRedondo1.UseVisualStyleBackColor = false;
+            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // label2
             // 
@@ -113,6 +134,8 @@
             this.label1.Size = new System.Drawing.Size(179, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "O crear una cuenta";
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // label4
             // 
@@ -170,26 +193,6 @@
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 5;
-            // 
-            // botonRedondo1
-            // 
-            this.botonRedondo1.BackColor = System.Drawing.Color.Red;
-            this.botonRedondo1.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo1.Location = new System.Drawing.Point(134, 543);
-            this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Size = new System.Drawing.Size(277, 64);
-            this.botonRedondo1.TabIndex = 18;
-            this.botonRedondo1.Text = "Iniciar sesión";
-            this.botonRedondo1.TextColor = System.Drawing.Color.White;
-            this.botonRedondo1.UseVisualStyleBackColor = false;
-            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // PantallaInicio
             // 
