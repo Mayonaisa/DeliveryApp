@@ -114,6 +114,7 @@
             this.panel4.Size = new System.Drawing.Size(347, 87);
             this.panel4.TabIndex = 0;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label5
             // 
@@ -160,7 +161,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1635, 11);
+            this.label2.Location = new System.Drawing.Point(1516, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 32);
             this.label2.TabIndex = 2;
@@ -171,7 +172,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(1359, 52);
+            this.panel3.Location = new System.Drawing.Point(1727, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 40);
             this.panel3.TabIndex = 2;
@@ -192,9 +193,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::DeliveryApp.Properties.Resources.logo7;
-            this.pictureBox1.Location = new System.Drawing.Point(1593, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(1447, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
