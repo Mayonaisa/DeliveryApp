@@ -32,7 +32,7 @@ namespace DeliveryApp.Modelos
             //	);
 
             SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
              
@@ -100,7 +100,7 @@ namespace DeliveryApp.Modelos
 			//	);
 
 			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();
@@ -129,7 +129,7 @@ namespace DeliveryApp.Modelos
 			//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
 			//	);
 			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
 			conx.Open();

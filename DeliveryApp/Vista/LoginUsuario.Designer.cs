@@ -39,6 +39,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonRedondo3 = new DeliveryApp.Recursos.botonRedondo();
+            this.botonRedondo2 = new DeliveryApp.Recursos.botonRedondo();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.lblResultado = new System.Windows.Forms.Label();
             this.tbxCon = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblOlvidar = new System.Windows.Forms.PictureBox();
-            this.botonRedondo2 = new DeliveryApp.Recursos.botonRedondo();
-            this.botonRedondo3 = new DeliveryApp.Recursos.botonRedondo();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -114,7 +114,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(165, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(295, 58);
+            this.label3.Size = new System.Drawing.Size(234, 46);
             this.label3.TabIndex = 7;
             this.label3.Text = "DeliveryApp";
             // 
@@ -143,14 +143,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(219, 237);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 15;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(219, 284);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 16;
             // 
             // panel1
@@ -169,12 +169,57 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(688, 207);
-            this.panel1.MaximumSize = new System.Drawing.Size(544, 749);
+            this.panel1.Location = new System.Drawing.Point(516, 168);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.MaximumSize = new System.Drawing.Size(408, 609);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 749);
+            this.panel1.Size = new System.Drawing.Size(408, 609);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // botonRedondo3
+            // 
+            this.botonRedondo3.BackColor = System.Drawing.Color.Red;
+            this.botonRedondo3.ButtonColor = System.Drawing.Color.Red;
+            this.botonRedondo3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRedondo3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.botonRedondo3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.botonRedondo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo3.Location = new System.Drawing.Point(189, 531);
+            this.botonRedondo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonRedondo3.Name = "botonRedondo3";
+            this.botonRedondo3.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.botonRedondo3.OnHoverButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo3.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.botonRedondo3.Size = new System.Drawing.Size(126, 58);
+            this.botonRedondo3.TabIndex = 27;
+            this.botonRedondo3.Text = "Prueba Cliente\r\n";
+            this.botonRedondo3.TextColor = System.Drawing.Color.White;
+            this.botonRedondo3.UseVisualStyleBackColor = false;
+            this.botonRedondo3.Click += new System.EventHandler(this.botonRedondo3_Click);
+            // 
+            // botonRedondo2
+            // 
+            this.botonRedondo2.BackColor = System.Drawing.Color.Red;
+            this.botonRedondo2.ButtonColor = System.Drawing.Color.Red;
+            this.botonRedondo2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonRedondo2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.botonRedondo2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.botonRedondo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo2.Location = new System.Drawing.Point(40, 531);
+            this.botonRedondo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonRedondo2.Name = "botonRedondo2";
+            this.botonRedondo2.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.botonRedondo2.OnHoverButtonColor = System.Drawing.Color.Transparent;
+            this.botonRedondo2.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.botonRedondo2.Size = new System.Drawing.Size(126, 58);
+            this.botonRedondo2.TabIndex = 26;
+            this.botonRedondo2.Text = "Prueba Recepcionista";
+            this.botonRedondo2.TextColor = System.Drawing.Color.White;
+            this.botonRedondo2.UseVisualStyleBackColor = false;
+            this.botonRedondo2.Click += new System.EventHandler(this.botonRedondo2_Click);
             // 
             // botonRedondo1
             // 
@@ -185,12 +230,13 @@
             this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo1.Location = new System.Drawing.Point(138, 412);
+            this.botonRedondo1.Location = new System.Drawing.Point(104, 335);
+            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonRedondo1.Name = "botonRedondo1";
             this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
             this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Size = new System.Drawing.Size(277, 64);
+            this.botonRedondo1.Size = new System.Drawing.Size(208, 52);
             this.botonRedondo1.TabIndex = 25;
             this.botonRedondo1.Text = "Iniciar sesión";
             this.botonRedondo1.TextColor = System.Drawing.Color.White;
@@ -202,9 +248,10 @@
             this.lblResultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(170, 362);
+            this.lblResultado.Location = new System.Drawing.Point(128, 294);
+            this.lblResultado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(51, 16);
+            this.lblResultado.Size = new System.Drawing.Size(41, 13);
             this.lblResultado.TabIndex = 24;
             this.lblResultado.Text = "label10";
             // 
@@ -213,9 +260,10 @@
             this.tbxCon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCon.Location = new System.Drawing.Point(143, 300);
+            this.tbxCon.Location = new System.Drawing.Point(107, 244);
+            this.tbxCon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCon.Name = "tbxCon";
-            this.tbxCon.Size = new System.Drawing.Size(277, 28);
+            this.tbxCon.Size = new System.Drawing.Size(209, 24);
             this.tbxCon.TabIndex = 23;
             this.tbxCon.Text = "Contraseña";
             // 
@@ -224,9 +272,10 @@
             this.tbxCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCorreo.Location = new System.Drawing.Point(143, 250);
+            this.tbxCorreo.Location = new System.Drawing.Point(107, 203);
+            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCorreo.Name = "tbxCorreo";
-            this.tbxCorreo.Size = new System.Drawing.Size(277, 28);
+            this.tbxCorreo.Size = new System.Drawing.Size(209, 24);
             this.tbxCorreo.TabIndex = 22;
             this.tbxCorreo.Text = "Correo";
             // 
@@ -237,9 +286,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(184, 574);
+            this.label9.Location = new System.Drawing.Point(138, 466);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 22);
+            this.label9.Size = new System.Drawing.Size(144, 18);
             this.label9.TabIndex = 21;
             this.label9.Text = "¿Olvidó contraseña?";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -250,9 +300,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.label2.Location = new System.Drawing.Point(198, 488);
+            this.label2.Location = new System.Drawing.Point(148, 396);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 25);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Regresar al inicio";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -263,9 +314,10 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(99, 163);
+            this.label6.Location = new System.Drawing.Point(74, 132);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(369, 58);
+            this.label6.Size = new System.Drawing.Size(296, 46);
             this.label6.TabIndex = 16;
             this.label6.Text = "Inicio de sesión";
             // 
@@ -274,8 +326,9 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(1, 1);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(543, 137);
+            this.panel4.Size = new System.Drawing.Size(407, 111);
             this.panel4.TabIndex = 17;
             // 
             // panel5
@@ -284,9 +337,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(94, 51);
+            this.panel5.Location = new System.Drawing.Point(70, 41);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(46, 46);
+            this.panel5.Size = new System.Drawing.Size(34, 37);
             this.panel5.TabIndex = 8;
             // 
             // label7
@@ -296,9 +350,10 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(147, 45);
+            this.label7.Location = new System.Drawing.Point(110, 37);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(295, 58);
+            this.label7.Size = new System.Drawing.Size(234, 46);
             this.label7.TabIndex = 7;
             this.label7.Text = "DeliveryApp";
             // 
@@ -309,9 +364,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(161, 424);
+            this.label8.Location = new System.Drawing.Point(121, 344);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 15;
             // 
             // lblOlvidar
@@ -320,63 +376,23 @@
             this.lblOlvidar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblOlvidar.Image = ((System.Drawing.Image)(resources.GetObject("lblOlvidar.Image")));
             this.lblOlvidar.Location = new System.Drawing.Point(0, 0);
+            this.lblOlvidar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblOlvidar.Name = "lblOlvidar";
-            this.lblOlvidar.Size = new System.Drawing.Size(1920, 1080);
+            this.lblOlvidar.Size = new System.Drawing.Size(1440, 878);
             this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.lblOlvidar.TabIndex = 8;
             this.lblOlvidar.TabStop = false;
             // 
-            // botonRedondo2
-            // 
-            this.botonRedondo2.BackColor = System.Drawing.Color.Red;
-            this.botonRedondo2.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonRedondo2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.botonRedondo2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.botonRedondo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo2.Location = new System.Drawing.Point(53, 654);
-            this.botonRedondo2.Name = "botonRedondo2";
-            this.botonRedondo2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo2.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo2.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo2.Size = new System.Drawing.Size(168, 72);
-            this.botonRedondo2.TabIndex = 26;
-            this.botonRedondo2.Text = "Prueba Recepcionista";
-            this.botonRedondo2.TextColor = System.Drawing.Color.White;
-            this.botonRedondo2.UseVisualStyleBackColor = false;
-            this.botonRedondo2.Click += new System.EventHandler(this.botonRedondo2_Click);
-            // 
-            // botonRedondo3
-            // 
-            this.botonRedondo3.BackColor = System.Drawing.Color.Red;
-            this.botonRedondo3.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonRedondo3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.botonRedondo3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.botonRedondo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo3.Location = new System.Drawing.Point(252, 654);
-            this.botonRedondo3.Name = "botonRedondo3";
-            this.botonRedondo3.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo3.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo3.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo3.Size = new System.Drawing.Size(168, 72);
-            this.botonRedondo3.TabIndex = 27;
-            this.botonRedondo3.Text = "Prueba Cliente\r\n";
-            this.botonRedondo3.TextColor = System.Drawing.Color.White;
-            this.botonRedondo3.UseVisualStyleBackColor = false;
-            this.botonRedondo3.Click += new System.EventHandler(this.botonRedondo3_Click);
-            // 
             // LoginUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1440, 878);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblOlvidar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginUsuario";
             this.Text = "LoginUsuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

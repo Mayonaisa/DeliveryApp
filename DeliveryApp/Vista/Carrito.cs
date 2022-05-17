@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
@@ -42,5 +43,6 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
+
     }
 }
