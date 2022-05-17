@@ -47,7 +47,7 @@ namespace DeliveryApp.Vista
 
         private void label1_MouseMove(object sender, MouseEventArgs e)
         {
-            label1.ForeColor = Color.AliceBlue;
+            label1.ForeColor = Color.DarkGray;
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
