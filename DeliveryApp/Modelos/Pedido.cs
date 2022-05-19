@@ -15,8 +15,8 @@ namespace DeliveryApp.Modelos
         List <string> Persona;
         int cantidad;
 
-        string iOrden;
-        string iDetalle;
+        Orden iOrden;
+        Detalle iDetalle;
         Solicita iSolicita;
 
         //public Pedido() { }
@@ -77,9 +77,9 @@ namespace DeliveryApp.Modelos
 
                 Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());
                 Orden[i].Estatus=resultado.GetString(3);
-                Persona[i]=resultado.GetString(4);
-                Persona[i] += resultado.GetString(5);
-                Persona[i] += resultado.GetString(6);
+                Persona[i]=resultado.GetString(4).Trim();
+                Persona[i] += " "+resultado.GetString(5).Trim();
+                Persona[i] += " "+resultado.GetString(6).Trim();
 
                 Solicitud[i].Fecha=resultado.GetString(7);
 
@@ -113,6 +113,26 @@ namespace DeliveryApp.Modelos
             }
             conx.Close();
             return cantidad;
+        }
+        public void EstatusPedido(string id)
+        {
+            SqlConnection conx = new SqlConnection(
+                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='Aceptado' where idOrden= '"+id+"'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+
+            }
+
+            conx.Close();
         }
 
     }

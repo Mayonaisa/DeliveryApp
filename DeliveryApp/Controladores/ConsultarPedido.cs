@@ -30,7 +30,22 @@ namespace DeliveryApp.Controladores
             }
             catch (Exception ex)
             {
-                //mensaje = ex.Message;
+                //mensaje = ex.Message; 
+                
+            }
+        }
+        public static void AceptarPedido(string Orden, ref Pedido PedN)
+        {
+            try
+            {
+                PedN.EstatusPedido(Orden);
+                PedN=new Pedido();
+
+
+            }
+            catch(Exception ex)
+            {
+
             }
         }
     }

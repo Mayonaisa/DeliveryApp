@@ -1,6 +1,6 @@
 ﻿namespace DeliveryApp.Vista
 {
-    partial class MenuRecepcionista
+    partial class MenuRecep_Admin
     {
         /// <summary>
         /// Required designer variable.

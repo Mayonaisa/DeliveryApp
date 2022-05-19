@@ -19,7 +19,10 @@ namespace DeliveryApp.Vista
         Panel contenedor=new Panel();
         Pedido pedidos;
         ConsultarPedido Consulta;
+        DataGridViewButtonColumn Aceptar = new DataGridViewButtonColumn();
         string Mensaje;
+
+        
         public PedidosPendientes(Recepcionista r, Panel p)
         {
             Rep = r;
@@ -28,14 +31,41 @@ namespace DeliveryApp.Vista
             //Dgv;
             InitializeComponent();
             dgvPedidos.CellClick += dgvPedidos_CellClick;
+            
         }
+        // boton de aceptar pedidos
         private void dgvPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //metodo que se creara dinamicamente para
-            //if (e.ColumnIndex == dgvPedidos.Columns["boton"].Index)
-            //{
+            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index)
+            {
                 
-            //}
+                string PedID = null;
+                PedID = dgvPedidos[0,e.RowIndex].Value.ToString();
+                if (dgvPedidos[3,e.RowIndex].Value.ToString().Trim()=="en proceso")
+                {
+                    ConsultarPedido.AceptarPedido(PedID, ref pedidos);
+                    CambiarBoton(e.RowIndex);
+                    dgvPedidos.Refresh();
+                }
+                else
+                {
+                    CambiarBoton(e.RowIndex);
+                    dgvPedidos.Refresh();
+
+                }
+                
+
+            }
+
+
+        }
+        public void CambiarBoton(int row)
+        {
+            dgvPedidos[13, row].Style.BackColor=Color.Green;
+            dgvPedidos[13, row].Style.SelectionBackColor=Color.Green;
+            
+            //Aceptar.CellTemplate.;
         }
         public void Desplegar(Form f)
         {
@@ -57,11 +87,7 @@ namespace DeliveryApp.Vista
             dgvPedidos.Rows.Clear();
             ConsultarPedido.ObtenerPedido(ref pedidos,ref Mensaje);
 
-            DataGridViewButtonColumn Aceptar = new DataGridViewButtonColumn();
-            Aceptar.UseColumnTextForButtonValue=true;
-            Aceptar.Text = "Aceptar";
-            Aceptar.Name ="estatusPed";
-            dgvPedidos.Columns.Add(Aceptar);
+            
 
             int cantidad=0;
             ConsultarPedido.cantidadPedidos(ref cantidad);
@@ -69,13 +95,34 @@ namespace DeliveryApp.Vista
 
             while (i<cantidad)
             {
-                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus,"NA","NA",pedidos.Persona1[i],pedidos.Solicitud[i].Fecha);
+                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus, "NA", "NA", pedidos.Persona1[i], pedidos.Solicitud[i].Fecha);
+                if (dgvPedidos[3, i].Value.ToString().Trim() == "Aceptado")
+                {
+                    CambiarBoton(i);
+                }
                 i++;
             }
             
 
 
 
+        }
+
+        private void PedidosPendientes_Load(object sender, EventArgs e)
+        {
+
+            Aceptar.UseColumnTextForButtonValue = true;
+            Aceptar.Text = "Aceptar";
+            Aceptar.Name = "estatusPed";
+            Aceptar.FlatStyle = FlatStyle.Flat;
+            Aceptar.DefaultCellStyle.ForeColor = Color.White;
+            Aceptar.DefaultCellStyle.BackColor = Color.Red;
+            //Aceptar.DefaultCellStyle.SelectionForeColor = Color.FromArgb(255,50,50);
+            Aceptar.DefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 0, 0);
+
+
+
+            dgvPedidos.Columns.Add(Aceptar);
         }
     }
 }

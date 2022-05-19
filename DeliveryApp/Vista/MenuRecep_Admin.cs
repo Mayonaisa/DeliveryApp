@@ -12,11 +12,11 @@ using DeliveryApp.Modelos;
 
 namespace DeliveryApp.Vista
 {
-    public partial class MenuRecepcionista : Form
+    public partial class MenuRecep_Admin : Form
     {
         Recepcionista recepcionista;
         Panel contenedor=new Panel();
-        public MenuRecepcionista(Recepcionista Rep, Panel p)
+        public MenuRecep_Admin(Recepcionista Rep, Panel p)
         {
             recepcionista = Rep;
             contenedor = p;
