@@ -37,6 +37,10 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomControls.RJControls">
+      <HintPath>..\..\..\..\OneDrive\Escritorio\pantallaMenuAdministrador\CustomControls.RJControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -228,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\CatalogoDetalleTieneProducto.resx">
       <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
+      <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>

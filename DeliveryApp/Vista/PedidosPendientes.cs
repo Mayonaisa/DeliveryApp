@@ -57,6 +57,11 @@ namespace DeliveryApp.Vista
                 
 
             }
+            else
+            {
+                ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor);
+                Desplegar(Pedidos);
+            }
 
 
         }
