@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Modelos;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
@@ -26,6 +27,9 @@ namespace DeliveryApp.Vista
             //panelMenu.Hide();
             panelMenu.Location = new Point(-291, -1);
             panelPrincipal.Location = new Point(-1, -1);
+
+            CarritoC nuevo = new CarritoC();
+
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
@@ -130,6 +134,16 @@ namespace DeliveryApp.Vista
         private void botonRedondo16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        void agregar (string nombre, string monto, int cantidad)
+        {
+
+        }
+
+        private void botonRedondo2_Click(object sender, EventArgs e)
+        {
+            agregar("pizza", "120", 3);
         }
     }
 }

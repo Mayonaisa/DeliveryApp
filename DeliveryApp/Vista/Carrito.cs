@@ -44,5 +44,9 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
+        private void Carrito_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
