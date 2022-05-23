@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
@@ -14,9 +15,11 @@ namespace DeliveryApp.Vista
     public partial class PantallaInicio : Form
     {
         Panel contenedor = new Panel();
-        public PantallaInicio(Panel p)
+        CarritoC Carro = new CarritoC();
+        public PantallaInicio(Panel p,CarritoC c)
         {
             contenedor = p;
+            Carro = c;
             InitializeComponent();
         }
 
@@ -41,7 +44,7 @@ namespace DeliveryApp.Vista
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            LoginUsuario Login = new LoginUsuario(contenedor);
+            LoginUsuario Login = new LoginUsuario(contenedor,Carro);
             Desplegar(Login);
         }
 

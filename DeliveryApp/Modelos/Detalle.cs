@@ -4,49 +4,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Modelos
 {
     class Detalle
     {
         string idDetalle;
-        decimal monto;
+        SqlSingle monto;
         string idOrden;
-        public Detalle()
+
+        CarritoC Carro;
+
+        int numDet = 0;
+        public Detalle(CarritoC c)
         {
-            //SqlConnection conx = new SqlConnection(
-            //   "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-            //   );
+            Carro = c;
+
+            SqlConnection conx = new SqlConnection(
+                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+            conx.Open();
+
+            SqlCommand Detalle = new SqlCommand("SELECT COUNT (*) FROM Detalle", conx);
 
 
-            //conx.Open();
+            Detalle.Prepare();
+            SqlDataReader resultado = Detalle.ExecuteReader();
 
-            //SqlCommand consulta = new SqlCommand("SELECT idDetalle, monto, idOrden from Detalle", conx);
+            if (resultado.Read())
+            {
+                numDet = resultado.GetInt32(0);
+                insert();
 
-            //consulta.Prepare();
-            //SqlDataReader resultado = consulta.ExecuteReader();
-
-            //if (resultado.Read())
-            //{
-            //    idDetalle = resultado.GetString(0);
-            //    monto = float.Parse(resultado.GetString(1));
-            //    idOrden = resultado.GetString(2);
-            //}
-            //else
-            //{
-            //    throw new Exception("no se encontro el usuario");
-            //}
-            //conx.Close();
+            }
         }
-        public Detalle(string Det, decimal dinero, string Orden)
+        private void insert()
         {
-            idDetalle = Det;
-            monto = dinero;
-            idOrden = Orden;
+            SqlConnection conx = new SqlConnection(
+                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+            conx.Open();
 
+            idDetalle = "DET" + numDet.ToString();
+
+            SqlCommand NuevoDetalle = new SqlCommand("INSERT Detalle values ('DET" + numDet.ToString() + "',0,'"+Carro.idOrden+"')", conx); //jhbj
+            NuevoDetalle.Prepare();
+
+            SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
         }
+        //public Detalle(string Det, decimal dinero, string Orden)
+        //{
+        //    IdDetalle1 = Det;
+        //    Monto1 = dinero;
+        //    IdOrden1 = Orden;
+
+        //}
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
-        public decimal Monto { get => monto; set => monto = value; }
+        public SqlSingle Monto { get => monto; set => monto = value; }
         public string IdOrden { get => idOrden; set => idOrden = value; }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
 using DeliveryApp.Modelos;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
@@ -17,6 +18,7 @@ namespace DeliveryApp.Vista
     {
         Panel contenedor = new Panel();
         Usuario usuario = new Usuario();
+
         public CambiarContraseña(Usuario Persona, Panel p)
         {
             usuario= Persona;   
@@ -49,8 +51,9 @@ namespace DeliveryApp.Vista
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            PantallaInicio Menu = new PantallaInicio(contenedor);
-            Desplegar(Menu);
+            //comentario por mientras
+            //PantallaInicio Menu = new PantallaInicio(contenedor);
+            //Desplegar(Menu);
         }
     }
 }

@@ -73,7 +73,7 @@
     <Compile Include="Modelos\Solicita.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
     <Compile Include="Recursos\CarritoC.cs" />
-    <Compile Include="Recursos\producto.cs">
+    <Compile Include="Recursos\PanelProducto.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Vista\CambiarContraseña.cs">
@@ -300,6 +300,10 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Burro.png" />
+    <Content Include="Imagenes\pizza.png" />
+    <None Include="Imagenes\Taco.png" />
+    <None Include="Imagenes\Quesadilla.png" />
     <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
     <Content Include="Imagenes\delicious-food-frame-top-view.png" />
     <Content Include="Imagenes\logo1.png" />

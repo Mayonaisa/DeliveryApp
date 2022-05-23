@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Modelos;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Recursos
 {
-    class producto : Panel
+    class PanelProducto : Panel
     {
         private PictureBox Imagen;
         private Label lblprincipal;
@@ -18,8 +20,25 @@ namespace DeliveryApp.Recursos
         private botonRedondo BRsecundario;
         private botonRedondo BRmas;
         private botonRedondo BRmenos;
+        public string idProducto = "";
+        string nombreP = "";
+        int montoP = 0;
 
-        public producto(string imagen, string producto, string monto, int x, int y)
+        public Producto prod;
+
+        CarritoC Carro;
+
+        public PanelProducto(int idnum, CarritoC c)
+        {
+            //idProducto = id;
+            //idProducto = idProducto.Trim();
+            prod = new Producto(idnum);
+            Carro = c;
+
+            //inicio una conexion y le doy los valores a nombreP y montoP
+        }
+
+        public void Crear_Panel_menu(string imagen, /*string producto, string monto,*/ int x, int y)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
@@ -30,6 +49,7 @@ namespace DeliveryApp.Recursos
             Imagen = new PictureBox();
             this.Controls.Add(this.Imagen);
             this.Imagen.Image = ((System.Drawing.Image)(resources.GetObject(imagen)));
+            //this.Imagen.Image = Image.FromFile(Server.MapPath("~/Image/undefinedProfileImage.png"));
             this.Imagen.Location = new System.Drawing.Point(3, 3);
             this.Imagen.Name = "PictureBox1";
             this.Imagen.Size = new System.Drawing.Size(148, 148);
@@ -45,7 +65,7 @@ namespace DeliveryApp.Recursos
             this.lblprincipal.ForeColor = Color.Black;
             this.lblprincipal.Location = new System.Drawing.Point(182, 26);
             this.lblprincipal.Size = new System.Drawing.Size(219, 29);
-            this.lblprincipal.Text = producto;
+            this.lblprincipal.Text = /*producto;*/prod.Nombre;
 
             lblmonto = new Label();
             this.Controls.Add(this.lblmonto);
@@ -55,7 +75,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
             this.lblmonto.Location = new System.Drawing.Point(182, 67);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
-            this.lblmonto.Text = monto;
+            this.lblmonto.Text = /*monto;*/prod.Precio.ToString();
 
             BRcantidad = new botonRedondo();
             this.Controls.Add(this.BRcantidad);
@@ -115,7 +135,7 @@ namespace DeliveryApp.Recursos
 
         }
 
-        public producto(string texto, string monto, int x, int y)
+        public void Crear_Panel_carrito(string texto, string monto, int x, int y)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
@@ -162,15 +182,22 @@ namespace DeliveryApp.Recursos
             this.BRprincipal.ForeColor = Color.White;
             this.BRprincipal.Location = new Point(593, 18);
             this.BRprincipal.Size = new System.Drawing.Size(189, 46);
-            this.BRprincipal.Text = "Agregar";
+            this.BRprincipal.Text = "Quitar";
             this.BRprincipal.FlatAppearance.BorderSize = 0;
         }
 
+        //////////////////////////////////////////////////////////////////////LOS BOTONES////////////////////////////////////////////////////////////////////////////
         private void btn_menos_click(object sender, EventArgs e)
         {
             if(true)
             {
+                int cantidad = int.Parse(BRcantidad.Text);
                 //bruh nibba text here
+                if (cantidad > 0)
+                {
+                    cantidad--;
+                    BRcantidad.Text = cantidad.ToString();
+                }
             }
         }
 
@@ -178,7 +205,12 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-
+                int cantidad = int.Parse(BRcantidad.Text);
+                if (cantidad < 9)
+                {
+                    cantidad++;
+                    BRcantidad.Text = cantidad.ToString();
+                }
             }
         }
 
@@ -186,7 +218,14 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-
+                //si idDetalle de orden es nulo, entonces llamo a la clase Detalle para crear una y se la asigno a orden, luego hago un metodo externo en esta clase que llame a Detalle tiene pedido y le asigno el contenido del panel ahí a la par que calcula el monto en detalle
+                //caso contrario solo se llama al metodo. También se crea en CarritoC un elemento tipo detalle para almacenarlo ahí
+                if(Carro.idDetalle == "nulo")
+                {
+                    //MessageBox.Show("nulo");
+                    Detalle det = new Detalle(Carro);
+                    Carro.update(det.IdDetalle, Carro.estatus);
+                }
             }
         }
 

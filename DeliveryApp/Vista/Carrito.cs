@@ -14,15 +14,17 @@ namespace DeliveryApp.Vista
     public partial class Carrito : Form
     {
         Panel contenedor = new Panel();
-        public Carrito(Panel p)
+        CarritoC Carro = new CarritoC();
+        public Carrito(Panel p,CarritoC c)
         {
             contenedor = p;
+            Carro = c;
             InitializeComponent();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            MenuCliente MenuClienteV = new MenuCliente(contenedor);
+            MenuCliente MenuClienteV = new MenuCliente(contenedor,Carro);
 
             this.Hide();
             Desplegar(MenuClienteV);
