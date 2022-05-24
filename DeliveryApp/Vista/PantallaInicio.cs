@@ -20,10 +20,6 @@ namespace DeliveryApp.Vista
             InitializeComponent();
         }
 
-        private void PantallaInicio_Load(object sender, EventArgs e)
-        {
-
-        }
         public void Desplegar(Form f)
         {
             if (contenedor.Controls.Count > 0)
@@ -39,7 +35,7 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
-        private void botonRedondo1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             LoginUsuario Login = new LoginUsuario(contenedor);
             Desplegar(Login);
@@ -47,12 +43,28 @@ namespace DeliveryApp.Vista
 
         private void label1_MouseMove(object sender, MouseEventArgs e)
         {
-            label1.ForeColor = Color.DarkGray;
+            lblRegistrarse.ForeColor = Color.DarkGray;
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Gray;
+            lblRegistrarse.ForeColor = Color.Gray;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            RegistrarUsuario Registrar = new RegistrarUsuario(contenedor);
+            Desplegar(Registrar);
+        }
+
+        private void pnlSuperior_Paint(object sender, PaintEventArgs e)
+        {
+            Color c = Color.FromArgb(241, 241, 241);
+            ControlPaint.DrawBorder(e.Graphics, pnlSuperior.ClientRectangle,
+                c, 0, ButtonBorderStyle.Solid, // left
+                c, 0, ButtonBorderStyle.Solid, // top
+                c, 0, ButtonBorderStyle.Solid, // right
+                c, 1, ButtonBorderStyle.Solid);// bottom
         }
     }
 }

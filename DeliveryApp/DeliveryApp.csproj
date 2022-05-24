@@ -37,6 +37,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomControls.RJControls">
+      <HintPath>..\..\..\CustomControls.RJControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -51,12 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\CambiarContraseña.cs" />
     <Compile Include="Controladores\Consultar Catalogo.cs" />
     <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
     <Compile Include="Controladores\Login.cs" />
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
+    <Compile Include="Controladores\RegistrarUsuario.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
     <Compile Include="Modelos\Direccion.cs" />
     <Compile Include="Recursos\botonRedondo.cs">
@@ -126,6 +131,12 @@
     </Compile>
     <Compile Include="Vista\HistorialPedidos.Designer.cs">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarUsuario.Designer.cs">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuAdministrador.cs">
       <SubType>Form</SubType>
@@ -221,6 +232,9 @@
     <EmbeddedResource Include="Vista\HistorialPedidos.resx">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarUsuario.resx">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +300,9 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\rp3.png" />
+    <None Include="Resources\rp2.png" />
+    <None Include="Resources\rp1.png" />
     <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
     <Content Include="Imagenes\delicious-food-frame-top-view.png" />
     <Content Include="Imagenes\logo1.png" />

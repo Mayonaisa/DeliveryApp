@@ -9,29 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
-using DeliveryApp.Modelos;
-using System.Net;
-using System.Net.Mail;
 
 namespace DeliveryApp.Vista
 {
     public partial class CambiarContraseña : Form
     {
         Panel contenedor = new Panel();
-        Usuario usuario = new Usuario();
+        
         public CambiarContraseña(Panel p)
         { 
             contenedor= p;  
             InitializeComponent();
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            LoginUsuario Login = new LoginUsuario(contenedor);
-            Desplegar(Login);
-            
-        }
         public void Desplegar(Form f)
         {
             if (contenedor.Controls.Count > 0)
@@ -47,36 +37,40 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
-        private void botonRedondo1_Click(object sender, EventArgs e)
+        private void Regresar_Click(object sender, EventArgs e)
         {
-            sendMail("");
+            LoginUsuario Login = new LoginUsuario(contenedor);
+            Desplegar(Login);
+            
         }
+        
 
-        private void sendMail(string destino)
+        private void Enviar_Click(object sender, EventArgs e)
         {
-            var fromAddress = new MailAddress("swideliveryapp@gmail.com", "Soporte Delivery App");
-            var toAddress = new MailAddress("vadigi9823@akapple.com", "Mayonesa");
-            const string fromPassword = "hhikgvvjeyhbbnos";
-            const string subject = "Recuperación de contraseña";
-            const string body = "Ya quedo jijiji";
-
-            var smtp = new SmtpClient
+            if(DeliveryApp.Controladores.CambiarContraseña.recuperarContraseña(tbxCorreo.Texts))
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            };
-            using (var message = new MailMessage(fromAddress, toAddress)
+                MessageBox.Show("Se ha enviado la contraseña a su correo");
+            }
+            else
             {
-                Subject = subject,
-                Body = body
-            })
-            {
-                smtp.Send(message);
+                MessageBox.Show("No existe una cuenta con ese correo");
             }
         }
+
+        private void pnlSuperior_Paint(object sender, PaintEventArgs e)
+        {
+            Color c = Color.FromArgb(241, 241, 241);
+            ControlPaint.DrawBorder(e.Graphics, pnlSuperior.ClientRectangle,
+                c, 0, ButtonBorderStyle.Solid, // left
+                c, 0, ButtonBorderStyle.Solid, // top
+                c, 0, ButtonBorderStyle.Solid, // right
+                c, 1, ButtonBorderStyle.Solid);// bottom
+        }
+
+        //private void CambiarContraseña_Load(object sender, EventArgs e)
+        //{
+        //    DeliveryApp.Controladores.CambiarContraseña control = new DeliveryApp.Controladores.CambiarContraseña();
+        //    MessageBox.Show(control.msg);
+        //}
     }
 }

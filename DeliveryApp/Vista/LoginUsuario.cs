@@ -27,11 +27,6 @@ namespace DeliveryApp
             InitializeComponent();
         }
 
-        private void LoginUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void Desplegar(Form f)
         {
             if (contenedor.Controls.Count > 0)
@@ -50,7 +45,7 @@ namespace DeliveryApp
 
         private void label9_Click(object sender, EventArgs e)
         {
-            CambiarContraseña Cambio = new CambiarContraseña(contenedor);
+            DeliveryApp.Vista.CambiarContraseña Cambio = new DeliveryApp.Vista.CambiarContraseña(contenedor);
             Desplegar(Cambio);
         }
 
@@ -65,107 +60,37 @@ namespace DeliveryApp
 
         }
 
-        private void botonRedondo1_Click(object sender, EventArgs e)
-        {
-            string correo = tbxCorreo.Text;
-            string contraseña = tbxCon.Text;
-            string mensaje = "";
-            Usuario usuario = new Usuario();
-            Recepcionista recepcionista = new Recepcionista(); ;
-            Cliente cliente = new Cliente();
-
-            if (Login.validarUsuario(contraseña, correo, ref mensaje, ref usuario))
-            {
-                if (Login.BuscarCliente(ref mensaje, ref usuario, ref cliente))
-                {
-                    MenuCliente vistaPrincipal = new MenuCliente(contenedor);
-
-                    this.Hide();
-                    //vistaPrincipal.ShowDialog();
-                    //Contenedor Cont = new Contenedor();
-                    //Cont.Desplegar(vistaPrincipal);
-                    Desplegar(vistaPrincipal);
-                    this.Close();
-
-
-
-                }
-                else if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
-                {
-                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista, contenedor);
-
-                    this.Hide();
-                    //MenuRep.ShowDialog();
-                    Desplegar(MenuRep);
-                    this.Close();
-                }
-
-            }
-            else
-            {
-                lblMensaje.Text = mensaje;
-            }
-        }
-
-        private void botonRedondo2_Click(object sender, EventArgs e)
-        {
-            string correo = "Paola_30@hotmail.com";
-            string contraseña = "Paola1234_30";
-            string mensaje = "";
-            Usuario usuario = new Usuario();
-            Recepcionista recepcionista = new Recepcionista(); ;
-            Cliente cliente = new Cliente();
-
-            if (Login.validarUsuario(contraseña, correo, ref mensaje, ref usuario))
-            {
-                if (Login.BuscarRecepcionista(ref mensaje, ref usuario, ref recepcionista))
-                {
-                    ContenedorEmpleado MenuRep = new ContenedorEmpleado(recepcionista, contenedor);
-
-                    this.Hide();
-                    //MenuRep.ShowDialog();
-                    Desplegar(MenuRep);
-                    this.Close();
-                }
-
-            }
-        }
-
-        private void botonRedondo3_Click(object sender, EventArgs e)
-        {
-            string correo = "Roberto_1@hotmail.com";
-            string contraseña = "Roberto1234_1";
-            string mensaje = "";
-            Usuario usuario = new Usuario();
-            Recepcionista recepcionista = new Recepcionista(); ;
-            Cliente cliente = new Cliente();
-
-            if (Login.validarUsuario(contraseña, correo, ref mensaje, ref usuario))
-            {
-                if (Login.BuscarCliente(ref mensaje, ref usuario, ref cliente))
-                {
-                    MenuCliente vistaPrincipal = new MenuCliente(contenedor);
-
-                    this.Hide();
-                    //vistaPrincipal.ShowDialog();
-                    //Contenedor Cont = new Contenedor();
-                    //Cont.Desplegar(vistaPrincipal);
-                    Desplegar(vistaPrincipal);
-                    this.Close();
-
-
-
-                }
-
-            }
-        }
-
         private void lblContraseña_Click(object sender, EventArgs e)
         {
-            CambiarContraseña vistaPrincipal = new CambiarContraseña(contenedor);
+            DeliveryApp.Vista.CambiarContraseña vistaPrincipal = new DeliveryApp.Vista.CambiarContraseña(contenedor);
             this.Hide();
             Desplegar(vistaPrincipal);
             this.Close();
+        }
+
+        private void pnlSuperior_Paint(object sender, PaintEventArgs e)
+        {
+            Color c = Color.FromArgb(241, 241, 241);
+            ControlPaint.DrawBorder(e.Graphics, pnlSuperior.ClientRectangle,
+                c, 0, ButtonBorderStyle.Solid, // left
+                c, 0, ButtonBorderStyle.Solid, // top
+                c, 0, ButtonBorderStyle.Solid, // right
+                c, 1, ButtonBorderStyle.Solid);// bottom
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // login
+        }
+
+        private void pnlInferior_Paint(object sender, PaintEventArgs e)
+        {
+            Color c = Color.FromArgb(241, 241, 241);
+            ControlPaint.DrawBorder(e.Graphics, pnlSuperior.ClientRectangle,
+                c, 0, ButtonBorderStyle.Solid, // left
+                c, 1, ButtonBorderStyle.Solid, // top
+                c, 0, ButtonBorderStyle.Solid, // right
+                c, 0, ButtonBorderStyle.Solid);// bottom
         }
     }
 }

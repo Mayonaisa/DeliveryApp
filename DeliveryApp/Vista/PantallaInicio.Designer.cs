@@ -29,72 +29,101 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnLogin = new CustomControls.RJControls.RJButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
-            this.lblIntro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRegistrarse = new System.Windows.Forms.Label();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
+            this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlContenedor
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.botonRedondo1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblDes);
-            this.panel1.Controls.Add(this.lblIntro);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.lblMensaje);
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(516, 135);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(408, 609);
-            this.panel1.TabIndex = 7;
+            this.pnlContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.btnLogin);
+            this.pnlContenedor.Controls.Add(this.label5);
+            this.pnlContenedor.Controls.Add(this.label4);
+            this.pnlContenedor.Controls.Add(this.label2);
+            this.pnlContenedor.Controls.Add(this.lblDes);
+            this.pnlContenedor.Controls.Add(this.lblRegistrarse);
+            this.pnlContenedor.Controls.Add(this.pnlSuperior);
+            this.pnlContenedor.Controls.Add(this.lblMensaje);
+            this.pnlContenedor.ForeColor = System.Drawing.Color.White;
+            this.pnlContenedor.Location = new System.Drawing.Point(516, 135);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(408, 609);
+            this.pnlContenedor.TabIndex = 7;
             // 
-            // botonRedondo1
+            // btnLogin
             // 
-            this.botonRedondo1.BackColor = System.Drawing.Color.Red;
-            this.botonRedondo1.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo1.Location = new System.Drawing.Point(100, 441);
-            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Size = new System.Drawing.Size(208, 52);
-            this.botonRedondo1.TabIndex = 18;
-            this.botonRedondo1.Text = "Iniciar sesión";
-            this.botonRedondo1.TextColor = System.Drawing.Color.White;
-            this.botonRedondo1.UseVisualStyleBackColor = false;
-            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.BackgroundColor = System.Drawing.Color.Red;
+            this.btnLogin.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.BorderRadius = 20;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(112, 440);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(184, 50);
+            this.btnLogin.TabIndex = 21;
+            this.btnLogin.Text = "Iniciar sesion";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Sora", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(122, 214);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 74);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "¡Bienvenido\r\nal sistema!\r\n";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Sora", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(161, 166);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 37);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Inicio";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Sora", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.label2.Location = new System.Drawing.Point(95, 312);
+            this.label2.Location = new System.Drawing.Point(107, 304);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 87);
+            this.label2.Size = new System.Drawing.Size(197, 87);
             this.label2.TabIndex = 17;
             this.label2.Text = "Inicia sesión o crea\r\nuna cuenta para \r\nacceder al menu\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,87 +140,62 @@
             this.lblDes.Size = new System.Drawing.Size(0, 20);
             this.lblDes.TabIndex = 15;
             // 
-            // lblIntro
+            // lblRegistrarse
             // 
-            this.lblIntro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIntro.AutoSize = true;
-            this.lblIntro.BackColor = System.Drawing.Color.White;
-            this.lblIntro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblIntro.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIntro.ForeColor = System.Drawing.Color.Black;
-            this.lblIntro.Location = new System.Drawing.Point(87, 223);
-            this.lblIntro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(234, 78);
-            this.lblIntro.TabIndex = 16;
-            this.lblIntro.Text = "¡Bienvenido al\r\nsistema!\r\n";
-            this.lblIntro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRegistrarse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRegistrarse.AutoSize = true;
+            this.lblRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegistrarse.Font = new System.Drawing.Font("Sora", 9.749999F);
+            this.lblRegistrarse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.lblRegistrarse.Location = new System.Drawing.Point(139, 511);
+            this.lblRegistrarse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistrarse.Name = "lblRegistrarse";
+            this.lblRegistrarse.Size = new System.Drawing.Size(130, 20);
+            this.lblRegistrarse.TabIndex = 14;
+            this.lblRegistrarse.Text = "O crear una cuenta";
+            this.lblRegistrarse.Click += new System.EventHandler(this.label1_Click);
+            this.lblRegistrarse.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.lblRegistrarse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
-            // label1
+            // pnlSuperior
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(132, 517);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "O crear una cuenta";
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(130, 147);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 55);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Inicio ";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(0, 8);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(407, 111);
-            this.panel3.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(103, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 46);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "DeliveryApp";
+            this.pnlSuperior.Controls.Add(this.panel2);
+            this.pnlSuperior.Controls.Add(this.label3);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(408, 111);
+            this.pnlSuperior.TabIndex = 11;
+            this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(70, 36);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(114, 37);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(34, 37);
-            this.panel2.TabIndex = 8;
+            this.panel2.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(144, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 33);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "DeliveryApp";
             // 
             // lblMensaje
             // 
@@ -211,33 +215,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1440, 878);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaInicio";
             this.Text = "PantallaInicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PantallaInicio_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
+            this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlContenedor;
+        private System.Windows.Forms.Label lblRegistrarse;
+        private System.Windows.Forms.Panel pnlSuperior;
         private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Label lblIntro;
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Label label2;
-        private Recursos.botonRedondo botonRedondo1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private CustomControls.RJControls.RJButton btnLogin;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

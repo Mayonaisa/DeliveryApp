@@ -15,25 +15,18 @@ namespace DeliveryApp.Modelos
 		string correo;
 		Direccion dir;
 
-        public string Contraseña { get => contraseña; set => contraseña = value; }
-        public string Correo { get => correo; set => correo = value; }
-
-        public void Insertar()
+		public Usuario()
 		{
-			//throw new NotImplementedException();
+
 		}
+
+		public string Contraseña { get => contraseña; set => contraseña = value; }
+        public string Correo { get => correo; set => correo = value; }
 
         public Usuario(string contraseña, string correo) 
         {
-            //Contraseña = contraseña;
-            //Correo = correo;
-
-            //SqlConnection conx = new SqlConnection(
-            //	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
-            //	);
-
             SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
 				);
 
              
@@ -56,10 +49,6 @@ namespace DeliveryApp.Modelos
             }
             conx.Close();
         }
-        public Usuario()
-		{
-
-		}
 
 		public Usuario(string idPersona, string nombre, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo, string contraseña, string correo) : base(idPersona, nombre,aPaterno,aMaterno,telefono,fechaNac,edad,sexo)
 		{
@@ -67,93 +56,92 @@ namespace DeliveryApp.Modelos
             Correo = correo;
 
         }
-		//public static Usuario BuscarContraseña(string correo, string contraseña)
-		//{
-		//	//consulta la base de datos
-		//	OdbcConnection conx = new OdbcConnection(
-		//	"Driver={ODBC Driver 17 for SQL Server};" +
-		//	"Server=localhost;" +
-		//	"Database = DeliveryApp;" +
-		//	"trusted_connection = Yes;"
-		//	//"UID = myUsername;" +
-		//	//"PWD = myPassword;"
-		//	);
+        public static Usuario BuscarContraseña(string correo)
+        {
+			//consulta la base de datos
+			SqlConnection conx = new SqlConnection(
+				"Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				);
+
+
+			conx.Open();
+
+			SqlCommand consulta = new SqlCommand("SELECT idPersona, correo, contraseña, nombre FROM Usuario, Persona WHERE correo = '" + correo + "' and Usuario.idUsuario = Persona.idPersona", conx);
+
+			consulta.Prepare();
+			SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                Usuario USR = new Usuario();
+                USR.IdPersona = resultado.GetString(0);
+                USR.correo = resultado.GetString(1);
+                USR.contraseña = resultado.GetString(2);
+				USR.Nombre = resultado.GetString(3);
+                return USR;
+            }
+            return null;
+        }
+  //      public bool BuscarRecepcionista(Usuario User)
+  //      {
+		//	//SqlConnection conx = new SqlConnection(
+		//	//	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
+		//	//	);
+
+		//	SqlConnection conx = new SqlConnection(
+		//		"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+		//		);
+
 		//	conx.Open();
-		//	OdbcCommand consulta = new OdbcCommand("SELECT idPersona, correo, contraseña FROM Usuario WHERE contraseña=?", conx);
-		//	consulta.Parameters.Add("contraseña", OdbcType.VarChar).Value = contraseña;
-		//	//consulta.Parameters.Add("contraseña", OdbcType.VarChar).Value = contraseña;
+
+		//	SqlCommand consulta = new SqlCommand("SELECT idRecepcionista FROM Recepcionista WHERE idRecepcionista = '" + User.IdPersona + "'" , conx);
+
 		//	consulta.Prepare();
-		//	OdbcDataReader resultado = consulta.ExecuteReader();
+		//	SqlDataReader resultado = consulta.ExecuteReader();
+
 		//	if (resultado.Read())
 		//	{
-		//		Usuario USR = new Usuario();
-		//		USR.IdPersona = resultado.GetString(0);
-		//		USR.correo = resultado.GetString(1);
-		//		USR.contraseña = resultado.GetString(2);
-		//		return USR;
+		//		conx.Close();
+		//		return true;
 		//	}
-		//	return null;
-		//}
-		public bool BuscarRecepcionista(Usuario User)
-        {
-			//SqlConnection conx = new SqlConnection(
-			//	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
-			//	);
-
-			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
-
-			conx.Open();
-
-			SqlCommand consulta = new SqlCommand("SELECT idRecepcionista FROM Recepcionista WHERE idRecepcionista = '" + User.IdPersona + "'" , conx);
-
-			consulta.Prepare();
-			SqlDataReader resultado = consulta.ExecuteReader();
-
-			if (resultado.Read())
-			{
-				conx.Close();
-				return true;
-			}
-			else
-			{
-				conx.Close();
-				return false;
-			}
+		//	else
+		//	{
+		//		conx.Close();
+		//		return false;
+		//	}
 			
-		}
-		public bool BuscarCliente(Usuario User)
-		{
-			//SqlConnection conx = new SqlConnection(
-			//	"Data Source=DESKTOP-I0PHDQ6" +
-			//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
-			//	);
-			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
+		//}
+		//public bool BuscarCliente(Usuario User)
+		//{
+		//	//SqlConnection conx = new SqlConnection(
+		//	//	"Data Source=DESKTOP-I0PHDQ6" +
+		//	//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
+		//	//	);
+		//	SqlConnection conx = new SqlConnection(
+		//		"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+		//		);
 
-			conx.Open();
+		//	conx.Open();
 
-			SqlCommand consulta = new SqlCommand("SELECT idCliente FROM Cliente WHERE idCliente = '" + User.IdPersona + "'", conx);
+		//	SqlCommand consulta = new SqlCommand("SELECT idCliente FROM Cliente WHERE idCliente = '" + User.IdPersona + "'", conx);
 
-			consulta.Prepare();
-			SqlDataReader resultado = consulta.ExecuteReader();
+		//	consulta.Prepare();
+		//	SqlDataReader resultado = consulta.ExecuteReader();
 
-			if (resultado.Read())
-			{
-				conx.Close();
-				return true;
-			}
-			else
-			{
-				conx.Close();
-				return false;
-			}
+		//	if (resultado.Read())
+		//	{
+		//		conx.Close();
+		//		return true;
+		//	}
+		//	else
+		//	{
+		//		conx.Close();
+		//		return false;
+		//	}
 
-		}
+		//}
 
-		public Usuario(string idPersona, string nombre, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo, string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa) : base(idPersona, nombre, aPaterno, aMaterno, telefono, fechaNac, edad, sexo)
+		public Usuario(string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa, string nombre, string idPersona, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo) : base (idPersona, nombre, aPaterno, aMaterno, telefono, fechaNac, edad, sexo)
 		{
 			// datos de persona
 			base.Nombre = nombre;
@@ -169,36 +157,40 @@ namespace DeliveryApp.Modelos
 			// datos de direccion
 			this.dir = new Direccion(pais, estado, ciudad, calle1, calle2, colonia, numCasa);
 			// registrar
-			RegistrarUsuario();
 		}
 
-		public bool RegistrarUsuario()
+		public bool RegistrarUsuario(ref string msg)
         {
-			//EXEC dbo.uspGetAddress @City = 'New York'
 			SqlConnection conx = new SqlConnection
 			(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+				"Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
 			);
 
 			conx.Open();
 
-			SqlCommand consulta = new SqlCommand
-			("EXEC Sp_CrearUsuario " +
-			 "@Nombre="+this.Nombre+","+
-			 "@Apaterno="+this.APaterno+","+
-			 "@Amaterno="+this.AMaterno+","+
-			 "", conx);
+			SqlCommand consulta = new SqlCommand("EXEC Sp_CrearUsuario '"+this.Nombre+"','"+this.APaterno+"','"+this.AMaterno+"','"+this.Telefono+"','"+this.FechaNac+"','"+this.correo+"','"+this.Sexo+"','"+this.Edad+"','"+this.contraseña+"','"+this.dir.Pais+"','"+this.dir.Estado+"','"+this.dir.Ciudad+"','"+this.dir.Calle1+"','"+this.dir.Calle2+"','"+this.dir.Colonia+"','"+this.dir.NumCasa+"'",conx);
 
 			consulta.Prepare();
 			SqlDataReader resultado = consulta.ExecuteReader();
 
 			if (resultado.Read())
 			{
-				conx.Close();
+				string correo = correo = resultado.GetString(0);
+				try
+				{
+					this.IdPersona = resultado.GetString(1);
+					msg = "Se ha registrado correctamente";
+				}
+				catch
+                {
+					msg = "El correo ya se encuentra registrado ";
+				}
+                conx.Close();
 				return true;
 			}
 			else
 			{
+				msg = "error en los valores";
 				conx.Close();
 				return false;
 			}

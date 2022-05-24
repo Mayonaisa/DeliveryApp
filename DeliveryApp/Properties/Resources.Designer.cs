@@ -19,7 +19,7 @@ namespace DeliveryApp.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,66 @@ namespace DeliveryApp.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_09_211231 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-09 211231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_09_212045 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-09 212045", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_194713 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 194713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_212152 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 212152", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_213108 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 213108", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Carrito_de_compra {
+            get {
+                object obj = ResourceManager.GetObject("Carrito de compra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -143,69 +203,39 @@ namespace DeliveryApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_09_211231 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-09 211231", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_09_212045 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-09 212045", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_194713 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 194713", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_212152 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 212152", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_05_11_213108 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2022-05-11 213108", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Carrito_de_compra {
-            get {
-                object obj = ResourceManager.GetObject("Carrito de compra", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap panel2_BackgroundImage {
             get {
                 object obj = ResourceManager.GetObject("panel2.BackgroundImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp1 {
+            get {
+                object obj = ResourceManager.GetObject("rp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp2 {
+            get {
+                object obj = ResourceManager.GetObject("rp2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp3 {
+            get {
+                object obj = ResourceManager.GetObject("rp3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
