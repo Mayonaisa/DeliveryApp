@@ -58,6 +58,11 @@
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\botonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -253,14 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vista\PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,7 +300,24 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Tacos de canasta.png" />
+    <None Include="Imagenes\Tacos de adobada.png" />
+    <None Include="Imagenes\sushi sweet.png" />
+    <None Include="Imagenes\Sushi mar y tierra.png" />
+    <None Include="Imagenes\Super Burros.png" />
+    <None Include="Imagenes\Quesatacos orden.png" />
+    <None Include="Imagenes\Quesadillas de Res.png" />
+    <None Include="Imagenes\Quesadillas de jamón.png" />
+    <None Include="Imagenes\Yakimeshi de res.png" />
     <None Include="Imagenes\Burro.png" />
+    <None Include="Imagenes\Burros de pollo.png" />
+    <None Include="Imagenes\ChochoFlan.png" />
+    <None Include="Imagenes\Combo Cuates.png" />
+    <None Include="Imagenes\hamburguesa-Pescado.png" />
+    <None Include="Imagenes\Hamburguesa-Pollo.png" />
+    <None Include="Imagenes\Malteada  Vainilla.png" />
+    <None Include="Imagenes\pizza caviar.png" />
+    <None Include="Imagenes\Pizza de camaron.png" />
     <Content Include="Imagenes\pizza.png" />
     <None Include="Imagenes\Taco.png" />
     <None Include="Imagenes\Quesadilla.png" />

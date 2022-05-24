@@ -9,7 +9,7 @@ using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Modelos
 {
-    class Detalle
+    public class Detalle
     {
         string idDetalle;
         SqlSingle monto;
@@ -48,8 +48,10 @@ namespace DeliveryApp.Modelos
             conx.Open();
 
             idDetalle = "DET" + numDet.ToString();
+            idOrden = Carro.idOrden;
+            monto = 0;
 
-            SqlCommand NuevoDetalle = new SqlCommand("INSERT Detalle values ('DET" + numDet.ToString() + "',0,'"+Carro.idOrden+"')", conx); //jhbj
+            SqlCommand NuevoDetalle = new SqlCommand("INSERT Detalle values ('DET" + numDet.ToString() + "',0,'"+idOrden+"')", conx); //jhbj
             NuevoDetalle.Prepare();
 
             SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
@@ -61,6 +63,22 @@ namespace DeliveryApp.Modelos
         //    IdOrden1 = Orden;
 
         //}
+
+        public void sumarMonto (SqlSingle cantidad)
+        {
+            monto += cantidad;
+            SqlConnection conx = new SqlConnection(
+                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+            conx.Open();
+
+            SqlCommand NuevoDetalle = new SqlCommand("update Detalle set monto = " + monto + " where idDetalle = '" + idDetalle + "'", conx); //jhbj
+            NuevoDetalle.Prepare();
+
+            SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
+        }
+
+
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
         public SqlSingle Monto { get => monto; set => monto = value; }
         public string IdOrden { get => idOrden; set => idOrden = value; }

@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.botonRedondo13 = new DeliveryApp.Recursos.botonRedondo();
-            this.botonRedondo14 = new DeliveryApp.Recursos.botonRedondo();
-            this.botonRedondo15 = new DeliveryApp.Recursos.botonRedondo();
-            this.botonRedondo16 = new DeliveryApp.Recursos.botonRedondo();
-            this.botonRedondo17 = new DeliveryApp.Recursos.botonRedondo();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.botonRedondo8 = new DeliveryApp.Recursos.botonRedondo();
@@ -75,8 +66,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelPrincipal.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
@@ -90,7 +79,6 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Controls.Add(this.panel4);
             this.panelPrincipal.Controls.Add(this.panel2);
             this.panelPrincipal.Controls.Add(this.panel3);
             this.panelPrincipal.Controls.Add(this.botonRedondo3);
@@ -101,154 +89,6 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1426, 839);
             this.panelPrincipal.TabIndex = 36;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.botonRedondo13);
-            this.panel4.Controls.Add(this.botonRedondo14);
-            this.panel4.Controls.Add(this.botonRedondo15);
-            this.panel4.Controls.Add(this.botonRedondo16);
-            this.panel4.Controls.Add(this.botonRedondo17);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(325, 522);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(801, 156);
-            this.panel4.TabIndex = 42;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_11_212152;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(148, 148);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 33;
-            this.pictureBox5.TabStop = false;
-            // 
-            // botonRedondo13
-            // 
-            this.botonRedondo13.BackColor = System.Drawing.Color.White;
-            this.botonRedondo13.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo13.FlatAppearance.BorderSize = 0;
-            this.botonRedondo13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.botonRedondo13.Location = new System.Drawing.Point(447, 18);
-            this.botonRedondo13.Name = "botonRedondo13";
-            this.botonRedondo13.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.botonRedondo13.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.botonRedondo13.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.botonRedondo13.Size = new System.Drawing.Size(43, 46);
-            this.botonRedondo13.TabIndex = 32;
-            this.botonRedondo13.Text = "-";
-            this.botonRedondo13.TextColor = System.Drawing.Color.White;
-            this.botonRedondo13.UseVisualStyleBackColor = false;
-            // 
-            // botonRedondo14
-            // 
-            this.botonRedondo14.BackColor = System.Drawing.Color.White;
-            this.botonRedondo14.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo14.FlatAppearance.BorderSize = 0;
-            this.botonRedondo14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.botonRedondo14.Location = new System.Drawing.Point(544, 18);
-            this.botonRedondo14.Name = "botonRedondo14";
-            this.botonRedondo14.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.botonRedondo14.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.botonRedondo14.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.botonRedondo14.Size = new System.Drawing.Size(43, 46);
-            this.botonRedondo14.TabIndex = 31;
-            this.botonRedondo14.Text = "+";
-            this.botonRedondo14.TextColor = System.Drawing.Color.White;
-            this.botonRedondo14.UseVisualStyleBackColor = false;
-            // 
-            // botonRedondo15
-            // 
-            this.botonRedondo15.BackColor = System.Drawing.Color.White;
-            this.botonRedondo15.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo15.FlatAppearance.BorderSize = 0;
-            this.botonRedondo15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.botonRedondo15.ForeColor = System.Drawing.Color.Black;
-            this.botonRedondo15.Location = new System.Drawing.Point(593, 81);
-            this.botonRedondo15.Name = "botonRedondo15";
-            this.botonRedondo15.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.botonRedondo15.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.botonRedondo15.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.botonRedondo15.Size = new System.Drawing.Size(189, 46);
-            this.botonRedondo15.TabIndex = 30;
-            this.botonRedondo15.Text = "Consultar";
-            this.botonRedondo15.TextColor = System.Drawing.Color.White;
-            this.botonRedondo15.UseVisualStyleBackColor = false;
-            // 
-            // botonRedondo16
-            // 
-            this.botonRedondo16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.botonRedondo16.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo16.FlatAppearance.BorderSize = 0;
-            this.botonRedondo16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.botonRedondo16.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo16.Location = new System.Drawing.Point(593, 18);
-            this.botonRedondo16.Name = "botonRedondo16";
-            this.botonRedondo16.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.botonRedondo16.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.botonRedondo16.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.botonRedondo16.Size = new System.Drawing.Size(189, 46);
-            this.botonRedondo16.TabIndex = 29;
-            this.botonRedondo16.Text = "Agregar";
-            this.botonRedondo16.TextColor = System.Drawing.Color.White;
-            this.botonRedondo16.UseVisualStyleBackColor = false;
-            this.botonRedondo16.Click += new System.EventHandler(this.botonRedondo16_Click);
-            // 
-            // botonRedondo17
-            // 
-            this.botonRedondo17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.botonRedondo17.ButtonColor = System.Drawing.Color.Red;
-            this.botonRedondo17.FlatAppearance.BorderSize = 0;
-            this.botonRedondo17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.botonRedondo17.Location = new System.Drawing.Point(496, 18);
-            this.botonRedondo17.Name = "botonRedondo17";
-            this.botonRedondo17.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.botonRedondo17.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.botonRedondo17.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.botonRedondo17.Size = new System.Drawing.Size(43, 46);
-            this.botonRedondo17.TabIndex = 28;
-            this.botonRedondo17.Text = "n";
-            this.botonRedondo17.TextColor = System.Drawing.Color.White;
-            this.botonRedondo17.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(49)))));
-            this.label5.Location = new System.Drawing.Point(182, 67);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 29);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Monto";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(182, 26);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 29);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Nombre Producto";
             // 
             // panel2
             // 
@@ -788,9 +628,6 @@
             this.Load += new System.EventHandler(this.MenuCliente_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -810,15 +647,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private Recursos.botonRedondo botonRedondo13;
-        private Recursos.botonRedondo botonRedondo14;
-        private Recursos.botonRedondo botonRedondo15;
-        private Recursos.botonRedondo botonRedondo16;
-        private Recursos.botonRedondo botonRedondo17;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Recursos.botonRedondo botonRedondo8;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,12 @@ namespace DeliveryApp.Recursos
         public string estatus = "";
         int numOrden = 0;
 
-        Detalle det;
+        public Detalle detalle;
+        public DetalleTieneProducto DetTProd;
+
+        public List<string> nombreProd = new List<string>();
+        public List<string> cantidad = new List<string>();
+        public List<string> monto = new List<string>();
         public CarritoC()
         {
             
@@ -98,6 +104,13 @@ namespace DeliveryApp.Recursos
             SqlDataReader resultado = Orden.ExecuteReader();
 
             leer();
+        }
+
+        public void AgregarElemento (string nombre, string cant, string mont)
+        {
+            nombreProd.Add(nombre);
+            cantidad.Add(cant);
+            monto.Add(mont);
         }
     }
 }

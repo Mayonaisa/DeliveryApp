@@ -30,7 +30,7 @@ namespace DeliveryApp.Vista
             panelMenu.Location = new Point(-291, -1);
             panelPrincipal.Location = new Point(-1, -1);
 
-            Carro.crear();
+            //Carro.crear();
 
             //CarritoC nuevo = new CarritoC();
             //nuevo.nuevo_producto();
@@ -38,8 +38,12 @@ namespace DeliveryApp.Vista
 
             ////////////////////////////////////////////Prueba/////////////////////////
             PanelProducto prueba = new PanelProducto(13,Carro);
-            prueba.Crear_Panel_menu(prueba.prod.Nombre, 325, 680);
+            prueba.Crear_Panel_menu(prueba.prod.Nombre, 325, 522);
             this.panelPrincipal.Controls.Add(prueba);
+
+            PanelProducto prueba2 = new PanelProducto(14, Carro);
+            prueba2.Crear_Panel_menu(prueba2.prod.Nombre, 325, 680);
+            this.panelPrincipal.Controls.Add(prueba2);
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)

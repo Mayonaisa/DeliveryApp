@@ -48,6 +48,15 @@ namespace DeliveryApp.Vista
 
         private void Carrito_Load(object sender, EventArgs e)
         {
+            int y = 600;
+            ////prueba
+            for(int n = 0; n < Carro.nombreProd.Count;n++)
+            {
+                PanelProducto prueba = new PanelProducto(Carro);
+                prueba.Crear_Panel_carrito(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 320, y);
+                this.Controls.Add(prueba);
+                y += 82;
+            }
             
         }
     }

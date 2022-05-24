@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,8 @@ namespace DeliveryApp.Recursos
         int montoP = 0;
 
         public Producto prod;
+        public DetalleTieneProducto detProd;
+        Detalle det;
 
         CarritoC Carro;
 
@@ -38,6 +41,11 @@ namespace DeliveryApp.Recursos
             //inicio una conexion y le doy los valores a nombreP y montoP
         }
 
+        public PanelProducto(CarritoC c)
+        {
+            Carro = c;
+        }
+
         public void Crear_Panel_menu(string imagen, /*string producto, string monto,*/ int x, int y)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
@@ -48,6 +56,9 @@ namespace DeliveryApp.Recursos
 
             Imagen = new PictureBox();
             this.Controls.Add(this.Imagen);
+
+            imagen = imagen.Replace(' ', '_');
+
             this.Imagen.Image = ((System.Drawing.Image)(resources.GetObject(imagen)));
             //this.Imagen.Image = Image.FromFile(Server.MapPath("~/Image/undefinedProfileImage.png"));
             this.Imagen.Location = new System.Drawing.Point(3, 3);
@@ -84,7 +95,7 @@ namespace DeliveryApp.Recursos
             this.BRcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BRcantidad.Location = new Point(496, 18);
             this.BRcantidad.Size = new System.Drawing.Size(43, 46);
-            this.BRcantidad.Text = "0";
+            this.BRcantidad.Text = "1";
             this.BRcantidad.FlatAppearance.BorderSize = 0;
 
             BRmenos = new botonRedondo();
@@ -135,7 +146,7 @@ namespace DeliveryApp.Recursos
 
         }
 
-        public void Crear_Panel_carrito(string texto, string monto, int x, int y)
+        public void Crear_Panel_carrito(string texto, string monto,string cantidad, int x, int y)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
@@ -170,7 +181,7 @@ namespace DeliveryApp.Recursos
             this.BRcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BRcantidad.Location = new Point(234, 18);
             this.BRcantidad.Size = new System.Drawing.Size(43, 46);
-            this.BRcantidad.Text = "0";
+            this.BRcantidad.Text = cantidad;
             this.BRcantidad.FlatAppearance.BorderSize = 0;
 
             BRprincipal = new botonRedondo();
@@ -193,7 +204,7 @@ namespace DeliveryApp.Recursos
             {
                 int cantidad = int.Parse(BRcantidad.Text);
                 //bruh nibba text here
-                if (cantidad > 0)
+                if (cantidad > 1)
                 {
                     cantidad--;
                     BRcantidad.Text = cantidad.ToString();
@@ -223,10 +234,28 @@ namespace DeliveryApp.Recursos
                 if(Carro.idDetalle == "nulo")
                 {
                     //MessageBox.Show("nulo");
-                    Detalle det = new Detalle(Carro);
+                    det = new Detalle(Carro);
                     Carro.update(det.IdDetalle, Carro.estatus);
+                    detProd = new DetalleTieneProducto(det.IdDetalle);
+                    Carro.DetTProd = detProd;
+                    Carro.detalle = det;
                 }
+                else
+                {
+                    det = Carro.detalle;
+                    detProd = Carro.DetTProd;
+                }
+                agregar();
             }
+        }
+
+        private void agregar()
+        {
+            detProd.nuevoProd(int.Parse(BRcantidad.Text), prod.IdProducto);
+            //metodo que recalcule el monto en detalle
+            SqlSingle precio = int.Parse(BRcantidad.Text) * prod.Precio;
+            det.sumarMonto(precio);
+            Carro.AgregarElemento(prod.Nombre, BRcantidad.Text, det.Monto.ToString());
         }
 
         private void btn_consultar_click(object sender, EventArgs e)
