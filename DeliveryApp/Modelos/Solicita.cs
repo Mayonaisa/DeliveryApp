@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DeliveryApp.Modelos
 {
-    class Solicita
+    public class Solicita
     {
         string idCliente; /*{ get; set; }*/
         string fecha;

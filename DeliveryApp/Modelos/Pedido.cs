@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DeliveryApp.Modelos
 {
-    class Pedido
+    public class Pedido
     {
         List <Orden> orden;
         List <Detalle> detalle;
@@ -18,6 +18,7 @@ namespace DeliveryApp.Modelos
         Orden iOrden;
         Detalle iDetalle;
         Solicita iSolicita;
+        string Ipersona;
 
         //public Pedido() { }
         public Pedido(Orden orde, Detalle Deta, Solicita Soli) 
@@ -31,6 +32,10 @@ namespace DeliveryApp.Modelos
         internal List<Orden> Orden { get => orden; set => orden = value; }
         internal List<Detalle> Detalle { get => detalle; set => detalle = value; }
         internal List<Solicita> Solicitud { get => solicitud; set => solicitud = value; }
+        public string Ipersona1 { get => Ipersona; set => Ipersona = value; }
+        public Orden IOrden { get => iOrden; set => iOrden = value; }
+        public Detalle IDetalle { get => iDetalle; set => iDetalle = value; }
+        public Solicita ISolicita { get => iSolicita; set => iSolicita = value; }
 
 
         //public string Persona1 { get => Persona; set => Persona = value; }
@@ -129,6 +134,47 @@ namespace DeliveryApp.Modelos
             SqlDataReader resultado = consulta.ExecuteReader();
             if (resultado.Read())
             {
+
+            }
+
+            conx.Close();
+        }
+        public void PedidoIndi(string idOrden)
+        {
+            SqlConnection conx = new SqlConnection(
+                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT S.idOrden,D.idDetalle,D.monto,O.estatus,P.nombre,P.aPaterno,P.aMaterno, S.fechaSolicitud from Solicita S,Orden O, Detalle D,Persona P where S.idOrden = '"+idOrden+"' and O.idOrden = '"+idOrden+"' and D.idDetalle = O.idDetalle and S.idCliente = P.idPersona", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                this.iDetalle = new Detalle();
+                this.iOrden = new Orden();
+                this.Ipersona1 = null;
+                this.ISolicita = new Solicita();
+
+                iSolicita.OrdenId1 = resultado.GetString(0).Trim();
+                iOrden.IdOrden = resultado.GetString(0).Trim();
+                iDetalle.IdOrden = resultado.GetString(0).Trim();
+
+                iOrden.IdDetalle = resultado.GetString(1).Trim();
+                iDetalle.IdDetalle = resultado.GetString(1).Trim();
+                iOrden.IdDetalle = resultado.GetString(1).Trim();
+
+                iDetalle.Monto = decimal.Parse(resultado.GetValue(2).ToString().Trim());
+                iOrden.Estatus = resultado.GetString(3).Trim();
+                Ipersona = resultado.GetString(4).Trim();
+                Ipersona += " " + resultado.GetString(5).Trim();
+                Ipersona += " " + resultado.GetString(6).Trim();
+
+                iSolicita.Fecha = resultado.GetString(7).Trim();
 
             }
 

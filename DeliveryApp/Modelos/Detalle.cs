@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DeliveryApp.Modelos
 {
-    class Detalle
+    public class Detalle
     {
         string idDetalle;
         decimal monto;

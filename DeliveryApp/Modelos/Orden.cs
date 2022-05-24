@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DeliveryApp.Modelos
 {
-    class Orden
+    public class Orden
     {
         string idOrden; /*{ get; set; }*/
         string estatus;

@@ -8,23 +8,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomControls.RJControls;
+using DeliveryApp.Modelos;
+using DeliveryApp.Controladores;
 
 namespace DeliveryApp.Vista
 {
     public partial class ConsultaEspecificaPedidosRecep : Form
     {
         Panel contenedor;
-        public ConsultaEspecificaPedidosRecep(Panel p)
+        Pedido Pedidos;
+        Repartidor Rep;
+        Vehiculo Veh;
+        public ConsultaEspecificaPedidosRecep(Panel p, Pedido Consulta, Repartidor R, Vehiculo V)
         {
+            Rep = R;
+            Veh = V;
+            Pedidos = Consulta;
             contenedor= p;
-            InitializeComponent();
-            CustomControls.RJControls.RJButton Boton=new RJButton();
-            this.Controls.Add(Boton);
+            InitializeComponent(); 
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            string Mensaje = null;
+            ConsultarPedido.ObtenerPedido(ref Pedidos, ref Mensaje);
+
+        }
+        public void Desplegar(Form f)
+        {
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = f.Width;
+            contenedor.Height = f.Height;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            contenedor.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            Recepcionista R=new Recepcionista();
+            PedidosPendientes Volver = new PedidosPendientes(R,contenedor);
+            Desplegar(Volver);
+            
+
+        }
+
+        private void ConsultaEspecificaPedidosRecep_Load(object sender, EventArgs e)
+        {
+            txtCliente.Texts = Pedidos.Ipersona1;
+            txtEstatus.Texts =Pedidos.IOrden.Estatus;
+            txtTotal.Texts =Pedidos.IDetalle.Monto.ToString();
+            cmbxRepart.Texts = Rep.Nombre+Rep.AMaterno+Rep.APaterno;
+            cmbxVehi.Texts = Veh.Modelo+Veh.Marca+", "+Veh.IdVehiculo;
+            
         }
     }
 }

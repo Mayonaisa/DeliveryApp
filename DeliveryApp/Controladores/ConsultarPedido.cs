@@ -48,5 +48,33 @@ namespace DeliveryApp.Controladores
 
             }
         }
+        public static void PedidoEspecifico( string id,ref Pedido PedN, ref Repartidor Rep, ref Vehiculo Veh, ref string mensaje)
+        {
+            try
+            {
+                //PedN = new Pedido();
+                PedN.PedidoIndi(id);
+                Rep.IdEntrega(id);
+                Veh.IdEntrega(id);
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;                  
+            }
+        }
+        public static void ObtenerRepartidores( ref List<Repartidor> Rep, ref string mensaje)
+        {
+            try
+            {
+                int i = 0;
+                int max = 0;
+                
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+        }
     }
 }

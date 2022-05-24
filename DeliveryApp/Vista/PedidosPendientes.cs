@@ -18,8 +18,9 @@ namespace DeliveryApp.Vista
         Recepcionista Rep=new Recepcionista();
         Panel contenedor=new Panel();
         Pedido pedidos;
-        ConsultarPedido Consulta;
         DataGridViewButtonColumn Aceptar = new DataGridViewButtonColumn();
+        Repartidor Repar;
+        Vehiculo Veh;
         string Mensaje;
 
         
@@ -53,13 +54,25 @@ namespace DeliveryApp.Vista
                     CambiarBoton(e.RowIndex);
                     dgvPedidos.Refresh();
 
+
                 }
                 
 
             }
             else
             {
-                ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor);
+                string error=null;
+                pedidos = new Pedido();
+                Repar = new Repartidor();
+                Veh = new Vehiculo();
+                string PedID = null;
+                PedID = dgvPedidos[0, e.RowIndex].Value.ToString().Trim();
+                ConsultarPedido.PedidoEspecifico(PedID,ref pedidos,ref Repar, ref Veh, ref error);
+                ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor,pedidos,Repar,Veh);
+                if (error != null)
+                {
+                    MessageBox.Show(error);
+                }
                 Desplegar(Pedidos);
             }
 
