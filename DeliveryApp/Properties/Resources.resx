@@ -172,4 +172,58 @@
   <data name="rp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rp3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Burros_de_pollo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Burros de pollo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChochoFlan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\ChochoFlan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Combo_Cuates" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Combo Cuates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburguesa_Pescado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\hamburguesa-Pescado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hamburguesa_Pollo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Hamburguesa-Pollo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Malteada__Vainilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Malteada  Vainilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pizza_caviar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\pizza caviar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pizza_de_camaron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Pizza de camaron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quesadillas_de_jamón" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Quesadillas de jamón.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quesadillas_de_Res" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Quesadillas de Res.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quesatacos_orden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Quesatacos orden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Super_Burros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Super Burros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sushi_mar_y_tierra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Sushi mar y tierra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sushi_sweet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\sushi sweet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Taco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tacos_de_adobada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Tacos de adobada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tacos_de_canasta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Tacos de canasta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yakimeshi_de_res" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Yakimeshi de res.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

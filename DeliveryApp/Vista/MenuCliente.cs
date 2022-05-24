@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Modelos;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
@@ -15,9 +16,11 @@ namespace DeliveryApp.Vista
     {
         bool mostrar = true;
         Panel contenedor = new Panel();
-        public MenuCliente(Panel p)
+        CarritoC Carro = new CarritoC();
+        public MenuCliente(Panel p, CarritoC c)
         {
             contenedor = p;
+            Carro = c;
             InitializeComponent();
         }
 
@@ -26,6 +29,21 @@ namespace DeliveryApp.Vista
             //panelMenu.Hide();
             panelMenu.Location = new Point(-291, -1);
             panelPrincipal.Location = new Point(-1, -1);
+
+            //Carro.crear();
+
+            //CarritoC nuevo = new CarritoC();
+            //nuevo.nuevo_producto();
+
+
+            ////////////////////////////////////////////Prueba/////////////////////////
+            PanelProducto prueba = new PanelProducto(13,Carro);
+            prueba.Crear_Panel_menu(prueba.prod.Nombre, 325, 522);
+            this.panelPrincipal.Controls.Add(prueba);
+
+            PanelProducto prueba2 = new PanelProducto(14, Carro);
+            prueba2.Crear_Panel_menu(prueba2.prod.Nombre, 325, 680);
+            this.panelPrincipal.Controls.Add(prueba2);
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
@@ -111,7 +129,7 @@ namespace DeliveryApp.Vista
 
         private void label11_Click(object sender, EventArgs e)
         {
-            Carrito CarritoV = new Carrito(contenedor);
+            Carrito CarritoV = new Carrito(contenedor,Carro);
 
             this.Hide();
             Desplegar(CarritoV);
@@ -120,7 +138,7 @@ namespace DeliveryApp.Vista
 
         private void label12_Click(object sender, EventArgs e)
         {
-            HistorialPedidos HistorialV = new HistorialPedidos(contenedor);
+            HistorialPedidos HistorialV = new HistorialPedidos(contenedor,Carro);
 
             this.Hide();
             Desplegar(HistorialV);
@@ -130,6 +148,16 @@ namespace DeliveryApp.Vista
         private void botonRedondo16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        void agregar (string nombre, string monto, int cantidad)
+        {
+
+        }
+
+        private void botonRedondo2_Click(object sender, EventArgs e)
+        {
+            agregar("pizza", "120", 3);
         }
     }
 }

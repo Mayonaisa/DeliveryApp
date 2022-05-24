@@ -12,26 +12,26 @@ namespace DeliveryApp.Controladores
         public static void ObtenerDetalleproducto(ref DetalleTieneProducto DerPed, ref string mensaje)
         {
 
-            try
-            {
-                DerPed = new DetalleTieneProducto();
-            }
-            catch (Exception ex)
-            {
-                mensaje = ex.Message;
-            }
+            //try
+            //{
+            //    DerPed = new DetalleTieneProducto();
+            //}
+            //catch (Exception ex)
+            //{
+            //    mensaje = ex.Message;
+            //}
         }
         public static void cantidadPedidos(ref int cantidad)
         {
-            DetalleTieneProducto detped = new DetalleTieneProducto();
-            try
-            {
-                cantidad = detped.Cantidad();
-            }
-            catch (Exception ex)
-            {
-                //mensaje = ex.Message;
-            }
+            //DetalleTieneProducto detped = new DetalleTieneProducto();
+            //try
+            //{
+            //    cantidad = detped.Cantidad();
+            //}
+            //catch (Exception ex)
+            //{
+            //    //mensaje = ex.Message;
+            //}
         }
     }
 }
