@@ -4,82 +4,116 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace DeliveryApp.Modelos
 {
-    class DetalleTieneProducto
+    public class DetalleTieneProducto
     {
-        List <string> idDetalle;
-        List <int> cantidad;
-        List <string> idproducto;
+        string idDetalle;
+        //SqlSingle cantidad;
+        //string idProducto;
 
-        public DetalleTieneProducto()
+        public string IdDetalle { get => idDetalle; set => idDetalle = value; }
+        //public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
+        //public string IdProducto { get => idProducto; set => idProducto = value; }
+
+
+        public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            idDetalle = idDet;
+            //cantidad = cant;
+            //idProducto = idProd;
 
 
-            conx.Open();
-
-            SqlCommand consulta = new SqlCommand("Select idDetalle,cantidad,idProducto from DetalleContieneProducto", conx);
-
-            consulta.Prepare();
-            SqlDataReader resultado = consulta.ExecuteReader();
-
-            idDetalle = new List<string>();
-            cantidad = new List<int>();
-            idproducto = new List<string>();
-
-            int i = 0;
-            int cant = Cantidad();
-
-            while (resultado.Read() && i<cant)
-            {
-                idDetalle.Add("");
-                cantidad.Add(0);
-                idproducto.Add("");
-
-                idDetalle[i] = resultado.GetString(0);
-                cantidad[i] =int.Parse(resultado.GetValue(1).ToString());
-                idproducto[i] = resultado.GetString(2);
-
-                i++;
-            }
-            conx.Close();
         }
 
-        public List<string> IdDetalle { get => idDetalle; set => idDetalle = value; }
-        public List<int> Cantidad1 { get => cantidad; set => cantidad = value; }
-        public List<string> Idproducto { get => idproducto; set => idproducto = value; }
-
-        public int Cantidad()
+        public void nuevoProd (int cantidad, string idProducto)
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
-
-
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) from DetalleContieneProducto", conx);
+            SqlCommand NuevaOrden = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "',"+cantidad.ToString()+",'"+idProducto+"')", conx);
+            NuevaOrden.Prepare();
 
-            int cantidad;
-            consulta.Prepare();
-            SqlDataReader resultado = consulta.ExecuteReader();
+            SqlDataReader resultado2 = NuevaOrden.ExecuteReader();
 
-            if (resultado.Read())
-            {
-                cantidad = resultado.GetInt32(0);
-            }
-            else
-            {
-                conx.Close();
-                throw new Exception("no se encontro el pedido");
-            }
-            conx.Close();
-            return cantidad;
+
         }
+
+        //List <string> idDetalle;
+        //List <int> cantidad;
+        //List <string> idproducto;
+
+        //public DetalleTieneProducto()
+        //{
+        //    SqlConnection conx = new SqlConnection(
+        //        "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+        //        );
+
+
+        //    conx.Open();
+
+        //    SqlCommand consulta = new SqlCommand("Select idDetalle,cantidad,idProducto from DetalleContieneProducto", conx);
+
+        //    consulta.Prepare();
+        //    SqlDataReader resultado = consulta.ExecuteReader();
+
+        //    idDetalle = new List<string>();
+        //    cantidad = new List<int>();
+        //    idproducto = new List<string>();
+
+        //    int i = 0;
+        //    int cant = Cantidad();
+
+        //    while (resultado.Read() && i<cant)
+        //    {
+        //        idDetalle.Add("");
+        //        cantidad.Add(0);
+        //        idproducto.Add("");
+
+        //        idDetalle[i] = resultado.GetString(0);
+        //        cantidad[i] =int.Parse(resultado.GetValue(1).ToString());
+        //        idproducto[i] = resultado.GetString(2);
+
+        //        i++;
+        //    }
+        //    conx.Close();
+        //}
+
+        //public List<string> IdDetalle { get => idDetalle; set => idDetalle = value; }
+        //public List<int> Cantidad1 { get => cantidad; set => cantidad = value; }
+        //public List<string> Idproducto { get => idproducto; set => idproducto = value; }
+
+        //public int Cantidad()
+        //{
+        //    SqlConnection conx = new SqlConnection(
+        //        "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+        //        );
+
+
+        //    conx.Open();
+
+        //    SqlCommand consulta = new SqlCommand("SELECT COUNT(*) from DetalleContieneProducto", conx);
+
+        //    int cantidad;
+        //    consulta.Prepare();
+        //    SqlDataReader resultado = consulta.ExecuteReader();
+
+        //    if (resultado.Read())
+        //    {
+        //        cantidad = resultado.GetInt32(0);
+        //    }
+        //    else
+        //    {
+        //        conx.Close();
+        //        throw new Exception("no se encontro el pedido");
+        //    }
+        //    conx.Close();
+        //    return cantidad;
+        //}
 
 
     }

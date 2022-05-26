@@ -31,7 +31,7 @@ namespace DeliveryApp.Vista
 
         private void ContenedorEmpleado_Load(object sender, EventArgs e)
         {
-            MenuRecep_Admin Inicio = new MenuRecep_Admin(empleado,ContenedorCatalogos);
+            MenuRecepcionista Inicio = new MenuRecepcionista(empleado,ContenedorCatalogos);
             ContenedorCatalogos.Width = Inicio.Width;
             ContenedorCatalogos.Height = Inicio.Height;
             //this.AutoSize = true;
@@ -62,7 +62,7 @@ namespace DeliveryApp.Vista
 
         private void panel4_Click(object sender, EventArgs e)
         {
-            MenuRecep_Admin Men = new MenuRecep_Admin(empleado,ContenedorCatalogos);
+            MenuRecepcionista Men = new MenuRecepcionista(empleado,ContenedorCatalogos);
             //ContenedorCatalogos.Controls.RemoveAt(0);
             Desplegar(Men);
 

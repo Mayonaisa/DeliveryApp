@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1921, 118);
             this.panel1.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             this.pictureBox3.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_211231;
             this.pictureBox3.Location = new System.Drawing.Point(1813, 37);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 46);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // 
             this.pictureBox2.Image = global::DeliveryApp.Properties.Resources.panel2_BackgroundImage;
             this.pictureBox2.Location = new System.Drawing.Point(37, 37);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(0, 962);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1921, 118);
             this.panel2.TabIndex = 11;
@@ -179,7 +179,7 @@
             this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo1.ForeColor = System.Drawing.Color.White;
             this.botonRedondo1.Location = new System.Drawing.Point(33, 31);
-            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo1.Name = "botonRedondo1";
             this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -200,7 +200,7 @@
             this.botonRedondo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo3.ForeColor = System.Drawing.Color.White;
             this.botonRedondo3.Location = new System.Drawing.Point(1595, 31);
-            this.botonRedondo3.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo3.Name = "botonRedondo3";
             this.botonRedondo3.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo3.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -246,7 +246,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(427, 295);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1067, 100);
             this.panel3.TabIndex = 17;
@@ -259,7 +259,7 @@
             this.botonRedondo6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRedondo6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo6.Location = new System.Drawing.Point(312, 22);
-            this.botonRedondo6.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo6.Name = "botonRedondo6";
             this.botonRedondo6.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo6.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -279,7 +279,7 @@
             this.botonRedondo4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo4.ForeColor = System.Drawing.Color.White;
             this.botonRedondo4.Location = new System.Drawing.Point(791, 22);
-            this.botonRedondo4.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo4.Name = "botonRedondo4";
             this.botonRedondo4.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo4.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -325,7 +325,7 @@
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Location = new System.Drawing.Point(427, 395);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1067, 100);
             this.panel4.TabIndex = 20;
@@ -338,7 +338,7 @@
             this.botonRedondo7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRedondo7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo7.Location = new System.Drawing.Point(312, 22);
-            this.botonRedondo7.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo7.Name = "botonRedondo7";
             this.botonRedondo7.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo7.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -358,7 +358,7 @@
             this.botonRedondo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo2.ForeColor = System.Drawing.Color.White;
             this.botonRedondo2.Location = new System.Drawing.Point(791, 22);
-            this.botonRedondo2.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo2.Name = "botonRedondo2";
             this.botonRedondo2.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo2.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -404,7 +404,7 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(427, 495);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1067, 100);
             this.panel5.TabIndex = 21;
@@ -417,7 +417,7 @@
             this.botonRedondo8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRedondo8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo8.Location = new System.Drawing.Point(312, 22);
-            this.botonRedondo8.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo8.Name = "botonRedondo8";
             this.botonRedondo8.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo8.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -437,7 +437,7 @@
             this.botonRedondo5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.botonRedondo5.ForeColor = System.Drawing.Color.White;
             this.botonRedondo5.Location = new System.Drawing.Point(791, 22);
-            this.botonRedondo5.Margin = new System.Windows.Forms.Padding(4);
+            this.botonRedondo5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonRedondo5.Name = "botonRedondo5";
             this.botonRedondo5.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.botonRedondo5.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -478,7 +478,7 @@
             // 
             this.pictureBox4.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_212045;
             this.pictureBox4.Location = new System.Drawing.Point(791, 183);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(51, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -500,10 +500,11 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Carrito";
             this.Text = "Carrito";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Carrito_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

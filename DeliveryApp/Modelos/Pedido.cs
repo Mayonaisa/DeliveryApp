@@ -15,8 +15,8 @@ namespace DeliveryApp.Modelos
         List <string> Persona;
         int cantidad;
 
-        Orden iOrden;
-        Detalle iDetalle;
+        string iOrden;
+        string iDetalle;
         Solicita iSolicita;
 
         //public Pedido() { }
@@ -63,7 +63,7 @@ namespace DeliveryApp.Modelos
             while (resultado.Read() && i<cantidad)
             {
                 solicitud.Add(new Solicita());
-                detalle.Add(new Detalle());
+                //detalle.Add(new Detalle());                     el comentario es temporal
                 orden.Add(new Orden());
                 Persona.Add("");
 
@@ -75,11 +75,11 @@ namespace DeliveryApp.Modelos
                 Detalle[i].IdDetalle = resultado.GetString(1);
                 Orden[i].IdDetalle = resultado.GetString(1);
 
-                Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());
+                //Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());                   el comentario es temporal
                 Orden[i].Estatus=resultado.GetString(3);
-                Persona[i]=resultado.GetString(4).Trim();
-                Persona[i] += " "+resultado.GetString(5).Trim();
-                Persona[i] += " "+resultado.GetString(6).Trim();
+                Persona[i]=resultado.GetString(4);
+                Persona[i] += resultado.GetString(5);
+                Persona[i] += resultado.GetString(6);
 
                 Solicitud[i].Fecha=resultado.GetString(7);
 
@@ -113,26 +113,6 @@ namespace DeliveryApp.Modelos
             }
             conx.Close();
             return cantidad;
-        }
-        public void EstatusPedido(string id)
-        {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
-
-
-            conx.Open();
-
-            SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='Aceptado' where idOrden= '"+id+"'", conx);
-
-            consulta.Prepare();
-            SqlDataReader resultado = consulta.ExecuteReader();
-            if (resultado.Read())
-            {
-
-            }
-
-            conx.Close();
         }
 
     }

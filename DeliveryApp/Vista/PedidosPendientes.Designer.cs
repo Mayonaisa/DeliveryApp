@@ -46,6 +46,7 @@
             this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Aceptar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +65,14 @@
             // 
             this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
             this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.FlatAppearance.BorderSize = 0;
-            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRedondo1.ForeColor = System.Drawing.Color.White;
             this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
             this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.White;
             this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
             this.botonRedondo1.TabIndex = 1;
             this.botonRedondo1.Text = "Consulta";
@@ -99,7 +97,8 @@
             this.C1,
             this.C2,
             this.Colo,
-            this.NCasa});
+            this.NCasa,
+            this.Aceptar});
             this.dgvPedidos.Location = new System.Drawing.Point(5, -1);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersWidth = 51;
@@ -230,6 +229,13 @@
             this.NCasa.ReadOnly = true;
             this.NCasa.Width = 125;
             // 
+            // Aceptar
+            // 
+            this.Aceptar.HeaderText = "";
+            this.Aceptar.MinimumWidth = 6;
+            this.Aceptar.Name = "Aceptar";
+            this.Aceptar.Width = 125;
+            // 
             // PedidosPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,7 +249,6 @@
             this.Name = "PedidosPendientes";
             this.Text = "PedidosPendientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PedidosPendientes_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
@@ -271,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NCasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Aceptar;
     }
 }

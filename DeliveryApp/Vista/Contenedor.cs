@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Vista;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
     public partial class Contenedor : Form
     {
-        
+
+        CarritoC Carro;
 
         public Contenedor()
         {
@@ -22,7 +24,10 @@ namespace DeliveryApp.Vista
 
         private void Contenedor_Load(object sender, EventArgs e)
         {
-            PantallaInicio Inicio = new PantallaInicio(PanelContenedor);
+            Carro = new CarritoC();
+            Carro.crear();
+
+            PantallaInicio Inicio = new PantallaInicio(PanelContenedor,Carro);
             PanelContenedor.Width = Inicio.Width;
             PanelContenedor.Height = Inicio.Height;
             this.AutoSize = true;
