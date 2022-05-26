@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -20,12 +21,9 @@ namespace DeliveryApp.Modelos
         Solicita iSolicita;
         string Ipersona;
 
-        //public Pedido() { }
         public Pedido(Orden orde, Detalle Deta, Solicita Soli) 
         {
-            //orden = orde;
-            //detalle = Deta;
-            //solicitud=Soli;
+            
         }
 
         public List<string> Persona1 { get => Persona; set => Persona = value; }
@@ -37,17 +35,9 @@ namespace DeliveryApp.Modelos
         public Detalle IDetalle { get => iDetalle; set => iDetalle = value; }
         public Solicita ISolicita { get => iSolicita; set => iSolicita = value; }
 
-
-        //public string Persona1 { get => Persona; set => Persona = value; }
-        //internal Orden Orden { get => orden; set => orden = value; }
-        //internal Detalle Detalle { get => detalle; set => detalle = value; }
-        //internal Solicita Solicitud { get => solicitud; set => solicitud = value; }
-
         public Pedido ()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
@@ -94,9 +84,7 @@ namespace DeliveryApp.Modelos
         }
         public int Cantidad()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
@@ -121,9 +109,7 @@ namespace DeliveryApp.Modelos
         }
         public void EstatusPedido(string id)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
@@ -141,9 +127,7 @@ namespace DeliveryApp.Modelos
         }
         public void PedidoIndi(string idOrden)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();

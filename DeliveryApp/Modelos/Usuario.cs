@@ -58,42 +58,10 @@ namespace DeliveryApp.Modelos
             Correo = correo;
 
         }
-		//public static Usuario BuscarContraseña(string correo, string contraseña)
-		//{
-		//	//consulta la base de datos
-		//	OdbcConnection conx = new OdbcConnection(
-		//	"Driver={ODBC Driver 17 for SQL Server};" +
-		//	"Server=localhost;" +
-		//	"Database = DeliveryApp;" +
-		//	"trusted_connection = Yes;"
-		//	//"UID = myUsername;" +
-		//	//"PWD = myPassword;"
-		//	);
-		//	conx.Open();
-		//	OdbcCommand consulta = new OdbcCommand("SELECT idPersona, correo, contraseña FROM Usuario WHERE contraseña=?", conx);
-		//	consulta.Parameters.Add("contraseña", OdbcType.VarChar).Value = contraseña;
-		//	//consulta.Parameters.Add("contraseña", OdbcType.VarChar).Value = contraseña;
-		//	consulta.Prepare();
-		//	OdbcDataReader resultado = consulta.ExecuteReader();
-		//	if (resultado.Read())
-		//	{
-		//		Usuario USR = new Usuario();
-		//		USR.IdPersona = resultado.GetString(0);
-		//		USR.correo = resultado.GetString(1);
-		//		USR.contraseña = resultado.GetString(2);
-		//		return USR;
-		//	}
-		//	return null;
-		//}
 		public bool BuscarRecepcionista(Usuario User)
         {
-			//SqlConnection conx = new SqlConnection(
-			//	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
-			//	);
 
-			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 			conx.Open();
 
@@ -116,13 +84,7 @@ namespace DeliveryApp.Modelos
 		}
 		public bool BuscarCliente(Usuario User)
 		{
-			//SqlConnection conx = new SqlConnection(
-			//	"Data Source=DESKTOP-I0PHDQ6" +
-			//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
-			//	);
-			SqlConnection conx = new SqlConnection(
-				"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 			conx.Open();
 

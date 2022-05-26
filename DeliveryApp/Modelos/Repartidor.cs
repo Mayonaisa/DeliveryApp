@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -15,9 +16,7 @@ namespace DeliveryApp.Modelos
         }
         public void IdEntrega(string idOrden)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
@@ -43,9 +42,7 @@ namespace DeliveryApp.Modelos
         }
         public int cantidad()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
@@ -70,9 +67,7 @@ namespace DeliveryApp.Modelos
         }
         public void ListaRepartidores(int max, ref List<Repartidor> Rep)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();

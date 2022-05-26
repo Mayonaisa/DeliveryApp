@@ -8,6 +8,7 @@ namespace DeliveryApp.Modelos
 {
     public class Cliente: Usuario
     {
+        
         public Cliente()
         {
 

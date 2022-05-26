@@ -14,29 +14,7 @@ namespace DeliveryApp.Modelos
         string OrdenId;
         public Solicita()
         {
-            //SqlConnection conx = new SqlConnection(
-            //    "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-            //    );
 
-
-            //conx.Open();
-
-            //SqlCommand consulta = new SqlCommand("SELECT idCliente, fechaSolicitud, idOrden FROM Solicita", conx);
-
-            //consulta.Prepare();
-            //SqlDataReader resultado = consulta.ExecuteReader();
-
-            //if (resultado.Read())
-            //{
-            //    idCliente = resultado.GetString(0);
-            //    fech = resultado.GetString(1);
-            //    OrdenId = resultado.GetString(2);
-            //}
-            //else
-            //{
-            //    throw new Exception("no se encontro el usuario");
-            //}
-            //conx.Close();
         }
         public Solicita(string id, string fech, string idOrden)
         {
