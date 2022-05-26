@@ -200,5 +200,49 @@ namespace DeliveryApp
                 }
             }
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            int val = Login.validarNomu("Roberto1234");
+            if (val == 0)
+            {
+                tbxCorreo.BorderColor = borde;
+                if (tbxContraseña.Texts.Length < 30)
+                {
+                    // login
+                    tbxContraseña.BorderColor = borde;
+
+                    int tipoUsuario = Login.ingresar("Roberto1234", "Roberto1234_1");
+
+                    switch (tipoUsuario)
+                    {
+                        case 0:
+                            MessageBox.Show("usuario no existe");
+                            break;
+                        case 1:
+                            MessageBox.Show("contraseña incorrecta");
+                            break;
+                        case 2:
+                            MessageBox.Show("administrador");
+                            //MenuAdministrador menu = new MenuAdministrador();
+                            //Desplegar(menu);
+                            break;
+                        case 3:
+                            MessageBox.Show("recepcionista");
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            Desplegar(menuR);
+                            break;
+                        case 4:
+                            MessageBox.Show("usuario normal");
+                            MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Desplegar(menu);
+                            break;
+                        default:
+                            MessageBox.Show("ERROR");
+                            break;
+                    }
+                }
+            }
+        }
     }
 }
