@@ -66,7 +66,26 @@ namespace DeliveryApp.Modelos
 
         public void sumarMonto (SqlSingle cantidad)
         {
-            monto += cantidad;
+            SqlSingle cant = 0;
+            SqlConnection conx = new SqlConnection(
+                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                );
+            conx.Open();
+
+            SqlCommand NuevoDetalle = new SqlCommand("Select monto from Detalle where idDetalle = '" + idDetalle + "'", conx); //jhbj
+            NuevoDetalle.Prepare();
+
+            SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
+            if (resultado2.Read())
+            {
+                cant = resultado2.GetSqlSingle(0);
+                actualizarMonto(cantidad, cant);
+            }
+        }
+
+        private void actualizarMonto (SqlSingle cantNueva, SqlSingle cantVieja)
+        {
+            monto += (cantNueva + cantVieja);
             SqlConnection conx = new SqlConnection(
                 "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );

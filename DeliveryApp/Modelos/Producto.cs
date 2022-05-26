@@ -46,12 +46,12 @@ namespace DeliveryApp.Modelos
                 Precio = resultado.GetSqlSingle(3);
 
                 //prueba
-                MessageBox.Show("si hay :)");
+                //MessageBox.Show("si hay :)");
             }
             else
             {
                 //prueba
-                MessageBox.Show("no se encontró el producto");
+                //MessageBox.Show("no se encontró el producto");
             }
         }
     }
