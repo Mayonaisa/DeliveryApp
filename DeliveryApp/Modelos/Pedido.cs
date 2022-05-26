@@ -133,7 +133,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT S.idOrden,D.idDetalle,D.monto,O.estatus,P.nombre,P.aPaterno,P.aMaterno, S.fechaSolicitud from Solicita S,Orden O, Detalle D,Persona P where S.idOrden = '"+idOrden+"' and O.idOrden = '"+idOrden+"' and D.idDetalle = O.idDetalle and S.idCliente = P.idPersona", conx);
+            SqlCommand consulta = new SqlCommand("SELECT O.idOrden,O.idDetalle,O.estatus,D.monto FROM Orden O,Detalle D where O.idOrden='"+idOrden+"' and D.idOrden='"+idOrden+"' and O.estatus!='nulo'", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -151,15 +151,15 @@ namespace DeliveryApp.Modelos
 
                 iOrden.IdDetalle = resultado.GetString(1).Trim();
                 iDetalle.IdDetalle = resultado.GetString(1).Trim();
-                iOrden.IdDetalle = resultado.GetString(1).Trim();
 
-                iDetalle.Monto = resultado.GetSqlSingle(2);
-                iOrden.Estatus = resultado.GetString(3).Trim();
-                Ipersona = resultado.GetString(4).Trim();
-                Ipersona += " " + resultado.GetString(5).Trim();
-                Ipersona += " " + resultado.GetString(6).Trim();
+                iOrden.Estatus = resultado.GetString(2).Trim();
+                iDetalle.Monto = resultado.GetSqlSingle(3);
+                
+                //Ipersona = resultado.GetString(4).Trim();
+                //Ipersona += " " + resultado.GetString(5).Trim();
+                //Ipersona += " " + resultado.GetString(6).Trim();
 
-                iSolicita.Fecha = resultado.GetString(7).Trim();
+                //iSolicita.Fecha = resultado.GetString(7).Trim();
 
             }
 

@@ -45,6 +45,9 @@ namespace DeliveryApp.Modelos
             }
             else
             {
+                this.idVehiculo ="";
+                this.modelo ="";
+                this.marca ="";
                 conx.Close();
                 throw new Exception("no se encontro el pedido");
             }

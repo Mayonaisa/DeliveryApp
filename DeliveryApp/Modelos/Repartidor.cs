@@ -35,6 +35,10 @@ namespace DeliveryApp.Modelos
             }
             else
             {
+                this.IdPersona = null;
+                this.Nombre = "";
+                this.APaterno ="";
+                this.AMaterno = "";
                 conx.Close();
                 throw new Exception("no se encontro el pedido");
             }
@@ -55,6 +59,7 @@ namespace DeliveryApp.Modelos
             if (resultado.Read())
             {
                 cant= resultado.GetInt32(0);
+                
                 return cant = resultado.GetInt32(0);
                 
             }
@@ -63,7 +68,7 @@ namespace DeliveryApp.Modelos
                 conx.Close();
                 throw new Exception("no se encontro el pedido");
             }
-            conx.Close();
+            
         }
         public void ListaRepartidores(int max, ref List<Repartidor> Rep)
         {
