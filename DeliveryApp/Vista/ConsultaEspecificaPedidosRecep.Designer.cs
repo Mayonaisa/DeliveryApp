@@ -422,10 +422,10 @@
             "En camino"});
             this.txtEstatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.txtEstatus.ListTextColor = System.Drawing.Color.DimGray;
-            this.txtEstatus.Location = new System.Drawing.Point(379, 225);
+            this.txtEstatus.Location = new System.Drawing.Point(398, 225);
             this.txtEstatus.MinimumSize = new System.Drawing.Size(200, 30);
             this.txtEstatus.Name = "txtEstatus";
-            this.txtEstatus.Size = new System.Drawing.Size(200, 41);
+            this.txtEstatus.Size = new System.Drawing.Size(227, 41);
             this.txtEstatus.TabIndex = 10;
             this.txtEstatus.Texts = "";
             // 

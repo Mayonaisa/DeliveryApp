@@ -49,7 +49,7 @@ namespace DeliveryApp.Modelos
                 this.modelo ="";
                 this.marca ="";
                 conx.Close();
-                throw new Exception("no se encontro el pedido");
+                //throw new Exception("no se encontro el pedido");
             }
             conx.Close();
         }

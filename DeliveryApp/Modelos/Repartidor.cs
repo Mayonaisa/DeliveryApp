@@ -40,7 +40,7 @@ namespace DeliveryApp.Modelos
                 this.APaterno ="";
                 this.AMaterno = "";
                 conx.Close();
-                throw new Exception("no se encontro el pedido");
+                //throw new Exception("no se encontro el pedido");
             }
             conx.Close();
         }
