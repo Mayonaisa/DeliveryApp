@@ -38,5 +38,11 @@ namespace DeliveryApp.Controladores
                 return false;
             }
         }
+
+        public static int ingresar(string usuario, string contraseña)
+        {
+            int tipoUsuario = Usuario.validarCredenciales(usuario, contraseña);
+            return tipoUsuario;
+        }
     }
 }

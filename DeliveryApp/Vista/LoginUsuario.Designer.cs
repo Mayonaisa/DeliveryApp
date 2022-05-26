@@ -39,23 +39,23 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlInferior = new System.Windows.Forms.Panel();
             this.lblContraseña = new System.Windows.Forms.Label();
+            this.btnLogin = new CustomControls.RJControls.RJButton();
+            this.tbxContraseña = new CustomControls.RJControls.RJTextBox();
+            this.tbxCorreo = new CustomControls.RJControls.RJTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblOlvidar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxCorreo = new CustomControls.RJControls.RJTextBox();
-            this.tbxContraseña = new CustomControls.RJControls.RJTextBox();
-            this.btnLogin = new CustomControls.RJControls.RJButton();
-            this.pnlInferior = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblOlvidar = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlInferior.SuspendLayout();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblOlvidar)).BeginInit();
-            this.pnlInferior.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +172,16 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pnlInferior
+            // 
+            this.pnlInferior.Controls.Add(this.lblContraseña);
+            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInferior.Location = new System.Drawing.Point(0, 535);
+            this.pnlInferior.Name = "pnlInferior";
+            this.pnlInferior.Size = new System.Drawing.Size(408, 74);
+            this.pnlInferior.TabIndex = 31;
+            this.pnlInferior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInferior_Paint);
+            // 
             // lblContraseña
             // 
             this.lblContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -187,6 +197,85 @@
             this.lblContraseña.Text = "¿Olvidó su contraseña?";
             this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblContraseña.Click += new System.EventHandler(this.lblContraseña_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.BackgroundColor = System.Drawing.Color.Red;
+            this.btnLogin.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.BorderRadius = 20;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(100, 332);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(208, 50);
+            this.btnLogin.TabIndex = 30;
+            this.btnLogin.Text = "Iniciar sesion";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // tbxContraseña
+            // 
+            this.tbxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tbxContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tbxContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxContraseña.BorderRadius = 10;
+            this.tbxContraseña.BorderSize = 1;
+            this.tbxContraseña.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.tbxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxContraseña.Location = new System.Drawing.Point(100, 277);
+            this.tbxContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxContraseña.Multiline = false;
+            this.tbxContraseña.Name = "tbxContraseña";
+            this.tbxContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxContraseña.PasswordChar = true;
+            this.tbxContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxContraseña.PlaceholderText = "Contraseña";
+            this.tbxContraseña.Size = new System.Drawing.Size(208, 35);
+            this.tbxContraseña.TabIndex = 29;
+            this.tbxContraseña.Texts = "";
+            this.tbxContraseña.UnderlinedStyle = false;
+            // 
+            // tbxCorreo
+            // 
+            this.tbxCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tbxCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxCorreo.BorderRadius = 10;
+            this.tbxCorreo.BorderSize = 1;
+            this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxCorreo.Location = new System.Drawing.Point(100, 225);
+            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCorreo.Multiline = false;
+            this.tbxCorreo.Name = "tbxCorreo";
+            this.tbxCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxCorreo.PasswordChar = false;
+            this.tbxCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxCorreo.PlaceholderText = "Correo electronico";
+            this.tbxCorreo.Size = new System.Drawing.Size(208, 35);
+            this.tbxCorreo.TabIndex = 28;
+            this.tbxCorreo.Texts = "";
+            this.tbxCorreo.UnderlinedStyle = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(127, 158);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 33);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Iniciar sesion";
             // 
             // label2
             // 
@@ -211,32 +300,6 @@
             this.pnlSuperior.Size = new System.Drawing.Size(407, 111);
             this.pnlSuperior.TabIndex = 17;
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(121, 344);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
-            this.label8.TabIndex = 15;
-            // 
-            // lblOlvidar
-            // 
-            this.lblOlvidar.BackColor = System.Drawing.Color.White;
-            this.lblOlvidar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOlvidar.Image = ((System.Drawing.Image)(resources.GetObject("lblOlvidar.Image")));
-            this.lblOlvidar.Location = new System.Drawing.Point(0, 0);
-            this.lblOlvidar.Margin = new System.Windows.Forms.Padding(2);
-            this.lblOlvidar.Name = "lblOlvidar";
-            this.lblOlvidar.Size = new System.Drawing.Size(1440, 878);
-            this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.lblOlvidar.TabIndex = 8;
-            this.lblOlvidar.TabStop = false;
             // 
             // panel5
             // 
@@ -266,94 +329,31 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "DeliveryApp";
             // 
-            // label6
+            // label8
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(127, 158);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 33);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Iniciar sesion";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(121, 344);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.TabIndex = 15;
             // 
-            // tbxCorreo
+            // lblOlvidar
             // 
-            this.tbxCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxCorreo.BorderRadius = 10;
-            this.tbxCorreo.BorderSize = 1;
-            this.tbxCorreo.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxCorreo.Location = new System.Drawing.Point(100, 225);
-            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxCorreo.Multiline = false;
-            this.tbxCorreo.Name = "tbxCorreo";
-            this.tbxCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxCorreo.PasswordChar = false;
-            this.tbxCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxCorreo.PlaceholderText = "Correo electronico";
-            this.tbxCorreo.Size = new System.Drawing.Size(208, 38);
-            this.tbxCorreo.TabIndex = 28;
-            this.tbxCorreo.Texts = "";
-            this.tbxCorreo.UnderlinedStyle = false;
-            // 
-            // tbxContraseña
-            // 
-            this.tbxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxContraseña.BorderRadius = 10;
-            this.tbxContraseña.BorderSize = 1;
-            this.tbxContraseña.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxContraseña.Location = new System.Drawing.Point(100, 277);
-            this.tbxContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxContraseña.Multiline = false;
-            this.tbxContraseña.Name = "tbxContraseña";
-            this.tbxContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxContraseña.PasswordChar = false;
-            this.tbxContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxContraseña.PlaceholderText = "Contraseña";
-            this.tbxContraseña.Size = new System.Drawing.Size(208, 38);
-            this.tbxContraseña.TabIndex = 29;
-            this.tbxContraseña.Texts = "";
-            this.tbxContraseña.UnderlinedStyle = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Red;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.Red;
-            this.btnLogin.BorderColor = System.Drawing.Color.White;
-            this.btnLogin.BorderRadius = 20;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(100, 332);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(208, 50);
-            this.btnLogin.TabIndex = 30;
-            this.btnLogin.Text = "Iniciar sesion";
-            this.btnLogin.TextColor = System.Drawing.Color.White;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // pnlInferior
-            // 
-            this.pnlInferior.Controls.Add(this.lblContraseña);
-            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(0, 535);
-            this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(408, 74);
-            this.pnlInferior.TabIndex = 31;
-            this.pnlInferior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInferior_Paint);
+            this.lblOlvidar.BackColor = System.Drawing.Color.White;
+            this.lblOlvidar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblOlvidar.Image = ((System.Drawing.Image)(resources.GetObject("lblOlvidar.Image")));
+            this.lblOlvidar.Location = new System.Drawing.Point(0, 0);
+            this.lblOlvidar.Margin = new System.Windows.Forms.Padding(2);
+            this.lblOlvidar.Name = "lblOlvidar";
+            this.lblOlvidar.Size = new System.Drawing.Size(1440, 878);
+            this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.lblOlvidar.TabIndex = 8;
+            this.lblOlvidar.TabStop = false;
             // 
             // LoginUsuario
             // 
@@ -372,11 +372,11 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlInferior.ResumeLayout(false);
+            this.pnlInferior.PerformLayout();
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblOlvidar)).EndInit();
-            this.pnlInferior.ResumeLayout(false);
-            this.pnlInferior.PerformLayout();
             this.ResumeLayout(false);
 
         }

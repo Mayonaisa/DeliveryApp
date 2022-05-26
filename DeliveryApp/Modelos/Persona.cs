@@ -17,8 +17,9 @@ namespace DeliveryApp.Modelos
 		string fechaNac;
 		int edad;
 		string sexo;
+		Direccion dir;
 
-        public string IdPersona { get => idPersona; set => idPersona = value; }
+		public string IdPersona { get => idPersona; set => idPersona = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string APaterno { get => aPaterno; set => aPaterno = value; }
         public string AMaterno { get => aMaterno; set => aMaterno = value; }
@@ -26,6 +27,7 @@ namespace DeliveryApp.Modelos
         public string FechaNac { get => fechaNac; set => fechaNac = value; }
         public int Edad { get => edad; set => edad = value; }
         public string Sexo { get => sexo; set => sexo = value; }
+        internal Direccion Dir { get => dir; set => dir = value; }
 
         public void InsertarDatos()
 		{

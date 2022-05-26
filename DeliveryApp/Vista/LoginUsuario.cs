@@ -81,6 +81,33 @@ namespace DeliveryApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // login
+            int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
+
+            switch (tipoUsuario)
+            {
+                case 0:
+                    MessageBox.Show("usuario no existe");
+                    break;
+                case 1:
+                    MessageBox.Show("contraseña incorrecta");
+                    break;
+                case 2:
+                    MessageBox.Show("administrador");
+                    //MenuAdministrador menu = new MenuAdministrador();
+                    //Desplegar(menu);
+                    break;
+                case 3:
+                    MessageBox.Show("recepcionista");
+                    //ContenedorEmpleado menu = new ContenedorEmpleado();
+                    //Desplegar(menu);
+                    break;
+                case 4:
+                    MessageBox.Show("usuario normal");
+                    break;
+                default:
+                    MessageBox.Show("ERROR");
+                    break;
+            }
         }
 
         private void pnlInferior_Paint(object sender, PaintEventArgs e)

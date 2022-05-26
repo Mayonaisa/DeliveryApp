@@ -61,6 +61,7 @@ namespace DeliveryApp
                     Point p3 = registro3.Location;
                     registro3.Location = registro2.Location;
                     registro2.Location = p3;
+                    btinSiguiente.Text = "Siguiente";
                     fase--;
                     break;
             }
@@ -100,23 +101,28 @@ namespace DeliveryApp
                     Point p2 = registro2.Location;
                     registro2.Location = registro3.Location;
                     registro3.Location = p2;
+                    btinSiguiente.Text = "Registrar";
                     fase++;
                     break;
                 case 2:
-                    Point p3 = registro2.Location;
-                    registro3.Location = registro1.Location;
-                    registro1.Location = p3;
-                    fase=0;
+                    //Point p3 = registro2.Location;
+                    //registro3.Location = registro1.Location;
+                    //registro1.Location = p3;
+                    //fase=0;
 
                     int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
                     int dob = int.Parse(dtpFechaNacim.Value.ToString("yyyyMMdd"));
                     int age = (now - dob) / 10000;
 
-                    string msg = DeliveryApp.Controladores.RegistrarUsuario.registrar(tbxContraseña.Texts, tbxCorreo.Texts, cbxPais.Texts, cbxEstado.Texts, cbxCiudad.Texts, cbxCalle1.Texts, cbxCalle2.Texts, cbxColonia.Texts, cbxNumCasa.Texts, tbxNombre.Texts, " ", tbxApaterno.Texts, tbxAmaterno.Texts, tbxTelefono.Texts, dtpFechaNacim.Value.ToString(), age, cbxSexo.Texts);
+                    string msg = DeliveryApp.Controladores.RegistrarUsuario.registrar(tbxUsuario.Texts,tbxContraseña.Texts, tbxCorreo.Texts, cbxPais.Texts, cbxEstado.Texts, cbxCiudad.Texts, cbxCalle1.Texts, cbxCalle2.Texts, cbxColonia.Texts, cbxNumCasa.Texts, tbxNombre.Texts, " ", tbxApaterno.Texts, tbxAmaterno.Texts, tbxTelefono.Texts, dtpFechaNacim.Value.ToString(), age, cbxSexo.Texts);
                     MessageBox.Show(msg);
 
-                    PantallaInicio menu = new PantallaInicio(contenedor);
-                    Desplegar(menu);
+                    if(msg == "Se ha registrado correctamente")
+                    {
+                        PantallaInicio menu = new PantallaInicio(contenedor);
+                        Desplegar(menu);
+                    }
+
                     break;
             }
         }

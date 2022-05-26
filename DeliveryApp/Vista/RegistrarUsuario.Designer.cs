@@ -74,6 +74,7 @@
             this.lblOlvidar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbxColonia = new CustomControls.RJControls.RJComboBox();
+            this.tbxUsuario = new CustomControls.RJControls.RJTextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlSuperior.SuspendLayout();
@@ -372,7 +373,7 @@
             this.tbxCorreo.BorderSize = 2;
             this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxCorreo.Location = new System.Drawing.Point(17, 133);
+            this.tbxCorreo.Location = new System.Drawing.Point(19, 184);
             this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCorreo.Multiline = false;
             this.tbxCorreo.Name = "tbxCorreo";
@@ -394,7 +395,7 @@
             this.tbxContraseña.BorderSize = 2;
             this.tbxContraseña.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxContraseña.Location = new System.Drawing.Point(17, 235);
+            this.tbxContraseña.Location = new System.Drawing.Point(19, 286);
             this.tbxContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.tbxContraseña.Multiline = false;
             this.tbxContraseña.Name = "tbxContraseña";
@@ -603,6 +604,7 @@
             // 
             // registro2
             // 
+            this.registro2.Controls.Add(this.tbxUsuario);
             this.registro2.Controls.Add(this.label7);
             this.registro2.Controls.Add(this.pictureBox2);
             this.registro2.Controls.Add(this.tbxConfirmarContraseña);
@@ -639,7 +641,7 @@
             this.tbxConfirmarCorreo.BorderSize = 2;
             this.tbxConfirmarCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxConfirmarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxConfirmarCorreo.Location = new System.Drawing.Point(17, 184);
+            this.tbxConfirmarCorreo.Location = new System.Drawing.Point(19, 235);
             this.tbxConfirmarCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbxConfirmarCorreo.Multiline = false;
             this.tbxConfirmarCorreo.Name = "tbxConfirmarCorreo";
@@ -661,7 +663,7 @@
             this.tbxConfirmarContraseña.BorderSize = 2;
             this.tbxConfirmarContraseña.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxConfirmarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxConfirmarContraseña.Location = new System.Drawing.Point(17, 286);
+            this.tbxConfirmarContraseña.Location = new System.Drawing.Point(19, 337);
             this.tbxConfirmarContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.tbxConfirmarContraseña.Multiline = false;
             this.tbxConfirmarContraseña.Name = "tbxConfirmarContraseña";
@@ -804,6 +806,28 @@
             this.cbxColonia.TabIndex = 32;
             this.cbxColonia.Texts = "Perla del golfo";
             // 
+            // tbxUsuario
+            // 
+            this.tbxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tbxUsuario.BorderColor = System.Drawing.SystemColors.Window;
+            this.tbxUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxUsuario.BorderRadius = 0;
+            this.tbxUsuario.BorderSize = 2;
+            this.tbxUsuario.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxUsuario.Location = new System.Drawing.Point(19, 133);
+            this.tbxUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxUsuario.Multiline = false;
+            this.tbxUsuario.Name = "tbxUsuario";
+            this.tbxUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxUsuario.PasswordChar = false;
+            this.tbxUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxUsuario.PlaceholderText = "Usuario";
+            this.tbxUsuario.Size = new System.Drawing.Size(247, 35);
+            this.tbxUsuario.TabIndex = 30;
+            this.tbxUsuario.Texts = "";
+            this.tbxUsuario.UnderlinedStyle = false;
+            // 
             // RegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,6 +909,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.RJComboBox cbxColonia;
+        private CustomControls.RJControls.RJTextBox tbxUsuario;
     }
 }
 
