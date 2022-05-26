@@ -31,7 +31,7 @@ namespace DeliveryApp.Recursos
         public void crear()
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -52,7 +52,7 @@ namespace DeliveryApp.Recursos
         private void insert ()
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -70,7 +70,7 @@ namespace DeliveryApp.Recursos
         private void leer()
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -93,7 +93,7 @@ namespace DeliveryApp.Recursos
         public void update(string detalle,string estatus)
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 

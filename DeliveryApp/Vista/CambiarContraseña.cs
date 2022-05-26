@@ -9,16 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
     public partial class CambiarContraseña : Form
     {
+        CarritoC Carro = new CarritoC();
         Panel contenedor = new Panel();
         
-        public CambiarContraseña(Panel p)
+        public CambiarContraseña(Panel p, CarritoC c)
         { 
-            contenedor= p;  
+            contenedor= p;
+            Carro = c;
             InitializeComponent();
         }
 
@@ -39,7 +42,7 @@ namespace DeliveryApp.Vista
 
         private void Regresar_Click(object sender, EventArgs e)
         {
-            LoginUsuario Login = new LoginUsuario(contenedor);
+            LoginUsuario Login = new LoginUsuario(contenedor, Carro);
             Desplegar(Login);
             
         }

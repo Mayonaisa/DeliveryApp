@@ -31,7 +31,7 @@ namespace DeliveryApp.Modelos
         public void nuevoProd (int cantidad, string idProducto)
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 

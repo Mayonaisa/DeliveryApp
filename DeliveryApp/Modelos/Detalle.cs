@@ -23,7 +23,7 @@ namespace DeliveryApp.Modelos
             Carro = c;
 
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -43,7 +43,7 @@ namespace DeliveryApp.Modelos
         private void insert()
         {
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -68,7 +68,7 @@ namespace DeliveryApp.Modelos
         {
             SqlSingle cant = 0;
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 
@@ -87,7 +87,7 @@ namespace DeliveryApp.Modelos
         {
             monto += (cantNueva + cantVieja);
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
             conx.Open();
 

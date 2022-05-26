@@ -15,7 +15,9 @@ namespace DeliveryApp.Vista
     public partial class Contenedor : Form
     {
 
-        CarritoC Carro;
+        public CarritoC Carro;
+
+        public CarritoC Carro1 { get => Carro; set => Carro = value; }
 
         public Contenedor()
         {
@@ -24,10 +26,10 @@ namespace DeliveryApp.Vista
 
         private void Contenedor_Load(object sender, EventArgs e)
         {
-            Carro = new CarritoC();
-            Carro.crear();
+            Carro1 = new CarritoC();
+            Carro1.crear();
 
-            PantallaInicio Inicio = new PantallaInicio(PanelContenedor,Carro);
+            PantallaInicio Inicio = new PantallaInicio(PanelContenedor,Carro1);
             PanelContenedor.Width = Inicio.Width;
             PanelContenedor.Height = Inicio.Height;
             this.AutoSize = true;

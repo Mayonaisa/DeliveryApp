@@ -11,20 +11,20 @@ using DeliveryApp;
 using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
 using DeliveryApp.Modelos; //Son los modelos
-
-
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp
 {
     public partial class RegistrarUsuario : Form
     {
         private int fase = 0;
+        CarritoC Carro = new CarritoC();
         System.Windows.Forms.Panel contenedor = new System.Windows.Forms.Panel();
         Usuario usuario = new Usuario();
-        public RegistrarUsuario(System.Windows.Forms.Panel p)
+        public RegistrarUsuario(System.Windows.Forms.Panel p, CarritoC c)
         {
             contenedor = p;
-            
+            Carro = c;
             InitializeComponent();
         }
 
@@ -48,7 +48,7 @@ namespace DeliveryApp
             switch (fase)
             {
                 case 0:
-                    PantallaInicio menu = new PantallaInicio(contenedor);
+                    PantallaInicio menu = new PantallaInicio(contenedor,Carro);
                     Desplegar(menu);
                     break;
                 case 1:
@@ -119,7 +119,7 @@ namespace DeliveryApp
 
                     if(msg == "Se ha registrado correctamente")
                     {
-                        PantallaInicio menu = new PantallaInicio(contenedor);
+                        PantallaInicio menu = new PantallaInicio(contenedor, Carro);
                         Desplegar(menu);
                     }
 

@@ -67,7 +67,7 @@ namespace DeliveryApp.Modelos
 
 			conx.Open();
 
-			SqlCommand consulta = new SqlCommand("SELECT idPersona, correo, contraseña, nombre FROM Usuario, Persona WHERE correo = '" + correo + "' and Usuario.idUsuario = Persona.idPersona", conx);
+			SqlCommand consulta = new SqlCommand("SELECT p.idPersona, u.correo, u.contraseña, p.nombre FROM Usuario as u, Persona as p WHERE u.correo = '" + correo + "' and u.idUsuario = p.idPersona", conx);
 
 			consulta.Prepare();
 			SqlDataReader resultado = consulta.ExecuteReader();

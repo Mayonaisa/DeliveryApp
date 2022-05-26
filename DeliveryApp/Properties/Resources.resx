@@ -129,11 +129,13 @@
   </data>
   <data name="rp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logo5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +147,8 @@
   </data>
   <data name="logo6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logo6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="Captura de pantalla 2022-05-11 213108" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+    <data name="Captura de pantalla 2022-05-11 213108" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de pantalla 2022-05-11 213108.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -156,6 +159,7 @@
   </data>
   <data name="panel2.BackgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel2.BackgroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logo5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -245,6 +249,7 @@
   </data>
   <data name="Yakimeshi_de_res" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\Yakimeshi de res.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="rp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rp3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -24,9 +24,9 @@ namespace DeliveryApp.Modelos
         public Producto(int idnum)
         {
             //ulilap   DESKTOP-I0PHDQ6
-            //ulidesk  DESKTOP-HFCLC9N
+            //ulidesk  DESKTOP-DF9LLIC
             SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-HFCLC9N;Initial Catalog=DeliveryApp;Integrated Security=True;"
+                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
                 );
 
             conx.Open();

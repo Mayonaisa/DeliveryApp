@@ -11,6 +11,7 @@ using DeliveryApp;
 using DeliveryApp.Controladores;
 using DeliveryApp.Vista;
 using DeliveryApp.Modelos; //Son los modelos
+using DeliveryApp.Recursos;
 
 
 
@@ -19,11 +20,13 @@ namespace DeliveryApp
     public partial class LoginUsuario : Form
     {
         System.Windows.Forms.Panel contenedor = new System.Windows.Forms.Panel();
+        CarritoC Carro = new CarritoC();
+
         Usuario usuario = new Usuario();
-        public LoginUsuario(System.Windows.Forms.Panel p)
+        public LoginUsuario(System.Windows.Forms.Panel p, CarritoC c)
         {
             contenedor = p;
-            
+            Carro = c;
             InitializeComponent();
         }
 
@@ -45,13 +48,13 @@ namespace DeliveryApp
 
         private void label9_Click(object sender, EventArgs e)
         {
-            DeliveryApp.Vista.CambiarContraseña Cambio = new DeliveryApp.Vista.CambiarContraseña(contenedor);
+            DeliveryApp.Vista.CambiarContraseña Cambio = new DeliveryApp.Vista.CambiarContraseña(contenedor, Carro);
             Desplegar(Cambio);
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            PantallaInicio menu = new PantallaInicio(contenedor);
+            PantallaInicio menu = new PantallaInicio(contenedor, null);
             Desplegar(menu);
         }
 
@@ -62,7 +65,7 @@ namespace DeliveryApp
 
         private void lblContraseña_Click(object sender, EventArgs e)
         {
-            DeliveryApp.Vista.CambiarContraseña vistaPrincipal = new DeliveryApp.Vista.CambiarContraseña(contenedor);
+            DeliveryApp.Vista.CambiarContraseña vistaPrincipal = new DeliveryApp.Vista.CambiarContraseña(contenedor, Carro);
             this.Hide();
             Desplegar(vistaPrincipal);
             this.Close();
@@ -103,6 +106,8 @@ namespace DeliveryApp
                     break;
                 case 4:
                     MessageBox.Show("usuario normal");
+                    MenuCliente menu = new MenuCliente(contenedor, Carro);
+                    Desplegar(menu);
                     break;
                 default:
                     MessageBox.Show("ERROR");

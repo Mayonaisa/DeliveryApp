@@ -283,10 +283,8 @@ namespace DeliveryApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rp1 {
         internal static System.Drawing.Bitmap Pizza {
             get {
-                object obj = ResourceManager.GetObject("rp1", resourceCulture);
                 object obj = ResourceManager.GetObject("Pizza", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -301,21 +299,11 @@ namespace DeliveryApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        internal static System.Drawing.Bitmap rp2
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("rp2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
+        
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Pizza_de_camaron {
-        internal static System.Drawing.Bitmap rp3 {
             get {
                 object obj = ResourceManager.GetObject("Pizza_de_camaron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -358,6 +346,36 @@ namespace DeliveryApp.Properties {
         internal static System.Drawing.Bitmap Quesatacos_orden {
             get {
                 object obj = ResourceManager.GetObject("Quesatacos_orden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp1 {
+            get {
+                object obj = ResourceManager.GetObject("rp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp2 {
+            get {
+                object obj = ResourceManager.GetObject("rp2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp3 {
+            get {
+                object obj = ResourceManager.GetObject("rp3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -438,7 +456,6 @@ namespace DeliveryApp.Properties {
         internal static System.Drawing.Bitmap Yakimeshi_de_res {
             get {
                 object obj = ResourceManager.GetObject("Yakimeshi_de_res", resourceCulture);
-                object obj = ResourceManager.GetObject("rp3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
