@@ -18,6 +18,7 @@ namespace DeliveryApp.Vista
         Panel contenedor;
         Pedido Pedidos;
         Repartidor Rep;
+        List<Repartidor> Repartidores = new List<Repartidor>();
         Vehiculo Veh;
         public ConsultaEspecificaPedidosRecep(Panel p, Pedido Consulta, Repartidor R, Vehiculo V)
         {
@@ -69,11 +70,24 @@ namespace DeliveryApp.Vista
 
         private void ConsultaEspecificaPedidosRecep_Load(object sender, EventArgs e)
         {
+            string mensaje =null;
             txtCliente.Texts = Pedidos.Ipersona1;
             txtEstatus.Texts =Pedidos.IOrden.Estatus;
             txtTotal.Texts =Pedidos.IDetalle.Monto.ToString();
-            cmbxRepart.Texts = Rep.Nombre+Rep.AMaterno+Rep.APaterno;
-            cmbxVehi.Texts = Veh.Modelo+Veh.Marca+", "+Veh.IdVehiculo;
+            
+            ConsultarPedido.ObtenerRepartidores(ref Repartidores,ref mensaje, Rep);
+
+            foreach(Repartidor R in Repartidores)
+            {
+                cmbxRepart.Items.Add(R.Nombre+R.APaterno+R.AMaterno);
+            }
+            cmbxRepart.Texts =Rep.Nombre+Rep.APaterno+Rep.APaterno;
+            cmbxVehi.Texts =Veh.Marca+Veh.Modelo+", "+Veh.IdVehiculo;
+            if (mensaje != null)
+            {
+                MessageBox.Show(mensaje);
+            }
+
             
         }
     }

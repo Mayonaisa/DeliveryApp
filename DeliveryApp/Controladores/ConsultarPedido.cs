@@ -63,12 +63,13 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;                  
             }
         }
-        public static void ObtenerRepartidores( ref List<Repartidor> Rep, ref string mensaje)
+        public static void ObtenerRepartidores( ref List<Repartidor> Rep, ref string mensaje, Repartidor R)
         {
             try
             {
-                int i = 0;
-                int max = 0;
+                R = new Repartidor();
+                int max = R.cantidad();
+                R.ListaRepartidores(max,ref Rep);
                 
             }
             catch (Exception ex)

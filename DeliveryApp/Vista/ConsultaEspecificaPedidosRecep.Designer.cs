@@ -44,6 +44,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCiudad = new CustomControls.RJControls.RJTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtHoraSol = new CustomControls.RJControls.RJTextBox();
             this.cmbxVehi = new CustomControls.RJControls.RJComboBox();
             this.cmbxRepart = new CustomControls.RJControls.RJComboBox();
             this.txtEstatus = new CustomControls.RJControls.RJComboBox();
@@ -56,8 +58,6 @@
             this.txtCliente = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtHoraSol = new CustomControls.RJControls.RJTextBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -338,21 +338,54 @@
             this.panel3.Size = new System.Drawing.Size(708, 540);
             this.panel3.TabIndex = 0;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.label12.Location = new System.Drawing.Point(85, 432);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(125, 72);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Hora de\r\nsolicitud";
+            // 
+            // txtHoraSol
+            // 
+            this.txtHoraSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtHoraSol.BorderColor = System.Drawing.Color.Black;
+            this.txtHoraSol.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtHoraSol.BorderRadius = 20;
+            this.txtHoraSol.BorderSize = 3;
+            this.txtHoraSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoraSol.ForeColor = System.Drawing.Color.White;
+            this.txtHoraSol.Location = new System.Drawing.Point(227, 441);
+            this.txtHoraSol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoraSol.Multiline = false;
+            this.txtHoraSol.Name = "txtHoraSol";
+            this.txtHoraSol.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtHoraSol.PasswordChar = false;
+            this.txtHoraSol.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtHoraSol.PlaceholderText = "";
+            this.txtHoraSol.Size = new System.Drawing.Size(439, 51);
+            this.txtHoraSol.TabIndex = 13;
+            this.txtHoraSol.Texts = "";
+            this.txtHoraSol.UnderlinedStyle = false;
+            // 
             // cmbxVehi
             // 
             this.cmbxVehi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
             this.cmbxVehi.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbxVehi.BorderSize = 0;
             this.cmbxVehi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbxVehi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxVehi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxVehi.ForeColor = System.Drawing.Color.White;
             this.cmbxVehi.IconColor = System.Drawing.Color.White;
             this.cmbxVehi.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxVehi.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbxVehi.Location = new System.Drawing.Point(273, 372);
+            this.cmbxVehi.Location = new System.Drawing.Point(273, 366);
             this.cmbxVehi.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxVehi.Name = "cmbxVehi";
-            this.cmbxVehi.Size = new System.Drawing.Size(393, 30);
+            this.cmbxVehi.Size = new System.Drawing.Size(352, 41);
             this.cmbxVehi.TabIndex = 12;
             this.cmbxVehi.Texts = "";
             // 
@@ -362,15 +395,15 @@
             this.cmbxRepart.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbxRepart.BorderSize = 0;
             this.cmbxRepart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbxRepart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxRepart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxRepart.ForeColor = System.Drawing.Color.White;
             this.cmbxRepart.IconColor = System.Drawing.Color.White;
             this.cmbxRepart.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxRepart.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbxRepart.Location = new System.Drawing.Point(273, 305);
+            this.cmbxRepart.Location = new System.Drawing.Point(273, 299);
             this.cmbxRepart.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxRepart.Name = "cmbxRepart";
-            this.cmbxRepart.Size = new System.Drawing.Size(393, 30);
+            this.cmbxRepart.Size = new System.Drawing.Size(352, 41);
             this.cmbxRepart.TabIndex = 11;
             this.cmbxRepart.Texts = "";
             // 
@@ -390,10 +423,10 @@
             "En camino"});
             this.txtEstatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.txtEstatus.ListTextColor = System.Drawing.Color.DimGray;
-            this.txtEstatus.Location = new System.Drawing.Point(379, 231);
+            this.txtEstatus.Location = new System.Drawing.Point(379, 225);
             this.txtEstatus.MinimumSize = new System.Drawing.Size(200, 30);
             this.txtEstatus.Name = "txtEstatus";
-            this.txtEstatus.Size = new System.Drawing.Size(287, 30);
+            this.txtEstatus.Size = new System.Drawing.Size(200, 41);
             this.txtEstatus.TabIndex = 10;
             this.txtEstatus.Texts = "";
             // 
@@ -514,39 +547,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1560, 48);
             this.panel5.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.label12.Location = new System.Drawing.Point(85, 432);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 72);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Hora de\r\nsolicitud";
-            // 
-            // txtHoraSol
-            // 
-            this.txtHoraSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.txtHoraSol.BorderColor = System.Drawing.Color.Black;
-            this.txtHoraSol.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtHoraSol.BorderRadius = 20;
-            this.txtHoraSol.BorderSize = 3;
-            this.txtHoraSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraSol.ForeColor = System.Drawing.Color.White;
-            this.txtHoraSol.Location = new System.Drawing.Point(227, 441);
-            this.txtHoraSol.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHoraSol.Multiline = false;
-            this.txtHoraSol.Name = "txtHoraSol";
-            this.txtHoraSol.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtHoraSol.PasswordChar = false;
-            this.txtHoraSol.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtHoraSol.PlaceholderText = "";
-            this.txtHoraSol.Size = new System.Drawing.Size(439, 51);
-            this.txtHoraSol.TabIndex = 13;
-            this.txtHoraSol.Texts = "";
-            this.txtHoraSol.UnderlinedStyle = false;
             // 
             // ConsultaEspecificaPedidosRecep
             // 
