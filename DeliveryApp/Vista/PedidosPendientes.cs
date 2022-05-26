@@ -43,7 +43,7 @@ namespace DeliveryApp.Vista
                 
                 string PedID = null;
                 PedID = dgvPedidos[0,e.RowIndex].Value.ToString();
-                if (dgvPedidos[3,e.RowIndex].Value.ToString().Trim()=="en proceso")
+                if (dgvPedidos[3,e.RowIndex].Value.ToString().Trim()=="pendiente")
                 {
                     ConsultarPedido.AceptarPedido(PedID, ref pedidos);
                     CambiarBoton(e.RowIndex);

@@ -417,9 +417,8 @@
             this.txtEstatus.ForeColor = System.Drawing.Color.White;
             this.txtEstatus.IconColor = System.Drawing.Color.White;
             this.txtEstatus.Items.AddRange(new object[] {
-            "en espera",
+            "pendiente",
             "Aceptado",
-            "Confirmado",
             "En camino"});
             this.txtEstatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.txtEstatus.ListTextColor = System.Drawing.Color.DimGray;

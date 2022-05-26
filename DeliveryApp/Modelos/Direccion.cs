@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -37,9 +38,7 @@ namespace DeliveryApp.Modelos
 
         public void consultarDireccion(string idPer)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-            );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();

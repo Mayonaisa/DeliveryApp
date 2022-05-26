@@ -59,9 +59,7 @@ namespace DeliveryApp.Modelos
         public static Usuario BuscarContraseña(string correo)
         {
 			//consulta la base de datos
-			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
 			conx.Open();
@@ -85,9 +83,7 @@ namespace DeliveryApp.Modelos
 
 		public static int validarCredenciales (string nu,string contraseña)
 		{
-			SqlConnection conx = new SqlConnection(
-				"Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-				);
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 			conx.Open();
 
@@ -230,10 +226,7 @@ namespace DeliveryApp.Modelos
 
 		public bool RegistrarUsuario(ref string msg)
         {
-			SqlConnection conx = new SqlConnection
-			(
-				"Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-			);
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 			conx.Open();
 

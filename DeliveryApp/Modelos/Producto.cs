@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -25,9 +26,7 @@ namespace DeliveryApp.Modelos
         {
             //ulilap   DESKTOP-I0PHDQ6
             //ulidesk  DESKTOP-DF9LLIC
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
             conx.Open();
 

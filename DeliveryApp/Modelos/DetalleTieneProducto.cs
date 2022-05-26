@@ -29,14 +29,12 @@ namespace DeliveryApp.Modelos
 
         }
 
-        public void nuevoProd (int cantidad, string idProducto)
+        public void nuevoProd(int cantidad, string idProducto)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
-            SqlCommand NuevaOrden = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "',"+cantidad.ToString()+",'"+idProducto+"')", conx);
+            SqlCommand NuevaOrden = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "'," + cantidad.ToString() + ",'" + idProducto + "')", conx);
             NuevaOrden.Prepare();
 
             SqlDataReader resultado2 = NuevaOrden.ExecuteReader();
@@ -93,27 +91,28 @@ namespace DeliveryApp.Modelos
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
-        //    conx.Open();
+            conx.Open();
 
-        //    SqlCommand consulta = new SqlCommand("SELECT COUNT(*) from DetalleContieneProducto", conx);
+            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) from DetalleContieneProducto", conx);
 
-        //    int cantidad;
-        //    consulta.Prepare();
-        //    SqlDataReader resultado = consulta.ExecuteReader();
+            int cantidad;
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
 
-        //    if (resultado.Read())
-        //    {
-        //        cantidad = resultado.GetInt32(0);
-        //    }
-        //    else
-        //    {
-        //        conx.Close();
-        //        throw new Exception("no se encontro el pedido");
-        //    }
-        //    conx.Close();
-        //    return cantidad;
-        //}
+            if (resultado.Read())
+            {
+                cantidad = resultado.GetInt32(0);
+            }
+            else
+            {
+                conx.Close();
+                throw new Exception("no se encontro el pedido");
+            }
+            conx.Close();
+            return cantidad;
+        }
 
 
+    
     }
-}
+ }

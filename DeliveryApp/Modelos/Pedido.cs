@@ -42,7 +42,9 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT S.idOrden,D.idDetalle,D.monto,O.estatus,P.nombre,P.aPaterno,P.aMaterno, S.fechaSolicitud from Solicita S,Orden O, Detalle D,Persona P where S.idOrden = O.idOrden and D.idDetalle = O.idDetalle and S.idCliente = P.idPersona", conx);
+            //SqlCommand consulta = new SqlCommand("SELECT S.idOrden,D.idDetalle,D.monto,O.estatus,P.nombre,P.aPaterno,P.aMaterno, S.fechaSolicitud from Solicita S,Orden O, Detalle D,Persona P where S.idOrden = O.idOrden and D.idDetalle = O.idDetalle and S.idCliente = P.idPersona", conx);
+            SqlCommand consulta = new SqlCommand("SELECT O.idOrden,O.idDetalle,O.estatus,D.monto FROM Orden O,Detalle D where O.idOrden=D.idOrden and O.estatus!='nulo'", conx);
+
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -58,25 +60,24 @@ namespace DeliveryApp.Modelos
             while (resultado.Read() && i<cantidad)
             {
                 solicitud.Add(new Solicita());
-                //detalle.Add(new Detalle());                     el comentario es temporal
+                detalle.Add(new Detalle()); 
                 orden.Add(new Orden());
                 Persona.Add("");
 
-                solicitud[i].OrdenId1 = resultado.GetString(0);
-                Orden[i].IdOrden = resultado.GetString(0);
-                Detalle[i].IdOrden = resultado.GetString(0);
+                //solicitud[i].OrdenId1 = resultado.GetString(0).Trim();
+                Orden[i].IdOrden = resultado.GetString(0).Trim();
+                Detalle[i].IdOrden = resultado.GetString(0).Trim();
 
-                Orden[i].IdDetalle=resultado.GetString(1);
-                Detalle[i].IdDetalle = resultado.GetString(1);
-                Orden[i].IdDetalle = resultado.GetString(1);
+                Orden[i].IdDetalle=resultado.GetString(1).Trim();
+                Detalle[i].IdDetalle = resultado.GetString(1).Trim();
 
-                //Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());                   el comentario es temporal
-                Orden[i].Estatus=resultado.GetString(3);
-                Persona[i]=resultado.GetString(4).Trim();
-                Persona[i] += " "+resultado.GetString(5).Trim();
-                Persona[i] += " "+resultado.GetString(6).Trim();
+                Orden[i].Estatus=resultado.GetString(2).Trim();
+                Detalle[i].Monto =resultado.GetSqlSingle(3);
+                //Persona[i]=resultado.GetString(4).Trim();
+                //Persona[i] += " "+resultado.GetString(5).Trim();
+                //Persona[i] += " "+resultado.GetString(6).Trim();
 
-                Solicitud[i].Fecha=resultado.GetString(7);
+                //Solicitud[i].Fecha=resultado.GetString(7);
 
                 i++;
             }
@@ -89,7 +90,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) from Pedido", conx);
+            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) FROM Orden O,Detalle D where O.idOrden=D.idOrden and O.estatus!='nulo'", conx);
 
             int cantidad;
             consulta.Prepare();
@@ -102,7 +103,7 @@ namespace DeliveryApp.Modelos
             else
             {
                 conx.Close();
-                throw new Exception("no se encontro el pedido");
+                throw new Exception("no se encontro la orden");
             }
             conx.Close();
             return cantidad;
@@ -152,7 +153,7 @@ namespace DeliveryApp.Modelos
                 iDetalle.IdDetalle = resultado.GetString(1).Trim();
                 iOrden.IdDetalle = resultado.GetString(1).Trim();
 
-                iDetalle.Monto = decimal.Parse(resultado.GetValue(2).ToString().Trim());
+                iDetalle.Monto = resultado.GetSqlSingle(2);
                 iOrden.Estatus = resultado.GetString(3).Trim();
                 Ipersona = resultado.GetString(4).Trim();
                 Ipersona += " " + resultado.GetString(5).Trim();

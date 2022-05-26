@@ -93,7 +93,7 @@ namespace DeliveryApp
                 {
                     // login
                     tbxContraseña.BorderColor = borde;
-                   
+
                     int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
 
                     switch (tipoUsuario)
@@ -111,8 +111,8 @@ namespace DeliveryApp
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
-                            //ContenedorEmpleado menu = new ContenedorEmpleado();
-                            //Desplegar(menu);
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            Desplegar(menuR);
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
@@ -130,7 +130,7 @@ namespace DeliveryApp
                     tbxContraseña.BorderColor = Color.Red;
                 }
             }
-            else if(val == 1)
+            else if (val == 1)
             {
                 MessageBox.Show("El usuario tiene más de 20 caracteres");
                 tbxCorreo.BorderColor = Color.Red;
@@ -155,6 +155,50 @@ namespace DeliveryApp
                 c, 1, ButtonBorderStyle.Solid, // top
                 c, 0, ButtonBorderStyle.Solid, // right
                 c, 0, ButtonBorderStyle.Solid);// bottom
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            int val = Login.validarNomu("Paola1234");
+            if (val == 0)
+            {
+                tbxCorreo.BorderColor = borde;
+                if (tbxContraseña.Texts.Length < 30)
+                {
+                    // login
+                    tbxContraseña.BorderColor = borde;
+
+                    int tipoUsuario = Login.ingresar("Paola1234", "Paola1234_30");
+
+                    switch (tipoUsuario)
+                    {
+                        case 0:
+                            MessageBox.Show("usuario no existe");
+                            break;
+                        case 1:
+                            MessageBox.Show("contraseña incorrecta");
+                            break;
+                        case 2:
+                            MessageBox.Show("administrador");
+                            //MenuAdministrador menu = new MenuAdministrador();
+                            //Desplegar(menu);
+                            break;
+                        case 3:
+                            MessageBox.Show("recepcionista");
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            Desplegar(menuR);
+                            break;
+                        case 4:
+                            MessageBox.Show("usuario normal");
+                            MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Desplegar(menu);
+                            break;
+                        default:
+                            MessageBox.Show("ERROR");
+                            break;
+                    }
+                }
+            }
         }
     }
 }

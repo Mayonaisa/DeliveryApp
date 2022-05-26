@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using DeliveryApp.Recursos;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -18,13 +19,12 @@ namespace DeliveryApp.Modelos
         CarritoC Carro;
 
         int numDet = 0;
+        public Detalle() { }
         public Detalle(CarritoC c)
         {
             Carro = c;
 
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand Detalle = new SqlCommand("SELECT COUNT (*) FROM Detalle", conx);
@@ -42,9 +42,7 @@ namespace DeliveryApp.Modelos
         }
         private void insert()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             idDetalle = "DET" + numDet.ToString();
@@ -67,9 +65,7 @@ namespace DeliveryApp.Modelos
         public void sumarMonto (SqlSingle cantidad)
         {
             SqlSingle cant = 0;
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand NuevoDetalle = new SqlCommand("Select monto from Detalle where idDetalle = '" + idDetalle + "'", conx); //jhbj
@@ -86,9 +82,7 @@ namespace DeliveryApp.Modelos
         private void actualizarMonto (SqlSingle cantNueva, SqlSingle cantVieja)
         {
             monto += (cantNueva + cantVieja);
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand NuevoDetalle = new SqlCommand("update Detalle set monto = " + monto + " where idDetalle = '" + idDetalle + "'", conx); //jhbj

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Modelos;
+using System.Configuration;
 
 namespace DeliveryApp.Recursos
 {
@@ -30,9 +31,7 @@ namespace DeliveryApp.Recursos
 
         public void crear()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand Orden = new SqlCommand("SELECT COUNT (*) FROM Orden", conx);
@@ -51,9 +50,7 @@ namespace DeliveryApp.Recursos
 
         private void insert ()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             idOrden = "ORD" + numOrden.ToString();
@@ -69,9 +66,7 @@ namespace DeliveryApp.Recursos
 
         private void leer()
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand Orden = new SqlCommand("select * from Orden where idOrden = '" + idOrden + "'", conx);
@@ -92,9 +87,7 @@ namespace DeliveryApp.Recursos
 
         public void update(string detalle,string estatus)
         {
-            SqlConnection conx = new SqlConnection(
-                "Data Source=DESKTOP-DF9LLIC;Initial Catalog=DeliveryApp;Integrated Security=True;"
-                );
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
             SqlCommand Orden = new SqlCommand("update Orden set estatus = '"+estatus+"', idDetalle = '"+detalle+"' where idOrden = '"+idOrden+"'", conx);
