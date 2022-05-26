@@ -26,7 +26,7 @@ namespace DeliveryApp.Vista
             Veh = V;
             Pedidos = Consulta;
             contenedor= p;
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)

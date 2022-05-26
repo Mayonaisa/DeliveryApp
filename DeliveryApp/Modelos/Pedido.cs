@@ -58,7 +58,7 @@ namespace DeliveryApp.Modelos
             while (resultado.Read() && i<cantidad)
             {
                 solicitud.Add(new Solicita());
-                detalle.Add(new Detalle());
+                //detalle.Add(new Detalle());                     el comentario es temporal
                 orden.Add(new Orden());
                 Persona.Add("");
 
@@ -70,7 +70,7 @@ namespace DeliveryApp.Modelos
                 Detalle[i].IdDetalle = resultado.GetString(1);
                 Orden[i].IdDetalle = resultado.GetString(1);
 
-                Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());
+                //Detalle[i].Monto =decimal.Parse(resultado.GetValue(2).ToString());                   el comentario es temporal
                 Orden[i].Estatus=resultado.GetString(3);
                 Persona[i]=resultado.GetString(4).Trim();
                 Persona[i] += " "+resultado.GetString(5).Trim();

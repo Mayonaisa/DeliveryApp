@@ -56,13 +56,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\CambiarContraseña.cs" />
     <Compile Include="Controladores\Consultar Catalogo.cs" />
     <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
     <Compile Include="Controladores\Login.cs" />
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
+    <Compile Include="Controladores\RegistrarUsuario.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Direccion.cs" />
     <Compile Include="Recursos\botonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -77,6 +85,10 @@
     <Compile Include="Modelos\Repartidor.cs" />
     <Compile Include="Modelos\Solicita.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
+    <Compile Include="Recursos\CarritoC.cs" />
+    <Compile Include="Recursos\PanelProducto.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Vista\CambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     <Compile Include="Vista\HistorialPedidos.Designer.cs">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarUsuario.Designer.cs">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,8 +188,14 @@
     <Compile Include="Vista\MenuRecep_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vista\MenuRecepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vista\MenuRecep_Admin.Designer.cs">
       <DependentUpon>MenuRecep_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\MenuRecepcionista.Designer.cs">
+      <DependentUpon>MenuRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\LoginUsuario.cs">
       <SubType>Form</SubType>
@@ -246,6 +270,9 @@
     <EmbeddedResource Include="Vista\HistorialPedidos.resx">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarUsuario.resx">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,11 +285,15 @@
     <EmbeddedResource Include="Vista\MenuRecep_Admin.resx">
       <DependentUpon>MenuRecep_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuRecep_Admin.resx">
+      <DependentUpon>MenuRecep_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pantalla Principal.resx">
       <DependentUpon>Pantalla Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -292,6 +323,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Recursos\Sora-Regular.ttf" />
     <None Include="Resources\Captura de pantalla 2022-05-11 194713.png" />
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +342,30 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Tacos de canasta.png" />
+    <None Include="Imagenes\Tacos de adobada.png" />
+    <None Include="Imagenes\sushi sweet.png" />
+    <None Include="Imagenes\Sushi mar y tierra.png" />
+    <None Include="Imagenes\Super Burros.png" />
+    <None Include="Imagenes\Quesatacos orden.png" />
+    <None Include="Imagenes\Quesadillas de Res.png" />
+    <None Include="Imagenes\Quesadillas de jamón.png" />
+    <None Include="Imagenes\Yakimeshi de res.png" />
+    <None Include="Imagenes\Burro.png" />
+    <None Include="Imagenes\Burros de pollo.png" />
+    <None Include="Imagenes\ChochoFlan.png" />
+    <None Include="Imagenes\Combo Cuates.png" />
+    <None Include="Imagenes\hamburguesa-Pescado.png" />
+    <None Include="Imagenes\Hamburguesa-Pollo.png" />
+    <None Include="Imagenes\Malteada  Vainilla.png" />
+    <None Include="Imagenes\pizza caviar.png" />
+    <None Include="Imagenes\Pizza de camaron.png" />
+    <Content Include="Imagenes\pizza.png" />
+    <None Include="Imagenes\Taco.png" />
+    <None Include="Imagenes\Quesadilla.png" />
+    <None Include="Resources\rp3.png" />
+    <None Include="Resources\rp2.png" />
+    <None Include="Resources\rp1.png" />
     <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
     <Content Include="Imagenes\delicious-food-frame-top-view.png" />
     <Content Include="Imagenes\logo1.png" />

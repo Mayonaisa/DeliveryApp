@@ -50,7 +50,7 @@ namespace DeliveryApp.Vista
 
             while (i < cantidad)
             {
-                dgvPedidos.Rows.Add(DetPed.IdDetalle[i],DetPed.Cantidad1[i],DetPed.Idproducto[i]);
+                //dgvPedidos.Rows.Add(DetPed.IdDetalle[i],DetPed.Cantidad1[i],DetPed.Idproducto[i]);          Temporal
                 i++;
             }
 

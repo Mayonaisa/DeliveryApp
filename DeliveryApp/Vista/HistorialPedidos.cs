@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeliveryApp.Recursos;
 
 namespace DeliveryApp.Vista
 {
     public partial class HistorialPedidos : Form
     {
         Panel contenedor = new Panel();
+        CarritoC Carro = new CarritoC();
         
-        public HistorialPedidos(Panel p)
+        public HistorialPedidos(Panel p, CarritoC c)
         {
             contenedor = p;
+            Carro = c;
             InitializeComponent();
         }
 
@@ -37,7 +40,7 @@ namespace DeliveryApp.Vista
 
         private void botonRedondo7_Click(object sender, EventArgs e)
         {
-            MenuCliente MenuClienteV = new MenuCliente(contenedor);
+            MenuCliente MenuClienteV = new MenuCliente(contenedor,Carro);
 
             this.Hide();
             Desplegar(MenuClienteV);

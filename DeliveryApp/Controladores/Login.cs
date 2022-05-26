@@ -2,25 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DeliveryApp.Modelos;
-//using DeliveryApp.Delivery;
 
 namespace DeliveryApp.Controladores
 {
     class Login
     {
-        //public static void insertarUsuario(string nombre, string password)
-        //{
-        //    Usuario user = new Usuario();
-        //}
-        public static void insertarUsuario(string correo, string password)
+        public Login()
         {
-            Usuario user = new Usuario();
-            user.Correo = correo;
-            //user.password = getMd5Hash("90segfjasdmflsj" + password + nombre);
+        
         }
-        public static bool validarUsuario(string contraseña,string correo ,ref string mensaje, ref Usuario USR)
+
+        public static bool validarUsuario(string contraseña,string correo, ref string mensaje, ref Usuario USR)
         {
             try
             {
@@ -32,6 +27,7 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;
                 return false;
             }
+
             if (USR.Contraseña.Replace(" ","") == contraseña && USR.Correo.Replace(" ", "") == correo) // contraseña correcta
             {
                 return true;
@@ -40,35 +36,39 @@ namespace DeliveryApp.Controladores
             {
                 USR = null;
                 mensaje = "correo de usuario o contraseña incorrectos";
-                //MessageBox.Show(mensaje);
-                return false;
-            }
-            
-        }
-        public static bool BuscarRecepcionista( ref string mensaje, ref Usuario USR, ref Recepcionista Recep)
-        {
-            Recepcionista Rep =new Recepcionista(USR);
-            Recep = Rep;
-            if (Rep.BuscarRecepcionista(USR))
-            {
-                return true;
-            }
-            else
-            {
                 return false;
             }
         }
-        public static bool BuscarCliente(ref string mensaje, ref Usuario USR, ref Cliente cliente)
+
+        public static int ingresar(string usuario, string contraseña)
         {
-            Cliente Cli = new Cliente(USR);
-            cliente = Cli;
-            if (Cli.BuscarCliente(USR))
+            int tipoUsuario = Usuario.validarCredenciales(usuario, contraseña);
+            return tipoUsuario;
+        }
+
+        public static int validarNomu(string numero)
+        {
+            if (numero != "")
             {
-                return true;
+                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$)"))
+                {
+                    if (numero.Length <= 20)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                }
+                else
+                {
+                    return 2;
+                }
             }
             else
             {
-                return false;
+                return 3;
             }
         }
     }
