@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DeliveryApp.Modelos;
 using System.Net;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace DeliveryApp.Controladores
 {
@@ -53,6 +54,32 @@ namespace DeliveryApp.Controladores
                 return false;
             }
             u = null;
+        }
+
+        public static int validarCorreo(string correo)
+        {
+            if (correo != "")
+            {
+                if (Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    if (correo.Length <= 40)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+            else
+            {
+                return 3;
+            }
         }
     }
 }

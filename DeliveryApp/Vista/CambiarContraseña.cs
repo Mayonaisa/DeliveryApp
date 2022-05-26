@@ -50,13 +50,38 @@ namespace DeliveryApp.Vista
 
         private void Enviar_Click(object sender, EventArgs e)
         {
-            if(DeliveryApp.Controladores.CambiarContraseña.recuperarContraseña(tbxCorreo.Texts))
+            int val = DeliveryApp.Controladores.CambiarContraseña.validarCorreo(tbxCorreo.Texts);
+
+            // Numero de casa
+            if (val == 3)
             {
-                MessageBox.Show("Se ha enviado la contraseña a su correo");
+                tbxCorreo.BorderColor = Color.Red;
+                MessageBox.Show("El correo esta vacio");
             }
             else
             {
-                MessageBox.Show("No existe una cuenta con ese correo");
+                if (val == 0)
+                {
+                    tbxCorreo.BorderColor = Color.FromArgb(241, 241, 241);
+                    if (DeliveryApp.Controladores.CambiarContraseña.recuperarContraseña(tbxCorreo.Texts))
+                    {
+                        MessageBox.Show("Se ha enviado la contraseña a su correo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe una cuenta con ese correo");
+                    }
+                }
+                else if (val == 1)
+                {
+                    tbxCorreo.BorderColor = Color.Red;
+                    MessageBox.Show("El correo tiene más de 40 caracteres");
+                }
+                else
+                {
+                    tbxCorreo.BorderColor = Color.Red;
+                    MessageBox.Show("Ingrese un correo valido");
+                }
             }
         }
 

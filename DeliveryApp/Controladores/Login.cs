@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DeliveryApp.Modelos;
 
@@ -43,6 +44,32 @@ namespace DeliveryApp.Controladores
         {
             int tipoUsuario = Usuario.validarCredenciales(usuario, contraseña);
             return tipoUsuario;
+        }
+
+        public static int validarNomu(string numero)
+        {
+            if (numero != "")
+            {
+                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$)"))
+                {
+                    if (numero.Length <= 20)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+            else
+            {
+                return 3;
+            }
         }
     }
 }

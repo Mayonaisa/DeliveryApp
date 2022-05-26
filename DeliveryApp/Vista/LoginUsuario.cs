@@ -21,6 +21,7 @@ namespace DeliveryApp
     {
         System.Windows.Forms.Panel contenedor = new System.Windows.Forms.Panel();
         CarritoC Carro = new CarritoC();
+        Color borde = Color.FromArgb(241, 241, 241);
 
         Usuario usuario = new Usuario();
         public LoginUsuario(System.Windows.Forms.Panel p, CarritoC c)
@@ -83,41 +84,72 @@ namespace DeliveryApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // login
-            int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
-
-            switch (tipoUsuario)
+            // validar campos
+            int val = Login.validarNomu(tbxCorreo.Texts);
+            if (val == 0)
             {
-                case 0:
-                    MessageBox.Show("usuario no existe");
-                    break;
-                case 1:
-                    MessageBox.Show("contraseña incorrecta");
-                    break;
-                case 2:
-                    MessageBox.Show("administrador");
-                    //MenuAdministrador menu = new MenuAdministrador();
-                    //Desplegar(menu);
-                    break;
-                case 3:
-                    MessageBox.Show("recepcionista");
-                    //ContenedorEmpleado menu = new ContenedorEmpleado();
-                    //Desplegar(menu);
-                    break;
-                case 4:
-                    MessageBox.Show("usuario normal");
-                    MenuCliente menu = new MenuCliente(contenedor, Carro);
-                    Desplegar(menu);
-                    break;
-                default:
-                    MessageBox.Show("ERROR");
-                    break;
+                tbxCorreo.BorderColor = borde;
+                if (tbxContraseña.Texts.Length < 30)
+                {
+                    // login
+                    tbxContraseña.BorderColor = borde;
+                   
+                    int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
+
+                    switch (tipoUsuario)
+                    {
+                        case 0:
+                            MessageBox.Show("usuario no existe");
+                            break;
+                        case 1:
+                            MessageBox.Show("contraseña incorrecta");
+                            break;
+                        case 2:
+                            MessageBox.Show("administrador");
+                            //MenuAdministrador menu = new MenuAdministrador();
+                            //Desplegar(menu);
+                            break;
+                        case 3:
+                            MessageBox.Show("recepcionista");
+                            //ContenedorEmpleado menu = new ContenedorEmpleado();
+                            //Desplegar(menu);
+                            break;
+                        case 4:
+                            MessageBox.Show("usuario normal");
+                            MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Desplegar(menu);
+                            break;
+                        default:
+                            MessageBox.Show("ERROR");
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La contraseña tiene más de 30 caracteres");
+                    tbxContraseña.BorderColor = Color.Red;
+                }
+            }
+            else if(val == 1)
+            {
+                MessageBox.Show("El usuario tiene más de 20 caracteres");
+                tbxCorreo.BorderColor = Color.Red;
+            }
+            else if (val == 2)
+            {
+                MessageBox.Show("El usuario tiene caracteres invalidos");
+                tbxCorreo.BorderColor = Color.Red;
+            }
+            else
+            {
+                MessageBox.Show("El usuario esta vacio");
+                tbxCorreo.BorderColor = Color.Red;
             }
         }
 
         private void pnlInferior_Paint(object sender, PaintEventArgs e)
         {
-            Color c = Color.FromArgb(241, 241, 241);
+            Color c = borde;
             ControlPaint.DrawBorder(e.Graphics, pnlSuperior.ClientRectangle,
                 c, 0, ButtonBorderStyle.Solid, // left
                 c, 1, ButtonBorderStyle.Solid, // top

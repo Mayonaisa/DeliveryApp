@@ -212,7 +212,7 @@
             this.btnLogin.Location = new System.Drawing.Point(100, 332);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(208, 50);
-            this.btnLogin.TabIndex = 30;
+            this.btnLogin.TabIndex = 28;
             this.btnLogin.Text = "Iniciar sesion";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -222,9 +222,9 @@
             // 
             this.tbxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxContraseña.BorderRadius = 10;
-            this.tbxContraseña.BorderSize = 1;
+            this.tbxContraseña.BorderSize = 2;
             this.tbxContraseña.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxContraseña.Location = new System.Drawing.Point(100, 277);
@@ -244,9 +244,9 @@
             // 
             this.tbxCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxCorreo.BorderRadius = 10;
-            this.tbxCorreo.BorderSize = 1;
+            this.tbxCorreo.BorderSize = 2;
             this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxCorreo.Location = new System.Drawing.Point(100, 225);
@@ -256,9 +256,9 @@
             this.tbxCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tbxCorreo.PasswordChar = false;
             this.tbxCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxCorreo.PlaceholderText = "Correo electronico";
+            this.tbxCorreo.PlaceholderText = "Nombre de usuario";
             this.tbxCorreo.Size = new System.Drawing.Size(208, 35);
-            this.tbxCorreo.TabIndex = 28;
+            this.tbxCorreo.TabIndex = 30;
             this.tbxCorreo.Texts = "";
             this.tbxCorreo.UnderlinedStyle = false;
             // 

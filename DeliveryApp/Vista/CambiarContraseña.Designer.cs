@@ -35,9 +35,9 @@
             this.lblRegresar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pbxFondo = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlSuperior.SuspendLayout();
@@ -85,9 +85,9 @@
             // 
             this.tbxCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxCorreo.BorderRadius = 10;
-            this.tbxCorreo.BorderSize = 1;
+            this.tbxCorreo.BorderSize = 2;
             this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxCorreo.Location = new System.Drawing.Point(79, 238);
@@ -147,6 +147,18 @@
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(113, 37);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 37);
+            this.panel2.TabIndex = 8;
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -175,18 +187,6 @@
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(113, 37);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 37);
-            this.panel2.TabIndex = 8;
             // 
             // pbxFondo
             // 
