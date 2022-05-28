@@ -4,7 +4,6 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.Odbc;
-using System.Data.SqlClient;
 
 
 

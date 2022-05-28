@@ -13,27 +13,30 @@ namespace DeliveryApp.Modelos
         List <Orden> orden;
         List <Detalle> detalle;
         List <Solicita> solicitud;
-        List <string> Persona;
+        List <Usuario> Persona;
+        List<Direccion> Direc;
         int cantidad;
 
         Orden iOrden;
         Detalle iDetalle;
         Solicita iSolicita;
-        string Ipersona;
+        Usuario Ipersona;
+        Direccion IDire;
 
         public Pedido(Orden orde, Detalle Deta, Solicita Soli) 
         {
             
         }
 
-        public List<string> Persona1 { get => Persona; set => Persona = value; }
+        public List<Usuario> Persona1 { get => Persona; set => Persona = value; }
         internal List<Orden> Orden { get => orden; set => orden = value; }
         internal List<Detalle> Detalle { get => detalle; set => detalle = value; }
         internal List<Solicita> Solicitud { get => solicitud; set => solicitud = value; }
-        public string Ipersona1 { get => Ipersona; set => Ipersona = value; }
+        public Usuario Ipersona1 { get => Ipersona; set => Ipersona = value; }
         public Orden IOrden { get => iOrden; set => iOrden = value; }
         public Detalle IDetalle { get => iDetalle; set => iDetalle = value; }
         public Solicita ISolicita { get => iSolicita; set => iSolicita = value; }
+        internal List<Direccion> Direc1 { get => Direc; set => Direc = value; }
 
         public Pedido ()
         {
@@ -48,39 +51,71 @@ namespace DeliveryApp.Modelos
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
+
+            
+
             int i = 0;
 
             Solicitud = new List<Solicita>();
             detalle = new List<Detalle>();
             orden = new List<Orden>();
-            Persona = new List<string>();
+            Persona = new List<Usuario>();
+            Direc = new List<Direccion>();
 
             cantidad = Cantidad();
 
-            while (resultado.Read() && i<cantidad)
+            while (resultado.Read() && i < cantidad)
             {
                 solicitud.Add(new Solicita());
-                detalle.Add(new Detalle()); 
+                detalle.Add(new Detalle());
                 orden.Add(new Orden());
-                Persona.Add("");
+                Persona.Add(new Usuario());
+                Direc.Add(new Direccion());
 
                 //solicitud[i].OrdenId1 = resultado.GetString(0).Trim();
                 Orden[i].IdOrden = resultado.GetString(0).Trim();
                 Detalle[i].IdOrden = resultado.GetString(0).Trim();
 
-                Orden[i].IdDetalle=resultado.GetString(1).Trim();
+                Orden[i].IdDetalle = resultado.GetString(1).Trim();
                 Detalle[i].IdDetalle = resultado.GetString(1).Trim();
 
-                Orden[i].Estatus=resultado.GetString(2).Trim();
-                Detalle[i].Monto =resultado.GetSqlSingle(3);
-                //Persona[i]=resultado.GetString(4).Trim();
-                //Persona[i] += " "+resultado.GetString(5).Trim();
-                //Persona[i] += " "+resultado.GetString(6).Trim();
+                Orden[i].Estatus = resultado.GetString(2).Trim();
+                Detalle[i].Monto = resultado.GetSqlSingle(3);
 
-                //Solicitud[i].Fecha=resultado.GetString(7);
+                SqlCommand Consulta2 = new SqlCommand("SELECT nombre, P.aPaterno, P.aMaterno,fechaSolicitud, D.calle1,D.calle2,D.ciudad,D.colonia,D.numCasa, D.idDireccion,C.idCliente from Solicita S, cliente C, Persona P, Orden O, Direccion D where C.idCliente=S.idCliente and O.idOrden= '" + Orden[i].IdOrden + "' and S.idOrden='" + Orden[i].IdOrden + "' and C.idCliente=P.idPersona and P.idPersona=D.idPersona", conx);
+                Consulta2.Prepare();
+                SqlDataReader Resultado2 = Consulta2.ExecuteReader();
+
+                if (Resultado2.Read())
+                {
+                    Persona[i].Nombre = Resultado2.GetString(0).Trim();
+                    Persona[i].APaterno= Resultado2.GetString(1).Trim();
+                    Persona[i].AMaterno= Resultado2.GetString(2).Trim();
+                    Solicitud[i].Fecha = Resultado2.GetString(3).Trim();
+                    Direc[i].IdPersona = Resultado2.GetString(10).Trim();
+                    Persona[i].IdPersona= Resultado2.GetString(10).Trim();
+
+                    Direc[i].Calle1 = Resultado2.GetString(4).Trim();
+                    Direc[i].Calle2 = Resultado2.GetString(5).Trim();
+                    Direc[i].Ciudad = Resultado2.GetString(6).Trim();
+                    Direc[i].Colonia = Resultado2.GetString(7).Trim();
+                    Direc[i].NumCasa = Resultado2.GetString(8).Trim();
+                    Direc[i].IdDireccion = Resultado2.GetString(9).Trim();
+                }
+                //SqlCommand Consulta3 = new SqlCommand("SELECT nombre, P.aPaterno, P.aMaterno,fechaSolicitud from Solicita S, cliente C, Persona P, Orden O where C.idCliente=S.idCliente and O.idOrden= '" + Orden[i].IdOrden + "' and S.idOrden='" + Orden[i].IdOrden + "' and C.idCliente=P.idPersonaand P.idPersona=D.idPersona", conx);
+                //Consulta2.Prepare();
+                //SqlDataReader Resultado3 = Consulta2.ExecuteReader();
+
+                //if (Resultado3.Read())
+                //{
+
+                //}
+
+
 
                 i++;
             }
+            
             conx.Close();
         }
         public int Cantidad()
@@ -154,7 +189,7 @@ namespace DeliveryApp.Modelos
 
                 iOrden.Estatus = resultado.GetString(2).Trim();
                 iDetalle.Monto = resultado.GetSqlSingle(3);
-                
+                /*SqlCommand ConsultaCliente = new SqlCommand();*/
                 //Ipersona = resultado.GetString(4).Trim();
                 //Ipersona += " " + resultado.GetString(5).Trim();
                 //Ipersona += " " + resultado.GetString(6).Trim();
@@ -162,6 +197,7 @@ namespace DeliveryApp.Modelos
                 //iSolicita.Fecha = resultado.GetString(7).Trim();
 
             }
+            
 
             conx.Close();
         }

@@ -71,7 +71,7 @@ namespace DeliveryApp.Vista
         private void ConsultaEspecificaPedidosRecep_Load(object sender, EventArgs e)
         {
             string mensaje =null;
-            txtCliente.Texts = Pedidos.Ipersona1;
+            txtCliente.Texts = Pedidos.Ipersona1.Nombre;
             txtEstatus.Texts =Pedidos.IOrden.Estatus;
             txtTotal.Texts =Pedidos.IDetalle.Monto.ToString();
             
@@ -82,7 +82,11 @@ namespace DeliveryApp.Vista
                 cmbxRepart.Items.Add(R.Nombre+R.APaterno+R.AMaterno);
             }
             cmbxRepart.Texts =Rep.Nombre+Rep.APaterno+Rep.APaterno;
-            cmbxVehi.Texts =Veh.Marca+Veh.Modelo+", "+Veh.IdVehiculo;
+            if (Veh.IdVehiculo != "")
+            {
+                cmbxVehi.Texts = Veh.Marca + Veh.Modelo + ", " + Veh.IdVehiculo;
+            }
+
             if (mensaje != null)
             {
                 MessageBox.Show(mensaje);

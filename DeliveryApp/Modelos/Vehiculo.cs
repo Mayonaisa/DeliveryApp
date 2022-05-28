@@ -53,5 +53,56 @@ namespace DeliveryApp.Modelos
             }
             conx.Close();
         }
+        public int cantidad()
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) FROM Vehiculo V", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int cant;
+            if (resultado.Read())
+            {
+                cant = resultado.GetInt32(0);
+
+                return cant = resultado.GetInt32(0);
+
+            }
+            else
+            {
+                conx.Close();
+                throw new Exception("Error");
+            }
+
+        }
+        public void ListaVehiculos(int max, ref List<Vehiculo> Veh)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT R.idRepartidor,P.nombre,P.aPaterno,P.aMaterno from Persona P, Repartidor R where P.idPersona=R.idRepartidor", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            while (resultado.Read() && i < max)
+            {
+                Veh.Add(new Vehiculo());
+                Veh[i].idVehiculo = resultado.GetString(0).Trim();
+                Veh[i].marca = resultado.GetString(1).Trim();
+                Veh[i].modelo = resultado.GetString(2).Trim();
+                Veh[i].placa = resultado.GetString(3).Trim();
+                Veh[i].Año = resultado.GetString(4).Trim();
+                i++;
+            }
+
+            conx.Close();
+        }
     }
 }

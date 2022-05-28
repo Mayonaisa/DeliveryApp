@@ -13,6 +13,7 @@ namespace DeliveryApp.Modelos
         private string idPersona, idDireccion;
         private string pais, estado, ciudad, calle1, calle2, colonia, numCasa;
 
+        public Direccion() { }
         public Direccion(string ip, string pa, string es, string ci, string c1, string c2, string co, string nc)
         {
             idPersona = ip;
