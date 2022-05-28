@@ -18,12 +18,19 @@ namespace DeliveryApp.Recursos
         public string estatus = "";
         int numOrden = 0;
 
+        private string idUsuario = "";
+        string usuario = "";
+
         public Detalle detalle;
         public DetalleTieneProducto DetTProd;
 
         public List<string> nombreProd = new List<string>();
         public List<string> cantidad = new List<string>();
         public List<string> monto = new List<string>();
+
+        public string IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string Usuario { get => usuario; set => usuario = value; }
+
         public CarritoC()
         {
             

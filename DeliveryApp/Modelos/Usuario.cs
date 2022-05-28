@@ -4,7 +4,6 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.Odbc;
-using System.Data.SqlClient;
 
 
 
@@ -25,14 +24,14 @@ namespace DeliveryApp.Modelos
         public string Correo { get => correo; set => correo = value; }
         public string Nomu { get => nomu; set => nomu = value; }
 
-        public Usuario(string contraseña, string correo) 
+        public Usuario(string contraseña, string usuario) 
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
              
             conx.Open();
 
-			SqlCommand consulta = new SqlCommand("SELECT idUsuario, correo, contraseña FROM Persona,Usuario WHERE contraseña = '"+ contraseña +"'" + " AND correo = '" + correo + "'"+"AND idPersona=idUsuario", conx);
+			SqlCommand consulta = new SqlCommand("SELECT idUsuario, nombre, contraseña FROM Usuario WHERE contraseña = '"+ contraseña +"'" + " AND nombre = '" + usuario + "'", conx);
 
             consulta.Prepare();
 			SqlDataReader resultado=consulta.ExecuteReader();
@@ -40,7 +39,7 @@ namespace DeliveryApp.Modelos
 			if (resultado.Read())
             {
                 IdPersona = resultado.GetString(0);
-                this.correo = resultado.GetString(1);
+                this.Nombre = resultado.GetString(1);
                 this.contraseña = resultado.GetString(2);
             }
 			else

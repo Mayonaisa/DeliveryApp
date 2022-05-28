@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
@@ -21,7 +22,16 @@ namespace DeliveryApp.Modelos
             idCliente = id;
             fecha = fech;
             OrdenId = idOrden;
-            
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand Insert = new SqlCommand("Insert Solicita Values ('"+idCliente+"','"+fecha+"','"+OrdenId+"')", conx);
+
+
+            Insert.Prepare();
+            SqlDataReader resultado = Insert.ExecuteReader();
+
         }
 
         public string IdCliente { get => idCliente; set => idCliente = value; }

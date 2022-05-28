@@ -40,6 +40,7 @@ namespace DeliveryApp.Modelos
                 IdProducto = IdProducto.Trim();
                 Nombre = resultado.GetString(1);
                 Nombre = Nombre.Trim();
+                Nombre = Nombre.Replace('-', ' ');
                 Disponible = resultado.GetString(2);
                 Disponible = Disponible.Trim();
                 Precio = resultado.GetSqlSingle(3);

@@ -23,11 +23,13 @@ namespace DeliveryApp
         CarritoC Carro = new CarritoC();
         Color borde = Color.FromArgb(241, 241, 241);
 
-        Usuario usuario = new Usuario();
+        Usuario usuario;
+        
         public LoginUsuario(System.Windows.Forms.Panel p, CarritoC c)
         {
             contenedor = p;
             Carro = c;
+            
             InitializeComponent();
         }
 
@@ -96,6 +98,8 @@ namespace DeliveryApp
 
                     int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
 
+                    usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+
                     switch (tipoUsuario)
                     {
                         case 0:
@@ -117,6 +121,8 @@ namespace DeliveryApp
                         case 4:
                             MessageBox.Show("usuario normal");
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Carro.IdUsuario = usuario.IdPersona.Trim();
+                            Carro.Usuario = usuario.Nombre.Trim();
                             Desplegar(menu);
                             break;
                         default:
@@ -213,6 +219,7 @@ namespace DeliveryApp
                     tbxContraseña.BorderColor = borde;
 
                     int tipoUsuario = Login.ingresar("Roberto1234", "Roberto1234_1");
+                    usuario = new Usuario("Roberto1234_1", "Roberto1234");
 
                     switch (tipoUsuario)
                     {
@@ -235,6 +242,8 @@ namespace DeliveryApp
                         case 4:
                             MessageBox.Show("usuario normal");
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Carro.IdUsuario = usuario.IdPersona.Trim();
+                            Carro.Usuario = usuario.Nombre.Trim();
                             Desplegar(menu);
                             break;
                         default:
