@@ -86,7 +86,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT R.idRepartidor,P.nombre,P.aPaterno,P.aMaterno from Persona P, Repartidor R where P.idPersona=R.idRepartidor", conx);
+            SqlCommand consulta = new SqlCommand("SELECT V.idVehiculo,V.marca,V.modelo,V.placa,V.año from Vehiculo V ", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();

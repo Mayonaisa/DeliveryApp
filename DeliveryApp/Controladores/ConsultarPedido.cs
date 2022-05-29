@@ -48,6 +48,41 @@ namespace DeliveryApp.Controladores
 
             }
         }
+        public static void ConfirmarPedido(string Orden, ref Pedido PedN)
+        {
+            try
+            {
+                PedN.ConfirmarPedido(Orden);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void NuevaEntrega(string Orden, string vehiculo, string fecha, string Rep, ref Pedido PedN, string mensaje, ref Entrega Ent)
+        {
+            try
+            {
+
+                Ent.NuevaEntrega(Orden, Rep, vehiculo, fecha, mensaje);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static bool ValidarEntrega(string idOrden, Entrega Ent,ref string mensaje)
+        {
+            if (Ent.ValidarEntrega(idOrden))
+            {
+                return true;
+            }
+            else
+            {
+                mensaje = "Ya existe este pedido en entrega";
+                return false;
+            }
+        }
         public static void PedidoEspecifico( string id,ref Pedido PedN, ref Repartidor Rep, ref Vehiculo Veh, ref string mensaje)
         {
             try
@@ -91,7 +126,7 @@ namespace DeliveryApp.Controladores
         {
             try
             {
-                R = new Repartidor();
+                //R = new Repartidor();
                 int max = R.cantidad();
                 R.ListaRepartidores(max,ref Rep);
                 
@@ -105,7 +140,7 @@ namespace DeliveryApp.Controladores
         {
             try
             {
-                V = new Vehiculo();
+                //V = new Vehiculo();
                 int max = V.cantidad();
                 V.ListaVehiculos(max, ref Veh);
 

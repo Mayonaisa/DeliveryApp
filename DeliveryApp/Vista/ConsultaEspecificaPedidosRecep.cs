@@ -19,6 +19,7 @@ namespace DeliveryApp.Vista
         Pedido Pedidos;
         Repartidor Rep;
         List<Repartidor> Repartidores = new List<Repartidor>();
+        List<Vehiculo> Vehiculos = new List<Vehiculo>();
         Vehiculo Veh;
         public ConsultaEspecificaPedidosRecep(Panel p, Pedido Consulta, Repartidor R, Vehiculo V)
         {
@@ -42,7 +43,50 @@ namespace DeliveryApp.Vista
         private void rjButton1_Click(object sender, EventArgs e)
         {
             string Mensaje = null;
-            ConsultarPedido.ObtenerPedido(ref Pedidos, ref Mensaje);
+            string mensC = null;
+            Entrega Ent = new Entrega();
+            Pedido P=new Pedido();
+            DateTime Actual = DateTime.Now;
+            if (ConsultarPedido.ValidarEntrega(Pedidos.IOrden.IdOrden,Ent,ref Mensaje))
+            {
+                //MessageBox.Show(Mensaje);
+                ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
+                txtEstatus.Texts = "en camino";
+               
+
+            }
+            else
+            {
+                foreach (Repartidor R in Repartidores)
+                {
+                    if (R.Nombre + R.APaterno + R.AMaterno == cmbxRepart.Texts)
+                    {
+                        Rep.IdPersona = R.IdPersona;
+                    }
+                }
+                foreach (Vehiculo V in Vehiculos)
+                {
+                    string Cad = V.Marca + " " + V.Modelo + " " + V.Año;
+                    if ( Cad== cmbxVehi.Texts)
+                    {
+                        Veh.IdVehiculo = V.IdVehiculo;
+                    }
+
+                }
+                ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
+                ConsultarPedido.NuevaEntrega(Pedidos.IOrden.IdOrden, Veh.IdVehiculo, Actual.ToString(), Rep.IdPersona, ref P, mensC, ref Ent);
+
+
+                if (mensC != null)
+                {
+                    MessageBox.Show(mensC);
+                    txtEstatus.Texts = "en camino";
+                }
+
+
+            }
+            
+
 
         }
         public void Desplegar(Form f)
@@ -71,20 +115,32 @@ namespace DeliveryApp.Vista
         private void ConsultaEspecificaPedidosRecep_Load(object sender, EventArgs e)
         {
             string mensaje =null;
-            txtCliente.Texts = Pedidos.Ipersona1.Nombre;
+            txtCliente.Texts = Pedidos.Ipersona1.Nombre+" "+ Pedidos.Ipersona1.APaterno+" "+ Pedidos.Ipersona1.AMaterno;
             txtEstatus.Texts =Pedidos.IOrden.Estatus;
             txtTotal.Texts =Pedidos.IDetalle.Monto.ToString();
-            
+            txtHoraSol.Texts = Pedidos.ISolicita.Fecha;
+
+            txtCalle1.Texts = Pedidos.IDire1.Calle1;
+            txtCalle2.Texts=Pedidos.IDire1.Calle2;
+            txtCiudad.Texts = Pedidos.IDire1.Ciudad;
+            txtColonia.Texts= Pedidos.IDire1.Colonia;
+            txtNumCasa.Texts= Pedidos.IDire1.NumCasa;
             ConsultarPedido.ObtenerRepartidores(ref Repartidores,ref mensaje, Rep);
+            ConsultarPedido.ObtenerVehiculos(ref Vehiculos, ref mensaje,Veh);
 
             foreach(Repartidor R in Repartidores)
             {
                 cmbxRepart.Items.Add(R.Nombre+R.APaterno+R.AMaterno);
             }
+            foreach (Vehiculo V in Vehiculos)
+            {
+                cmbxVehi.Items.Add(V.Marca+" " + V.Modelo+" "+V.Año);
+            }
+
             cmbxRepart.Texts =Rep.Nombre+Rep.APaterno+Rep.APaterno;
             if (Veh.IdVehiculo != "")
             {
-                cmbxVehi.Texts = Veh.Marca + Veh.Modelo + ", " + Veh.IdVehiculo;
+                cmbxVehi.Texts = Veh.Marca +" "+ Veh.Modelo + ", " + Veh.Año;
             }
 
             if (mensaje != null)
@@ -93,6 +149,11 @@ namespace DeliveryApp.Vista
             }
 
             
+        }
+
+        private void cmbxVehi_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

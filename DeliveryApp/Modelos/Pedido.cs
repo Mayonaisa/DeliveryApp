@@ -37,6 +37,7 @@ namespace DeliveryApp.Modelos
         public Detalle IDetalle { get => iDetalle; set => iDetalle = value; }
         public Solicita ISolicita { get => iSolicita; set => iSolicita = value; }
         internal List<Direccion> Direc1 { get => Direc; set => Direc = value; }
+        internal Direccion IDire1 { get => IDire; set => IDire = value; }
 
         public Pedido ()
         {
@@ -161,6 +162,28 @@ namespace DeliveryApp.Modelos
 
             conx.Close();
         }
+        public void ConfirmarPedido(string id)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='en camino' where idOrden= '" + id + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+
+            }
+            else
+            {
+                throw new Exception("Error");
+            }
+
+            conx.Close();
+        }
         public void PedidoIndi(string idOrden)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
@@ -177,8 +200,9 @@ namespace DeliveryApp.Modelos
             {
                 this.iDetalle = new Detalle();
                 this.iOrden = new Orden();
-                this.Ipersona1 = null;
+                this.Ipersona1 = new Usuario();
                 this.ISolicita = new Solicita();
+                this.IDire = new Direccion();
 
                 iSolicita.OrdenId1 = resultado.GetString(0).Trim();
                 iOrden.IdOrden = resultado.GetString(0).Trim();
@@ -189,12 +213,26 @@ namespace DeliveryApp.Modelos
 
                 iOrden.Estatus = resultado.GetString(2).Trim();
                 iDetalle.Monto = resultado.GetSqlSingle(3);
-                /*SqlCommand ConsultaCliente = new SqlCommand();*/
-                //Ipersona = resultado.GetString(4).Trim();
-                //Ipersona += " " + resultado.GetString(5).Trim();
-                //Ipersona += " " + resultado.GetString(6).Trim();
+                SqlCommand Consulta2 = new SqlCommand("SELECT nombre, P.aPaterno, P.aMaterno,fechaSolicitud, D.calle1,D.calle2,D.ciudad,D.colonia,D.numCasa, D.idDireccion,C.idCliente from Solicita S, cliente C, Persona P, Orden O, Direccion D where C.idCliente=S.idCliente and O.idOrden= '" + idOrden + "' and S.idOrden='" + idOrden + "' and C.idCliente=P.idPersona and P.idPersona=D.idPersona", conx);
+                Consulta2.Prepare();
+                SqlDataReader Resultado2 = Consulta2.ExecuteReader();
 
-                //iSolicita.Fecha = resultado.GetString(7).Trim();
+                if (Resultado2.Read())
+                {
+                    Ipersona.Nombre = Resultado2.GetString(0).Trim();
+                    Ipersona.APaterno = Resultado2.GetString(1).Trim();
+                    Ipersona.AMaterno = Resultado2.GetString(2).Trim();
+                    iSolicita.Fecha = Resultado2.GetString(3).Trim();
+                    IDire.IdPersona = Resultado2.GetString(10).Trim();
+                    Ipersona1.IdPersona = Resultado2.GetString(10).Trim();
+
+                    IDire.Calle1 = Resultado2.GetString(4).Trim();
+                    IDire.Calle2 = Resultado2.GetString(5).Trim();
+                    IDire.Ciudad = Resultado2.GetString(6).Trim();
+                    IDire.Colonia = Resultado2.GetString(7).Trim();
+                    IDire.NumCasa = Resultado2.GetString(8).Trim();
+                    IDire.IdDireccion = Resultado2.GetString(9).Trim();
+                }
 
             }
             

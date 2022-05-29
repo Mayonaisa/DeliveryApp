@@ -171,7 +171,7 @@
             this.txtNumCasa.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtNumCasa.BorderRadius = 20;
             this.txtNumCasa.BorderSize = 3;
-            this.txtNumCasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumCasa.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumCasa.ForeColor = System.Drawing.Color.White;
             this.txtNumCasa.Location = new System.Drawing.Point(201, 368);
             this.txtNumCasa.Margin = new System.Windows.Forms.Padding(4);
@@ -181,7 +181,7 @@
             this.txtNumCasa.PasswordChar = false;
             this.txtNumCasa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumCasa.PlaceholderText = "";
-            this.txtNumCasa.Size = new System.Drawing.Size(112, 51);
+            this.txtNumCasa.Size = new System.Drawing.Size(112, 50);
             this.txtNumCasa.TabIndex = 18;
             this.txtNumCasa.Texts = "";
             this.txtNumCasa.UnderlinedStyle = false;
@@ -204,7 +204,7 @@
             this.txtColonia.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtColonia.BorderRadius = 20;
             this.txtColonia.BorderSize = 3;
-            this.txtColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColonia.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.White;
             this.txtColonia.Location = new System.Drawing.Point(198, 290);
             this.txtColonia.Margin = new System.Windows.Forms.Padding(4);
@@ -214,7 +214,7 @@
             this.txtColonia.PasswordChar = false;
             this.txtColonia.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtColonia.PlaceholderText = "";
-            this.txtColonia.Size = new System.Drawing.Size(439, 51);
+            this.txtColonia.Size = new System.Drawing.Size(439, 50);
             this.txtColonia.TabIndex = 16;
             this.txtColonia.Texts = "";
             this.txtColonia.UnderlinedStyle = false;
@@ -237,7 +237,7 @@
             this.txtCalle2.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtCalle2.BorderRadius = 20;
             this.txtCalle2.BorderSize = 3;
-            this.txtCalle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalle2.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle2.ForeColor = System.Drawing.Color.White;
             this.txtCalle2.Location = new System.Drawing.Point(198, 210);
             this.txtCalle2.Margin = new System.Windows.Forms.Padding(4);
@@ -247,7 +247,7 @@
             this.txtCalle2.PasswordChar = false;
             this.txtCalle2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCalle2.PlaceholderText = "";
-            this.txtCalle2.Size = new System.Drawing.Size(439, 51);
+            this.txtCalle2.Size = new System.Drawing.Size(439, 50);
             this.txtCalle2.TabIndex = 14;
             this.txtCalle2.Texts = "";
             this.txtCalle2.UnderlinedStyle = false;
@@ -270,7 +270,7 @@
             this.txtCalle1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtCalle1.BorderRadius = 20;
             this.txtCalle1.BorderSize = 3;
-            this.txtCalle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalle1.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle1.ForeColor = System.Drawing.Color.White;
             this.txtCalle1.Location = new System.Drawing.Point(198, 137);
             this.txtCalle1.Margin = new System.Windows.Forms.Padding(4);
@@ -280,7 +280,7 @@
             this.txtCalle1.PasswordChar = false;
             this.txtCalle1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCalle1.PlaceholderText = "";
-            this.txtCalle1.Size = new System.Drawing.Size(439, 51);
+            this.txtCalle1.Size = new System.Drawing.Size(439, 50);
             this.txtCalle1.TabIndex = 12;
             this.txtCalle1.Texts = "";
             this.txtCalle1.UnderlinedStyle = false;
@@ -303,7 +303,7 @@
             this.txtCiudad.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtCiudad.BorderRadius = 20;
             this.txtCiudad.BorderSize = 3;
-            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.ForeColor = System.Drawing.Color.White;
             this.txtCiudad.Location = new System.Drawing.Point(198, 63);
             this.txtCiudad.Margin = new System.Windows.Forms.Padding(4);
@@ -313,7 +313,7 @@
             this.txtCiudad.PasswordChar = false;
             this.txtCiudad.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCiudad.PlaceholderText = "";
-            this.txtCiudad.Size = new System.Drawing.Size(439, 51);
+            this.txtCiudad.Size = new System.Drawing.Size(439, 50);
             this.txtCiudad.TabIndex = 10;
             this.txtCiudad.Texts = "";
             this.txtCiudad.UnderlinedStyle = false;
@@ -356,7 +356,7 @@
             this.txtHoraSol.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtHoraSol.BorderRadius = 20;
             this.txtHoraSol.BorderSize = 3;
-            this.txtHoraSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoraSol.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoraSol.ForeColor = System.Drawing.Color.White;
             this.txtHoraSol.Location = new System.Drawing.Point(227, 441);
             this.txtHoraSol.Margin = new System.Windows.Forms.Padding(4);
@@ -366,7 +366,7 @@
             this.txtHoraSol.PasswordChar = false;
             this.txtHoraSol.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHoraSol.PlaceholderText = "";
-            this.txtHoraSol.Size = new System.Drawing.Size(439, 51);
+            this.txtHoraSol.Size = new System.Drawing.Size(439, 50);
             this.txtHoraSol.TabIndex = 13;
             this.txtHoraSol.Texts = "";
             this.txtHoraSol.UnderlinedStyle = false;
@@ -377,7 +377,7 @@
             this.cmbxVehi.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbxVehi.BorderSize = 0;
             this.cmbxVehi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbxVehi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxVehi.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxVehi.ForeColor = System.Drawing.Color.White;
             this.cmbxVehi.IconColor = System.Drawing.Color.White;
             this.cmbxVehi.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
@@ -388,6 +388,7 @@
             this.cmbxVehi.Size = new System.Drawing.Size(352, 41);
             this.cmbxVehi.TabIndex = 12;
             this.cmbxVehi.Texts = "";
+            this.cmbxVehi.OnSelectedIndexChanged += new System.EventHandler(this.cmbxVehi_OnSelectedIndexChanged);
             // 
             // cmbxRepart
             // 
@@ -395,7 +396,7 @@
             this.cmbxRepart.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbxRepart.BorderSize = 0;
             this.cmbxRepart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbxRepart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxRepart.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxRepart.ForeColor = System.Drawing.Color.White;
             this.cmbxRepart.IconColor = System.Drawing.Color.White;
             this.cmbxRepart.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
@@ -413,13 +414,12 @@
             this.txtEstatus.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtEstatus.BorderSize = 0;
             this.txtEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.txtEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstatus.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstatus.ForeColor = System.Drawing.Color.White;
             this.txtEstatus.IconColor = System.Drawing.Color.White;
             this.txtEstatus.Items.AddRange(new object[] {
             "pendiente",
-            "Aceptado",
-            "En camino"});
+            "Aceptado"});
             this.txtEstatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.txtEstatus.ListTextColor = System.Drawing.Color.DimGray;
             this.txtEstatus.Location = new System.Drawing.Point(398, 225);
@@ -481,7 +481,7 @@
             this.txtTotal.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtTotal.BorderRadius = 20;
             this.txtTotal.BorderSize = 3;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.ForeColor = System.Drawing.Color.White;
             this.txtTotal.Location = new System.Drawing.Point(239, 137);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
@@ -491,7 +491,7 @@
             this.txtTotal.PasswordChar = false;
             this.txtTotal.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTotal.PlaceholderText = "";
-            this.txtTotal.Size = new System.Drawing.Size(204, 51);
+            this.txtTotal.Size = new System.Drawing.Size(204, 50);
             this.txtTotal.TabIndex = 2;
             this.txtTotal.Texts = "";
             this.txtTotal.UnderlinedStyle = false;
@@ -514,7 +514,7 @@
             this.txtCliente.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtCliente.BorderRadius = 20;
             this.txtCliente.BorderSize = 3;
-            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.ForeColor = System.Drawing.Color.White;
             this.txtCliente.Location = new System.Drawing.Point(239, 63);
             this.txtCliente.Margin = new System.Windows.Forms.Padding(4);
@@ -524,7 +524,7 @@
             this.txtCliente.PasswordChar = false;
             this.txtCliente.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCliente.PlaceholderText = "";
-            this.txtCliente.Size = new System.Drawing.Size(439, 51);
+            this.txtCliente.Size = new System.Drawing.Size(439, 50);
             this.txtCliente.TabIndex = 0;
             this.txtCliente.Texts = "";
             this.txtCliente.UnderlinedStyle = false;
