@@ -56,7 +56,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT idCliente, nombre, aPaterno, aMaterno, telefono, sexo, RFC from Cliente,Persona where idCliente=idPersona", conx);
+            SqlCommand consulta = new SqlCommand("SELECT idCliente, nombre, aPaterno, aMaterno, telefono, sexo, RFC, Edad,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Cliente,Persona P,Direccion D where idCliente=P.idPersona and P.idPersona=D.idPersona", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -71,6 +71,17 @@ namespace DeliveryApp.Modelos
                 Cli[i].Telefono = resultado.GetString(4).Trim();
                 Cli[i].Sexo = resultado.GetString(5).Trim();
                 Cli[i].RFC = resultado.GetString(6).Trim();
+                Cli[i].Edad =int.Parse(resultado.GetValue(7).ToString());
+
+                Cli[i].Dir = new Direccion();
+                Cli[i].Dir.IdDireccion =resultado.GetString(8).Trim();
+                Cli[i].Dir.Pais = resultado.GetString(9).Trim();
+                Cli[i].Dir.Estado = resultado.GetString(10).Trim();
+                Cli[i].Dir.Ciudad = resultado.GetString(11).Trim();
+                Cli[i].Dir.Calle1 = resultado.GetString(12).Trim();
+                Cli[i].Dir.Calle2 = resultado.GetString(13).Trim();
+                Cli[i].Dir.Colonia = resultado.GetString(14).Trim();
+                Cli[i].Dir.NumCasa = resultado.GetString(15).Trim();
 
                 i++;
             }

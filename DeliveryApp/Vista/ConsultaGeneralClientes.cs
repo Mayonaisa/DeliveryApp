@@ -32,7 +32,7 @@ namespace DeliveryApp.Vista
             int i = 0;
             while (i < max)
             {
-                dgvCliente.Rows.Add(LClientes[i].IdPersona, LClientes[i].Nombre+" "+ LClientes[i].APaterno+" "+ LClientes[i].AMaterno, LClientes[i].Telefono, LClientes[i].Sexo, LClientes[i].Edad, LClientes[i].RFC1);
+                dgvCliente.Rows.Add(LClientes[i].IdPersona, LClientes[i].Nombre+" "+ LClientes[i].APaterno+" "+ LClientes[i].AMaterno, LClientes[i].Telefono, LClientes[i].Sexo, LClientes[i].Edad, LClientes[i].RFC1, LClientes[i].Dir.Pais, LClientes[i].Dir.Estado, LClientes[i].Dir.Ciudad, LClientes[i].Dir.Calle1, LClientes[i].Dir.Calle2, LClientes[i].Dir.Colonia, LClientes[i].Dir.NumCasa);
                 i++;
             }
 
