@@ -116,5 +116,10 @@ namespace DeliveryApp.Vista
             ConsultaGeneralClientes ConClin = new ConsultaGeneralClientes();
             Desplegar(ConClin);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

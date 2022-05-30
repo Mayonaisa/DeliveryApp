@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\CambiarContraseña.cs" />
+    <Compile Include="Controladores\ConsultaClientes.cs" />
     <Compile Include="Controladores\Consultar Catalogo.cs" />
     <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="Vista\CatalogoDetalleTieneProducto.Designer.cs">
       <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CatalogoGeneralVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CatalogoGeneralVehiculos.Designer.cs">
+      <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Configuración.cs">
       <SubType>Form</SubType>
@@ -281,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaGeneralClientes.resx">
+      <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralProductos.resx">
       <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>
