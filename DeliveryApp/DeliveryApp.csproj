@@ -286,6 +286,9 @@
     <EmbeddedResource Include="Vista\CatalogoDetalleTieneProducto.resx">
       <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CatalogoGeneralVehiculos.resx">
+      <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
     </EmbeddedResource>

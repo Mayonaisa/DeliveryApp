@@ -89,5 +89,12 @@ namespace DeliveryApp.Vista
         {
 
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            MenuRecep_Admin Men = new MenuRecep_Admin(empleado, ContenedorCatalogos);
+            //ContenedorCatalogos.Controls.RemoveAt(0);
+            Desplegar(Men);
+        }
     }
 }
