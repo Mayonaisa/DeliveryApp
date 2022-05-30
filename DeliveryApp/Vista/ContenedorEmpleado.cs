@@ -31,6 +31,8 @@ namespace DeliveryApp.Vista
 
         private void ContenedorEmpleado_Load(object sender, EventArgs e)
         {
+            DateTime actual = DateTime.Now;
+            lblfecha.Text = actual.ToString();
             MenuRecep_Admin Inicio = new MenuRecep_Admin(empleado,ContenedorCatalogos);
             ContenedorCatalogos.Width = Inicio.Width;
             ContenedorCatalogos.Height = Inicio.Height;
@@ -74,6 +76,16 @@ namespace DeliveryApp.Vista
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblfecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
