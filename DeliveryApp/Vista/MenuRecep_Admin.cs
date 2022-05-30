@@ -119,7 +119,8 @@ namespace DeliveryApp.Vista
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos();
+            Desplegar(CatVeh);
         }
     }
 }
