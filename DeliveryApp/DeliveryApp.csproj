@@ -122,6 +122,12 @@
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.Designer.cs">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsultaGeneralClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralClientes.Designer.cs">
+      <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ConsultaGeneralDetalle.cs">
       <SubType>Form</SubType>
     </Compile>

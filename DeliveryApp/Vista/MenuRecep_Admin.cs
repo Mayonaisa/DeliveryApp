@@ -78,7 +78,9 @@ namespace DeliveryApp.Vista
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            
+            pbxEmp.BackColor= Color.Blue;
+            btnEmpleados.FlatAppearance.MouseOverBackColor=Color.Blue;
+
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -96,6 +98,23 @@ namespace DeliveryApp.Vista
         {
             CatalogoDetalleTieneProducto CatDetPed = new CatalogoDetalleTieneProducto(recepcionista, contenedor);
             Desplegar(CatDetPed);
+        }
+
+        private void pbxEmp_Click(object sender, EventArgs e)
+        {
+            PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
+            Desplegar(PedPen);
+        }
+
+        private void pbxEmp_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ConsultaGeneralClientes ConClin = new ConsultaGeneralClientes();
+            Desplegar(ConClin);
         }
     }
 }
