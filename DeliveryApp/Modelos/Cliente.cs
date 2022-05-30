@@ -10,6 +10,7 @@ namespace DeliveryApp.Modelos
 {
     public class Cliente: Usuario
     {
+        string RFC;
         
         public Cliente()
         {
@@ -19,6 +20,9 @@ namespace DeliveryApp.Modelos
         {
             this.IdPersona = usuario.IdPersona;
         }
+
+        public string RFC1 { get => RFC; set => RFC = value; }
+
         public int cantidad()
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
@@ -64,6 +68,10 @@ namespace DeliveryApp.Modelos
                 Cli[i].Nombre = resultado.GetString(1).Trim();
                 Cli[i].APaterno = " " + resultado.GetString(2).Trim();
                 Cli[i].AMaterno = " " + resultado.GetString(3).Trim();
+                Cli[i].Telefono = resultado.GetString(4).Trim();
+                Cli[i].Sexo = resultado.GetString(5).Trim();
+                Cli[i].RFC = resultado.GetString(6).Trim();
+
                 i++;
             }
 

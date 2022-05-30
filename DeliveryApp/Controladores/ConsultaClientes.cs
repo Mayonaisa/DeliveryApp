@@ -22,7 +22,7 @@ namespace DeliveryApp.Controladores
 
             }
         }
-        public static void ObtenerRepartidores(ref List<Cliente> Cli, ref string mensaje, Cliente C)
+        public static void ObtenerClientes(ref List<Cliente> Cli, ref string mensaje, Cliente C)
         {
             try
             {
