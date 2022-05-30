@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Recursos;
+using DeliveryApp.Modelos;
+using DeliveryApp.Properties;
 
 namespace DeliveryApp.Vista
 {
@@ -16,18 +18,16 @@ namespace DeliveryApp.Vista
         Panel contenedor = new Panel();
         CarritoC Carro = new CarritoC();
 
-        public CarritoC Carro1 { get => Carro; set => Carro = value; }
-
         public Carrito(Panel p,CarritoC c)
         {
             contenedor = p;
-            Carro1 = c;
+            Carro = c;
             InitializeComponent();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            MenuCliente MenuClienteV = new MenuCliente(contenedor,Carro1);
+            MenuCliente MenuClienteV = new MenuCliente(contenedor,Carro);
 
             this.Hide();
             Desplegar(MenuClienteV);
@@ -51,16 +51,75 @@ namespace DeliveryApp.Vista
 
         private void Carrito_Load(object sender, EventArgs e)
         {
-            int y = 600;
-            ////prueba
-            for(int n = 0; n < Carro1.nombreProd.Count;n++)
+            int y = 0;
+            pnlCarrito.AutoScroll = true;
+            if(Carro.estatus == "nulo")
             {
-                PanelProducto prueba = new PanelProducto(Carro1);
-                prueba.Crear_Panel_carrito(Carro1.nombreProd[n], Carro1.monto[n], Carro1.cantidad[n], 320, y);
-                this.Controls.Add(prueba);
+                //tabControl1.TabPages.Add(pnlCarrito);
+                //tabControl1.TabPages.Remove(pnlCarga);
+                tabControl1.SelectedTab = tabControl1.TabPages[0];
+            }
+            else
+            {
+                BRconfirmar.Enabled = false;
+                //tabControl1.TabPages.Add(pnlCarga);
+                //tabControl1.TabPages.Remove(pnlCarrito);
+                tabControl1.SelectedTab = tabControl1.TabPages[1];
+                switch (Carro.estatus)
+                {
+                    case "pendiente":
+                        pnlBarraRoja.Width = pnlBarraGris.Width / 3;
+                        pbEtapa.Image = Resources.etapa2;
+                        lblProgreso.Text = "Pedido pendiente";
+                        break;
+                    case "Aceptado":
+                        pnlBarraRoja.Width = (pnlBarraGris.Width / 3)*2;
+                        pbEtapa.Image = Resources.etapa1;
+                        lblProgreso.Text = "Pedido aceptado";
+                        break;
+                    case "en camino":
+                        pnlBarraRoja.Width = pnlBarraGris.Width;
+                        pbEtapa.Image = Resources.etapa3;
+                        lblProgreso.Text = "Pedido en camino";
+                        break;
+                }
+            }
+            
+            if (Carro.idDetalle != "nulo")
+            {
+                lblMonto.Text = Carro.detalle.Monto.ToString();
+            }
+            if(lblMonto.Text == "0")
+            {
+                BRconfirmar.Enabled = false;
+            }
+            else
+            {
+                BRconfirmar.Enabled = true;
+            }
+            ////prueba
+            for(int n = 0; n < Carro.nombreProd.Count;n++)
+            {
+                PanelProducto prueba = new PanelProducto(Carro);
+                prueba.Crear_Panel_carrito(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y);
+                this.pnlCarrito.Controls.Add(prueba);
                 y += 82;
             }
             
+        }
+
+        private void BRconfirmar_Click(object sender, EventArgs e)
+        {
+            Carro.update(Carro.idDetalle, "pendiente");
+            string date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt");
+            Solicita soli = new Solicita(Carro.IdUsuario, date, Carro.idOrden);
+            //tabControl1.TabPages.Add(pnlCarga);
+            //tabControl1.TabPages.Remove(pnlCarrito);
+            tabControl1.SelectedTab = tabControl1.TabPages[1];
+            pnlBarraRoja.Width = pnlBarraGris.Width / 3;
+            pbEtapa.Image = Resources.etapa2;
+            lblProgreso.Text = "Pedido pendiente";
+            BRconfirmar.Enabled = false;
         }
     }
 }

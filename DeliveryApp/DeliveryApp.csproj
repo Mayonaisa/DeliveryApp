@@ -221,11 +221,11 @@
     <Compile Include="Vista\PedidosPendientes.Designer.cs">
       <DependentUpon>PedidosPendientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Producto.cs">
+    <Compile Include="Vista\ProductoV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Producto.Designer.cs">
-      <DependentUpon>Producto.cs</DependentUpon>
+    <Compile Include="Vista\ProductoV.Designer.cs">
+      <DependentUpon>ProductoV.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Registro1.cs">
       <SubType>Form</SubType>
@@ -265,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\HistorialPedidos.resx">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ProductoV.resx">
+      <DependentUpon>ProductoV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\RegistrarUsuario.resx">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
@@ -335,6 +338,11 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\etapa1.png" />
+    <Content Include="Imagenes\etapa2.png" />
+    <Content Include="Imagenes\etapa3.png" />
+    <Content Include="Imagenes\etapa4.png" />
+    <Content Include="Recursos\CustomControls.RJControls.dll" />
     <None Include="Imagenes\Tacos de canasta.png" />
     <None Include="Imagenes\Tacos de adobada.png" />
     <None Include="Imagenes\sushi sweet.png" />

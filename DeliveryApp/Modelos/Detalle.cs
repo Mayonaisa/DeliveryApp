@@ -81,7 +81,7 @@ namespace DeliveryApp.Modelos
 
         private void actualizarMonto (SqlSingle cantNueva, SqlSingle cantVieja)
         {
-            monto += (cantNueva + cantVieja);
+            monto = (cantNueva + cantVieja);
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Modelos;
 using DeliveryApp.Recursos;
+using DeliveryApp.Vista;
 
 namespace DeliveryApp.Recursos
 {
@@ -28,6 +29,8 @@ namespace DeliveryApp.Recursos
         public Producto prod;
         public DetalleTieneProducto detProd;
         Detalle det;
+        public MenuCliente MenuV;
+        public Panel contenedor;
 
         CarritoC Carro;
 
@@ -53,6 +56,7 @@ namespace DeliveryApp.Recursos
             this.Size = new System.Drawing.Size(801, 156);
             this.Location = new Point(x, y);
             this.BorderStyle = BorderStyle.FixedSingle;
+            this.BackColor = Color.White;
 
             Imagen = new PictureBox();
             this.Controls.Add(this.Imagen);
@@ -255,14 +259,19 @@ namespace DeliveryApp.Recursos
             //metodo que recalcule el monto en detalle
             SqlSingle precio = int.Parse(BRcantidad.Text) * prod.Precio;
             det.sumarMonto(precio);
-            Carro.AgregarElemento(prod.Nombre, BRcantidad.Text, det.Monto.ToString());
+            Carro.AgregarElemento(prod.Nombre, BRcantidad.Text, precio.ToString());
         }
 
         private void btn_consultar_click(object sender, EventArgs e)
         {
             if (true)
             {
-
+                ProductoV ProdV = new ProductoV(contenedor, Carro);
+                ProdV.Prod = prod;
+                MenuV.Hide();
+                MenuV.Desplegar(ProdV);
+                
+                MenuV.Close();
             }
         }
 
@@ -270,7 +279,7 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-
+                
             }
         }
     }
