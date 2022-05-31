@@ -161,6 +161,12 @@
     <Compile Include="Vista\ConsultaGeneralProductos.Designer.cs">
       <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsutaEspecificaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsutaEspecificaCliente.Designer.cs">
+      <DependentUpon>ConsutaEspecificaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Contenedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralProductos.resx">
       <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsutaEspecificaCliente.resx">
+      <DependentUpon>ConsutaEspecificaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
