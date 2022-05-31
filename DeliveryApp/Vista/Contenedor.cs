@@ -27,7 +27,7 @@ namespace DeliveryApp.Vista
         private void Contenedor_Load(object sender, EventArgs e)
         {
             Carro1 = new CarritoC();
-            Carro1.crear();
+            //Carro1.crear();
 
             PantallaInicio Inicio = new PantallaInicio(PanelContenedor,Carro1);
             PanelContenedor.Width = Inicio.Width;

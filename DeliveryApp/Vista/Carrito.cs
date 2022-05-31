@@ -18,6 +18,9 @@ namespace DeliveryApp.Vista
         Panel contenedor = new Panel();
         CarritoC Carro = new CarritoC();
 
+        Solicita soli = new Solicita();
+
+
         public Carrito(Panel p,CarritoC c)
         {
             contenedor = p;
@@ -53,11 +56,14 @@ namespace DeliveryApp.Vista
         {
             int y = 0;
             pnlCarrito.AutoScroll = true;
-            if(Carro.estatus == "nulo")
+            Carro.leer();
+            soli.leer(Carro.IdUsuario, Carro.idOrden);
+            if (Carro.estatus == "nulo")
             {
                 //tabControl1.TabPages.Add(pnlCarrito);
                 //tabControl1.TabPages.Remove(pnlCarga);
                 tabControl1.SelectedTab = tabControl1.TabPages[0];
+                BRconfirmar.Text = "Confirmar";
             }
             else
             {
@@ -71,6 +77,8 @@ namespace DeliveryApp.Vista
                         pnlBarraRoja.Width = pnlBarraGris.Width / 3;
                         pbEtapa.Image = Resources.etapa2;
                         lblProgreso.Text = "Pedido pendiente";
+                        BRconfirmar.Enabled = true;
+                        BRconfirmar.Text = "Cancelar";
                         break;
                     case "Aceptado":
                         pnlBarraRoja.Width = (pnlBarraGris.Width / 3)*2;
@@ -81,6 +89,13 @@ namespace DeliveryApp.Vista
                         pnlBarraRoja.Width = pnlBarraGris.Width;
                         pbEtapa.Image = Resources.etapa3;
                         lblProgreso.Text = "Pedido en camino";
+                        break;
+                    case "entregado":
+                        BRconfirmar.Enabled = true;
+                        tabControl1.SelectedTab = tabControl1.TabPages[0];
+                        Carro = new CarritoC();
+                        Carro.crear();
+                        BRconfirmar.Text = "Confirmar";
                         break;
                 }
             }
@@ -110,16 +125,30 @@ namespace DeliveryApp.Vista
 
         private void BRconfirmar_Click(object sender, EventArgs e)
         {
-            Carro.update(Carro.idDetalle, "pendiente");
-            string date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt");
-            Solicita soli = new Solicita(Carro.IdUsuario, date, Carro.idOrden);
-            //tabControl1.TabPages.Add(pnlCarga);
-            //tabControl1.TabPages.Remove(pnlCarrito);
-            tabControl1.SelectedTab = tabControl1.TabPages[1];
-            pnlBarraRoja.Width = pnlBarraGris.Width / 3;
-            pbEtapa.Image = Resources.etapa2;
-            lblProgreso.Text = "Pedido pendiente";
-            BRconfirmar.Enabled = false;
+            if (BRconfirmar.Text == "Confirmar")
+            {
+                Carro.update(Carro.idDetalle, "pendiente");
+                string date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt");
+                soli = new Solicita(Carro.IdUsuario, date, Carro.idOrden);
+                //tabControl1.TabPages.Add(pnlCarga);
+                //tabControl1.TabPages.Remove(pnlCarrito);
+                tabControl1.SelectedTab = tabControl1.TabPages[1];
+                pnlBarraRoja.Width = pnlBarraGris.Width / 3;
+                pbEtapa.Image = Resources.etapa2;
+                lblProgreso.Text = "Pedido pendiente";
+                BRconfirmar.Enabled = true;
+                BRconfirmar.Text = "Cancelar";
+            }
+            else
+            {
+                Carro.update(Carro.idDetalle, "nulo");
+                tabControl1.SelectedTab = tabControl1.TabPages[0];
+                
+                soli.borrar(Carro.IdUsuario, Carro.idOrden);
+                BRconfirmar.Enabled = true;
+                BRconfirmar.Text = "Confirmar";
+
+            }
         }
     }
 }

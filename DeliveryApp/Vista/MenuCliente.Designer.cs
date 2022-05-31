@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.botonRedondo3 = new DeliveryApp.Recursos.botonRedondo();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlMenu = new System.Windows.Forms.Panel();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,6 +67,17 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1426, 877);
             this.panelPrincipal.TabIndex = 36;
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlMenu.AutoScroll = true;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Location = new System.Drawing.Point(300, 208);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(852, 595);
+            this.pnlMenu.TabIndex = 42;
             // 
             // botonRedondo3
             // 
@@ -298,17 +309,6 @@
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pnlMenu
-            // 
-            this.pnlMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlMenu.AutoScroll = true;
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMenu.Location = new System.Drawing.Point(300, 208);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(852, 595);
-            this.pnlMenu.TabIndex = 42;
             // 
             // MenuCliente
             // 

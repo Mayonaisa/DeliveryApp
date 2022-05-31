@@ -19,7 +19,8 @@ namespace DeliveryApp.Modelos
         //public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
         //public string IdProducto { get => idProducto; set => idProducto = value; }
 
-
+        public DetalleTieneProducto()
+            {
         public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
         {
             idDetalle = idDet;
