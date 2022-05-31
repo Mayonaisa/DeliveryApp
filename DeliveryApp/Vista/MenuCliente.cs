@@ -27,6 +27,12 @@ namespace DeliveryApp.Vista
         private void MenuCliente_Load(object sender, EventArgs e)
         {
             //panelMenu.Hide();
+            if(Carro.estatus == "entregado")
+            {
+                Carro = new CarritoC();
+                Carro.crear();
+            }
+
             panelMenu.Location = new Point(-291, -1);
             panelPrincipal.Location = new Point(-1, -1);
             panelPrincipal.Size = contenedor.Size;

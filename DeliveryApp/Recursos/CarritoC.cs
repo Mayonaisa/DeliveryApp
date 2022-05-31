@@ -71,7 +71,7 @@ namespace DeliveryApp.Recursos
 
         }
 
-        private void leer()
+        public void leer()
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
@@ -111,6 +111,34 @@ namespace DeliveryApp.Recursos
             nombreProd.Add(nombre);
             cantidad.Add(cant);
             monto.Add(mont);
+        }
+
+        public void Verificar (string idClien)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand Orden = new SqlCommand("select idOrden from Solicita where idCliente = '"+idClien+"' intersect select idOrden from Orden where estatus !='entregado'", conx);
+
+
+            Orden.Prepare();
+            SqlDataReader resultado = Orden.ExecuteReader();
+            if(resultado.Read())
+            {
+                string idOrd = resultado.GetString(0);
+                idOrd = idOrd.Trim();
+
+                idOrden = idOrd;
+
+                leer();
+                detalle = new Detalle();
+                detalle.refrescar(idOrden);
+            }
+            else
+            {
+                //MessageBox.Show("no hay carnal");
+                crear();
+            }
         }
     }
 }

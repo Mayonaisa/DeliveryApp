@@ -241,6 +241,7 @@ namespace DeliveryApp
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
+                            Carro.Verificar(usuario.IdPersona.Trim());
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
                             Carro.IdUsuario = usuario.IdPersona.Trim();
                             Carro.Usuario = usuario.Nombre.Trim();

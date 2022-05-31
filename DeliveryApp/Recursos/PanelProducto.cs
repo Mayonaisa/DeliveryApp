@@ -27,7 +27,7 @@ namespace DeliveryApp.Recursos
         int montoP = 0;
 
         public Producto prod;
-        public DetalleTieneProducto detProd;
+        public DetalleTieneProducto detProd = new DetalleTieneProducto();
         Detalle det;
         public MenuCliente MenuV;
         public Panel contenedor;
@@ -135,6 +135,12 @@ namespace DeliveryApp.Recursos
             this.BRprincipal.Size = new System.Drawing.Size(189, 46);
             this.BRprincipal.Text = "Agregar";
             this.BRprincipal.FlatAppearance.BorderSize = 0;
+            if (Carro.estatus == "nulo")
+            {
+                this.BRprincipal.Enabled = true;
+            }
+            else
+                this.BRprincipal.Enabled = false;
 
             BRsecundario = new botonRedondo();
             BRsecundario.Click += new System.EventHandler(btn_consultar_click);
@@ -174,7 +180,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.Name = "lblmonto";
             this.lblmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
-            this.lblmonto.Location = new System.Drawing.Point(308, 26);
+            this.lblmonto.Location = new System.Drawing.Point(408, 26);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
             this.lblmonto.Text = monto;
 
@@ -183,7 +189,7 @@ namespace DeliveryApp.Recursos
             this.BRcantidad.BackColor = Color.FromArgb(236, 236, 236);
             this.BRcantidad.FlatStyle = FlatStyle.Flat;
             this.BRcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BRcantidad.Location = new Point(234, 18);
+            this.BRcantidad.Location = new Point(334, 18);
             this.BRcantidad.Size = new System.Drawing.Size(43, 46);
             this.BRcantidad.Text = cantidad;
             this.BRcantidad.FlatAppearance.BorderSize = 0;
@@ -279,7 +285,8 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-                
+                //metodo de borrar un registro en DetalleTieneProducto basado en el idproducto y detalle
+                //ya luego un metodo para sumar al registro en caso de haber agregado al carrito el mismo producto
             }
         }
     }

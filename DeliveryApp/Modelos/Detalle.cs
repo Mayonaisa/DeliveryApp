@@ -91,6 +91,25 @@ namespace DeliveryApp.Modelos
             SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
         }
 
+        public void refrescar (string idOrd)
+        {
+            idOrden = idOrd;
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand NuevoDetalle = new SqlCommand("Select idDetalle,monto from Detalle where idOrden= '" + idOrd + "'", conx); //jhbj
+            NuevoDetalle.Prepare();
+
+            SqlDataReader resultado2 = NuevoDetalle.ExecuteReader();
+            if(resultado2.Read())
+            {
+                idDetalle = resultado2.GetString(0);
+                idDetalle = idDetalle.Trim();
+                monto = resultado2.GetSqlSingle(1);
+            }
+        }
+
 
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
         public SqlSingle Monto { get => monto; set => monto = value; }

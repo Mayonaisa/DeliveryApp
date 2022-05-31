@@ -46,5 +46,14 @@ namespace DeliveryApp.Vista
             Desplegar(MenuClienteV);
             this.Close();
         }
+
+        private void HistorialPedidos_Load(object sender, EventArgs e)
+        {
+            if (Carro.estatus == "entregado")
+            {
+                Carro = new CarritoC();
+                Carro.crear();
+            }
+        }
     }
 }

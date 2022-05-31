@@ -34,6 +34,41 @@ namespace DeliveryApp.Modelos
 
         }
 
+        public void borrar(string id, string idOrden)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand Insert = new SqlCommand("delete from Solicita where idCliente = '"+id+"' and idOrden = '"+idOrden+"'", conx);
+
+
+            Insert.Prepare();
+            SqlDataReader resultado = Insert.ExecuteReader();
+        }
+
+        public void leer(string id, string idOrden)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand Orden = new SqlCommand("select * from Solicita where idOrden = '" + idOrden + "' and idCliente = '"+id+"'", conx);
+
+
+            Orden.Prepare();
+            SqlDataReader resultado = Orden.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                idCliente = resultado.GetString(0);
+                idCliente = idCliente.Trim();
+                fecha = resultado.GetString(1);
+                fecha = fecha.Trim();
+                OrdenId = resultado.GetString(2);
+                OrdenId = OrdenId.Trim();
+
+            }
+        }
+
         public string IdCliente { get => idCliente; set => idCliente = value; }
         public string Fecha { get => fecha; set => fecha = value; }
         public string OrdenId1 { get => OrdenId; set => OrdenId = value; }

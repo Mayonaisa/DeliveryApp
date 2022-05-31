@@ -53,10 +53,16 @@ namespace DeliveryApp.Vista
 
         private void ProductoV_Load(object sender, EventArgs e)
         {
+            if (Carro.estatus == "entregado")
+            {
+                Carro = new CarritoC();
+                Carro.crear();
+            }
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
-            pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject(prod.Nombre)));
-            txtProducto.Texts = prod.Nombre.Replace(' ', '_');
+            pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject(prod.Nombre.Replace(' ', '_'))));
+            txtProducto.Texts = prod.Nombre.Replace('_', ' ');
             txtPrecio.Texts = "$" + prod.Precio.ToString() + " MXN";
             txtDisponibilidad.Texts = prod.Disponible;
         }
