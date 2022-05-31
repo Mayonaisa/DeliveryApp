@@ -12,14 +12,14 @@ namespace DeliveryApp.Modelos
     public class DetalleTieneProducto
     {
         string idDetalle;
-        //SqlSingle cantidad;
-        //string idProducto;
+        SqlSingle cantidad;
+        string idProducto;
 
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
-        //public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
-        //public string IdProducto { get => idProducto; set => idProducto = value; }
+        public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
+        public string IdProducto { get => idProducto; set => idProducto = value; }
 
-
+        public DetalleTieneProducto() { }
         public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
         {
             idDetalle = idDet;
@@ -86,7 +86,7 @@ namespace DeliveryApp.Modelos
         //public List<int> Cantidad1 { get => cantidad; set => cantidad = value; }
         //public List<string> Idproducto { get => idproducto; set => idproducto = value; }
 
-        public int Cantidad()
+        public int CantidadDetalles()
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
@@ -112,7 +112,29 @@ namespace DeliveryApp.Modelos
             return cantidad;
         }
 
+        public void ListaDetallesTieneProductos(int max, ref List<DetalleTieneProducto> DetPro)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
-    
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT * FROM DetalleContieneProducto", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            while (resultado.Read() && i < max)
+            {
+                DetPro.Add(new DetalleTieneProducto());
+                DetPro[i].IdDetalle = resultado.GetString(0);
+                DetPro[i].cantidad = resultado.GetSqlSingle(1);
+                DetPro[i].idProducto = resultado.GetString(2);
+                i++;
+            }
+
+            conx.Close();
+        }
+
     }
  }

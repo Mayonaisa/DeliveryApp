@@ -126,9 +126,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
             this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 29);
+            this.label1.Size = new System.Drawing.Size(250, 29);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Productos";
+            this.label1.Text = "Detalles de Productos";
             // 
             // CatalogoDetalleTieneProducto
             // 

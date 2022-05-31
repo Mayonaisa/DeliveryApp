@@ -17,7 +17,8 @@ namespace DeliveryApp.Vista
         Recepcionista Rep = new Recepcionista();
         Panel contenedor = new Panel();
         Pedido pedidos;
-        DetalleTieneProducto DetPed;
+        DetalleTieneProducto DetPed=new DetalleTieneProducto();
+        List<DetalleTieneProducto> DetPedList=new List<DetalleTieneProducto>();
         public CatalogoDetalleTieneProducto(Recepcionista r, Panel p)
         {
             Rep = r;
@@ -42,15 +43,14 @@ namespace DeliveryApp.Vista
         {
             string Mensaje=null;
             dgvPedidos.Rows.Clear();
-            ConsultarDetalleTieneProducto.ObtenerDetalleproducto(ref DetPed,ref Mensaje);
 
-            int cantidad = 0;
-            ConsultarDetalleTieneProducto.cantidadPedidos(ref cantidad);
+            int cantidad = DetPed.CantidadDetalles();
+            ConsultarDetalleTieneProducto.ObtenerDetallesProductos(ref DetPedList,ref Mensaje,DetPed);
             int i = 0;
 
             while (i < cantidad)
             {
-                //dgvPedidos.Rows.Add(DetPed.IdDetalle[i], DetPed.Cantidad, DetPed.Idproducto[i]); /*Temporal*/
+                dgvPedidos.Rows.Add(DetPedList[i].IdDetalle, DetPedList[i].Cantidad, DetPedList[i].IdProducto);
                 i++;
             }
 

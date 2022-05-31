@@ -91,7 +91,8 @@ namespace DeliveryApp.Vista
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            ConsultaGeneralEmpleados ConEmp = new ConsultaGeneralEmpleados();
+            Desplegar(ConEmp);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -121,6 +122,12 @@ namespace DeliveryApp.Vista
         {
             CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos();
             Desplegar(CatVeh);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos();
+            Desplegar(ConPro);
         }
     }
 }
