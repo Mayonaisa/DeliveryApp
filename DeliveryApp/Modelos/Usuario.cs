@@ -145,66 +145,60 @@ namespace DeliveryApp.Modelos
 			}
 		}
 
-		//      public bool BuscarRecepcionista(Usuario User)
-		//      {
-		//	//SqlConnection conx = new SqlConnection(
-		//	//	"Data Source=DESKTOP-I0PHDQ6;Initial Catalog=DeliveryApp;Integrated Security=True;"
-		//	//	);
+        public void BuscarRecepcionista(string id)
+        {
+			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
-		//	SqlConnection conx = new SqlConnection(
-		//		"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-		//		);
+			conx.Open();
 
-		//	conx.Open();
+            SqlCommand consulta = new SqlCommand("SELECT idRecepcionista, nombre, APaterno FROM Recepcionista,Persona WHERE idRecepcionista = '" + id + "' and idPersona = '" + id + "'", conx);
 
-		//	SqlCommand consulta = new SqlCommand("SELECT idRecepcionista FROM Recepcionista WHERE idRecepcionista = '" + User.IdPersona + "'" , conx);
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
 
-		//	consulta.Prepare();
-		//	SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+				this.Nombre=resultado.GetString(1);
+				this.APaterno = resultado.GetString(2);
+				conx.Close();
+            }
+            else
+            {
+                conx.Close();
+            }
 
-		//	if (resultado.Read())
-		//	{
-		//		conx.Close();
-		//		return true;
-		//	}
-		//	else
-		//	{
-		//		conx.Close();
-		//		return false;
-		//	}
+        }
+        //public bool BuscarCliente(Usuario User)
+        //{
+        //	//SqlConnection conx = new SqlConnection(
+        //	//	"Data Source=DESKTOP-I0PHDQ6" +
+        //	//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
+        //	//	);
+        //	SqlConnection conx = new SqlConnection(
+        //		"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
+        //		);
 
-		//}
-		//public bool BuscarCliente(Usuario User)
-		//{
-		//	//SqlConnection conx = new SqlConnection(
-		//	//	"Data Source=DESKTOP-I0PHDQ6" +
-		//	//             ";Initial Catalog=DeliveryApp;Integrated Security=True;"
-		//	//	);
-		//	SqlConnection conx = new SqlConnection(
-		//		"Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-		//		);
+        //	conx.Open();
 
-		//	conx.Open();
+        //	SqlCommand consulta = new SqlCommand("SELECT idCliente FROM Cliente WHERE idCliente = '" + User.IdPersona + "'", conx);
 
-		//	SqlCommand consulta = new SqlCommand("SELECT idCliente FROM Cliente WHERE idCliente = '" + User.IdPersona + "'", conx);
+        //	consulta.Prepare();
+        //	SqlDataReader resultado = consulta.ExecuteReader();
 
-		//	consulta.Prepare();
-		//	SqlDataReader resultado = consulta.ExecuteReader();
+        //	if (resultado.Read())
+        //	{
+        //		conx.Close();
+        //		return true;
+        //	}
+        //	else
+        //	{
+        //		conx.Close();
+        //		return false;
+        //	}
 
-		//	if (resultado.Read())
-		//	{
-		//		conx.Close();
-		//		return true;
-		//	}
-		//	else
-		//	{
-		//		conx.Close();
-		//		return false;
-		//	}
+        //}
 
-		//}
-
-		public Usuario(string nu, string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa, string nombre, string idPersona, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo) : base (idPersona, nombre, aPaterno, aMaterno, telefono, fechaNac, edad, sexo)
+        public Usuario(string nu, string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa, string nombre, string idPersona, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo) : base (idPersona, nombre, aPaterno, aMaterno, telefono, fechaNac, edad, sexo)
 		{
 			// datos de persona
 			base.Nombre = nombre;

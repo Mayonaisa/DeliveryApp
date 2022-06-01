@@ -21,11 +21,9 @@ namespace DeliveryApp.Modelos
         public string Nombre { get => nombre; set => nombre = value; }
         public string Disponible { get => disponible; set => disponible = value; }
         public SqlSingle Precio { get => precio; set => precio = value; }
-
+        public Producto() { }
         public Producto(int idnum)
         {
-            //ulilap   DESKTOP-I0PHDQ6
-            //ulidesk  DESKTOP-DF9LLIC
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
             conx.Open();
@@ -53,6 +51,56 @@ namespace DeliveryApp.Modelos
                 //prueba
                 //MessageBox.Show("no se encontró el producto");
             }
+        }
+        public int cantidad()
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT COUNT(*) FROM Producto", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int cant = 0;
+            if (resultado.Read())
+            {
+                cant = resultado.GetInt32(0);
+
+                return cant = resultado.GetInt32(0);
+
+            }
+            else
+            {
+                conx.Close();
+                throw new Exception("Error");
+            }
+
+        }
+        public void ListaProductos(int max, ref List<Producto> Pro)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT * FROM Producto", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            while (resultado.Read() && i < max)
+            {
+                Pro.Add(new Producto());
+                Pro[i].idProducto = resultado.GetString(0);
+                Pro[i].nombre = resultado.GetString(1);
+                Pro[i].disponible = resultado.GetString(2);
+                Pro[i].precio = resultado.GetSqlSingle(3);
+                i++;
+            }
+
+            conx.Close();
         }
     }
 }

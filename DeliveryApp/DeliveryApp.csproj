@@ -57,9 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\CambiarContraseña.cs" />
+    <Compile Include="Controladores\ConsultaClientes.cs" />
     <Compile Include="Controladores\Consultar Catalogo.cs" />
     <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
+    <Compile Include="Controladores\ConsultarProductos.cs" />
+    <Compile Include="Controladores\ConsultarVehiculos.cs" />
     <Compile Include="Controladores\Login.cs" />
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
@@ -67,11 +70,6 @@
     <Compile Include="Controladores\SolicitarPedido.cs" />
     <Compile Include="Modelos\Entrega.cs" />
     <Compile Include="Modelos\Registra.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Modelos\Direccion.cs" />
     <Compile Include="Recursos\botonRedondo.cs">
       <SubType>Component</SubType>
@@ -109,6 +107,12 @@
     <Compile Include="Vista\CatalogoDetalleTieneProducto.Designer.cs">
       <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\CatalogoGeneralVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CatalogoGeneralVehiculos.Designer.cs">
+      <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Configuración.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +130,42 @@
     </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.Designer.cs">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralClientes.Designer.cs">
+      <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralDetalle.Designer.cs">
+      <DependentUpon>ConsultaGeneralDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralEmpleados.Designer.cs">
+      <DependentUpon>ConsultaGeneralEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralOrden.Designer.cs">
+      <DependentUpon>ConsultaGeneralOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralProductos.Designer.cs">
+      <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsutaEspecificaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsutaEspecificaCliente.Designer.cs">
+      <DependentUpon>ConsutaEspecificaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Contenedor.cs">
       <SubType>Form</SubType>
@@ -254,8 +294,20 @@
     <EmbeddedResource Include="Vista\CatalogoDetalleTieneProducto.resx">
       <DependentUpon>CatalogoDetalleTieneProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CatalogoGeneralVehiculos.resx">
+      <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaGeneralClientes.resx">
+      <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaGeneralProductos.resx">
+      <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsutaEspecificaCliente.resx">
+      <DependentUpon>ConsutaEspecificaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
@@ -290,7 +342,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -338,6 +389,7 @@
     <None Include="Resources\Captura de pantalla 2022-05-11 212152.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\empleado%281%29.png" />
     <Content Include="Imagenes\etapa1.png" />
     <Content Include="Imagenes\etapa2.png" />
     <Content Include="Imagenes\etapa3.png" />
@@ -369,7 +421,6 @@
     <None Include="Resources\rp1.png" />
     <None Include="Resources\Captura de pantalla 2022-05-11 213108.png" />
     <Content Include="Imagenes\delicious-food-frame-top-view.png" />
-    <Content Include="Imagenes\logo1.png" />
     <Content Include="Imagenes\logo2.png" />
     <Content Include="Imagenes\logo3.png" />
     <Content Include="Imagenes\logo4.png" />

@@ -14,9 +14,13 @@ namespace DeliveryApp.Modelos
         string marca;
         string placa;
         string año;
+        string color;
         string modelo;
         string tipo;
-        public Vehiculo() { }
+        public Vehiculo()
+        {
+            
+        }
 
         public string IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
         public string Marca { get => marca; set => marca = value; }
@@ -24,6 +28,7 @@ namespace DeliveryApp.Modelos
         public string Año { get => año; set => año = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public string Tipo { get => tipo; set => tipo = value; }
+        public string Color { get => color; set => color = value; }
 
         public void IdEntrega(string idOrden)
         {
@@ -86,7 +91,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT V.idVehiculo,V.marca,V.modelo,V.placa,V.año from Vehiculo V ", conx);
+            SqlCommand consulta = new SqlCommand("SELECT V.idVehiculo,V.marca,V.modelo,V.placa,V.año,V.color,V.tipo from Vehiculo V ", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -99,6 +104,8 @@ namespace DeliveryApp.Modelos
                 Veh[i].modelo = resultado.GetString(2).Trim();
                 Veh[i].placa = resultado.GetString(3).Trim();
                 Veh[i].Año = resultado.GetString(4).Trim();
+                Veh[i].color = resultado.GetString(5);
+                Veh[i].tipo = resultado.GetString(6);
                 i++;
             }
 

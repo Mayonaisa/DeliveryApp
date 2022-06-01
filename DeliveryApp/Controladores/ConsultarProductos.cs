@@ -7,9 +7,9 @@ using DeliveryApp.Modelos;
 
 namespace DeliveryApp.Controladores
 {
-    class ConsultarDetalleTieneProducto
+    class ConsultarProductos
     {
-        public static void CantidadDetallesProductos(ref int cantidad, ref Producto Pro)
+        public static void CantidadProductos(ref int cantidad, ref Producto Pro)
         {
 
             try
@@ -22,12 +22,12 @@ namespace DeliveryApp.Controladores
 
             }
         }
-        public static void ObtenerDetallesProductos(ref List<DetalleTieneProducto> Pro, ref string mensaje, DetalleTieneProducto P)
+        public static void ObtenerProducto(ref List<Producto> Pro, ref string mensaje, Producto P)
         {
             try
             {
-                int max = P.CantidadDetalles();
-                P.ListaDetallesTieneProductos(max, ref Pro);
+                int max = P.cantidad();
+                P.ListaProductos(max, ref Pro);
 
             }
             catch (Exception ex)
