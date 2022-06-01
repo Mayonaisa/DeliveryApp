@@ -60,6 +60,7 @@
     <Compile Include="Controladores\ConsultaClientes.cs" />
     <Compile Include="Controladores\Consultar Catalogo.cs" />
     <Compile Include="Controladores\ConsultarDetalleTieneProducto.cs" />
+    <Compile Include="Controladores\ConsultarEmpleados.cs" />
     <Compile Include="Controladores\ConsultarPedido.cs" />
     <Compile Include="Controladores\ConsultarProductos.cs" />
     <Compile Include="Controladores\ConsultarVehiculos.cs" />
