@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DeliveryApp.Vista
 {
-    public partial class ConsultaGeneralEmpleados : Form
+    public partial class ConsultaEspecificaVehiculo : Form
     {
-        public ConsultaGeneralEmpleados()
+        public ConsultaEspecificaVehiculo()
         {
             InitializeComponent();
         }

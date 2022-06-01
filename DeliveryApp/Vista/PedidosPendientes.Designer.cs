@@ -39,9 +39,6 @@
             this.Vehi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaSolici = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,7 +54,7 @@
             this.panel2.Controls.Add(this.dgvPedidos);
             this.panel2.Location = new System.Drawing.Point(12, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1086, 565);
+            this.panel2.Size = new System.Drawing.Size(1565, 783);
             this.panel2.TabIndex = 8;
             // 
             // botonRedondo1
@@ -68,14 +65,14 @@
             this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo1.Font = new System.Drawing.Font("Sora", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRedondo1.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo1.Location = new System.Drawing.Point(871, 511);
+            this.botonRedondo1.Location = new System.Drawing.Point(1271, 694);
             this.botonRedondo1.Name = "botonRedondo1";
             this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
             this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Size = new System.Drawing.Size(203, 51);
+            this.botonRedondo1.Size = new System.Drawing.Size(273, 70);
             this.botonRedondo1.TabIndex = 1;
             this.botonRedondo1.Text = "Consulta";
             this.botonRedondo1.TextColor = System.Drawing.Color.White;
@@ -95,16 +92,13 @@
             this.Vehi,
             this.Clie,
             this.fechaSolici,
-            this.Ciu,
-            this.C1,
-            this.C2,
             this.Colo,
             this.NCasa});
             this.dgvPedidos.Location = new System.Drawing.Point(5, -1);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersWidth = 51;
             this.dgvPedidos.RowTemplate.Height = 24;
-            this.dgvPedidos.Size = new System.Drawing.Size(1078, 476);
+            this.dgvPedidos.Size = new System.Drawing.Size(1557, 572);
             this.dgvPedidos.TabIndex = 0;
             // 
             // IdOrden
@@ -171,30 +165,6 @@
             this.fechaSolici.ReadOnly = true;
             this.fechaSolici.Width = 125;
             // 
-            // Ciu
-            // 
-            this.Ciu.HeaderText = "Ciudad";
-            this.Ciu.MinimumWidth = 6;
-            this.Ciu.Name = "Ciu";
-            this.Ciu.ReadOnly = true;
-            this.Ciu.Width = 125;
-            // 
-            // C1
-            // 
-            this.C1.HeaderText = "Calle1";
-            this.C1.MinimumWidth = 6;
-            this.C1.Name = "C1";
-            this.C1.ReadOnly = true;
-            this.C1.Width = 125;
-            // 
-            // C2
-            // 
-            this.C2.HeaderText = "Calle2";
-            this.C2.MinimumWidth = 6;
-            this.C2.Name = "C2";
-            this.C2.ReadOnly = true;
-            this.C2.Width = 125;
-            // 
             // Colo
             // 
             this.Colo.HeaderText = "Colonia";
@@ -216,7 +186,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
             this.panel1.Location = new System.Drawing.Point(12, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1086, 16);
+            this.panel1.Size = new System.Drawing.Size(1562, 37);
             this.panel1.TabIndex = 7;
             // 
             // label1
@@ -235,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1110, 653);
+            this.ClientSize = new System.Drawing.Size(1600, 884);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -266,9 +236,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Vehi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clie;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaSolici;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NCasa;
     }

@@ -1,6 +1,6 @@
 ﻿namespace DeliveryApp.Vista
 {
-    partial class CatalogoGeneralVehiculos
+    partial class ConsultaGeneralEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -32,22 +32,21 @@
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvVehiculo = new System.Windows.Forms.DataGridView();
-            this.idV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modelo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Placoso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Año2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idEmplea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nambre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pussy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.dgvVehiculo);
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.botonRedondo1);
             this.panel2.Location = new System.Drawing.Point(22, 86);
             this.panel2.Name = "panel2";
@@ -58,10 +57,9 @@
             // 
             this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
             this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonRedondo1.FlatAppearance.BorderSize = 0;
-            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonRedondo1.Font = new System.Drawing.Font("Sora", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRedondo1.ForeColor = System.Drawing.Color.White;
@@ -92,85 +90,76 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 32);
+            this.label1.Size = new System.Drawing.Size(157, 32);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Vehiculos";
+            this.label1.Text = "Empleados";
             // 
-            // dgvVehiculo
+            // dataGridView1
             // 
-            this.dgvVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idV,
-            this.Marca2,
-            this.Modelo2,
-            this.Color2,
-            this.Placoso,
-            this.Año2,
-            this.Tipo2});
-            this.dgvVehiculo.Location = new System.Drawing.Point(3, 3);
-            this.dgvVehiculo.Name = "dgvVehiculo";
-            this.dgvVehiculo.RowHeadersWidth = 51;
-            this.dgvVehiculo.RowTemplate.Height = 24;
-            this.dgvVehiculo.Size = new System.Drawing.Size(1549, 625);
-            this.dgvVehiculo.TabIndex = 4;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEmplea,
+            this.nambre,
+            this.Telefo,
+            this.Sexum,
+            this.Edada,
+            this.Pussy});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1551, 625);
+            this.dataGridView1.TabIndex = 4;
             // 
-            // idV
+            // idEmplea
             // 
-            this.idV.HeaderText = "idVehiculo";
-            this.idV.MinimumWidth = 6;
-            this.idV.Name = "idV";
-            this.idV.ReadOnly = true;
-            this.idV.Width = 125;
+            this.idEmplea.HeaderText = "idEmpleado";
+            this.idEmplea.MinimumWidth = 6;
+            this.idEmplea.Name = "idEmplea";
+            this.idEmplea.ReadOnly = true;
+            this.idEmplea.Width = 125;
             // 
-            // Marca2
+            // nambre
             // 
-            this.Marca2.HeaderText = "Marca";
-            this.Marca2.MinimumWidth = 6;
-            this.Marca2.Name = "Marca2";
-            this.Marca2.ReadOnly = true;
-            this.Marca2.Width = 125;
+            this.nambre.HeaderText = "Nombre";
+            this.nambre.MinimumWidth = 6;
+            this.nambre.Name = "nambre";
+            this.nambre.ReadOnly = true;
+            this.nambre.Width = 125;
             // 
-            // Modelo2
+            // Telefo
             // 
-            this.Modelo2.HeaderText = "Modelo";
-            this.Modelo2.MinimumWidth = 6;
-            this.Modelo2.Name = "Modelo2";
-            this.Modelo2.ReadOnly = true;
-            this.Modelo2.Width = 125;
+            this.Telefo.HeaderText = "Telefono";
+            this.Telefo.MinimumWidth = 6;
+            this.Telefo.Name = "Telefo";
+            this.Telefo.ReadOnly = true;
+            this.Telefo.Width = 125;
             // 
-            // Color2
+            // Sexum
             // 
-            this.Color2.HeaderText = "Color";
-            this.Color2.MinimumWidth = 6;
-            this.Color2.Name = "Color2";
-            this.Color2.ReadOnly = true;
-            this.Color2.Width = 125;
+            this.Sexum.HeaderText = "Sexo";
+            this.Sexum.MinimumWidth = 6;
+            this.Sexum.Name = "Sexum";
+            this.Sexum.ReadOnly = true;
+            this.Sexum.Width = 125;
             // 
-            // Placoso
+            // Edada
             // 
-            this.Placoso.HeaderText = "Placa";
-            this.Placoso.MinimumWidth = 6;
-            this.Placoso.Name = "Placoso";
-            this.Placoso.ReadOnly = true;
-            this.Placoso.Width = 125;
+            this.Edada.HeaderText = "Edad";
+            this.Edada.MinimumWidth = 6;
+            this.Edada.Name = "Edada";
+            this.Edada.ReadOnly = true;
+            this.Edada.Width = 125;
             // 
-            // Año2
+            // Pussy
             // 
-            this.Año2.HeaderText = "Año";
-            this.Año2.MinimumWidth = 6;
-            this.Año2.Name = "Año2";
-            this.Año2.ReadOnly = true;
-            this.Año2.Width = 125;
+            this.Pussy.HeaderText = "Posición";
+            this.Pussy.MinimumWidth = 6;
+            this.Pussy.Name = "Pussy";
+            this.Pussy.ReadOnly = true;
+            this.Pussy.Width = 125;
             // 
-            // Tipo2
-            // 
-            this.Tipo2.HeaderText = "Tipo";
-            this.Tipo2.MinimumWidth = 6;
-            this.Tipo2.Name = "Tipo2";
-            this.Tipo2.ReadOnly = true;
-            this.Tipo2.Width = 125;
-            // 
-            // CatalogoGeneralVehiculos
+            // ConsultaGeneralEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,11 +169,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CatalogoGeneralVehiculos";
-            this.Text = "CatalogoGeneralVehiculos";
+            this.Name = "ConsultaGeneralEmpleado";
+            this.Text = "ConsultaGeneralEmpleado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,13 +185,12 @@
         private Recursos.botonRedondo botonRedondo1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvVehiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Placoso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Año2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmplea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nambre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pussy;
     }
 }

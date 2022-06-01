@@ -96,5 +96,22 @@ namespace DeliveryApp.Vista
             //ContenedorCatalogos.Controls.RemoveAt(0);
             Desplegar(Men);
         }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            PantallaInicio Inicio = new PantallaInicio(contenedor);
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = Inicio.Width;
+            contenedor.Height = Inicio.Height;
+            Inicio.FormBorderStyle = FormBorderStyle.None;
+            Inicio.TopLevel = false;
+            contenedor.Controls.Add(Inicio);
+            Inicio.Dock = DockStyle.Fill;
+            Inicio.Show();
+
+        }
     }
 }

@@ -35,7 +35,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pbxPed = new System.Windows.Forms.PictureBox();
@@ -45,7 +44,6 @@
             this.botonEmp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPed)).BeginInit();
             this.panel3.SuspendLayout();
@@ -146,22 +144,11 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(75)))), ((int)(((byte)(25)))));
-            this.panel7.Controls.Add(this.pictureBox4);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Location = new System.Drawing.Point(598, 393);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(383, 186);
             this.panel7.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(221, 38);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(143, 124);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
             // 
             // button2
             // 
@@ -278,7 +265,6 @@
             this.Text = "LoginRecepcionista";
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxPed)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -296,7 +282,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbxPed;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pbxEmp;
         private System.Windows.Forms.Button botonEmp;
         private System.Windows.Forms.Button btnEmpleados;

@@ -61,27 +61,35 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                string error=null;
-                pedidos = new Pedido();
-                Repar = new Repartidor();
-                Veh = new Vehiculo();
-                string PedID = null;
-                PedID = dgvPedidos[0, e.RowIndex].Value.ToString().Trim();
-                ConsultarPedido.PedidoEspecifico(PedID,ref pedidos,ref Repar, ref Veh, ref error);
-                ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor,pedidos,Repar,Veh);
-                if (error != null)
+                if (e.RowIndex ==-1)
                 {
-                    MessageBox.Show(error);
+
                 }
-                Desplegar(Pedidos);
+                else
+                {
+                    string error = null;
+                    pedidos = new Pedido();
+                    Repar = new Repartidor();
+                    Veh = new Vehiculo();
+                    string PedID = null;
+                    PedID = dgvPedidos[0, e.RowIndex].Value.ToString().Trim();
+                    ConsultarPedido.PedidoEspecifico(PedID, ref pedidos, ref Repar, ref Veh, ref error);
+                    ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor, pedidos, Repar, Veh);
+                    if (error != null)
+                    {
+                        MessageBox.Show(error);
+                    }
+                    Desplegar(Pedidos);
+                }
+                
             }
 
 
         }
         public void CambiarBoton(int row)
         {
-            dgvPedidos[13, row].Style.BackColor=Color.Green;
-            dgvPedidos[13, row].Style.SelectionBackColor=Color.Green;
+            dgvPedidos[10, row].Style.BackColor=Color.Green;
+            dgvPedidos[10, row].Style.SelectionBackColor=Color.Green;
             
             //Aceptar.CellTemplate.;
         }
@@ -116,7 +124,7 @@ namespace DeliveryApp.Vista
             {
                 ConsultarPedido.RepartidorEspecifico(pedidos.Orden[i].IdOrden, ref IREP,ref  Mensaje);
                 ConsultarPedido.VehiculoEspecifico(pedidos.Orden[i].IdOrden, ref IVEH, ref Mensaje);
-                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus,IREP.Nombre+" "+IREP.APaterno+" "+IREP.AMaterno,IVEH.Marca+" "+IVEH.Modelo+" "+IVEH.Año, pedidos.Persona1[i].Nombre+" "+ pedidos.Persona1[i].APaterno+" "+ pedidos.Persona1[i].AMaterno, pedidos.Solicitud[i].Fecha, pedidos.Direc1[i].Ciudad, pedidos.Direc1[i].Calle1, pedidos.Direc1[i].Calle2, pedidos.Direc1[i].Colonia, pedidos.Direc1[i].NumCasa);
+                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus,IREP.Nombre+" "+IREP.APaterno+" "+IREP.AMaterno,IVEH.Marca+" "+IVEH.Modelo+" "+IVEH.Año, pedidos.Persona1[i].Nombre+" "+ pedidos.Persona1[i].APaterno+" "+ pedidos.Persona1[i].AMaterno, pedidos.Solicitud[i].Fecha, pedidos.Direc1[i].Colonia, pedidos.Direc1[i].NumCasa);
                 
                 if (dgvPedidos[3, i].Value.ToString().Trim() == "Aceptado" || dgvPedidos[3, i].Value.ToString().Trim() == "en camino")
                 {
