@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvProductos = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dispo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.idPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nambre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -51,62 +50,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1554, 779);
             this.panel2.TabIndex = 17;
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nom,
-            this.dispo,
-            this.pre});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvProductos.Location = new System.Drawing.Point(333, 3);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(912, 625);
-            this.dgvProductos.TabIndex = 2;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "idProductos";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            this.nom.Width = 125;
-            // 
-            // dispo
-            // 
-            this.dispo.HeaderText = "Disponible";
-            this.dispo.MinimumWidth = 6;
-            this.dispo.Name = "dispo";
-            this.dispo.ReadOnly = true;
-            this.dispo.Width = 125;
-            // 
-            // pre
-            // 
-            this.pre.HeaderText = "Precio";
-            this.pre.MinimumWidth = 6;
-            this.pre.Name = "pre";
-            this.pre.ReadOnly = true;
-            this.pre.Width = 125;
             // 
             // botonRedondo1
             // 
@@ -150,6 +93,53 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Productos";
             // 
+            // dgvProductos
+            // 
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPro,
+            this.nambre,
+            this.Disp,
+            this.Preco});
+            this.dgvProductos.Location = new System.Drawing.Point(331, 3);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(912, 773);
+            this.dgvProductos.TabIndex = 4;
+            // 
+            // idPro
+            // 
+            this.idPro.HeaderText = "idProducto";
+            this.idPro.MinimumWidth = 6;
+            this.idPro.Name = "idPro";
+            this.idPro.ReadOnly = true;
+            this.idPro.Width = 125;
+            // 
+            // nambre
+            // 
+            this.nambre.HeaderText = "Nombre";
+            this.nambre.MinimumWidth = 6;
+            this.nambre.Name = "nambre";
+            this.nambre.ReadOnly = true;
+            this.nambre.Width = 125;
+            // 
+            // Disp
+            // 
+            this.Disp.HeaderText = "Disponible";
+            this.Disp.MinimumWidth = 6;
+            this.Disp.Name = "Disp";
+            this.Disp.ReadOnly = true;
+            this.Disp.Width = 125;
+            // 
+            // Preco
+            // 
+            this.Preco.HeaderText = "Precio";
+            this.Preco.MinimumWidth = 6;
+            this.Preco.Name = "Preco";
+            this.Preco.ReadOnly = true;
+            this.Preco.Width = 125;
+            // 
             // ConsultaGeneralProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,13 +163,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvProductos;
         private Recursos.botonRedondo botonRedondo1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dispo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pre;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nambre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Disp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
     }
 }

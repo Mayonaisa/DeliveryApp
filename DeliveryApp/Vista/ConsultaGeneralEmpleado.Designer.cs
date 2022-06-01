@@ -28,57 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvCliente = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idEmplea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nambre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pussy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.dgvCliente);
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.botonRedondo1);
             this.panel2.Location = new System.Drawing.Point(22, 86);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1554, 779);
             this.panel2.TabIndex = 14;
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nom,
-            this.tel,
-            this.sex,
-            this.ed,
-            this.tip});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvCliente.Location = new System.Drawing.Point(5, 0);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.RowHeadersWidth = 51;
-            this.dgvCliente.RowTemplate.Height = 24;
-            this.dgvCliente.Size = new System.Drawing.Size(1549, 625);
-            this.dgvCliente.TabIndex = 2;
             // 
             // botonRedondo1
             // 
@@ -121,53 +94,70 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Empleados";
             // 
-            // id
+            // dataGridView1
             // 
-            this.id.HeaderText = "idEmpleado";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEmplea,
+            this.nambre,
+            this.Telefo,
+            this.Sexum,
+            this.Edada,
+            this.Pussy});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1551, 625);
+            this.dataGridView1.TabIndex = 4;
             // 
-            // nom
+            // idEmplea
             // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            this.nom.Width = 125;
+            this.idEmplea.HeaderText = "idEmpleado";
+            this.idEmplea.MinimumWidth = 6;
+            this.idEmplea.Name = "idEmplea";
+            this.idEmplea.ReadOnly = true;
+            this.idEmplea.Width = 125;
             // 
-            // tel
+            // nambre
             // 
-            this.tel.HeaderText = "Telefono";
-            this.tel.MinimumWidth = 6;
-            this.tel.Name = "tel";
-            this.tel.ReadOnly = true;
-            this.tel.Width = 125;
+            this.nambre.HeaderText = "Nombre";
+            this.nambre.MinimumWidth = 6;
+            this.nambre.Name = "nambre";
+            this.nambre.ReadOnly = true;
+            this.nambre.Width = 125;
             // 
-            // sex
+            // Telefo
             // 
-            this.sex.HeaderText = "Sexo";
-            this.sex.MinimumWidth = 6;
-            this.sex.Name = "sex";
-            this.sex.ReadOnly = true;
-            this.sex.Width = 125;
+            this.Telefo.HeaderText = "Telefono";
+            this.Telefo.MinimumWidth = 6;
+            this.Telefo.Name = "Telefo";
+            this.Telefo.ReadOnly = true;
+            this.Telefo.Width = 125;
             // 
-            // ed
+            // Sexum
             // 
-            this.ed.HeaderText = "Edad";
-            this.ed.MinimumWidth = 6;
-            this.ed.Name = "ed";
-            this.ed.ReadOnly = true;
-            this.ed.Width = 125;
+            this.Sexum.HeaderText = "Sexo";
+            this.Sexum.MinimumWidth = 6;
+            this.Sexum.Name = "Sexum";
+            this.Sexum.ReadOnly = true;
+            this.Sexum.Width = 125;
             // 
-            // tip
+            // Edada
             // 
-            this.tip.HeaderText = "Posición";
-            this.tip.MinimumWidth = 6;
-            this.tip.Name = "tip";
-            this.tip.ReadOnly = true;
-            this.tip.Width = 125;
+            this.Edada.HeaderText = "Edad";
+            this.Edada.MinimumWidth = 6;
+            this.Edada.Name = "Edada";
+            this.Edada.ReadOnly = true;
+            this.Edada.Width = 125;
+            // 
+            // Pussy
+            // 
+            this.Pussy.HeaderText = "Posición";
+            this.Pussy.MinimumWidth = 6;
+            this.Pussy.Name = "Pussy";
+            this.Pussy.ReadOnly = true;
+            this.Pussy.Width = 125;
             // 
             // ConsultaGeneralEmpleado
             // 
@@ -183,7 +173,7 @@
             this.Text = "ConsultaGeneralEmpleado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,15 +182,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tip;
         private Recursos.botonRedondo botonRedondo1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmplea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nambre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pussy;
     }
 }

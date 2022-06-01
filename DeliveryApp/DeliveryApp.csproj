@@ -40,7 +40,6 @@
     <Reference Include="CustomControls.RJControls">
       <HintPath>..\..\..\..\OneDrive\Escritorio\pantallaMenuAdministrador\CustomControls.RJControls.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -156,12 +155,6 @@
     <Compile Include="Vista\ConsultaGeneralEmpleado.Designer.cs">
       <DependentUpon>ConsultaGeneralEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultaGeneralEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\ConsultaGeneralEmpleados.Designer.cs">
-      <DependentUpon>ConsultaGeneralEmpleados.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\ConsultaGeneralOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,24 +202,6 @@
     </Compile>
     <Compile Include="Vista\MenuAdministrador.Designer.cs">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoClientes.Designer.cs">
-      <DependentUpon>MenuCatalogoClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoEmpleados.Designer.cs">
-      <DependentUpon>MenuCatalogoEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MenuCatalogoProductos.Designer.cs">
-      <DependentUpon>MenuCatalogoProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuCliente.cs">
       <SubType>Form</SubType>
@@ -342,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\MenuCatalogoProductos.resx">
-      <DependentUpon>MenuCatalogoProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuCliente.resx">
       <DependentUpon>MenuCliente.cs</DependentUpon>

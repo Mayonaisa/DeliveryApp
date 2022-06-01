@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvVehiculo = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.año = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvVehiculo = new System.Windows.Forms.DataGridView();
+            this.idV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modelo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Placoso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Año2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculo)).BeginInit();
             this.SuspendLayout();
@@ -54,89 +53,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1554, 779);
             this.panel2.TabIndex = 14;
-            // 
-            // dgvVehiculo
-            // 
-            this.dgvVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.marc,
-            this.Mode,
-            this.color,
-            this.Pla,
-            this.año,
-            this.tip});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVehiculo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvVehiculo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvVehiculo.Location = new System.Drawing.Point(5, 0);
-            this.dgvVehiculo.Name = "dgvVehiculo";
-            this.dgvVehiculo.RowHeadersWidth = 51;
-            this.dgvVehiculo.RowTemplate.Height = 24;
-            this.dgvVehiculo.Size = new System.Drawing.Size(1549, 625);
-            this.dgvVehiculo.TabIndex = 2;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "idVehiculo";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
-            // 
-            // marc
-            // 
-            this.marc.HeaderText = "Marca";
-            this.marc.MinimumWidth = 6;
-            this.marc.Name = "marc";
-            this.marc.ReadOnly = true;
-            this.marc.Width = 125;
-            // 
-            // Mode
-            // 
-            this.Mode.HeaderText = "Modelo";
-            this.Mode.MinimumWidth = 6;
-            this.Mode.Name = "Mode";
-            this.Mode.ReadOnly = true;
-            this.Mode.Width = 125;
-            // 
-            // color
-            // 
-            this.color.HeaderText = "Color";
-            this.color.MinimumWidth = 6;
-            this.color.Name = "color";
-            this.color.ReadOnly = true;
-            this.color.Width = 125;
-            // 
-            // Pla
-            // 
-            this.Pla.HeaderText = "Placa";
-            this.Pla.MinimumWidth = 6;
-            this.Pla.Name = "Pla";
-            this.Pla.ReadOnly = true;
-            this.Pla.Width = 125;
-            // 
-            // año
-            // 
-            this.año.HeaderText = "Año";
-            this.año.MinimumWidth = 6;
-            this.año.Name = "año";
-            this.año.ReadOnly = true;
-            this.año.Width = 125;
-            // 
-            // tip
-            // 
-            this.tip.HeaderText = "Tipo";
-            this.tip.MinimumWidth = 6;
-            this.tip.Name = "tip";
-            this.tip.ReadOnly = true;
-            this.tip.Width = 125;
             // 
             // botonRedondo1
             // 
@@ -180,6 +96,80 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Vehiculos";
             // 
+            // dgvVehiculo
+            // 
+            this.dgvVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idV,
+            this.Marca2,
+            this.Modelo2,
+            this.Color2,
+            this.Placoso,
+            this.Año2,
+            this.Tipo2});
+            this.dgvVehiculo.Location = new System.Drawing.Point(3, 3);
+            this.dgvVehiculo.Name = "dgvVehiculo";
+            this.dgvVehiculo.RowHeadersWidth = 51;
+            this.dgvVehiculo.RowTemplate.Height = 24;
+            this.dgvVehiculo.Size = new System.Drawing.Size(1549, 625);
+            this.dgvVehiculo.TabIndex = 4;
+            // 
+            // idV
+            // 
+            this.idV.HeaderText = "idVehiculo";
+            this.idV.MinimumWidth = 6;
+            this.idV.Name = "idV";
+            this.idV.ReadOnly = true;
+            this.idV.Width = 125;
+            // 
+            // Marca2
+            // 
+            this.Marca2.HeaderText = "Marca";
+            this.Marca2.MinimumWidth = 6;
+            this.Marca2.Name = "Marca2";
+            this.Marca2.ReadOnly = true;
+            this.Marca2.Width = 125;
+            // 
+            // Modelo2
+            // 
+            this.Modelo2.HeaderText = "Modelo";
+            this.Modelo2.MinimumWidth = 6;
+            this.Modelo2.Name = "Modelo2";
+            this.Modelo2.ReadOnly = true;
+            this.Modelo2.Width = 125;
+            // 
+            // Color2
+            // 
+            this.Color2.HeaderText = "Color";
+            this.Color2.MinimumWidth = 6;
+            this.Color2.Name = "Color2";
+            this.Color2.ReadOnly = true;
+            this.Color2.Width = 125;
+            // 
+            // Placoso
+            // 
+            this.Placoso.HeaderText = "Placa";
+            this.Placoso.MinimumWidth = 6;
+            this.Placoso.Name = "Placoso";
+            this.Placoso.ReadOnly = true;
+            this.Placoso.Width = 125;
+            // 
+            // Año2
+            // 
+            this.Año2.HeaderText = "Año";
+            this.Año2.MinimumWidth = 6;
+            this.Año2.Name = "Año2";
+            this.Año2.ReadOnly = true;
+            this.Año2.Width = 125;
+            // 
+            // Tipo2
+            // 
+            this.Tipo2.HeaderText = "Tipo";
+            this.Tipo2.MinimumWidth = 6;
+            this.Tipo2.Name = "Tipo2";
+            this.Tipo2.ReadOnly = true;
+            this.Tipo2.Width = 125;
+            // 
             // CatalogoGeneralVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,16 +193,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvVehiculo;
         private Recursos.botonRedondo botonRedondo1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn año;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tip;
+        private System.Windows.Forms.DataGridView dgvVehiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Placoso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Año2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo2;
     }
 }
