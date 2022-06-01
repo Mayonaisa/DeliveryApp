@@ -98,7 +98,7 @@ namespace DeliveryApp
 
                     int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
 
-                    usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                    //usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
 
                     switch (tipoUsuario)
                     {

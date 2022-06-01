@@ -297,6 +297,9 @@
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaVehiculo.resx">
+      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralClientes.resx">
       <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
     </EmbeddedResource>
