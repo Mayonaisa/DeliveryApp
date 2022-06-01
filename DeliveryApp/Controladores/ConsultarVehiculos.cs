@@ -23,5 +23,18 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;
             }
         }
+
+        public static void VehiculoEspecifico(string id, ref Vehiculo Veh, ref string mensaje)
+        {
+            try
+            {
+                Veh.IdEntrega(id);
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+        }
     }
 }

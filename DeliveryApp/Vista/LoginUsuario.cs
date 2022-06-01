@@ -98,7 +98,7 @@ namespace DeliveryApp
 
                     int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
 
-                    usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                    //usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
 
                     switch (tipoUsuario)
                     {
@@ -165,7 +165,7 @@ namespace DeliveryApp
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            int val = Login.validarNomu("Paola1234");
+            int val = Login.validarNomu("Paola_30");
             if (val == 0)
             {
                 tbxCorreo.BorderColor = borde;
@@ -174,7 +174,7 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Paola1234", "Paola1234_30");
+                    int tipoUsuario = Login.ingresar("Paola_30", "Paola1234_30");
 
                     switch (tipoUsuario)
                     {

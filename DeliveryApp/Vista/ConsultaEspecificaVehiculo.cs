@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeliveryApp.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,8 @@ namespace DeliveryApp.Vista
 {
     public partial class ConsultaEspecificaVehiculo : Form
     {
-        public ConsultaEspecificaVehiculo()
+        
+        public ConsultaEspecificaVehiculo(Panel p, Vehiculo V)
         {
             InitializeComponent();
         }
