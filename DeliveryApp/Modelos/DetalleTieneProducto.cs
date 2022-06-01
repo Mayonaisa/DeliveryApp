@@ -14,10 +14,12 @@ namespace DeliveryApp.Modelos
         string idDetalle;
         SqlSingle cantidad;
         string idProducto;
+        bool nuevo;
 
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
         public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
         public string IdProducto { get => idProducto; set => idProducto = value; }
+        public bool Nuevo { get => nuevo; set => nuevo = value; }
 
         public DetalleTieneProducto()
         { }
@@ -35,10 +37,29 @@ namespace DeliveryApp.Modelos
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
-            SqlCommand NuevaOrden = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "'," + cantidad.ToString() + ",'" + idProducto + "')", conx);
+            SqlCommand NuevaOrden = new SqlCommand("select * from DetalleContieneProducto where idDetalle = '"+idDetalle+"' and idProducto = '"+idProducto+"'", conx);
             NuevaOrden.Prepare();
 
             SqlDataReader resultado2 = NuevaOrden.ExecuteReader();
+            if(resultado2.Read())
+            {
+                SqlSingle monto = resultado2.GetSqlSingle(1);
+                string montoFinal = (monto + SqlSingle.Parse(cantidad.ToString())).ToString();
+
+                SqlCommand NuevaOrden3 = new SqlCommand("Update DetalleContieneProducto SET cantidad = "+montoFinal+ " where idDetalle = '" + idDetalle + "' and idProducto = '" + idProducto + "'", conx);
+                NuevaOrden3.Prepare();
+
+                SqlDataReader resultado = NuevaOrden3.ExecuteReader();
+                nuevo = false;
+            }
+            else
+            {
+                SqlCommand NuevaOrden2 = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "'," + cantidad.ToString() + ",'" + idProducto + "')", conx);
+                NuevaOrden2.Prepare();
+
+                SqlDataReader resultado = NuevaOrden2.ExecuteReader();
+                nuevo = true;
+            }
 
 
         }

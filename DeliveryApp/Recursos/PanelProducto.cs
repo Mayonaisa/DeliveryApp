@@ -32,6 +32,8 @@ namespace DeliveryApp.Recursos
         public MenuCliente MenuV;
         public Panel contenedor;
 
+        Carrito vista;
+
         CarritoC Carro;
 
         public PanelProducto(int idnum, CarritoC c)
@@ -156,8 +158,11 @@ namespace DeliveryApp.Recursos
 
         }
 
-        public void Crear_Panel_carrito(string texto, string monto,string cantidad, int x, int y)
+        public void Crear_Panel_carrito(string texto, string monto,string cantidad, int x, int y, Carrito vis)
         {
+            vista = vis;
+            nombreP = texto;
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
             this.Size = new System.Drawing.Size(801, 82);
@@ -265,7 +270,10 @@ namespace DeliveryApp.Recursos
             //metodo que recalcule el monto en detalle
             SqlSingle precio = int.Parse(BRcantidad.Text) * prod.Precio;
             det.sumarMonto(precio);
-            Carro.AgregarElemento(prod.Nombre, BRcantidad.Text, precio.ToString());
+            if (detProd.Nuevo == true)
+                Carro.AgregarElemento(prod.Nombre, BRcantidad.Text, precio.ToString());
+            else
+                Carro.refrescarCarrito();
         }
 
         private void btn_consultar_click(object sender, EventArgs e)
@@ -285,8 +293,15 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-                //metodo de borrar un registro en DetalleTieneProducto basado en el idproducto y detalle
-                //ya luego un metodo para sumar al registro en caso de haber agregado al carrito el mismo producto
+                Carro.eliminarProd(nombreP);
+
+                //vista.Carro = Carro;
+                //vista.cargarCarrito();
+                Carrito vista2 = new Carrito(vista.contenedor, Carro);
+                vista.Hide();
+                vista.Desplegar(vista2);
+                vista.Close();
+
             }
         }
     }

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Modelos;
 using System.Configuration;
+using System.Data.Common;
+using System.Data.SqlTypes;
 
 namespace DeliveryApp.Recursos
 {
@@ -23,6 +25,8 @@ namespace DeliveryApp.Recursos
 
         public Detalle detalle;
         public DetalleTieneProducto DetTProd;
+
+        SqlSingle m = 0;
 
         public List<string> nombreProd = new List<string>();
         public List<string> cantidad = new List<string>();
@@ -133,11 +137,60 @@ namespace DeliveryApp.Recursos
                 leer();
                 detalle = new Detalle();
                 detalle.refrescar(idOrden);
+
+                refrescarCarrito();
             }
             else
             {
                 //MessageBox.Show("no hay carnal");
                 crear();
+            }
+        }
+
+        public void refrescarCarrito ()
+        {
+            nombreProd.Clear();
+            monto.Clear();
+            cantidad.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand registros = new SqlCommand("select nombre,cantidad,precio,Producto.idProducto from Producto, DetalleContieneProducto where Producto.idProducto = DetalleContieneProducto.idProducto and idDetalle = '" + idDetalle + "'", conx);
+            
+
+            using (var r = registros.ExecuteReader())
+            {
+                
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    nombreProd.Add(s.GetString(0).Trim());
+                    cantidad.Add(s.GetValue(1).ToString());
+                    string mon = (int.Parse(s.GetValue(2).ToString()) * int.Parse(s.GetValue(1).ToString())).ToString();
+                    monto.Add(mon);
+                    m += SqlSingle.Parse(mon);
+                }
+                detalle.Monto = m;
+            }
+        }
+
+        public void eliminarProd (string nombre)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand registros = new SqlCommand("select Producto.idProducto from Producto, DetalleContieneProducto where Producto.idProducto = DetalleContieneProducto.idProducto and idDetalle = '"+idDetalle+"' and nombre = '"+nombre+"'", conx);
+
+            SqlDataReader resultado = registros.ExecuteReader();
+            if(resultado.Read())
+            {
+                string idProd = resultado.GetString(0);
+                SqlCommand borrar = new SqlCommand("Delete from DetalleContieneProducto where idDetalle = '" + idDetalle + "' and idProducto = '"+idProd+"'", conx);
+
+                SqlDataReader borr = borrar.ExecuteReader();
+
+                refrescarCarrito();
             }
         }
     }
