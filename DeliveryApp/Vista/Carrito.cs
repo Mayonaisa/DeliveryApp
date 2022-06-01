@@ -58,16 +58,17 @@ namespace DeliveryApp.Vista
             pnlCarrito.AutoScroll = true;
             Carro.leer();
             soli.leer(Carro.IdUsuario, Carro.idOrden);
+            BRconfirmar.Enabled = false;
             if (Carro.estatus == "nulo")
             {
                 //tabControl1.TabPages.Add(pnlCarrito);
                 //tabControl1.TabPages.Remove(pnlCarga);
                 tabControl1.SelectedTab = tabControl1.TabPages[0];
                 BRconfirmar.Text = "Confirmar";
+                BRconfirmar.Enabled = true;
             }
             else
             {
-                BRconfirmar.Enabled = false;
                 //tabControl1.TabPages.Add(pnlCarga);
                 //tabControl1.TabPages.Remove(pnlCarrito);
                 tabControl1.SelectedTab = tabControl1.TabPages[1];
@@ -81,11 +82,13 @@ namespace DeliveryApp.Vista
                         BRconfirmar.Text = "Cancelar";
                         break;
                     case "Aceptado":
+                        BRconfirmar.Enabled = false;
                         pnlBarraRoja.Width = (pnlBarraGris.Width / 3)*2;
                         pbEtapa.Image = Resources.etapa1;
                         lblProgreso.Text = "Pedido aceptado";
                         break;
                     case "en camino":
+                        BRconfirmar.Enabled = false;
                         pnlBarraRoja.Width = pnlBarraGris.Width;
                         pbEtapa.Image = Resources.etapa3;
                         lblProgreso.Text = "Pedido en camino";
