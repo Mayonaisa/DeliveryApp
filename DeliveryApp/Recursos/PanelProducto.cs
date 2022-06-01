@@ -211,7 +211,57 @@ namespace DeliveryApp.Recursos
             this.BRprincipal.Text = "Quitar";
             this.BRprincipal.FlatAppearance.BorderSize = 0;
         }
+        public void Crear_Panel_historial(string texto, string monto, string cantidad, int x, int y)
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryApp.Properties.Resources));
 
+            this.Size = new System.Drawing.Size(801, 82);
+            this.Location = new Point(x, y);
+            this.BorderStyle = BorderStyle.FixedSingle;
+            this.BackColor = Color.White;
+
+            lblprincipal = new Label();
+            this.Controls.Add(this.lblprincipal);
+            this.lblprincipal.AutoSize = true;
+            this.lblprincipal.Name = "lblfecha";
+            this.lblprincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprincipal.ForeColor = Color.Black;
+            this.lblprincipal.Location = new System.Drawing.Point(17, 26);
+            this.lblprincipal.Size = new System.Drawing.Size(219, 29);
+            this.lblprincipal.Text = texto;
+
+            lblmonto = new Label();
+            this.Controls.Add(this.lblmonto);
+            this.lblmonto.AutoSize = true;
+            this.lblmonto.Name = "lblmonto";
+            this.lblmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
+            this.lblmonto.Location = new System.Drawing.Point(420, 26);
+            this.lblmonto.Size = new System.Drawing.Size(219, 29);
+            this.lblmonto.Text = monto;
+
+            BRcantidad = new botonRedondo();
+            this.Controls.Add(this.BRcantidad);
+            this.BRcantidad.BackColor = Color.FromArgb(236, 236, 236);
+            this.BRcantidad.FlatStyle = FlatStyle.Flat;
+            this.BRcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRcantidad.Location = new Point(334, 18);
+            this.BRcantidad.Size = new System.Drawing.Size(80, 46);
+            this.BRcantidad.Text = cantidad;
+            this.BRcantidad.FlatAppearance.BorderSize = 0;
+
+            BRprincipal = new botonRedondo();
+            BRprincipal.Click += new System.EventHandler(btn_consultar_historial);
+            this.Controls.Add(this.BRprincipal);
+            this.BRprincipal.BackColor = Color.FromArgb(255, 36, 36);
+            this.BRprincipal.FlatStyle = FlatStyle.Flat;
+            this.BRprincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRprincipal.ForeColor = Color.White;
+            this.BRprincipal.Location = new Point(593, 18);
+            this.BRprincipal.Size = new System.Drawing.Size(189, 46);
+            this.BRprincipal.Text = "Consultar";
+            this.BRprincipal.FlatAppearance.BorderSize = 0;
+        }
         //////////////////////////////////////////////////////////////////////LOS BOTONES////////////////////////////////////////////////////////////////////////////
         private void btn_menos_click(object sender, EventArgs e)
         {
@@ -301,6 +351,14 @@ namespace DeliveryApp.Recursos
                 vista.Hide();
                 vista.Desplegar(vista2);
                 vista.Close();
+
+            }
+        }
+
+        private void btn_consultar_historial(object sender, EventArgs e)
+        {
+            if (true)
+            {
 
             }
         }

@@ -32,6 +32,10 @@ namespace DeliveryApp.Recursos
         public List<string> cantidad = new List<string>();
         public List<string> monto = new List<string>();
 
+        public List<string> fechaH = new List<string>();
+        public List<string> cantidadH = new List<string>();
+        public List<string> montoH = new List<string>();
+
         public string IdUsuario { get => idUsuario; set => idUsuario = value; }
         public string Usuario { get => usuario; set => usuario = value; }
 
@@ -191,6 +195,31 @@ namespace DeliveryApp.Recursos
                 SqlDataReader borr = borrar.ExecuteReader();
 
                 refrescarCarrito();
+            }
+        }
+
+        public void Historial()
+        {
+            fechaH.Clear();
+            cantidadH.Clear();
+            montoH.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+            conx.Open();
+
+            SqlCommand registros = new SqlCommand("select fechaSolicitud, SUM(cantidad) as cantidad, monto from Solicita, Orden,DetalleContieneProducto, Detalle where Solicita.idOrden = Orden.idOrden and Orden.idDetalle = DetalleContieneProducto.idDetalle and Orden.idDetalle = Detalle.idDetalle and estatus = 'entregado' and idCliente = '"+idUsuario+"' group by fechaSolicitud,monto", conx);
+
+
+            using (var r = registros.ExecuteReader())
+            {
+
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    fechaH.Add(s.GetString(0).Trim());
+                    cantidadH.Add(s.GetValue(1).ToString());
+                    montoH.Add(s.GetValue(2).ToString());
+                }
             }
         }
     }
