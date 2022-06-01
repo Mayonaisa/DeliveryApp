@@ -20,7 +20,7 @@ namespace DeliveryApp.Modelos
         //public string IdProducto { get => idProducto; set => idProducto = value; }
 
         public DetalleTieneProducto()
-            {
+        { }
         public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
         {
             idDetalle = idDet;
