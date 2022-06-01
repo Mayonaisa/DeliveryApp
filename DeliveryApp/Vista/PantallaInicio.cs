@@ -22,6 +22,11 @@ namespace DeliveryApp.Vista
             Carro = c;
             InitializeComponent();
         }
+        public PantallaInicio(Panel p2)
+        {
+            contenedor = p2;
+            InitializeComponent();
+        }
 
         public void Desplegar(Form f)
         {

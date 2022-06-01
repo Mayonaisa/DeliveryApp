@@ -119,17 +119,23 @@
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultaEspecifica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\ConsultaEspecifica.Designer.cs">
-      <DependentUpon>ConsultaEspecifica.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.Designer.cs">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaProductos.Designer.cs">
+      <DependentUpon>ConsultaEspecificaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaVehiculo.Designer.cs">
+      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultaGeneralClientes.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="Vista\ConsultaGeneralDetalle.Designer.cs">
       <DependentUpon>ConsultaGeneralDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaGeneralEmpleado.Designer.cs">
+      <DependentUpon>ConsultaGeneralEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultaGeneralEmpleados.cs">
       <SubType>Form</SubType>
@@ -302,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralClientes.resx">
       <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaGeneralEmpleado.resx">
+      <DependentUpon>ConsultaGeneralEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralProductos.resx">
       <DependentUpon>ConsultaGeneralProductos.cs</DependentUpon>

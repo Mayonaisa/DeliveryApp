@@ -31,18 +31,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvCliente = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rfc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Esta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Call = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Call2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,10 +66,6 @@
             this.tel,
             this.sex,
             this.ed,
-            this.rfc,
-            this.Pa,
-            this.Esta,
-            this.Ciu,
             this.Call,
             this.Call2,
             this.Colo,
@@ -93,25 +85,6 @@
             this.dgvCliente.RowTemplate.Height = 24;
             this.dgvCliente.Size = new System.Drawing.Size(1549, 625);
             this.dgvCliente.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(12, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1557, 16);
-            this.panel1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(12, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 32);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Clientes";
             // 
             // botonRedondo1
             // 
@@ -134,6 +107,25 @@
             this.botonRedondo1.TextColor = System.Drawing.Color.White;
             this.botonRedondo1.UseVisualStyleBackColor = false;
             this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
+            this.panel1.Location = new System.Drawing.Point(12, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1557, 16);
+            this.panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 32);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Clientes";
             // 
             // id
             // 
@@ -174,38 +166,6 @@
             this.ed.Name = "ed";
             this.ed.ReadOnly = true;
             this.ed.Width = 125;
-            // 
-            // rfc
-            // 
-            this.rfc.HeaderText = "RFC";
-            this.rfc.MinimumWidth = 6;
-            this.rfc.Name = "rfc";
-            this.rfc.ReadOnly = true;
-            this.rfc.Width = 125;
-            // 
-            // Pa
-            // 
-            this.Pa.HeaderText = "País";
-            this.Pa.MinimumWidth = 6;
-            this.Pa.Name = "Pa";
-            this.Pa.ReadOnly = true;
-            this.Pa.Width = 125;
-            // 
-            // Esta
-            // 
-            this.Esta.HeaderText = "Estado";
-            this.Esta.MinimumWidth = 6;
-            this.Esta.Name = "Esta";
-            this.Esta.ReadOnly = true;
-            this.Esta.Width = 125;
-            // 
-            // Ciu
-            // 
-            this.Ciu.HeaderText = "Ciudad";
-            this.Ciu.MinimumWidth = 6;
-            this.Ciu.Name = "Ciu";
-            this.Ciu.ReadOnly = true;
-            this.Ciu.Width = 125;
             // 
             // Call
             // 
@@ -271,10 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn ed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rfc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Esta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Call;
         private System.Windows.Forms.DataGridViewTextBoxColumn Call2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colo;

@@ -128,6 +128,7 @@
             this.rjButton3.Text = "Cerrar sesión";
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
             // 
             // rjButton2
             // 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DeliveryApp.Vista
 {
-    public partial class ConsutaEspecificaCliente : Form
+    public partial class ConsultaGeneralEmpleado : Form
     {
-        public ConsutaEspecificaCliente()
+        public ConsultaGeneralEmpleado()
         {
             InitializeComponent();
-        }
-
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
