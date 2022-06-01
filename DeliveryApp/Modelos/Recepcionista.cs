@@ -66,16 +66,17 @@ namespace DeliveryApp.Modelos
                 Rep[i].Telefono = resultado.GetString(4).Trim();
                 Rep[i].Sexo = resultado.GetString(5).Trim();
                 Rep[i].Edad =int.Parse(resultado.GetValue(6).ToString());
+                Rep[i].Nomu = resultado.GetString(7).Trim();
 
                 Rep[i].Dir = new Direccion();
-                Rep[i].Dir.IdDireccion = resultado.GetString(7).Trim();
-                Rep[i].Dir.Pais = resultado.GetString(8).Trim();
-                Rep[i].Dir.Estado = resultado.GetString(9).Trim();
-                Rep[i].Dir.Ciudad = resultado.GetString(10).Trim();
-                Rep[i].Dir.Calle1 = resultado.GetString(11).Trim();
-                Rep[i].Dir.Calle2 = resultado.GetString(12).Trim();
-                Rep[i].Dir.Colonia = resultado.GetString(13).Trim();
-                Rep[i].Dir.NumCasa = resultado.GetString(14).Trim();
+                Rep[i].Dir.IdDireccion = resultado.GetString(8).Trim();
+                Rep[i].Dir.Pais = resultado.GetString(9).Trim();
+                Rep[i].Dir.Estado = resultado.GetString(10).Trim();
+                Rep[i].Dir.Ciudad = resultado.GetString(11).Trim();
+                Rep[i].Dir.Calle1 = resultado.GetString(12).Trim();
+                Rep[i].Dir.Calle2 = resultado.GetString(13).Trim();
+                Rep[i].Dir.Colonia = resultado.GetString(14).Trim();
+                Rep[i].Dir.NumCasa = resultado.GetString(15).Trim();
                 i++;
             }
 

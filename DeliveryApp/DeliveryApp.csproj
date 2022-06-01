@@ -119,6 +119,12 @@
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsultaEspecificaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaEmpleados.Designer.cs">
+      <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\CatalogoGeneralVehiculos.resx">
       <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaEmpleados.resx">
+      <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>

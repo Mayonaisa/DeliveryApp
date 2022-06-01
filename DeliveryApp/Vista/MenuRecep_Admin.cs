@@ -91,7 +91,7 @@ namespace DeliveryApp.Vista
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            ConsultaGeneralEmpleado ConEmp = new ConsultaGeneralEmpleado();
+            ConsultaGeneralEmpleado ConEmp = new ConsultaGeneralEmpleado(contenedor);
             Desplegar(ConEmp);
         }
 
