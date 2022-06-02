@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +42,8 @@
             this.fechaSolici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -52,10 +52,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel2.Controls.Add(this.dgvPedidos);
-            this.panel2.Location = new System.Drawing.Point(27, 98);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(36, 121);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1606, 886);
+            this.panel2.Size = new System.Drawing.Size(1550, 700);
             this.panel2.TabIndex = 8;
             // 
             // dgvPedidos
@@ -92,9 +92,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPedidos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPedidos.Location = new System.Drawing.Point(0, 0);
-            this.dgvPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPedidos.MultiSelect = false;
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
@@ -102,29 +101,8 @@
             this.dgvPedidos.RowHeadersWidth = 51;
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidos.Size = new System.Drawing.Size(1606, 886);
+            this.dgvPedidos.Size = new System.Drawing.Size(1500, 1090);
             this.dgvPedidos.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(27, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1622, 16);
-            this.panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(23, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Pedidos pendientes";
             // 
             // IdOrden
             // 
@@ -206,17 +184,37 @@
             this.NCasa.Name = "NCasa";
             this.NCasa.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
+            this.panel1.Location = new System.Drawing.Point(36, 106);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1550, 20);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(31, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Pedidos pendientes";
+            // 
             // PedidosPendientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1660, 1011);
+            this.ClientSize = new System.Drawing.Size(1600, 884);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PedidosPendientes";
             this.Text = "PedidosPendientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -38,7 +38,7 @@ namespace DeliveryApp.Vista
         private void dgvPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //metodo que se creara dinamicamente para
-            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index && e.RowIndex != dgvPedidos.Rows.Count - 1)
+            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index)
             {
                 
                 string PedID = null;
@@ -61,7 +61,7 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                if (e.RowIndex ==-1 || e.RowIndex==dgvPedidos.Rows.Count-1)
+                if (e.RowIndex ==-1 )
                 {
 
                 }
@@ -184,5 +184,10 @@ namespace DeliveryApp.Vista
                 MessageBox.Show(Mensaje);
             }
         }
+
+        //private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+
+        //}
     }
 }
