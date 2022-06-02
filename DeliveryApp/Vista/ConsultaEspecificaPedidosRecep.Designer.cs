@@ -58,6 +58,7 @@
             this.txtCliente = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEntregado = new CustomControls.RJControls.RJButton();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel2.Controls.Add(this.btnEntregado);
             this.panel2.Controls.Add(this.rjButton2);
             this.panel2.Controls.Add(this.rjButton1);
             this.panel2.Controls.Add(this.panel4);
@@ -101,9 +103,9 @@
             this.rjButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(768, 663);
+            this.rjButton2.Location = new System.Drawing.Point(365, 663);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(351, 90);
             this.rjButton2.TabIndex = 3;
@@ -124,7 +126,7 @@
             this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
             this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(1163, 663);
             this.rjButton1.Name = "rjButton1";
@@ -181,7 +183,7 @@
             this.txtNumCasa.PasswordChar = false;
             this.txtNumCasa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumCasa.PlaceholderText = "";
-            this.txtNumCasa.Size = new System.Drawing.Size(112, 50);
+            this.txtNumCasa.Size = new System.Drawing.Size(112, 49);
             this.txtNumCasa.TabIndex = 18;
             this.txtNumCasa.Texts = "";
             this.txtNumCasa.UnderlinedStyle = false;
@@ -214,7 +216,7 @@
             this.txtColonia.PasswordChar = false;
             this.txtColonia.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtColonia.PlaceholderText = "";
-            this.txtColonia.Size = new System.Drawing.Size(439, 50);
+            this.txtColonia.Size = new System.Drawing.Size(439, 49);
             this.txtColonia.TabIndex = 16;
             this.txtColonia.Texts = "";
             this.txtColonia.UnderlinedStyle = false;
@@ -247,7 +249,7 @@
             this.txtCalle2.PasswordChar = false;
             this.txtCalle2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCalle2.PlaceholderText = "";
-            this.txtCalle2.Size = new System.Drawing.Size(439, 50);
+            this.txtCalle2.Size = new System.Drawing.Size(439, 49);
             this.txtCalle2.TabIndex = 14;
             this.txtCalle2.Texts = "";
             this.txtCalle2.UnderlinedStyle = false;
@@ -280,7 +282,7 @@
             this.txtCalle1.PasswordChar = false;
             this.txtCalle1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCalle1.PlaceholderText = "";
-            this.txtCalle1.Size = new System.Drawing.Size(439, 50);
+            this.txtCalle1.Size = new System.Drawing.Size(439, 49);
             this.txtCalle1.TabIndex = 12;
             this.txtCalle1.Texts = "";
             this.txtCalle1.UnderlinedStyle = false;
@@ -313,7 +315,7 @@
             this.txtCiudad.PasswordChar = false;
             this.txtCiudad.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCiudad.PlaceholderText = "";
-            this.txtCiudad.Size = new System.Drawing.Size(439, 50);
+            this.txtCiudad.Size = new System.Drawing.Size(439, 49);
             this.txtCiudad.TabIndex = 10;
             this.txtCiudad.Texts = "";
             this.txtCiudad.UnderlinedStyle = false;
@@ -366,7 +368,7 @@
             this.txtHoraSol.PasswordChar = false;
             this.txtHoraSol.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHoraSol.PlaceholderText = "";
-            this.txtHoraSol.Size = new System.Drawing.Size(439, 50);
+            this.txtHoraSol.Size = new System.Drawing.Size(439, 49);
             this.txtHoraSol.TabIndex = 13;
             this.txtHoraSol.Texts = "";
             this.txtHoraSol.UnderlinedStyle = false;
@@ -491,7 +493,7 @@
             this.txtTotal.PasswordChar = false;
             this.txtTotal.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTotal.PlaceholderText = "";
-            this.txtTotal.Size = new System.Drawing.Size(204, 50);
+            this.txtTotal.Size = new System.Drawing.Size(204, 49);
             this.txtTotal.TabIndex = 2;
             this.txtTotal.Texts = "";
             this.txtTotal.UnderlinedStyle = false;
@@ -524,7 +526,7 @@
             this.txtCliente.PasswordChar = false;
             this.txtCliente.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCliente.PlaceholderText = "";
-            this.txtCliente.Size = new System.Drawing.Size(439, 50);
+            this.txtCliente.Size = new System.Drawing.Size(439, 49);
             this.txtCliente.TabIndex = 0;
             this.txtCliente.Texts = "";
             this.txtCliente.UnderlinedStyle = false;
@@ -546,6 +548,30 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1560, 48);
             this.panel5.TabIndex = 11;
+            // 
+            // btnEntregado
+            // 
+            this.btnEntregado.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnEntregado.BackgroundColor = System.Drawing.Color.SlateBlue;
+            this.btnEntregado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEntregado.BorderRadius = 35;
+            this.btnEntregado.BorderSize = 0;
+            this.btnEntregado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntregado.Enabled = false;
+            this.btnEntregado.FlatAppearance.BorderSize = 0;
+            this.btnEntregado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEntregado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEntregado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntregado.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntregado.ForeColor = System.Drawing.Color.White;
+            this.btnEntregado.Location = new System.Drawing.Point(768, 663);
+            this.btnEntregado.Name = "btnEntregado";
+            this.btnEntregado.Size = new System.Drawing.Size(351, 90);
+            this.btnEntregado.TabIndex = 4;
+            this.btnEntregado.Text = "Entregado";
+            this.btnEntregado.TextColor = System.Drawing.Color.White;
+            this.btnEntregado.UseVisualStyleBackColor = false;
+            this.btnEntregado.Click += new System.EventHandler(this.btnEntregado_Click);
             // 
             // ConsultaEspecificaPedidosRecep
             // 
@@ -603,5 +629,6 @@
         private CustomControls.RJControls.RJComboBox cmbxRepart;
         private System.Windows.Forms.Label label12;
         private CustomControls.RJControls.RJTextBox txtHoraSol;
+        private CustomControls.RJControls.RJButton btnEntregado;
     }
 }

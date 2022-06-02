@@ -128,6 +128,7 @@
             this.rjButton1.Text = "Confirmar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // panel4
             // 
@@ -511,7 +512,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
             this.label1.Location = new System.Drawing.Point(17, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 42);
+            this.label1.Size = new System.Drawing.Size(161, 43);
             this.label1.TabIndex = 16;
             this.label1.Text = "Empleado";
             // 
@@ -529,6 +530,7 @@
             this.Name = "ConsultaEspecificaEmpleados";
             this.Text = "ConsultaEspecificaEmpleados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ConsultaEspecificaEmpleados_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

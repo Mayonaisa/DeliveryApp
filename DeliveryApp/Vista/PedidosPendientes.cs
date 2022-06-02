@@ -38,7 +38,7 @@ namespace DeliveryApp.Vista
         private void dgvPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //metodo que se creara dinamicamente para
-            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index)
+            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index && e.RowIndex != dgvPedidos.Rows.Count - 1)
             {
                 
                 string PedID = null;
@@ -61,7 +61,7 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                if (e.RowIndex ==-1)
+                if (e.RowIndex ==-1 || e.RowIndex==dgvPedidos.Rows.Count-1)
                 {
 
                 }
@@ -74,7 +74,7 @@ namespace DeliveryApp.Vista
                     string PedID = null;
                     PedID = dgvPedidos[0, e.RowIndex].Value.ToString().Trim();
                     ConsultarPedido.PedidoEspecifico(PedID, ref pedidos, ref Repar, ref Veh, ref error);
-                    ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor, pedidos, Repar, Veh);
+                    ConsultaEspecificaPedidosRecep Pedidos = new ConsultaEspecificaPedidosRecep(contenedor, pedidos, Repar, Veh, Rep);
                     if (error != null)
                     {
                         MessageBox.Show(error);

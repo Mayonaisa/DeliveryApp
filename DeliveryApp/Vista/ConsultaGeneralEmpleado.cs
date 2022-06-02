@@ -52,12 +52,12 @@ namespace DeliveryApp.Vista
                 string ID = null;
                 ID = dgvEmpleados[0, e.RowIndex].Value.ToString().Trim();
 
-                ConsultaEspecificaEmpleados Emp = new ConsultaEspecificaEmpleados();
+                //ConsultaEspecificaEmpleados Emp = new ConsultaEspecificaEmpleados();
                 if (error != null)
                 {
                     MessageBox.Show(error);
                 }
-                Desplegar(Emp);
+                //Desplegar(Emp);
             }
         }
 

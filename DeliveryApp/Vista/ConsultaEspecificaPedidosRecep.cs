@@ -21,12 +21,14 @@ namespace DeliveryApp.Vista
         List<Repartidor> Repartidores = new List<Repartidor>();
         List<Vehiculo> Vehiculos = new List<Vehiculo>();
         Vehiculo Veh;
-        public ConsultaEspecificaPedidosRecep(Panel p, Pedido Consulta, Repartidor R, Vehiculo V)
+        Recepcionista recepcionista;
+        public ConsultaEspecificaPedidosRecep(Panel p, Pedido Consulta, Repartidor R, Vehiculo V, Recepcionista Recepcio)
         {
             Rep = R;
             Veh = V;
             Pedidos = Consulta;
             contenedor= p;
+            recepcionista = Recepcio;
             InitializeComponent();
         }
 
@@ -46,13 +48,11 @@ namespace DeliveryApp.Vista
             string mensC = null;
             Entrega Ent = new Entrega();
             Pedido P=new Pedido();
+            Registra Reg=new Registra();
             DateTime Actual = DateTime.Now;
-            if (ConsultarPedido.ValidarEntrega(Pedidos.IOrden.IdOrden,Ent,ref Mensaje))
+            if (ConsultarPedido.ValidarEntrega(Pedidos.IOrden.IdOrden,Ent,ref Mensaje)==true)
             {
-                //MessageBox.Show(Mensaje);
-                ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
-                txtEstatus.Texts = "en camino";
-               
+                MessageBox.Show(Mensaje);
 
             }
             else
@@ -73,17 +73,28 @@ namespace DeliveryApp.Vista
                     }
 
                 }
-                ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
-                ConsultarPedido.NuevaEntrega(Pedidos.IOrden.IdOrden, Veh.IdVehiculo, Actual.ToString(), Rep.IdPersona, ref P, mensC, ref Ent);
+                
+                ConsultarPedido.NuevaEntrega(Pedidos.IOrden.IdOrden, Veh.IdVehiculo, Actual.ToString(), Rep.IdPersona, ref P, ref mensC, ref Ent);
 
 
-                if (mensC != null)
+                if (mensC == null)
                 {
-                    MessageBox.Show(mensC);
+                    ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
                     txtEstatus.Texts = "en camino";
+                    ConsultarPedido.NuevoRegistra(Pedidos.IOrden.IdOrden, Actual.ToString(),recepcionista.IdPersona,ref Reg);
+                    MessageBox.Show("Se Registro la entrega del pedido");
+                }
+                else
+                {
+                    MessageBox.Show("Acepte el pedido y rellene los campos faltantes");
                 }
 
+                
 
+                if (txtEstatus.Texts=="en camino")
+                {
+                    btnEntregado.Enabled = true;
+                }
             }
             
 
@@ -142,7 +153,15 @@ namespace DeliveryApp.Vista
             {
                 cmbxVehi.Texts = Veh.Marca +" "+ Veh.Modelo + ", " + Veh.Año;
             }
-
+            if (txtEstatus.Texts != "Entregado")
+            {
+                btnEntregado.Enabled = true;
+            }
+            if (txtEstatus.Texts == "Entregado")
+            {
+                btnEntregado.Enabled = false;
+                rjButton1.Enabled = false;
+            }
             if (mensaje != null)
             {
                 MessageBox.Show(mensaje);
@@ -154,6 +173,27 @@ namespace DeliveryApp.Vista
         private void cmbxVehi_OnSelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEntregado_Click(object sender, EventArgs e)
+        {
+            Pedidos.PedidoIndi(Pedidos.IOrden.IdOrden);
+            if (Pedidos.IOrden.Estatus == "Entregado")
+            {
+                
+            }
+            else
+            {
+                ConsultarPedido.ConfirmarEntregapedido(Pedidos.IOrden.IdOrden, Pedidos);
+                txtEstatus.Texts = "Entregado";
+                MessageBox.Show("Pedido Concluido");
+                btnEntregado.Enabled = false;
+                rjButton1.Enabled = false;
+            }
+           
+            
+            
+            
         }
     }
 }

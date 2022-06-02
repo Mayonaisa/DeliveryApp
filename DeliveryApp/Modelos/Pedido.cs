@@ -184,6 +184,28 @@ namespace DeliveryApp.Modelos
 
             conx.Close();
         }
+        public void PedidoYaEntregado(string id)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='Entregado' where idOrden= '" + id + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+
+            }
+            else
+            {
+                throw new Exception("Error");
+            }
+
+            conx.Close();
+        }
         public void PedidoIndi(string idOrden)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);

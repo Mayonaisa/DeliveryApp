@@ -53,13 +53,14 @@ namespace DeliveryApp.Controladores
             try
             {
                 PedN.ConfirmarPedido(Orden);
+               
             }
             catch (Exception ex)
             {
-
+                
             }
         }
-        public static void NuevaEntrega(string Orden, string vehiculo, string fecha, string Rep, ref Pedido PedN, string mensaje, ref Entrega Ent)
+        public static void NuevaEntrega(string Orden, string vehiculo, string fecha, string Rep, ref Pedido PedN, ref string mensaje, ref Entrega Ent)
         {
             try
             {
@@ -68,21 +69,56 @@ namespace DeliveryApp.Controladores
             }
             catch (Exception ex)
             {
+                mensaje = ex.Message;
+            }
+        }
+        public static void NuevoRegistra(string Orden, string fecha, string Rec, ref Registra Reg)
+        {
+            try
+            {
 
+                Reg.NuevoRegistro(Orden, Rec, fecha);
+            }
+            catch (Exception ex)
+            {
+                //mensaje = ex.Message;
             }
         }
         public static bool ValidarEntrega(string idOrden, Entrega Ent,ref string mensaje)
         {
             if (Ent.ValidarEntrega(idOrden))
             {
+                mensaje = "Ya existe la entrega de este pedido";
                 return true;
             }
             else
             {
-                mensaje = "Ya existe este pedido en entrega";
                 return false;
             }
         }
+        public static void ConfirmarEntregapedido(string Orden, Pedido PedN)
+        {
+            try
+            {
+                PedN.PedidoYaEntregado(Orden);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        //public static bool ValidarPedidoEntregado(string idOrden, Entrega Ent, ref string mensaje)
+        //{
+        //    if (Ent.ValidarEntrega(idOrden))
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        mensaje = "Ya existe este pedido en entrega";
+        //        return false;
+        //    }
+        //}
         public static void PedidoEspecifico( string id,ref Pedido PedN, ref Repartidor Rep, ref Vehiculo Veh, ref string mensaje)
         {
             try

@@ -37,12 +37,11 @@ namespace DeliveryApp.Modelos
                 this.idVehiculo = resultado.GetString(3);
                 this.idRepartidor = resultado.GetString(0);
                 this.fechaEntrega = resultado.GetString(2);
-                mensaje = "Entrega del pedido confirmada";
             }
             else
             {
                 conx.Close();
-                throw new Exception("No se puede confirmar este pedido, faltan datos o el pedido ya esta confirmado");
+                throw new Exception("No se puede confirmar este pedido, faltan datos en los campos de repartidor o vehiculo");
             }
         }
         public bool ValidarEntrega(string idOrden)
