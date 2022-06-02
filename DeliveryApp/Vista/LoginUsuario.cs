@@ -179,7 +179,7 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Paola_30", "Paola1234_30");
+                    int tipoUsuario = Login.ingresar("Paola_30","Paola1234_30");
 
                     switch (tipoUsuario)
                     {

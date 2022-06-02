@@ -21,7 +21,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT idRepartidor, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Repartidor,Persona P,Direccion D where  P.idPersona='"+ idOrden + "' and D.idPersona='"+ idOrden + "' and idRepartidor=P.idPersona", conx);
+            SqlCommand consulta = new SqlCommand("SELECT R.idRepartidor,P.nombre,P.aPaterno,P.aMaterno from Entrega, Repartidor R, Persona P WHERE '"+idOrden+"'=idOrden and R.idRepartidor=Entrega.idRepartidor and P.idPersona=R.idRepartidor", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -30,8 +30,8 @@ namespace DeliveryApp.Modelos
             {
                 this.IdPersona = resultado.GetString(0).Trim();
                 this.Nombre = resultado.GetString(1).Trim();
-                this.APaterno = " " + resultado.GetString(2).Trim();
-                this.AMaterno = " " + resultado.GetString(3).Trim();
+                this.APaterno =  resultado.GetString(2).Trim();
+                this.AMaterno = resultado.GetString(3).Trim();
             }
             else
             {
