@@ -44,18 +44,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCiudad = new CustomControls.RJControls.RJTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.txtAma = new CustomControls.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTotal = new CustomControls.RJControls.RJTextBox();
+            this.txtApa = new CustomControls.RJControls.RJTextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.txtCorreo = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCliente = new CustomControls.RJControls.RJTextBox();
+            this.txtNom = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtUsua = new CustomControls.RJControls.RJTextBox();
+            this.lblUsua = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -106,6 +106,7 @@
             this.rjButton2.Text = "Volver";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
             // 
@@ -316,53 +317,20 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.rjTextBox3);
+            this.panel3.Controls.Add(this.lblUsua);
+            this.panel3.Controls.Add(this.txtUsua);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.rjTextBox2);
+            this.panel3.Controls.Add(this.txtAma);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.rjTextBox1);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txtTotal);
+            this.panel3.Controls.Add(this.txtApa);
+            this.panel3.Controls.Add(this.lblCorreo);
+            this.panel3.Controls.Add(this.txtCorreo);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtCliente);
+            this.panel3.Controls.Add(this.txtNom);
             this.panel3.Location = new System.Drawing.Point(38, 66);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(708, 557);
             this.panel3.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.label6.Location = new System.Drawing.Point(66, 317);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 72);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Nombre de\r\nusuario";
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Black;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 20;
-            this.rjTextBox3.BorderSize = 3;
-            this.rjTextBox3.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox3.Location = new System.Drawing.Point(234, 330);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(439, 49);
-            this.rjTextBox3.TabIndex = 19;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -375,27 +343,27 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Apellido \r\nMaterno\r\n";
             // 
-            // rjTextBox2
+            // txtAma
             // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Black;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 20;
-            this.rjTextBox2.BorderSize = 3;
-            this.rjTextBox2.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox2.Location = new System.Drawing.Point(239, 218);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(359, 49);
-            this.rjTextBox2.TabIndex = 17;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.txtAma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtAma.BorderColor = System.Drawing.Color.Black;
+            this.txtAma.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtAma.BorderRadius = 20;
+            this.txtAma.BorderSize = 3;
+            this.txtAma.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAma.ForeColor = System.Drawing.Color.White;
+            this.txtAma.Location = new System.Drawing.Point(239, 218);
+            this.txtAma.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAma.Multiline = false;
+            this.txtAma.Name = "txtAma";
+            this.txtAma.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAma.PasswordChar = false;
+            this.txtAma.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAma.PlaceholderText = "";
+            this.txtAma.Size = new System.Drawing.Size(359, 49);
+            this.txtAma.TabIndex = 17;
+            this.txtAma.Texts = "";
+            this.txtAma.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -408,60 +376,60 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Apellido \r\nPaterno";
             // 
-            // rjTextBox1
+            // txtApa
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 20;
-            this.rjTextBox1.BorderSize = 3;
-            this.rjTextBox1.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(239, 132);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(359, 49);
-            this.rjTextBox1.TabIndex = 15;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtApa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtApa.BorderColor = System.Drawing.Color.Black;
+            this.txtApa.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtApa.BorderRadius = 20;
+            this.txtApa.BorderSize = 3;
+            this.txtApa.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApa.ForeColor = System.Drawing.Color.White;
+            this.txtApa.Location = new System.Drawing.Point(239, 132);
+            this.txtApa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApa.Multiline = false;
+            this.txtApa.Name = "txtApa";
+            this.txtApa.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApa.PasswordChar = false;
+            this.txtApa.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtApa.PlaceholderText = "";
+            this.txtApa.Size = new System.Drawing.Size(359, 49);
+            this.txtApa.TabIndex = 15;
+            this.txtApa.Texts = "";
+            this.txtApa.UnderlinedStyle = false;
             // 
-            // label3
+            // lblCorreo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.label3.Location = new System.Drawing.Point(126, 423);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 36);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Correo";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.lblCorreo.Location = new System.Drawing.Point(126, 423);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(106, 36);
+            this.lblCorreo.TabIndex = 3;
+            this.lblCorreo.Text = "Correo";
             // 
-            // txtTotal
+            // txtCorreo
             // 
-            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.txtTotal.BorderColor = System.Drawing.Color.Black;
-            this.txtTotal.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTotal.BorderRadius = 20;
-            this.txtTotal.BorderSize = 3;
-            this.txtTotal.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.Color.White;
-            this.txtTotal.Location = new System.Drawing.Point(239, 410);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTotal.Multiline = false;
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtTotal.PasswordChar = false;
-            this.txtTotal.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTotal.PlaceholderText = "";
-            this.txtTotal.Size = new System.Drawing.Size(439, 49);
-            this.txtTotal.TabIndex = 2;
-            this.txtTotal.Texts = "";
-            this.txtTotal.UnderlinedStyle = false;
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtCorreo.BorderColor = System.Drawing.Color.Black;
+            this.txtCorreo.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCorreo.BorderRadius = 20;
+            this.txtCorreo.BorderSize = 3;
+            this.txtCorreo.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.White;
+            this.txtCorreo.Location = new System.Drawing.Point(239, 410);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Multiline = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCorreo.PasswordChar = false;
+            this.txtCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCorreo.PlaceholderText = "";
+            this.txtCorreo.Size = new System.Drawing.Size(439, 49);
+            this.txtCorreo.TabIndex = 2;
+            this.txtCorreo.Texts = "";
+            this.txtCorreo.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -474,27 +442,27 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // txtCliente
+            // txtNom
             // 
-            this.txtCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.txtCliente.BorderColor = System.Drawing.Color.Black;
-            this.txtCliente.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCliente.BorderRadius = 20;
-            this.txtCliente.BorderSize = 3;
-            this.txtCliente.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliente.ForeColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(234, 36);
-            this.txtCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCliente.Multiline = false;
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCliente.PasswordChar = false;
-            this.txtCliente.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCliente.PlaceholderText = "";
-            this.txtCliente.Size = new System.Drawing.Size(359, 49);
-            this.txtCliente.TabIndex = 0;
-            this.txtCliente.Texts = "";
-            this.txtCliente.UnderlinedStyle = false;
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtNom.BorderColor = System.Drawing.Color.Black;
+            this.txtNom.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNom.BorderRadius = 20;
+            this.txtNom.BorderSize = 3;
+            this.txtNom.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.ForeColor = System.Drawing.Color.White;
+            this.txtNom.Location = new System.Drawing.Point(234, 36);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNom.Multiline = false;
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNom.PasswordChar = false;
+            this.txtNom.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNom.PlaceholderText = "";
+            this.txtNom.Size = new System.Drawing.Size(359, 49);
+            this.txtNom.TabIndex = 0;
+            this.txtNom.Texts = "";
+            this.txtNom.UnderlinedStyle = false;
             // 
             // panel1
             // 
@@ -515,6 +483,39 @@
             this.label1.Size = new System.Drawing.Size(161, 43);
             this.label1.TabIndex = 16;
             this.label1.Text = "Empleado";
+            // 
+            // txtUsua
+            // 
+            this.txtUsua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
+            this.txtUsua.BorderColor = System.Drawing.Color.Black;
+            this.txtUsua.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUsua.BorderRadius = 20;
+            this.txtUsua.BorderSize = 3;
+            this.txtUsua.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsua.ForeColor = System.Drawing.Color.White;
+            this.txtUsua.Location = new System.Drawing.Point(234, 330);
+            this.txtUsua.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsua.Multiline = false;
+            this.txtUsua.Name = "txtUsua";
+            this.txtUsua.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUsua.PasswordChar = false;
+            this.txtUsua.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUsua.PlaceholderText = "";
+            this.txtUsua.Size = new System.Drawing.Size(439, 49);
+            this.txtUsua.TabIndex = 19;
+            this.txtUsua.Texts = "";
+            this.txtUsua.UnderlinedStyle = false;
+            // 
+            // lblUsua
+            // 
+            this.lblUsua.AutoSize = true;
+            this.lblUsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.lblUsua.Location = new System.Drawing.Point(66, 317);
+            this.lblUsua.Name = "lblUsua";
+            this.lblUsua.Size = new System.Drawing.Size(161, 72);
+            this.lblUsua.TabIndex = 20;
+            this.lblUsua.Text = "Nombre de\r\nusuario";
             // 
             // ConsultaEspecificaEmpleados
             // 
@@ -559,17 +560,17 @@
         private System.Windows.Forms.Label label11;
         private CustomControls.RJControls.RJTextBox txtCiudad;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
         private System.Windows.Forms.Label label5;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private CustomControls.RJControls.RJTextBox txtAma;
         private System.Windows.Forms.Label label4;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private System.Windows.Forms.Label label3;
-        private CustomControls.RJControls.RJTextBox txtTotal;
+        private CustomControls.RJControls.RJTextBox txtApa;
+        private System.Windows.Forms.Label lblCorreo;
+        private CustomControls.RJControls.RJTextBox txtCorreo;
         private System.Windows.Forms.Label label2;
-        private CustomControls.RJControls.RJTextBox txtCliente;
+        private CustomControls.RJControls.RJTextBox txtNom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsua;
+        private CustomControls.RJControls.RJTextBox txtUsua;
     }
 }

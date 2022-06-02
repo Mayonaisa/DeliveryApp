@@ -8,11 +8,11 @@ using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
-    public class Repartidor:Persona
+    public class Repartidor : Persona
     {
         public Repartidor()
         {
-            
+
         }
         public void IdEntrega(string idOrden)
         {
@@ -21,7 +21,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT R.idRepartidor,P.nombre,P.aPaterno,P.aMaterno from Entrega, Repartidor R, Persona P WHERE idOrden='"+idOrden+"' and R.idRepartidor=Entrega.idRepartidor and P.idPersona=R.idRepartidor", conx);
+            SqlCommand consulta = new SqlCommand("SELECT idRepartidor, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Repartidor,Persona P,Direccion D where  P.idPersona='"+ idOrden + "' and D.idPersona='"+ idOrden + "' and idRepartidor=P.idPersona", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -29,15 +29,15 @@ namespace DeliveryApp.Modelos
             if (resultado.Read())
             {
                 this.IdPersona = resultado.GetString(0).Trim();
-                this.Nombre =resultado.GetString(1).Trim();
-                this.APaterno =" "+ resultado.GetString(2).Trim();
-                this.AMaterno =" "+ resultado.GetString(3).Trim();
+                this.Nombre = resultado.GetString(1).Trim();
+                this.APaterno = " " + resultado.GetString(2).Trim();
+                this.AMaterno = " " + resultado.GetString(3).Trim();
             }
             else
             {
                 this.IdPersona = null;
                 this.Nombre = "";
-                this.APaterno ="";
+                this.APaterno = "";
                 this.AMaterno = "";
                 conx.Close();
                 //throw new Exception("no se encontro el pedido");
@@ -58,17 +58,17 @@ namespace DeliveryApp.Modelos
             int cant;
             if (resultado.Read())
             {
-                cant= resultado.GetInt32(0);
-                
+                cant = resultado.GetInt32(0);
+
                 return cant = resultado.GetInt32(0);
-                
+
             }
             else
             {
                 conx.Close();
                 throw new Exception("no se encontro el pedido");
             }
-            
+
         }
         public void ListaRepartidores(int max, ref List<Repartidor> Rep)
         {
@@ -81,8 +81,8 @@ namespace DeliveryApp.Modelos
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
-            int i=0;
-            while (resultado.Read() && i<max)
+            int i = 0;
+            while (resultado.Read() && i < max)
             {
                 Rep.Add(new Repartidor());
                 Rep[i].IdPersona = resultado.GetString(0).Trim();
@@ -104,7 +104,41 @@ namespace DeliveryApp.Modelos
                 //Rep[i].Dir.NumCasa = resultado.GetString(14).Trim();
                 i++;
             }
-            
+
+            conx.Close();
+        }
+        public void RepaIndi(string  RepaId, ref Repartidor Rep)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT idRepartidor, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Repartidor,Persona P,Direccion D where  P.idPersona='"+ RepaId+"' and D.idPersona='" + RepaId+"' and idRepartidor=P.idPersona", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+                Rep.IdPersona = resultado.GetString(0).Trim();
+                Rep.Nombre = resultado.GetString(1).Trim();
+                Rep.APaterno = resultado.GetString(2).Trim();
+                Rep.AMaterno =  resultado.GetString(3).Trim();
+                Rep.Telefono = resultado.GetString(4).Trim();
+                Rep.Sexo = resultado.GetString(5).Trim();
+                Rep.Edad = int.Parse(resultado.GetValue(6).ToString());
+
+                Rep.Dir = new Direccion();
+                Rep.Dir.IdDireccion = resultado.GetString(7).Trim();
+                Rep.Dir.Pais = resultado.GetString(8).Trim();
+                Rep.Dir.Estado = resultado.GetString(9).Trim();
+                Rep.Dir.Ciudad = resultado.GetString(10).Trim();
+                Rep.Dir.Calle1 = resultado.GetString(11).Trim();
+                Rep.Dir.Calle2 = resultado.GetString(12).Trim();
+                Rep.Dir.Colonia = resultado.GetString(13).Trim();
+                Rep.Dir.NumCasa = resultado.GetString(14).Trim();
+            }
+
             conx.Close();
         }
 

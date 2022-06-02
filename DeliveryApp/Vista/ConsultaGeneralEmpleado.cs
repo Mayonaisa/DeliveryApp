@@ -42,7 +42,7 @@ namespace DeliveryApp.Vista
         }
         private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1)
+            if (e.RowIndex == -1 || e.RowIndex == dgvEmpleados.Rows.Count - 1)
             {
 
             }
@@ -52,12 +52,25 @@ namespace DeliveryApp.Vista
                 string ID = null;
                 ID = dgvEmpleados[0, e.RowIndex].Value.ToString().Trim();
 
-                //ConsultaEspecificaEmpleados Emp = new ConsultaEspecificaEmpleados();
-                if (error != null)
+                //if (error != null)
+                //{
+                //    MessageBox.Show(error);
+                //}
+                if (dgvEmpleados[5, e.RowIndex].Value.ToString().Trim()== "Recepcionista")
                 {
-                    MessageBox.Show(error);
+                    ConsultarEmpleados.ObtenerRecepIndi(ID,ref Recep);
+                    ConsultaEspecificaEmpleados Emp = new ConsultaEspecificaEmpleados(contenedor, Recep);
+                    Desplegar(Emp);
                 }
-                //Desplegar(Emp);
+                if (dgvEmpleados[5, e.RowIndex].Value.ToString().Trim() == "Repartidor")
+                {
+                    ConsultarEmpleados.ObtenerRepaIndi(ID, ref Rep);
+                    ConsultaEspecificaEmpleados EmpREP = new ConsultaEspecificaEmpleados(contenedor,  Rep);
+                    Desplegar(EmpREP);
+                }
+                
+                
+                
             }
         }
 

@@ -61,5 +61,30 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;
             }
         }
+        public static void ObtenerRepaIndi( string idOrden, ref Repartidor R)
+        {
+            try
+            {
+                Repartidor Repa=new Repartidor();
+                Repa.RepaIndi(idOrden, ref R);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void ObtenerRecepIndi(string idOrden, ref Recepcionista R)
+        {
+            try
+            {
+                Recepcionista Repe = new Recepcionista();
+                Repe.RecepIndi(idOrden,ref R);
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
     }
 }

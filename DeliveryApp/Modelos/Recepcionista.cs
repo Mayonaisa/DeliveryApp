@@ -68,15 +68,53 @@ namespace DeliveryApp.Modelos
                 Rep[i].Edad =int.Parse(resultado.GetValue(6).ToString());
                 Rep[i].Nomu = resultado.GetString(7).Trim();
 
-                Rep[i].Dir = new Direccion();
-                Rep[i].Dir.IdDireccion = resultado.GetString(8).Trim();
-                Rep[i].Dir.Pais = resultado.GetString(9).Trim();
-                Rep[i].Dir.Estado = resultado.GetString(10).Trim();
-                Rep[i].Dir.Ciudad = resultado.GetString(11).Trim();
-                Rep[i].Dir.Calle1 = resultado.GetString(12).Trim();
-                Rep[i].Dir.Calle2 = resultado.GetString(13).Trim();
-                Rep[i].Dir.Colonia = resultado.GetString(14).Trim();
-                Rep[i].Dir.NumCasa = resultado.GetString(15).Trim();
+                //Rep[i].Dir = new Direccion();
+                //Rep[i].Dir.IdDireccion = resultado.GetString(8).Trim();
+                //Rep[i].Dir.Pais = resultado.GetString(9).Trim();
+                //Rep[i].Dir.Estado = resultado.GetString(10).Trim();
+                //Rep[i].Dir.Ciudad = resultado.GetString(11).Trim();
+                //Rep[i].Dir.Calle1 = resultado.GetString(12).Trim();
+                //Rep[i].Dir.Calle2 = resultado.GetString(13).Trim();
+                //Rep[i].Dir.Colonia = resultado.GetString(14).Trim();
+                //Rep[i].Dir.NumCasa = resultado.GetString(15).Trim();
+                i++;
+            }
+
+            conx.Close();
+        }
+        public void RecepIndi(string RecepId, ref Recepcionista R)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT idRecepcionista, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,U.nombre,U.correo,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Recepcionista,Persona P,Direccion D, Usuario U where idUsuario='"+ RecepId + "' and P.idPersona='"+ RecepId + "' and D.idPersona='"+ RecepId + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            if (resultado.Read())
+            {
+                R.IdPersona = resultado.GetString(0).Trim();
+                R.Nombre = resultado.GetString(1).Trim();
+                R.APaterno = resultado.GetString(2).Trim();
+                R.AMaterno = resultado.GetString(3).Trim();
+                R.Telefono = resultado.GetString(4).Trim();
+                R.Sexo = resultado.GetString(5).Trim();
+                R.Edad = int.Parse(resultado.GetValue(6).ToString());
+                R.Nomu = resultado.GetString(7).Trim();
+                R.Correo = resultado.GetString(8).Trim();
+
+                R.Dir = new Direccion();
+                R.Dir.IdDireccion = resultado.GetString(9).Trim();
+                R.Dir.Pais = resultado.GetString(10).Trim();
+                R.Dir.Estado = resultado.GetString(11).Trim();
+                R.Dir.Ciudad = resultado.GetString(12).Trim();
+                R.Dir.Calle1 = resultado.GetString(13).Trim();
+                R.Dir.Calle2 = resultado.GetString(14).Trim();
+                R.Dir.Colonia = resultado.GetString(15).Trim();
+                R.Dir.NumCasa = resultado.GetString(16).Trim();
                 i++;
             }
 
