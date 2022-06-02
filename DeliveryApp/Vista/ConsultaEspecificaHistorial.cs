@@ -28,23 +28,23 @@ namespace DeliveryApp.Vista
         private void ConsultaEspecificaHistorial_Load(object sender, EventArgs e)
         {
             Carro.consultaHistorial(idOrden);
-            txtNomCliente.Texts = Carro.nombreCliente;
+            txtNomCliente.Texts = Carro.nombreCliente; //el nombre del cliente
             txtDirCliente.Texts = Carro.direccion;
             txtNomRep.Texts = Carro.nombreRepartidor;
             txtNomRec.Texts = Carro.nombreRec;
 
             int y = 0;
             bool t = true;
-            Carro.consultaEsp(idOrden,t);
+            Carro.consultaEsp(idOrden,t); //esto ejecuta un método que devuelve los valores por producto, osea, la lista de productos, su precio y cantidad (idOrden ya lo tienes, está arriba) ejecuta t como true para sacar eso
             for(int n = 0; n < Carro.nombreProd.Count; n++)
             {
                 PanelProducto prueba = new PanelProducto(Carro);
-                prueba.Crear_Panel_consulta(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y);
+                prueba.Crear_Panel_consulta(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y);//esos son los datos de nombre del producto, monto y cantidad según su indice en un listas
                 this.pnlHistorial.Controls.Add(prueba);
                 y += 82;
             }
             t = false;
-            Carro.consultaEsp(idOrden, t);
+            Carro.consultaEsp(idOrden, t); //por otro lado, si ejecutas t como false te devuelve el monto total en el la lista monto indice 0 (monto[0])
             PanelProducto prueba2 = new PanelProducto(Carro);
             prueba2.Crear_Panel_consulta("Total pagado:", Carro.monto[0], "", pnlHistorial.Location.X, (pnlHistorial.Location.Y)+pnlHistorial.Height + 40);
             this.Controls.Add(prueba2);

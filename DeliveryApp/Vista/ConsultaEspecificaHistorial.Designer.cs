@@ -43,6 +43,7 @@
             this.txtNomRec = new CustomControls.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlHistorial = new System.Windows.Forms.Panel();
+            this.btnRecibo = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -289,12 +290,32 @@
             this.pnlHistorial.Size = new System.Drawing.Size(633, 459);
             this.pnlHistorial.TabIndex = 44;
             // 
+            // btnRecibo
+            // 
+            this.btnRecibo.BackColor = System.Drawing.Color.Red;
+            this.btnRecibo.BackgroundColor = System.Drawing.Color.Red;
+            this.btnRecibo.BorderColor = System.Drawing.Color.White;
+            this.btnRecibo.BorderRadius = 20;
+            this.btnRecibo.BorderSize = 0;
+            this.btnRecibo.FlatAppearance.BorderSize = 0;
+            this.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecibo.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibo.ForeColor = System.Drawing.Color.White;
+            this.btnRecibo.Location = new System.Drawing.Point(720, 674);
+            this.btnRecibo.Name = "btnRecibo";
+            this.btnRecibo.Size = new System.Drawing.Size(208, 50);
+            this.btnRecibo.TabIndex = 45;
+            this.btnRecibo.Text = "Recibo";
+            this.btnRecibo.TextColor = System.Drawing.Color.White;
+            this.btnRecibo.UseVisualStyleBackColor = false;
+            // 
             // ConsultaEspecificaHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1440, 878);
+            this.Controls.Add(this.btnRecibo);
             this.Controls.Add(this.pnlHistorial);
             this.Controls.Add(this.txtNomRec);
             this.Controls.Add(this.label7);
@@ -337,5 +358,6 @@
         private CustomControls.RJControls.RJTextBox txtNomRec;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlHistorial;
+        private CustomControls.RJControls.RJButton btnRecibo;
     }
 }
