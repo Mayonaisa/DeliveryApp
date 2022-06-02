@@ -1,4 +1,5 @@
-﻿using DeliveryApp.Modelos;
+﻿using DeliveryApp.Controladores;
+using DeliveryApp.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,82 @@ namespace DeliveryApp.Vista
 {
     public partial class ConsultaEspecificaVehiculo : Form
     {
-        
-        public ConsultaEspecificaVehiculo(Panel p, Vehiculo V)
+        Vehiculo veh;
+        List<Vehiculo> lve;
+        Recepcionista Rep = new Recepcionista();
+        Panel contenedor = new Panel();
+
+        public ConsultaEspecificaVehiculo(Panel p, Vehiculo V, Recepcionista r)
         {
+            veh = V;
+            contenedor = p;
+            Rep = r;
             InitializeComponent();
+        }
+
+        private void ConsultaEspecificaVehiculo_Load(object sender, EventArgs e)
+        {
+            cbxId.Texts = veh.IdVehiculo;
+            tbxAño.Texts = veh.Año;
+            tbxColor.Texts = veh.Color;
+            tbxMarca.Texts = veh.Marca;
+            tbxModelo.Texts = veh.Modelo;
+            tbxPlaca.Texts = veh.Placa;
+            tbxTipo.Texts = veh.Tipo;
+        }
+
+        public void Desplegar(Form f)
+        {
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = f.Width;
+            contenedor.Height = f.Height;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            contenedor.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
+
+        private void cbxId_Enter(object sender, EventArgs e)
+        {
+            string msg = "";
+            lve = new List<Vehiculo>();
+            ConsultarVehiculos.ObtenerVehiculos(ref lve, ref msg, veh);
+
+            cbxId.Items.Clear();
+            foreach (Vehiculo v in lve)
+            {
+                cbxId.Items.Add(v.IdVehiculo);
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(Rep, contenedor);
+            Desplegar(CatVeh);
+        }
+
+        private void cbxId_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string error = null;
+            string VehID = null;
+
+            Vehiculo Veh = new Vehiculo();
+            VehID = cbxId.SelectedItem.ToString();
+
+            ConsultarVehiculos.VehiculoEspecifico(VehID, ref Veh, ref error);
+            ConsultaEspecificaVehiculo ConsultarVehiculo = new ConsultaEspecificaVehiculo(contenedor, Veh, Rep);
+
+            cbxId.Texts = Veh.IdVehiculo;
+            tbxAño.Texts = Veh.Año;
+            tbxColor.Texts = Veh.Color;
+            tbxMarca.Texts = Veh.Marca;
+            tbxModelo.Texts = Veh.Modelo;
+            tbxPlaca.Texts = Veh.Placa;
+            tbxTipo.Texts = Veh.Tipo;
         }
     }
 }

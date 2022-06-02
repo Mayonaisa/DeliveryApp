@@ -30,14 +30,13 @@ namespace DeliveryApp.Modelos
         public string Tipo { get => tipo; set => tipo = value; }
         public string Color { get => color; set => color = value; }
 
-        public void IdEntrega(string idOrden)
+        public void IdEntrega(string id)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
-
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT V.idVehiculo,V.modelo,V.marca from Entrega, Vehiculo V WHERE idOrden='" + idOrden+"' and V.idVehiculo=Entrega.idVehiculo", conx);
+            SqlCommand consulta = new SqlCommand("SELECT * FROM Vehiculo WHERE idVehiculo='" + id+"'", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -45,16 +44,23 @@ namespace DeliveryApp.Modelos
             if (resultado.Read())
             {
                 this.idVehiculo = resultado.GetString(0).Trim();
-                this.modelo = " " + resultado.GetString(1).Trim();
-                this.marca = " " + resultado.GetString(2).Trim();
+                this.marca = resultado.GetString(1).Trim();
+                this.placa = resultado.GetString(2).Trim();
+                this.color = resultado.GetString(3).Trim();
+                this.año = resultado.GetString(4).Trim();
+                this.modelo = resultado.GetString(5).Trim();
+                this.tipo = resultado.GetString(6).Trim();
             }
             else
             {
-                this.idVehiculo ="";
-                this.modelo ="";
-                this.marca ="";
+                this.idVehiculo = "";
+                this.marca = "";
+                this.placa = "";
+                this.color = "";
+                this.año = "";
+                this.modelo = "";
+                this.tipo = "";
                 conx.Close();
-                //throw new Exception("no se encontro el pedido");
             }
             conx.Close();
         }

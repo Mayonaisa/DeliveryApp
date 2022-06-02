@@ -167,7 +167,7 @@ namespace DeliveryApp
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            int val = Login.validarNomu("Paola1234");
+            int val = Login.validarNomu("Paola_30");
             if (val == 0)
             {
                 tbxCorreo.BorderColor = borde;
@@ -176,7 +176,7 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Paola1234", "Paola1234_30");
+                    int tipoUsuario = Login.ingresar("Paola_30", "Paola1234_30");
 
                     switch (tipoUsuario)
                     {
@@ -193,7 +193,7 @@ namespace DeliveryApp
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
-                            Usuario Recep = new Usuario("Paola1234_30", "Paola1234");
+                            Usuario Recep = new Usuario("Paola1234_30", "Paola_30");
                             ContenedorEmpleado menuR = new ContenedorEmpleado(Recep, contenedor);
                             Desplegar(menuR);
                             break;

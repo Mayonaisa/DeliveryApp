@@ -149,11 +149,11 @@
     <Compile Include="Vista\ConsultaGeneralClientes.Designer.cs">
       <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultaGeneralDetalle.cs">
+    <Compile Include="Vista\ConsultaEspecificaDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultaGeneralDetalle.Designer.cs">
-      <DependentUpon>ConsultaGeneralDetalle.cs</DependentUpon>
+    <Compile Include="Vista\ConsultaEspecificaDetalle.Designer.cs">
+      <DependentUpon>ConsultaEspecificaDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultaGeneralEmpleado.cs">
       <SubType>Form</SubType>
@@ -267,6 +267,9 @@
     <EmbeddedResource Include="Vista\CatalogoGeneralVehiculos.resx">
       <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaDetalle.resx">
+      <DependentUpon>ConsultaEspecificaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaEmpleados.resx">
       <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\HistorialPedidos.resx">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuProductos.resx">
+      <DependentUpon>MenuProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuRecep.resx">
       <DependentUpon>MenuRecep.cs</DependentUpon>

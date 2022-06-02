@@ -39,7 +39,7 @@ namespace DeliveryApp.Recursos
 
         CarritoC Carro;
 
-        public PanelProducto(int idnum, CarritoC c)
+        public PanelProducto(string idnum, CarritoC c)
         {
             //idProducto = id;
             //idProducto = idProducto.Trim();
