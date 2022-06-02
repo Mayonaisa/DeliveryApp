@@ -24,7 +24,7 @@ namespace DeliveryApp.Controladores
             catch (Exception ex)
             {
                 //mensaje = "nombre de usuario o contraseña incorrectos";
-                mensaje = ex.Message;
+                mensaje = "datos incorrectos";
                 return false;
             }
 

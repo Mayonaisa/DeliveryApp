@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaEspecificaHistorial));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pnlHistorial = new System.Windows.Forms.Panel();
             this.btnRecibo = new CustomControls.RJControls.RJButton();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.pnlRecibo = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,7 +63,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1923, 118);
             this.panel1.TabIndex = 3;
@@ -69,7 +73,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_211231;
             this.pictureBox3.Location = new System.Drawing.Point(1813, 37);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 46);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +109,7 @@
             // 
             this.pictureBox2.Image = global::DeliveryApp.Properties.Resources.panel2_BackgroundImage;
             this.pictureBox2.Location = new System.Drawing.Point(37, 37);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +128,7 @@
             this.txtNomCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNomCliente.Location = new System.Drawing.Point(960, 236);
-            this.txtNomCliente.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNomCliente.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomCliente.Multiline = false;
             this.txtNomCliente.Name = "txtNomCliente";
             this.txtNomCliente.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -176,7 +180,7 @@
             this.txtDirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDirCliente.Location = new System.Drawing.Point(960, 391);
-            this.txtDirCliente.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDirCliente.Margin = new System.Windows.Forms.Padding(5);
             this.txtDirCliente.Multiline = false;
             this.txtDirCliente.Name = "txtDirCliente";
             this.txtDirCliente.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -213,7 +217,7 @@
             this.txtNomRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNomRep.Location = new System.Drawing.Point(960, 544);
-            this.txtNomRep.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNomRep.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomRep.Multiline = false;
             this.txtNomRep.Name = "txtNomRep";
             this.txtNomRep.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -250,7 +254,7 @@
             this.txtNomRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomRec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNomRec.Location = new System.Drawing.Point(960, 705);
-            this.txtNomRec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNomRec.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomRec.Multiline = false;
             this.txtNomRec.Name = "txtNomRec";
             this.txtNomRec.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -282,13 +286,14 @@
             this.pnlHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlHistorial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHistorial.Location = new System.Drawing.Point(59, 190);
-            this.pnlHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHistorial.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHistorial.Name = "pnlHistorial";
             this.pnlHistorial.Size = new System.Drawing.Size(843, 564);
             this.pnlHistorial.TabIndex = 44;
             // 
             // btnRecibo
             // 
+            this.btnRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecibo.BackColor = System.Drawing.Color.Red;
             this.btnRecibo.BackgroundColor = System.Drawing.Color.Red;
             this.btnRecibo.BorderColor = System.Drawing.Color.White;
@@ -299,13 +304,35 @@
             this.btnRecibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecibo.ForeColor = System.Drawing.Color.White;
             this.btnRecibo.Location = new System.Drawing.Point(960, 830);
-            this.btnRecibo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecibo.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecibo.Name = "btnRecibo";
             this.btnRecibo.Size = new System.Drawing.Size(277, 62);
             this.btnRecibo.TabIndex = 45;
             this.btnRecibo.Text = "Recibo";
             this.btnRecibo.TextColor = System.Drawing.Color.White;
             this.btnRecibo.UseVisualStyleBackColor = false;
+            this.btnRecibo.Click += new System.EventHandler(this.btnRecibo_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // pnlRecibo
+            // 
+            this.pnlRecibo.Location = new System.Drawing.Point(1561, 190);
+            this.pnlRecibo.Name = "pnlRecibo";
+            this.pnlRecibo.Size = new System.Drawing.Size(347, 450);
+            this.pnlRecibo.TabIndex = 46;
             // 
             // ConsultaEspecificaHistorial
             // 
@@ -313,6 +340,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.Controls.Add(this.pnlRecibo);
             this.Controls.Add(this.btnRecibo);
             this.Controls.Add(this.pnlHistorial);
             this.Controls.Add(this.txtNomRec);
@@ -326,7 +354,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultaEspecificaHistorial";
             this.Text = "ConsultaEspecificaHistorial";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -358,5 +386,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlHistorial;
         private CustomControls.RJControls.RJButton btnRecibo;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Panel pnlRecibo;
     }
 }

@@ -44,7 +44,8 @@ namespace DeliveryApp.Modelos
             }
 			else
             {
-                throw new Exception("no se encontro el usuario");
+                //throw new Exception("no se encontro el usuario");
+				
             }
             conx.Close();
         }

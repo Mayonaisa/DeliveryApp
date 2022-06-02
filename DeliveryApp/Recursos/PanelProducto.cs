@@ -39,6 +39,8 @@ namespace DeliveryApp.Recursos
 
         CarritoC Carro;
 
+        string fecha = "";
+
         public PanelProducto(string idnum, CarritoC c)
         {
             //idProducto = id;
@@ -264,6 +266,8 @@ namespace DeliveryApp.Recursos
             this.BRprincipal.Size = new System.Drawing.Size(189, 46);
             this.BRprincipal.Text = "Consultar";
             this.BRprincipal.FlatAppearance.BorderSize = 0;
+
+            fecha = texto;
         }
         public void Crear_Panel_consulta(string texto, string monto, string cantidad, int x, int y)
         {
@@ -305,6 +309,8 @@ namespace DeliveryApp.Recursos
             this.BRcantidad.Size = new System.Drawing.Size(80, 46);
             this.BRcantidad.Text = cantidad;
             this.BRcantidad.FlatAppearance.BorderSize = 0;
+
+            fecha = texto;
         }
         //////////////////////////////////////////////////////////////////////LOS BOTONES////////////////////////////////////////////////////////////////////////////
         private void btn_menos_click(object sender, EventArgs e)
@@ -405,7 +411,7 @@ namespace DeliveryApp.Recursos
         {
             if (true)
             {
-                ConsultaEspecificaHistorial consV = new ConsultaEspecificaHistorial(contenedor, Carro, idOrden);
+                ConsultaEspecificaHistorial consV = new ConsultaEspecificaHistorial(contenedor, Carro, idOrden,fecha);
                 HistorialV.Hide();
                 HistorialV.Desplegar(consV);
 
