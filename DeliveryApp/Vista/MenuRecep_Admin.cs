@@ -14,9 +14,9 @@ namespace DeliveryApp.Vista
 {
     public partial class MenuRecep_Admin : Form
     {
-        Recepcionista recepcionista;
+        Administrador recepcionista;
         Panel contenedor=new Panel();
-        public MenuRecep_Admin(Recepcionista Rep, Panel p)
+        public MenuRecep_Admin(Administrador Rep, Panel p)
         {
             recepcionista = Rep;
             contenedor = p;
@@ -25,9 +25,6 @@ namespace DeliveryApp.Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //new LoginUsuario().ShowDialog();
-            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,8 +63,8 @@ namespace DeliveryApp.Vista
 
         private void panel8_Click(object sender, EventArgs e)
         {
-            PedidosPendientes PedPen = new PedidosPendientes(recepcionista,contenedor);
-            Desplegar(PedPen);
+            //PedidosPendientes PedPen = new PedidosPendientes(recepcionista,contenedor);
+            //Desplegar(PedPen);
 
         }
 
@@ -78,15 +75,13 @@ namespace DeliveryApp.Vista
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pbxEmp.BackColor= Color.Blue;
-            btnEmpleados.FlatAppearance.MouseOverBackColor=Color.Blue;
 
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
-            Desplegar(PedPen);
+            //PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
+            //Desplegar(PedPen);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -97,14 +92,14 @@ namespace DeliveryApp.Vista
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            CatalogoDetalleTieneProducto CatDetPed = new CatalogoDetalleTieneProducto(recepcionista, contenedor);
+            CatalogoDetalleTieneProducto CatDetPed = new CatalogoDetalleTieneProducto(contenedor);
             Desplegar(CatDetPed);
         }
 
         private void pbxEmp_Click(object sender, EventArgs e)
         {
-            PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
-            Desplegar(PedPen);
+            //PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
+            //Desplegar(PedPen);
         }
 
         private void pbxEmp_MouseDown(object sender, MouseEventArgs e)
@@ -120,7 +115,7 @@ namespace DeliveryApp.Vista
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(recepcionista, contenedor);
+            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(contenedor);
             Desplegar(CatVeh);
         }
 

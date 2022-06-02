@@ -16,14 +16,14 @@ namespace DeliveryApp.Vista
     {
         Vehiculo Veh = new Vehiculo();
         Panel contenedor = new Panel();
-        Recepcionista Rep = new Recepcionista();
+        //Recepcionista Rep = new Recepcionista();
         string Mensaje;
 
         List<Vehiculo> vehiculos = new List<Vehiculo>();
 
-        public CatalogoGeneralVehiculos(Recepcionista r, Panel p)
+        public CatalogoGeneralVehiculos(Panel p)
         {
-            Rep = r;
+            //Rep = r;
             contenedor = p;
             InitializeComponent();
         }

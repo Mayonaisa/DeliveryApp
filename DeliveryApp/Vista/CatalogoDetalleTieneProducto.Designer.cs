@@ -143,6 +143,7 @@
             this.Name = "CatalogoDetalleTieneProducto";
             this.Text = "CatalogoDetalleTieneProducto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.CatalogoDetalleTieneProducto_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);

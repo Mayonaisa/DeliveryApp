@@ -34,20 +34,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pbxPed = new System.Windows.Forms.PictureBox();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbxEmp = new System.Windows.Forms.PictureBox();
             this.botonEmp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPed)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEmp)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +72,6 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,7 +107,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1078, 393);
+            this.button3.Location = new System.Drawing.Point(598, 393);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(383, 186);
             this.button3.TabIndex = 10;
@@ -141,17 +134,9 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(75)))), ((int)(((byte)(25)))));
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Location = new System.Drawing.Point(598, 393);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(383, 186);
-            this.panel7.TabIndex = 3;
-            // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(75)))), ((int)(((byte)(25)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -164,30 +149,19 @@
             this.button2.TabIndex = 8;
             this.button2.Text = " Detalle \r\n Productos\r\n";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.panel8.Controls.Add(this.pbxPed);
+            this.panel8.Controls.Add(this.button2);
             this.panel8.Controls.Add(this.btnEmpleados);
             this.panel8.Location = new System.Drawing.Point(99, 393);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(383, 186);
             this.panel8.TabIndex = 2;
             this.panel8.Click += new System.EventHandler(this.panel8_Click);
-            // 
-            // pbxPed
-            // 
-            this.pbxPed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxPed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxPed.Location = new System.Drawing.Point(226, 38);
-            this.pbxPed.Name = "pbxPed";
-            this.pbxPed.Size = new System.Drawing.Size(143, 124);
-            this.pbxPed.TabIndex = 5;
-            this.pbxPed.TabStop = false;
-            this.pbxPed.Visible = false;
             // 
             // btnEmpleados
             // 
@@ -204,13 +178,13 @@
             this.btnEmpleados.Text = " Pedidos\r\n";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Visible = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             this.btnEmpleados.MouseEnter += new System.EventHandler(this.btnEmpleados_MouseEnter);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(85)))), ((int)(((byte)(110)))));
-            this.panel3.Controls.Add(this.pbxEmp);
             this.panel3.Controls.Add(this.botonEmp);
             this.panel3.Location = new System.Drawing.Point(98, 111);
             this.panel3.Name = "panel3";
@@ -218,21 +192,6 @@
             this.panel3.TabIndex = 0;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // pbxEmp
-            // 
-            this.pbxEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxEmp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxEmp.Location = new System.Drawing.Point(227, 45);
-            this.pbxEmp.Name = "pbxEmp";
-            this.pbxEmp.Size = new System.Drawing.Size(143, 124);
-            this.pbxEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxEmp.TabIndex = 6;
-            this.pbxEmp.TabStop = false;
-            this.pbxEmp.Visible = false;
-            this.pbxEmp.Click += new System.EventHandler(this.pbxEmp_Click);
-            this.pbxEmp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxEmp_MouseDown);
-            this.pbxEmp.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // botonEmp
             // 
@@ -265,11 +224,8 @@
             this.Text = "LoginRecepcionista";
             this.Load += new System.EventHandler(this.MenuRecep_Admin_Load);
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPed)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEmp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,11 +235,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pbxPed;
-        private System.Windows.Forms.PictureBox pbxEmp;
         private System.Windows.Forms.Button botonEmp;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button button2;

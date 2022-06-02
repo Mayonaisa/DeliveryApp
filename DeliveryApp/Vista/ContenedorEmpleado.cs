@@ -16,10 +16,17 @@ namespace DeliveryApp.Vista
     public partial class ContenedorEmpleado : Form
     {
         Recepcionista empleado = new Recepcionista();
+        Administrador Ad;
         Panel contenedor=new Panel();   
         public ContenedorEmpleado(Usuario Emp, Panel p)
         {
             empleado = new Recepcionista(Emp);
+            contenedor = p;
+            InitializeComponent();
+        }
+        public ContenedorEmpleado(Usuario Emp, Panel p, Administrador Admin)
+        {
+            Ad = new Administrador(Emp);
             contenedor = p;
             InitializeComponent();
         }
@@ -33,15 +40,32 @@ namespace DeliveryApp.Vista
         {
             DateTime actual = DateTime.Now;
             lblfecha.Text = actual.ToString();
-            MenuRecep_Admin Inicio = new MenuRecep_Admin(empleado,ContenedorCatalogos);
-            ContenedorCatalogos.Width = Inicio.Width;
-            ContenedorCatalogos.Height = Inicio.Height;
-            //this.AutoSize = true;
-            Inicio.FormBorderStyle = FormBorderStyle.None;
-            Inicio.TopLevel = false;
-            ContenedorCatalogos.Controls.Add(Inicio);
-            Inicio.Dock = DockStyle.Fill;
-            Inicio.Show();
+            if (empleado.IdPersona != null)
+            {
+                MenuRecep Inicio = new MenuRecep(empleado, ContenedorCatalogos);
+                ContenedorCatalogos.Width = Inicio.Width;
+                ContenedorCatalogos.Height = Inicio.Height;
+                //this.AutoSize = true;
+                Inicio.FormBorderStyle = FormBorderStyle.None;
+                Inicio.TopLevel = false;
+                ContenedorCatalogos.Controls.Add(Inicio);
+                Inicio.Dock = DockStyle.Fill;
+                Inicio.Show();
+            }
+            else if (Ad.IdPersona != null)
+            {
+                MenuRecep_Admin Inicio = new MenuRecep_Admin(Ad, ContenedorCatalogos);
+                ContenedorCatalogos.Width = Inicio.Width;
+                ContenedorCatalogos.Height = Inicio.Height;
+                //this.AutoSize = true;
+                Inicio.FormBorderStyle = FormBorderStyle.None;
+                Inicio.TopLevel = false;
+                ContenedorCatalogos.Controls.Add(Inicio);
+                Inicio.Dock = DockStyle.Fill;
+                Inicio.Show();
+            }
+
+
 
 
         }
@@ -64,9 +88,8 @@ namespace DeliveryApp.Vista
 
         private void panel4_Click(object sender, EventArgs e)
         {
-            MenuRecep_Admin Men = new MenuRecep_Admin(empleado,ContenedorCatalogos);
-            //ContenedorCatalogos.Controls.RemoveAt(0);
-            Desplegar(Men);
+            
+            
 
         }
 
@@ -92,9 +115,16 @@ namespace DeliveryApp.Vista
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            MenuRecep_Admin Men = new MenuRecep_Admin(empleado, ContenedorCatalogos);
-            //ContenedorCatalogos.Controls.RemoveAt(0);
-            Desplegar(Men);
+            if (empleado.IdPersona != null)
+            {
+                MenuRecep Men = new MenuRecep(empleado, ContenedorCatalogos);
+                Desplegar(Men);
+            }
+            else if (Ad.IdPersona != null)
+            {
+                MenuRecep_Admin Men = new MenuRecep_Admin(Ad, ContenedorCatalogos);
+                Desplegar(Men);
+            }
         }
 
         private void rjButton3_Click(object sender, EventArgs e)

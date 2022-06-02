@@ -12,15 +12,13 @@ using DeliveryApp.Modelos;
 
 namespace DeliveryApp.Vista
 {
-    public partial class CatalogoDetalleTieneProducto : Form
+    public partial class MenuRecep : Form
     {
+        Recepcionista recepcionista;
         Panel contenedor = new Panel();
-        Pedido pedidos;
-        DetalleTieneProducto DetPed=new DetalleTieneProducto();
-        List<DetalleTieneProducto> DetPedList=new List<DetalleTieneProducto>();
-        public CatalogoDetalleTieneProducto(Panel p)
+        public MenuRecep(Recepcionista Rep, Panel p)
         {
-            //Rep = r;
+            recepcionista = Rep;
             contenedor = p;
             InitializeComponent();
         }
@@ -38,26 +36,21 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
-        private void botonRedondo1_Click(object sender, EventArgs e)
+        private void MenuRecep_Load(object sender, EventArgs e)
         {
-            string Mensaje=null;
-            dgvPedidos.Rows.Clear();
-
-            int cantidad = DetPed.CantidadDetalles();
-            ConsultarDetalleTieneProducto.ObtenerDetallesProductos(ref DetPedList,ref Mensaje,DetPed);
-            int i = 0;
-
-            while (i < cantidad)
-            {
-                dgvPedidos.Rows.Add(DetPedList[i].IdDetalle, DetPedList[i].Cantidad, DetPedList[i].IdProducto);
-                i++;
-            }
 
         }
 
-        private void CatalogoDetalleTieneProducto_Load(object sender, EventArgs e)
+        private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            PedidosPendientes PedPen = new PedidosPendientes(recepcionista, contenedor);
+            Desplegar(PedPen);
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos();
+            Desplegar(ConPro);
         }
     }
 }

@@ -110,8 +110,8 @@ namespace DeliveryApp
                             break;
                         case 2:
                             MessageBox.Show("administrador");
-                            //MenuAdministrador menu = new MenuAdministrador();
-                            //Desplegar(menu);
+                            Usuario Admin = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                            ContenedorEmpleado menuAdmin = new ContenedorEmpleado(Admin, contenedor,new Administrador());
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
@@ -240,6 +240,52 @@ namespace DeliveryApp
                             MessageBox.Show("recepcionista");
                             ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
                             Desplegar(menuR);
+                            break;
+                        case 4:
+                            MessageBox.Show("usuario normal");
+                            Carro.Verificar(usuario.IdPersona.Trim());
+                            MenuCliente menu = new MenuCliente(contenedor, Carro);
+                            Carro.IdUsuario = usuario.IdPersona.Trim();
+                            Carro.Usuario = usuario.Nombre.Trim();
+                            Desplegar(menu);
+                            break;
+                        default:
+                            MessageBox.Show("ERROR");
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            int val = Login.validarNomu("Diana50");
+            if (val == 0)
+            {
+                tbxCorreo.BorderColor = borde;
+                if (tbxContraseña.Texts.Length < 30)
+                {
+                    // login
+                    tbxContraseña.BorderColor = borde;
+
+                    int tipoUsuario = Login.ingresar("Diana50", "Diana1234_50");
+                    usuario = new Usuario("Diana1234_50", "Diana50");
+
+                    switch (tipoUsuario)
+                    {
+                        case 0:
+                            MessageBox.Show("usuario no existe");
+                            break;
+                        case 1:
+                            MessageBox.Show("contraseña incorrecta");
+                            break;
+                        case 2:
+                            MessageBox.Show("administrador");
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(usuario, contenedor,new Administrador());
+                            Desplegar(menuR);
+                            break;
+                        case 3:
+                            MessageBox.Show("recepcionista");
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
