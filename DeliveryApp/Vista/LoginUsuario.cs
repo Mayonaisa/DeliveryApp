@@ -98,7 +98,7 @@ namespace DeliveryApp
 
                     int tipoUsuario = Login.ingresar(tbxCorreo.Texts, tbxContraseña.Texts);
 
-                    //usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                    usuario = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
 
                     switch (tipoUsuario)
                     {
@@ -221,8 +221,8 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Roberto1234", "Roberto1234_1");
-                    usuario = new Usuario("Roberto1234_1", "Roberto1234");
+                    int tipoUsuario = Login.ingresar("Roberto_1", "Roberto1234_1");
+                    usuario = new Usuario("Roberto1234_1", "Roberto_1");
 
                     switch (tipoUsuario)
                     {
