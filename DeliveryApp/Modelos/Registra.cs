@@ -29,7 +29,7 @@ namespace DeliveryApp.Modelos
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
-            if (resultado.Read() && idRecep != null && idOrden !=  null && fecha != null)
+            if ( idRecep != null && idOrden !=  null && fecha != null)
             {
                 this.idRecepcionista = idRecep;
                 this.fechaRegistro = fecha;

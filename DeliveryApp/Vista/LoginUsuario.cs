@@ -115,7 +115,8 @@ namespace DeliveryApp
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
-                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            Usuario Recep = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(Recep, contenedor);
                             Desplegar(menuR);
                             break;
                         case 4:
@@ -191,7 +192,8 @@ namespace DeliveryApp
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
-                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            Usuario Recep = new Usuario("Paola1234_30", "Paola1234");
+                            ContenedorEmpleado menuR = new ContenedorEmpleado(Recep, contenedor);
                             Desplegar(menuR);
                             break;
                         case 4:

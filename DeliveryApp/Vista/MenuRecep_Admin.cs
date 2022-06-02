@@ -129,5 +129,10 @@ namespace DeliveryApp.Vista
             ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos();
             Desplegar(ConPro);
         }
+
+        private void MenuRecep_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

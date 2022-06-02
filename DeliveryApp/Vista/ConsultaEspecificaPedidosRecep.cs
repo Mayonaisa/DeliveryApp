@@ -81,7 +81,7 @@ namespace DeliveryApp.Vista
                 {
                     ConsultarPedido.ConfirmarPedido(Pedidos.IOrden.IdOrden, ref P);
                     txtEstatus.Texts = "en camino";
-                    ConsultarPedido.NuevoRegistra(Pedidos.IOrden.IdOrden, Actual.ToString(),recepcionista.IdPersona,ref Reg);
+                    //ConsultarPedido.NuevoRegistra(Pedidos.IOrden.IdOrden, Actual.ToString(),recepcionista.IdPersona,ref Reg);
                     MessageBox.Show("Se Registro la entrega del pedido");
                 }
                 else
@@ -153,7 +153,7 @@ namespace DeliveryApp.Vista
             {
                 cmbxVehi.Texts = Veh.Marca +" "+ Veh.Modelo + ", " + Veh.Año;
             }
-            if (txtEstatus.Texts != "Entregado")
+            if ( txtEstatus.Texts == "en camino")
             {
                 btnEntregado.Enabled = true;
             }
@@ -184,11 +184,23 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                ConsultarPedido.ConfirmarEntregapedido(Pedidos.IOrden.IdOrden, Pedidos);
-                txtEstatus.Texts = "Entregado";
-                MessageBox.Show("Pedido Concluido");
-                btnEntregado.Enabled = false;
-                rjButton1.Enabled = false;
+                string Error = null;
+                DateTime Actual = DateTime.Now;
+                Registra Reg=new Registra();
+                ConsultarPedido.NuevoRegistra(Pedidos.IOrden.IdOrden, Actual.ToString(), recepcionista.IdPersona, ref Reg, ref Error);
+                if (Error == null)
+                {
+                    ConsultarPedido.ConfirmarEntregapedido(Pedidos.IOrden.IdOrden, Pedidos);
+                    txtEstatus.Texts = "Entregado";
+                    MessageBox.Show("Pedido Concluido");
+                    btnEntregado.Enabled = false;
+                    rjButton1.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show(Error);
+                }
+                
             }
            
             

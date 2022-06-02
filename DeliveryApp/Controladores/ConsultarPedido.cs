@@ -72,7 +72,7 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;
             }
         }
-        public static void NuevoRegistra(string Orden, string fecha, string Rec, ref Registra Reg)
+        public static void NuevoRegistra(string Orden, string fecha, string Rec, ref Registra Reg, ref string mensaje)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace DeliveryApp.Controladores
             }
             catch (Exception ex)
             {
-                //mensaje = ex.Message;
+                mensaje=ex.Message;
             }
         }
         public static bool ValidarEntrega(string idOrden, Entrega Ent,ref string mensaje)
