@@ -110,19 +110,19 @@ namespace DeliveryApp
                             MessageBox.Show("contraseña incorrecta");
                             break;
                         case 2:
-                            MessageBox.Show("administrador");
+                            //MessageBox.Show("administrador");
                             Usuario Admin = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
                             ContenedorEmpleado menuAdmin = new ContenedorEmpleado(Admin, contenedor,new Administrador());
                             Desplegar(menuAdmin);
                             break;
                         case 3:
-                            MessageBox.Show("recepcionista");
+                            //MessageBox.Show("recepcionista");
                             Usuario Recep = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
                             ContenedorEmpleado menuR = new ContenedorEmpleado(Recep, contenedor);
                             Desplegar(menuR);
                             break;
                         case 4:
-                            MessageBox.Show("usuario normal");
+                            //MessageBox.Show("usuario normal");
                             Usuario Usu = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
                             Carro.Verificar(Usu.IdPersona.Trim());
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
