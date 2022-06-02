@@ -197,7 +197,6 @@
             this.rjButton3.Text = "Admin";
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
-            this.rjButton3.Visible = false;
             this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
             // 
             // rjButton2
@@ -219,7 +218,6 @@
             this.rjButton2.Text = "Recepcionista";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Visible = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
@@ -241,7 +239,6 @@
             this.rjButton1.Text = "Cliente";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Visible = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // pnlInferior
