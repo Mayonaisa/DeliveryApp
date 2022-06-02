@@ -30,26 +30,26 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.btnVolver = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.s = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbxMarca = new CustomControls.RJControls.RJTextBox();
-            this.cbxId = new CustomControls.RJControls.RJComboBox();
-            this.tbxPlaca = new CustomControls.RJControls.RJTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbxColor = new CustomControls.RJControls.RJTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxModelo = new CustomControls.RJControls.RJTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxTipo = new CustomControls.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbxAño = new CustomControls.RJControls.RJTextBox();
-            this.tbxTipo = new CustomControls.RJControls.RJTextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxModelo = new CustomControls.RJControls.RJTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxColor = new CustomControls.RJControls.RJTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxPlaca = new CustomControls.RJControls.RJTextBox();
+            this.cbxId = new CustomControls.RJControls.RJComboBox();
+            this.tbxMarca = new CustomControls.RJControls.RJTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.s.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(15, 72);
+            this.panel5.Location = new System.Drawing.Point(245, 218);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1170, 39);
@@ -74,11 +74,34 @@
             this.panel2.Controls.Add(this.s);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(15, 75);
+            this.panel2.Location = new System.Drawing.Point(245, 221);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1170, 626);
             this.panel2.TabIndex = 15;
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.Brown;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.Brown;
+            this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.rjButton3.BorderRadius = 20;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Bold);
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(846, 562);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(146, 46);
+            this.rjButton3.TabIndex = 4;
+            this.rjButton3.Text = "Eliminar";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
             // 
             // btnVolver
             // 
@@ -151,219 +174,39 @@
             this.s.Size = new System.Drawing.Size(1170, 546);
             this.s.TabIndex = 0;
             // 
-            // panel1
+            // label8
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(15, 61);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1170, 53);
-            this.panel1.TabIndex = 13;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label8.Location = new System.Drawing.Point(234, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 23);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Id de vehiculo";
             // 
-            // label1
+            // tbxTipo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sora", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(11, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 29);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Vehiculo especifico";
-            // 
-            // tbxMarca
-            // 
-            this.tbxMarca.BackColor = System.Drawing.Color.White;
-            this.tbxMarca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxMarca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxMarca.BorderRadius = 0;
-            this.tbxMarca.BorderSize = 2;
-            this.tbxMarca.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.tbxMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxMarca.Location = new System.Drawing.Point(241, 315);
-            this.tbxMarca.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxMarca.Multiline = false;
-            this.tbxMarca.Name = "tbxMarca";
-            this.tbxMarca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxMarca.PasswordChar = false;
-            this.tbxMarca.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxMarca.PlaceholderText = "";
-            this.tbxMarca.Size = new System.Drawing.Size(302, 38);
-            this.tbxMarca.TabIndex = 0;
-            this.tbxMarca.Texts = "";
-            this.tbxMarca.UnderlinedStyle = false;
-            // 
-            // cbxId
-            // 
-            this.cbxId.BackColor = System.Drawing.Color.White;
-            this.cbxId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.cbxId.BorderSize = 2;
-            this.cbxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbxId.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.cbxId.ForeColor = System.Drawing.Color.DimGray;
-            this.cbxId.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.cbxId.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbxId.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxId.Location = new System.Drawing.Point(238, 165);
-            this.cbxId.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbxId.Name = "cbxId";
-            this.cbxId.Padding = new System.Windows.Forms.Padding(2);
-            this.cbxId.Size = new System.Drawing.Size(655, 35);
-            this.cbxId.TabIndex = 1;
-            this.cbxId.Texts = "";
-            this.cbxId.OnSelectedIndexChanged += new System.EventHandler(this.cbxId_OnSelectedIndexChanged);
-            this.cbxId.Enter += new System.EventHandler(this.cbxId_Enter);
-            // 
-            // tbxPlaca
-            // 
-            this.tbxPlaca.BackColor = System.Drawing.Color.White;
-            this.tbxPlaca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxPlaca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxPlaca.BorderRadius = 0;
-            this.tbxPlaca.BorderSize = 2;
-            this.tbxPlaca.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.tbxPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxPlaca.Location = new System.Drawing.Point(241, 391);
-            this.tbxPlaca.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxPlaca.Multiline = false;
-            this.tbxPlaca.Name = "tbxPlaca";
-            this.tbxPlaca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxPlaca.PasswordChar = false;
-            this.tbxPlaca.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxPlaca.PlaceholderText = "";
-            this.tbxPlaca.Size = new System.Drawing.Size(302, 38);
-            this.tbxPlaca.TabIndex = 2;
-            this.tbxPlaca.Texts = "";
-            this.tbxPlaca.UnderlinedStyle = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label2.Location = new System.Drawing.Point(237, 212);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 23);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Tipo de vehiculo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label3.Location = new System.Drawing.Point(237, 290);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 23);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Marca";
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.Brown;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.Brown;
-            this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.rjButton3.BorderRadius = 20;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
-            this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Bold);
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(846, 562);
-            this.rjButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(146, 46);
-            this.rjButton3.TabIndex = 4;
-            this.rjButton3.Text = "Eliminar";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label4.Location = new System.Drawing.Point(237, 364);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 23);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Placa";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label5.Location = new System.Drawing.Point(590, 210);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 23);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Color";
-            // 
-            // tbxColor
-            // 
-            this.tbxColor.BackColor = System.Drawing.Color.White;
-            this.tbxColor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxColor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxColor.BorderRadius = 0;
-            this.tbxColor.BorderSize = 2;
-            this.tbxColor.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.tbxColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxColor.Location = new System.Drawing.Point(594, 237);
-            this.tbxColor.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxColor.Multiline = false;
-            this.tbxColor.Name = "tbxColor";
-            this.tbxColor.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxColor.PasswordChar = false;
-            this.tbxColor.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxColor.PlaceholderText = "";
-            this.tbxColor.Size = new System.Drawing.Size(302, 38);
-            this.tbxColor.TabIndex = 19;
-            this.tbxColor.Texts = "";
-            this.tbxColor.UnderlinedStyle = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label6.Location = new System.Drawing.Point(593, 288);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 23);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Modelo";
-            // 
-            // tbxModelo
-            // 
-            this.tbxModelo.BackColor = System.Drawing.Color.White;
-            this.tbxModelo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxModelo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxModelo.BorderRadius = 0;
-            this.tbxModelo.BorderSize = 2;
-            this.tbxModelo.Font = new System.Drawing.Font("Sora", 11.25F);
-            this.tbxModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxModelo.Location = new System.Drawing.Point(597, 315);
-            this.tbxModelo.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxModelo.Multiline = false;
-            this.tbxModelo.Name = "tbxModelo";
-            this.tbxModelo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxModelo.PasswordChar = false;
-            this.tbxModelo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxModelo.PlaceholderText = "";
-            this.tbxModelo.Size = new System.Drawing.Size(302, 38);
-            this.tbxModelo.TabIndex = 21;
-            this.tbxModelo.Texts = "";
-            this.tbxModelo.UnderlinedStyle = false;
+            this.tbxTipo.BackColor = System.Drawing.Color.White;
+            this.tbxTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxTipo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxTipo.BorderRadius = 0;
+            this.tbxTipo.BorderSize = 2;
+            this.tbxTipo.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxTipo.Location = new System.Drawing.Point(238, 239);
+            this.tbxTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTipo.Multiline = false;
+            this.tbxTipo.Name = "tbxTipo";
+            this.tbxTipo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxTipo.PasswordChar = false;
+            this.tbxTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxTipo.PlaceholderText = "";
+            this.tbxTipo.Size = new System.Drawing.Size(302, 38);
+            this.tbxTipo.TabIndex = 25;
+            this.tbxTipo.Texts = "";
+            this.tbxTipo.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -399,46 +242,203 @@
             this.tbxAño.Texts = "";
             this.tbxAño.UnderlinedStyle = false;
             // 
-            // tbxTipo
+            // label6
             // 
-            this.tbxTipo.BackColor = System.Drawing.Color.White;
-            this.tbxTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxTipo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxTipo.BorderRadius = 0;
-            this.tbxTipo.BorderSize = 2;
-            this.tbxTipo.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxTipo.Location = new System.Drawing.Point(238, 239);
-            this.tbxTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxTipo.Multiline = false;
-            this.tbxTipo.Name = "tbxTipo";
-            this.tbxTipo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbxTipo.PasswordChar = false;
-            this.tbxTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbxTipo.PlaceholderText = "";
-            this.tbxTipo.Size = new System.Drawing.Size(302, 38);
-            this.tbxTipo.TabIndex = 25;
-            this.tbxTipo.Texts = "";
-            this.tbxTipo.UnderlinedStyle = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label6.Location = new System.Drawing.Point(593, 288);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 23);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Modelo";
             // 
-            // label8
+            // tbxModelo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label8.Location = new System.Drawing.Point(234, 139);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 23);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Id de vehiculo";
+            this.tbxModelo.BackColor = System.Drawing.Color.White;
+            this.tbxModelo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxModelo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxModelo.BorderRadius = 0;
+            this.tbxModelo.BorderSize = 2;
+            this.tbxModelo.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxModelo.Location = new System.Drawing.Point(597, 315);
+            this.tbxModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxModelo.Multiline = false;
+            this.tbxModelo.Name = "tbxModelo";
+            this.tbxModelo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxModelo.PasswordChar = false;
+            this.tbxModelo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxModelo.PlaceholderText = "";
+            this.tbxModelo.Size = new System.Drawing.Size(302, 38);
+            this.tbxModelo.TabIndex = 21;
+            this.tbxModelo.Texts = "";
+            this.tbxModelo.UnderlinedStyle = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label5.Location = new System.Drawing.Point(590, 210);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 23);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Color";
+            // 
+            // tbxColor
+            // 
+            this.tbxColor.BackColor = System.Drawing.Color.White;
+            this.tbxColor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxColor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxColor.BorderRadius = 0;
+            this.tbxColor.BorderSize = 2;
+            this.tbxColor.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxColor.Location = new System.Drawing.Point(594, 237);
+            this.tbxColor.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxColor.Multiline = false;
+            this.tbxColor.Name = "tbxColor";
+            this.tbxColor.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxColor.PasswordChar = false;
+            this.tbxColor.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxColor.PlaceholderText = "";
+            this.tbxColor.Size = new System.Drawing.Size(302, 38);
+            this.tbxColor.TabIndex = 19;
+            this.tbxColor.Texts = "";
+            this.tbxColor.UnderlinedStyle = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label4.Location = new System.Drawing.Point(237, 364);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 23);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Placa";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label3.Location = new System.Drawing.Point(237, 290);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 23);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Marca";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label2.Location = new System.Drawing.Point(237, 212);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 23);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tipo de vehiculo";
+            // 
+            // tbxPlaca
+            // 
+            this.tbxPlaca.BackColor = System.Drawing.Color.White;
+            this.tbxPlaca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxPlaca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxPlaca.BorderRadius = 0;
+            this.tbxPlaca.BorderSize = 2;
+            this.tbxPlaca.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxPlaca.Location = new System.Drawing.Point(241, 391);
+            this.tbxPlaca.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxPlaca.Multiline = false;
+            this.tbxPlaca.Name = "tbxPlaca";
+            this.tbxPlaca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxPlaca.PasswordChar = false;
+            this.tbxPlaca.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxPlaca.PlaceholderText = "";
+            this.tbxPlaca.Size = new System.Drawing.Size(302, 38);
+            this.tbxPlaca.TabIndex = 2;
+            this.tbxPlaca.Texts = "";
+            this.tbxPlaca.UnderlinedStyle = false;
+            // 
+            // cbxId
+            // 
+            this.cbxId.BackColor = System.Drawing.Color.White;
+            this.cbxId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.cbxId.BorderSize = 2;
+            this.cbxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxId.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.cbxId.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxId.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.cbxId.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxId.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxId.Location = new System.Drawing.Point(238, 165);
+            this.cbxId.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbxId.Name = "cbxId";
+            this.cbxId.Padding = new System.Windows.Forms.Padding(2);
+            this.cbxId.Size = new System.Drawing.Size(655, 35);
+            this.cbxId.TabIndex = 1;
+            this.cbxId.Texts = "";
+            this.cbxId.OnSelectedIndexChanged += new System.EventHandler(this.cbxId_OnSelectedIndexChanged);
+            this.cbxId.Enter += new System.EventHandler(this.cbxId_Enter);
+            // 
+            // tbxMarca
+            // 
+            this.tbxMarca.BackColor = System.Drawing.Color.White;
+            this.tbxMarca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxMarca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxMarca.BorderRadius = 0;
+            this.tbxMarca.BorderSize = 2;
+            this.tbxMarca.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxMarca.Location = new System.Drawing.Point(241, 315);
+            this.tbxMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxMarca.Multiline = false;
+            this.tbxMarca.Name = "tbxMarca";
+            this.tbxMarca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxMarca.PasswordChar = false;
+            this.tbxMarca.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxMarca.PlaceholderText = "";
+            this.tbxMarca.Size = new System.Drawing.Size(302, 38);
+            this.tbxMarca.TabIndex = 0;
+            this.tbxMarca.Texts = "";
+            this.tbxMarca.UnderlinedStyle = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
+            this.panel1.Location = new System.Drawing.Point(245, 207);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1170, 53);
+            this.panel1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sora", 16.2F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 34);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Vehiculo especifico";
             // 
             // ConsultaEspecificaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1200, 718);
+            this.ClientSize = new System.Drawing.Size(1660, 1011);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

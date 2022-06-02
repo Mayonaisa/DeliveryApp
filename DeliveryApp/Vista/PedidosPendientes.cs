@@ -156,6 +156,33 @@ namespace DeliveryApp.Vista
 
 
             dgvPedidos.Columns.Add(Aceptar);
+
+            dgvPedidos.Rows.Clear();
+            ConsultarPedido.ObtenerPedido(ref pedidos, ref Mensaje);
+
+
+
+            int cantidad = 0;
+            ConsultarPedido.cantidadPedidos(ref cantidad);
+            int i = 0;
+            Repartidor IREP = new Repartidor();
+            Vehiculo IVEH = new Vehiculo();
+            while (i < cantidad)
+            {
+                ConsultarPedido.RepartidorEspecifico(pedidos.Orden[i].IdOrden, ref IREP, ref Mensaje);
+                ConsultarPedido.VehiculoEspecifico(pedidos.Orden[i].IdOrden, ref IVEH, ref Mensaje);
+                dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus, IREP.Nombre + " " + IREP.APaterno + " " + IREP.AMaterno, IVEH.Marca + " " + IVEH.Modelo + " " + IVEH.Año, pedidos.Persona1[i].Nombre + " " + pedidos.Persona1[i].APaterno + " " + pedidos.Persona1[i].AMaterno, pedidos.Solicitud[i].Fecha, pedidos.Direc1[i].Colonia, pedidos.Direc1[i].NumCasa);
+
+                if (dgvPedidos[3, i].Value.ToString().Trim() == "Aceptado" || dgvPedidos[3, i].Value.ToString().Trim() == "en camino")
+                {
+                    CambiarBoton(i);
+                }
+                i++;
+            }
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
         }
     }
 }

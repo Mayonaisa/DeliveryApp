@@ -49,10 +49,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel2.Controls.Add(this.dgvVehiculo);
-            this.panel2.Location = new System.Drawing.Point(21, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(16, 70);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1555, 779);
+            this.panel2.Size = new System.Drawing.Size(1166, 633);
             this.panel2.TabIndex = 14;
             // 
             // dgvVehiculo
@@ -88,7 +88,7 @@
             this.dgvVehiculo.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVehiculo.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvVehiculo.Location = new System.Drawing.Point(0, 0);
-            this.dgvVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvVehiculo.MultiSelect = false;
             this.dgvVehiculo.Name = "dgvVehiculo";
             this.dgvVehiculo.ReadOnly = true;
@@ -96,7 +96,7 @@
             this.dgvVehiculo.RowHeadersWidth = 51;
             this.dgvVehiculo.RowTemplate.Height = 24;
             this.dgvVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVehiculo.Size = new System.Drawing.Size(1555, 677);
+            this.dgvVehiculo.Size = new System.Drawing.Size(1166, 550);
             this.dgvVehiculo.TabIndex = 4;
             this.dgvVehiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculo_CellClick);
             // 
@@ -159,10 +159,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(21, 64);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(16, 52);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1557, 16);
+            this.panel1.Size = new System.Drawing.Size(1168, 13);
             this.panel1.TabIndex = 13;
             // 
             // label1
@@ -170,23 +170,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(21, 18);
+            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 32);
+            this.label1.Size = new System.Drawing.Size(107, 26);
             this.label1.TabIndex = 12;
             this.label1.Text = "Vehiculos";
             // 
             // CatalogoGeneralVehiculos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1600, 884);
+            this.ClientSize = new System.Drawing.Size(1660, 1011);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CatalogoGeneralVehiculos";
             this.Text = "CatalogoGeneralVehiculos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
