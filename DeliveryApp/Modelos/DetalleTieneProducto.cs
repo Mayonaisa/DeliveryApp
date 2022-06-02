@@ -21,13 +21,32 @@ namespace DeliveryApp.Modelos
         public string IdProducto { get => idProducto; set => idProducto = value; }
         public bool Nuevo { get => nuevo; set => nuevo = value; }
 
-        public DetalleTieneProducto()
-        { }
-        public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
+        public DetalleTieneProducto() { }
+        public DetalleTieneProducto(string idDet)
         {
-            idDetalle = idDet;
-            //cantidad = cant;
-            //idProducto = idProd;
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("SELECT * FROM DetalleContieneProducto WHERE idDetalle='"+idDet+"'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            if (resultado.Read())
+            {
+                this.idDetalle = resultado.GetString(0);
+                this.cantidad = resultado.GetSqlSingle(1);
+                this.idProducto = resultado.GetString(2);
+            }
+            else
+            {
+                //prueba
+                //MessageBox.Show("no se encontró el producto");
+            }
+
+            conx.Close();
 
 
         }

@@ -26,6 +26,7 @@ namespace DeliveryApp.Controladores
 
         public static void VehiculoEspecifico(string id, ref Vehiculo Veh, ref string mensaje)
         {
+            //Veh.IdEntrega(id);
             try
             {
                 Veh.IdEntrega(id);

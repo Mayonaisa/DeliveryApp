@@ -76,10 +76,11 @@ namespace DeliveryApp.Vista
             else
             {
                 string error = null;
-                Veh = new Vehiculo();
                 string VehID = null;
+
+                Veh = new Vehiculo();
                 VehID = dgvVehiculo[0, e.RowIndex].Value.ToString().Trim();
-                //
+                
                 ConsultarVehiculos.VehiculoEspecifico(VehID, ref Veh, ref error);
                 ConsultaEspecificaVehiculo ConsultarVehiculo = new ConsultaEspecificaVehiculo(contenedor, Veh);
 
@@ -107,5 +108,13 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            //ContenedorEmpleado menuR = new ContenedorEmpleado(Rep, contenedor);
+            //Desplegar(menuR);
+            MenuRecep_Admin Men = new MenuRecep_Admin(null, contenedor);
+            //ContenedorCatalogos.Controls.RemoveAt(0);
+            Desplegar(Men);
+        }
     }
 }
