@@ -121,6 +121,7 @@ namespace DeliveryApp.Vista
                 y += 82;
             }
 
+            lblMonto.Text += " $";
             //cargarCarrito();
         }
 

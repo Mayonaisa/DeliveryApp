@@ -24,7 +24,7 @@ namespace DeliveryApp.Recursos
         private string idUsuario = "";
         string usuario = "";
 
-        public Detalle detalle;
+        public Detalle detalle = new Detalle();
         public DetalleTieneProducto DetTProd;
 
         SqlSingle m = 0;
@@ -170,6 +170,7 @@ namespace DeliveryApp.Recursos
 
             using (var r = registros.ExecuteReader())
             {
+                m = 0;
                 
                 foreach (DbDataRecord s in r)
                 {

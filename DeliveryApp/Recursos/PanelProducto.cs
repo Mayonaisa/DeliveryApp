@@ -140,7 +140,7 @@ namespace DeliveryApp.Recursos
             this.BRprincipal.Size = new System.Drawing.Size(189, 46);
             this.BRprincipal.Text = "Agregar";
             this.BRprincipal.FlatAppearance.BorderSize = 0;
-            if (Carro.estatus == "nulo")
+            if (Carro.estatus == "nulo" && prod.Disponible=="Si")
             {
                 this.BRprincipal.Enabled = true;
             }
