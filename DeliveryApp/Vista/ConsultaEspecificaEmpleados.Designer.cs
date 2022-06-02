@@ -1,6 +1,6 @@
 ﻿namespace DeliveryApp.Vista
 {
-    partial class ConsutaEspecificaCliente
+    partial class ConsultaEspecificaEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -50,8 +50,6 @@
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtHoraSol = new CustomControls.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotal = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,10 +65,10 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(24, 90);
+            this.panel5.Location = new System.Drawing.Point(24, 91);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1560, 48);
-            this.panel5.TabIndex = 14;
+            this.panel5.TabIndex = 18;
             // 
             // panel2
             // 
@@ -82,10 +80,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(24, 90);
+            this.panel2.Location = new System.Drawing.Point(24, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1560, 771);
-            this.panel2.TabIndex = 15;
+            this.panel2.TabIndex = 19;
             // 
             // rjButton2
             // 
@@ -324,8 +322,6 @@
             this.panel3.Controls.Add(this.rjTextBox2);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.rjTextBox1);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.txtHoraSol);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.label2);
@@ -434,39 +430,6 @@
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.label12.Location = new System.Drawing.Point(151, 502);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 36);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "RFC";
-            // 
-            // txtHoraSol
-            // 
-            this.txtHoraSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(106)))), ((int)(((byte)(137)))));
-            this.txtHoraSol.BorderColor = System.Drawing.Color.Black;
-            this.txtHoraSol.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtHoraSol.BorderRadius = 20;
-            this.txtHoraSol.BorderSize = 3;
-            this.txtHoraSol.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraSol.ForeColor = System.Drawing.Color.White;
-            this.txtHoraSol.Location = new System.Drawing.Point(239, 489);
-            this.txtHoraSol.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHoraSol.Multiline = false;
-            this.txtHoraSol.Name = "txtHoraSol";
-            this.txtHoraSol.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtHoraSol.PasswordChar = false;
-            this.txtHoraSol.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtHoraSol.PlaceholderText = "";
-            this.txtHoraSol.Size = new System.Drawing.Size(204, 49);
-            this.txtHoraSol.TabIndex = 13;
-            this.txtHoraSol.Texts = "";
-            this.txtHoraSol.UnderlinedStyle = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -537,23 +500,23 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(24, 76);
+            this.panel1.Location = new System.Drawing.Point(24, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1560, 65);
-            this.panel1.TabIndex = 13;
+            this.panel1.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sora", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(17, 21);
+            this.label1.Location = new System.Drawing.Point(17, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 42);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Cliente";
+            this.label1.Size = new System.Drawing.Size(161, 43);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Empleado";
             // 
-            // ConsutaEspecificaCliente
+            // ConsultaEspecificaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -564,9 +527,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ConsutaEspecificaCliente";
-            this.Text = "ConsutaEspecificaCliente";
+            this.Name = "ConsultaEspecificaEmpleados";
+            this.Text = "ConsultaEspecificaEmpleados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ConsultaEspecificaEmpleados_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -595,19 +559,17 @@
         private System.Windows.Forms.Label label11;
         private CustomControls.RJControls.RJTextBox txtCiudad;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label12;
-        private CustomControls.RJControls.RJTextBox txtHoraSol;
+        private System.Windows.Forms.Label label6;
+        private CustomControls.RJControls.RJTextBox rjTextBox3;
+        private System.Windows.Forms.Label label5;
+        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private System.Windows.Forms.Label label4;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJTextBox txtTotal;
         private System.Windows.Forms.Label label2;
         private CustomControls.RJControls.RJTextBox txtCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
-        private System.Windows.Forms.Label label4;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private System.Windows.Forms.Label label6;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
     }
 }

@@ -263,6 +263,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuRecep_Admin";
             this.Text = "LoginRecepcionista";
+            this.Load += new System.EventHandler(this.MenuRecep_Admin_Load);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

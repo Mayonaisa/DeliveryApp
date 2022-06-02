@@ -119,6 +119,27 @@ namespace DeliveryApp.Modelos
             
             conx.Close();
         }
+        public void PedidoNuevo(string idOrden, string idDetalle)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("insert into Pedido(idOrden,idDetalle) values('"+idOrden+"','"+idDetalle+"');", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (idOrden != null && idDetalle != null )
+            {
+
+            }
+            else
+            {
+                conx.Close();
+                throw new Exception("Error");
+            }
+        }
         public int Cantidad()
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
@@ -170,6 +191,28 @@ namespace DeliveryApp.Modelos
             conx.Open();
 
             SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='en camino' where idOrden= '" + id + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+
+            }
+            else
+            {
+                throw new Exception("Error");
+            }
+
+            conx.Close();
+        }
+        public void PedidoYaEntregado(string id)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("UPDATE Orden set estatus='Entregado' where idOrden= '" + id + "'", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();

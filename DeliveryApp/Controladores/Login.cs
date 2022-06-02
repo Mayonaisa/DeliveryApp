@@ -39,7 +39,17 @@ namespace DeliveryApp.Controladores
                 return false;
             }
         }
+        public void IdRecep(string contraseña, string nomu)
+        {
+            try
+            {
 
+            }
+            catch
+            {
+
+            }
+        }
         public static int ingresar(string usuario, string contraseña)
         {
             int tipoUsuario = Usuario.validarCredenciales(usuario, contraseña);

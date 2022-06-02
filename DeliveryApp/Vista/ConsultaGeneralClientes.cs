@@ -41,5 +41,26 @@ namespace DeliveryApp.Vista
                 MessageBox.Show(Mensaje);
             }
         }
+
+        private void ConsultaGeneralClientes_Load(object sender, EventArgs e)
+        {
+            dgvCliente.Rows.Clear();
+            string Mensaje = null;
+            int max = 0;
+            dgvCliente.Rows.Clear();
+            ConsultaClientes.cantidadClientes(ref max, ref Cli);
+            ConsultaClientes.ObtenerClientes(ref LClientes, ref Mensaje, Cli);
+            int i = 0;
+            while (i < max)
+            {
+                dgvCliente.Rows.Add(LClientes[i].IdPersona, LClientes[i].Nombre + " " + LClientes[i].APaterno + " " + LClientes[i].AMaterno, LClientes[i].Telefono, LClientes[i].Sexo, LClientes[i].Edad, LClientes[i].Dir.Calle1, LClientes[i].Dir.Calle2, LClientes[i].Dir.Colonia, LClientes[i].Dir.NumCasa);
+                i++;
+            }
+
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
+        }
     }
 }

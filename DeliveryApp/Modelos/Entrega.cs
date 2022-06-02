@@ -20,29 +20,28 @@ namespace DeliveryApp.Modelos
         public string IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
         public string FechaEntrega { get => fechaEntrega; set => fechaEntrega = value; }
         public string IdOrden { get => idOrden; set => idOrden = value; }
-        public void NuevaEntrega(string idOrden, string idRep, string idVeh, string fecha,string mensaje)
+        public void NuevaEntrega(string idOrd, string idRep, string idVeh, string fecha,string mensaje)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("insert into Entrega(idRepartidor,idOrden,fechaEntrega,idVehiculo) values('"+idRep+"','"+idOrden+"','"+fecha+"','"+idVeh+"');", conx);
+            SqlCommand consulta = new SqlCommand("insert into Entrega(idRepartidor,idOrden,fechaEntrega,idVehiculo) values('"+idRep+"','"+idOrd+"','"+fecha+"','"+idVeh+"');", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
-            if (resultado.Read() && idRep!=null && idOrden!=null && idVeh!=null && fecha!=null)
+            if (idRep!=null && idOrd != null && idVeh!=null && fecha!=null)
             {
-                this.idOrden=resultado.GetString(1);
-                this.idVehiculo = resultado.GetString(3);
-                this.idRepartidor = resultado.GetString(0);
-                this.fechaEntrega = resultado.GetString(2);
-                mensaje = "Entrega del pedido confirmada";
+                this.idOrden= idOrd;
+                this.idVehiculo = idVeh;
+                this.idRepartidor = idRep;
+                this.fechaEntrega = fecha;
             }
             else
             {
                 conx.Close();
-                throw new Exception("No se puede confirmar este pedido, faltan datos o el pedido ya esta confirmado");
+                throw new Exception("No se puede confirmar este pedido, faltan datos en los campos de repartidor o vehiculo");
             }
         }
         public bool ValidarEntrega(string idOrden)
