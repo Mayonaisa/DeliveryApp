@@ -49,7 +49,7 @@ namespace DeliveryApp.Vista
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos();
+            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos(contenedor);
             Desplegar(ConPro);
         }
     }

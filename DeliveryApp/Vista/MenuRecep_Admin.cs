@@ -92,7 +92,7 @@ namespace DeliveryApp.Vista
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            CatalogoDetalleTieneProducto CatDetPed = new CatalogoDetalleTieneProducto(contenedor);
+            ConsultaEspecificaDetalle CatDetPed = new ConsultaEspecificaDetalle(contenedor);
             Desplegar(CatDetPed);
         }
 
@@ -121,7 +121,7 @@ namespace DeliveryApp.Vista
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos();
+            ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos(recepcionista, contenedor);
             Desplegar(ConPro);
         }
 

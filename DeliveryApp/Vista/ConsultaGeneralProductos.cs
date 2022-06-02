@@ -17,12 +17,19 @@ namespace DeliveryApp.Vista
         List <Producto> LProductos=new List<Producto>();
         Producto Pro=new Producto();
         Panel contenedor = new Panel();
-        Recepcionista Rep = new Recepcionista();
+        Administrador Rep = new Administrador();
         string Mensaje;
 
-        public ConsultaGeneralProductos(Recepcionista r, Panel p)
+        public ConsultaGeneralProductos(Administrador r, Panel p)
         {
             Rep = r;
+            contenedor = p;
+            InitializeComponent();
+        }
+
+        public ConsultaGeneralProductos(Panel p)
+        {
+            Rep = null;
             contenedor = p;
             InitializeComponent();
         }

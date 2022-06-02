@@ -61,7 +61,7 @@ namespace DeliveryApp.Vista
             prod.OrdenDisponibilidad();
             for(int i = 0; i < prod.orden.Count; i++)
             {
-                PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                PanelProducto prueba = new PanelProducto(prod.orden[i], Carro); // aguas <<<<<
                 prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                 pnlMenu.Controls.Add(prueba);
                 y += 156;
@@ -217,7 +217,7 @@ namespace DeliveryApp.Vista
                 int y = 0;
                 for (int i = 0; i < prod.orden.Count; i++)
                 {
-                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    PanelProducto prueba = new PanelProducto(prod.orden[i], Carro);
                     prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                     pnlMenu.Controls.Add(prueba);
                     y += 156;
@@ -236,7 +236,7 @@ namespace DeliveryApp.Vista
                 int y = 0;
                 for (int i = 0; i < prod.orden.Count; i++)
                 {
-                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    PanelProducto prueba = new PanelProducto(prod.orden[i], Carro);
                     prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                     pnlMenu.Controls.Add(prueba);
                     y += 156;
@@ -255,7 +255,7 @@ namespace DeliveryApp.Vista
                 int y = 0;
                 for (int i = 0; i < prod.orden.Count; i++)
                 {
-                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    PanelProducto prueba = new PanelProducto(prod.orden[i], Carro);
                     prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                     pnlMenu.Controls.Add(prueba);
                     y += 156;
@@ -274,7 +274,7 @@ namespace DeliveryApp.Vista
                 int y = 0;
                 for (int i = 0; i < prod.orden.Count; i++)
                 {
-                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    PanelProducto prueba = new PanelProducto(prod.orden[i], Carro);
                     prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                     pnlMenu.Controls.Add(prueba);
                     y += 156;

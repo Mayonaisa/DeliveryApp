@@ -21,9 +21,9 @@ namespace DeliveryApp.Vista
         List<DetalleTieneProducto> DetPedList=new List<DetalleTieneProducto>();
         string idc;
 
-        public CatalogoDetalleTieneProducto(Recepcionista r, Panel p, string id)
+        public CatalogoDetalleTieneProducto(Panel p, string id)
         {
-            Rep = r;
+            Rep = null;
             contenedor = p;
             idc = id;
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace DeliveryApp.Vista
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            ConsultaEspecificaDetalle ConPro = new ConsultaEspecificaDetalle(Rep, contenedor);
+            ConsultaEspecificaDetalle ConPro = new ConsultaEspecificaDetalle(contenedor);
             Desplegar(ConPro);
         }
     }

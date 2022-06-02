@@ -112,6 +112,7 @@ namespace DeliveryApp
                             MessageBox.Show("administrador");
                             Usuario Admin = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
                             ContenedorEmpleado menuAdmin = new ContenedorEmpleado(Admin, contenedor,new Administrador());
+                            Desplegar(menuAdmin);
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
@@ -121,10 +122,11 @@ namespace DeliveryApp
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
-                            Carro.Verificar(usuario.IdPersona.Trim());
+                            Usuario Usu = new Usuario(tbxContraseña.Texts, tbxCorreo.Texts);
+                            Carro.Verificar(Usu.IdPersona.Trim());
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
-                            Carro.IdUsuario = usuario.IdPersona.Trim();
-                            Carro.Usuario = usuario.Nombre.Trim();
+                            Carro.IdUsuario = Usu.IdPersona.Trim();
+                            Carro.Usuario = Usu.Nombre.Trim();
                             Desplegar(menu);
                             break;
                         default:

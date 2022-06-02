@@ -20,7 +20,7 @@ namespace DeliveryApp.Vista
         DetalleTieneProducto DetPed = new DetalleTieneProducto();
         List<DetalleTieneProducto> DetPedList = new List<DetalleTieneProducto>();
 
-        public ConsultaEspecificaDetalle(Recepcionista r, Panel p)
+        public ConsultaEspecificaDetalle(Panel p)
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace DeliveryApp.Vista
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            MenuRecep_Admin Men = new MenuRecep_Admin(Rep, contenedor);
+            MenuRecep_Admin Men = new MenuRecep_Admin(null, contenedor);
             Desplegar(Men);
             MessageBox.Show("a");
         }
@@ -73,7 +73,7 @@ namespace DeliveryApp.Vista
             else
             {
                 string VehID = dgvPedidos[0, e.RowIndex].Value.ToString().Trim();
-                CatalogoDetalleTieneProducto pnt = new CatalogoDetalleTieneProducto(Rep, contenedor, VehID);
+                CatalogoDetalleTieneProducto pnt = new CatalogoDetalleTieneProducto(contenedor, VehID);
                 Desplegar(pnt);
                 MessageBox.Show("a");
             }

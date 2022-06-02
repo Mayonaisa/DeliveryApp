@@ -19,11 +19,10 @@ namespace DeliveryApp.Vista
         Recepcionista Rep = new Recepcionista();
         Panel contenedor = new Panel();
 
-        public ConsultaEspecificaVehiculo(Panel p, Vehiculo V, Recepcionista r)
+        public ConsultaEspecificaVehiculo(Panel p, Vehiculo V)
         {
             veh = V;
             contenedor = p;
-            Rep = r;
             InitializeComponent();
         }
 
@@ -68,7 +67,7 @@ namespace DeliveryApp.Vista
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(Rep, contenedor);
+            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(contenedor);
             Desplegar(CatVeh);
         }
 
@@ -81,7 +80,7 @@ namespace DeliveryApp.Vista
             VehID = cbxId.SelectedItem.ToString();
 
             ConsultarVehiculos.VehiculoEspecifico(VehID, ref Veh, ref error);
-            ConsultaEspecificaVehiculo ConsultarVehiculo = new ConsultaEspecificaVehiculo(contenedor, Veh, Rep);
+            ConsultaEspecificaVehiculo ConsultarVehiculo = new ConsultaEspecificaVehiculo(contenedor, Veh);
 
             cbxId.Texts = Veh.IdVehiculo;
             tbxAño.Texts = Veh.Año;

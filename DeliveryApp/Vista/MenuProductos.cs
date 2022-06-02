@@ -16,10 +16,10 @@ namespace DeliveryApp.Vista
     {
         Producto pro;
         List<Vehiculo> lve;
-        Recepcionista Rep = new Recepcionista();
+        Administrador Rep = new Administrador();
         Panel contenedor = new Panel();
 
-        public MenuProductos(Panel p, Recepcionista r, string id)
+        public MenuProductos(Panel p, Administrador r, string id)
         {
             contenedor = p;
             Rep = r;
