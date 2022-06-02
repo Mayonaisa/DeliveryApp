@@ -336,6 +336,7 @@ namespace DeliveryApp.Recursos
 
         private void btn_agregar_click(object sender, EventArgs e)
         {
+            detProd.IdDetalle = Carro.idDetalle;
             if (true)
             {
                 //si idDetalle de orden es nulo, entonces llamo a la clase Detalle para crear una y se la asigno a orden, luego hago un metodo externo en esta clase que llame a Detalle tiene pedido y le asigno el contenido del panel ahí a la par que calcula el monto en detalle
@@ -360,6 +361,7 @@ namespace DeliveryApp.Recursos
 
         private void agregar()
         {
+            detProd.IdDetalle = Carro.idDetalle;
             detProd.nuevoProd(int.Parse(BRcantidad.Text), prod.IdProducto);
             //metodo que recalcule el monto en detalle
             SqlSingle precio = int.Parse(BRcantidad.Text) * prod.Precio;
