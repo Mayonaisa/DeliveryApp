@@ -17,6 +17,9 @@ namespace DeliveryApp.Vista
         bool mostrar = true;
         Panel contenedor = new Panel();
         CarritoC Carro = new CarritoC();
+
+        Producto prod = new Producto();
+        bool flag = false;
         public MenuCliente(Panel p, CarritoC c)
         {
             contenedor = p;
@@ -55,20 +58,31 @@ namespace DeliveryApp.Vista
             //prueba2.Crear_Panel_menu(prueba2.prod.Nombre, 325, 680);
             //this.panelPrincipal.Controls.Add(prueba2);
             int y = 0;
-            for(int i = 0; i < 40; i++)
+            prod.OrdenDisponibilidad();
+            for(int i = 0; i < prod.orden.Count; i++)
             {
-                PanelProducto prueba = new PanelProducto(i, Carro);
+                PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
                 prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                 pnlMenu.Controls.Add(prueba);
-                y+=156;
+                y += 156;
                 prueba.MenuV = this;
                 prueba.contenedor = contenedor;
             }
+            pnlFiltro.Hide();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            
+            if(flag == false)
+            {
+                pnlFiltro.Show();
+                flag = true;
+            }
+            else
+            {
+                pnlFiltro.Hide();
+                flag = false;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -192,6 +206,82 @@ namespace DeliveryApp.Vista
             this.Hide();
             Desplegar(loginV);
             this.Close();
+        }
+
+        private void rbNombre_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbNombre.Checked == true)
+            {
+                prod.OrdenNombre();
+                pnlMenu.Controls.Clear();
+                int y = 0;
+                for (int i = 0; i < prod.orden.Count; i++)
+                {
+                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
+                    pnlMenu.Controls.Add(prueba);
+                    y += 156;
+                    prueba.MenuV = this;
+                    prueba.contenedor = contenedor;
+                }
+            }
+        }
+
+        private void rbPrecio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbPrecio.Checked == true)
+            {
+                prod.OrdenPrecio();
+                pnlMenu.Controls.Clear();
+                int y = 0;
+                for (int i = 0; i < prod.orden.Count; i++)
+                {
+                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
+                    pnlMenu.Controls.Add(prueba);
+                    y += 156;
+                    prueba.MenuV = this;
+                    prueba.contenedor = contenedor;
+                }
+            }
+        }
+
+        private void rdDisp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdDisp.Checked == true)
+            {
+                prod.OrdenDisponibilidad();
+                pnlMenu.Controls.Clear();
+                int y = 0;
+                for (int i = 0; i < prod.orden.Count; i++)
+                {
+                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
+                    pnlMenu.Controls.Add(prueba);
+                    y += 156;
+                    prueba.MenuV = this;
+                    prueba.contenedor = contenedor;
+                }
+            }
+        }
+
+        private void botonRedondo3_Click(object sender, EventArgs e)
+        {
+            if(txtFiltro.Texts != "")
+            {
+                prod.OrdenTexto(txtFiltro.Texts);
+                pnlMenu.Controls.Clear();
+                int y = 0;
+                for (int i = 0; i < prod.orden.Count; i++)
+                {
+                    PanelProducto prueba = new PanelProducto(int.Parse(prod.orden[i]), Carro);
+                    prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
+                    pnlMenu.Controls.Add(prueba);
+                    y += 156;
+                    prueba.MenuV = this;
+                    prueba.contenedor = contenedor;
+                }
+            }
         }
     }
 }

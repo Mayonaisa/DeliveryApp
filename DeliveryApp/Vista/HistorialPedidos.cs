@@ -59,9 +59,12 @@ namespace DeliveryApp.Vista
             for (int n = 0; n < Carro.fechaH.Count; n++)
             {
                 PanelProducto prueba = new PanelProducto(Carro);
+                prueba.idOrden = Carro.idOrdenH[n];
                 prueba.Crear_Panel_historial(Carro.fechaH[n], Carro.montoH[n], Carro.cantidadH[n], 0, y);
                 this.pnlHistorial.Controls.Add(prueba);
                 y += 82;
+                prueba.HistorialV = this;
+                prueba.contenedor = contenedor;
             }
         }
     }
