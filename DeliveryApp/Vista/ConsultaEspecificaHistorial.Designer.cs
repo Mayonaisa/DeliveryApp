@@ -48,9 +48,15 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pnlRecibo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlRecibo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -329,10 +335,50 @@
             // 
             // pnlRecibo
             // 
+            this.pnlRecibo.Controls.Add(this.label9);
+            this.pnlRecibo.Controls.Add(this.label8);
+            this.pnlRecibo.Controls.Add(this.panel2);
+            this.pnlRecibo.Controls.Add(this.pictureBox1);
             this.pnlRecibo.Location = new System.Drawing.Point(1561, 190);
             this.pnlRecibo.Name = "pnlRecibo";
             this.pnlRecibo.Size = new System.Drawing.Size(347, 450);
             this.pnlRecibo.TabIndex = 46;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DeliveryApp.Properties.Resources.panel2_BackgroundImage;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(1, 333);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(347, 30);
+            this.panel2.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 366);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(299, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Derechos reservados al establecimiento; CLABE";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 382);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(211, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "AHJD982893479327832578324985";
             // 
             // ConsultaEspecificaHistorial
             // 
@@ -363,6 +409,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlRecibo.ResumeLayout(false);
+            this.pnlRecibo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,5 +438,9 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Panel pnlRecibo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
