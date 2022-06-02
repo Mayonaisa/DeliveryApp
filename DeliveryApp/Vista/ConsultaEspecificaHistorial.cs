@@ -73,7 +73,7 @@ namespace DeliveryApp.Vista
             Label nombre2 = new Label();
             nombre2.Text = Carro.nombreCliente;
             nombre2.Location = new Point(5, y);
-            nombre2.Width = 200;
+            nombre2.Width = 400;
             y += 25;
             for (int n = 0; n < Carro.nombreProd.Count; n++)
             {

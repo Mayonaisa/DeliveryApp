@@ -187,7 +187,7 @@
             this.rjButton3.BorderSize = 0;
             this.rjButton3.FlatAppearance.BorderSize = 0;
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
             this.rjButton3.Location = new System.Drawing.Point(432, 576);
             this.rjButton3.Margin = new System.Windows.Forms.Padding(4);
@@ -197,6 +197,7 @@
             this.rjButton3.Text = "Admin";
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Visible = false;
             this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
             // 
             // rjButton2
@@ -208,7 +209,7 @@
             this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
             this.rjButton2.Location = new System.Drawing.Point(231, 576);
             this.rjButton2.Margin = new System.Windows.Forms.Padding(4);
@@ -218,6 +219,7 @@
             this.rjButton2.Text = "Recepcionista";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Visible = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
@@ -229,7 +231,7 @@
             this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(55, 576);
             this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
@@ -239,6 +241,7 @@
             this.rjButton1.Text = "Cliente";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Visible = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // pnlInferior
@@ -257,11 +260,11 @@
             this.lblContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Sora", 9.749999F);
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.lblContraseña.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblContraseña.Location = new System.Drawing.Point(165, 33);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(211, 26);
+            this.lblContraseña.Size = new System.Drawing.Size(186, 20);
             this.lblContraseña.TabIndex = 21;
             this.lblContraseña.Text = "¿Olvidó su contraseña?";
             this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -277,7 +280,7 @@
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(133, 409);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
@@ -296,7 +299,7 @@
             this.tbxContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxContraseña.BorderRadius = 10;
             this.tbxContraseña.BorderSize = 2;
-            this.tbxContraseña.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.tbxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxContraseña.Location = new System.Drawing.Point(133, 341);
             this.tbxContraseña.Margin = new System.Windows.Forms.Padding(5);
@@ -306,7 +309,7 @@
             this.tbxContraseña.PasswordChar = true;
             this.tbxContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxContraseña.PlaceholderText = "Contraseña";
-            this.tbxContraseña.Size = new System.Drawing.Size(277, 45);
+            this.tbxContraseña.Size = new System.Drawing.Size(277, 39);
             this.tbxContraseña.TabIndex = 29;
             this.tbxContraseña.Texts = "";
             this.tbxContraseña.UnderlinedStyle = false;
@@ -318,7 +321,7 @@
             this.tbxCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxCorreo.BorderRadius = 10;
             this.tbxCorreo.BorderSize = 2;
-            this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.tbxCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxCorreo.Location = new System.Drawing.Point(133, 277);
             this.tbxCorreo.Margin = new System.Windows.Forms.Padding(5);
@@ -328,7 +331,7 @@
             this.tbxCorreo.PasswordChar = false;
             this.tbxCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxCorreo.PlaceholderText = "Nombre de usuario";
-            this.tbxCorreo.Size = new System.Drawing.Size(277, 45);
+            this.tbxCorreo.Size = new System.Drawing.Size(277, 39);
             this.tbxCorreo.TabIndex = 30;
             this.tbxCorreo.Texts = "";
             this.tbxCorreo.UnderlinedStyle = false;
@@ -339,11 +342,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(169, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 42);
+            this.label6.Size = new System.Drawing.Size(173, 31);
             this.label6.TabIndex = 26;
             this.label6.Text = "Iniciar sesion";
             // 
@@ -351,11 +354,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Sora", 9.749999F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.label2.Location = new System.Drawing.Point(195, 500);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 26);
+            this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Regresar al inicio";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -390,11 +393,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
             this.label7.Location = new System.Drawing.Point(191, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(192, 42);
+            this.label7.Size = new System.Drawing.Size(172, 31);
             this.label7.TabIndex = 11;
             this.label7.Text = "DeliveryApp";
             // 
