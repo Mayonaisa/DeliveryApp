@@ -14,12 +14,15 @@ namespace DeliveryApp.Modelos
         string idDetalle;
         SqlSingle cantidad;
         string idProducto;
+        bool nuevo;
 
         public string IdDetalle { get => idDetalle; set => idDetalle = value; }
         public SqlSingle Cantidad { get => cantidad; set => cantidad = value; }
         public string IdProducto { get => idProducto; set => idProducto = value; }
+        public bool Nuevo { get => nuevo; set => nuevo = value; }
 
-        public DetalleTieneProducto() { }
+        public DetalleTieneProducto()
+        { }
         public DetalleTieneProducto(string idDet/*, int cant, string idProd*/)
         {
             idDetalle = idDet;
@@ -34,57 +37,33 @@ namespace DeliveryApp.Modelos
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
             conx.Open();
 
-            SqlCommand NuevaOrden = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "'," + cantidad.ToString() + ",'" + idProducto + "')", conx);
+            SqlCommand NuevaOrden = new SqlCommand("select * from DetalleContieneProducto where idDetalle = '"+idDetalle+"' and idProducto = '"+idProducto+"'", conx);
             NuevaOrden.Prepare();
 
             SqlDataReader resultado2 = NuevaOrden.ExecuteReader();
+            if(resultado2.Read())
+            {
+                SqlSingle monto = resultado2.GetSqlSingle(1);
+                string montoFinal = (monto + SqlSingle.Parse(cantidad.ToString())).ToString();
+
+                SqlCommand NuevaOrden3 = new SqlCommand("Update DetalleContieneProducto SET cantidad = "+montoFinal+ " where idDetalle = '" + idDetalle + "' and idProducto = '" + idProducto + "'", conx);
+                NuevaOrden3.Prepare();
+
+                SqlDataReader resultado = NuevaOrden3.ExecuteReader();
+                nuevo = false;
+            }
+            else
+            {
+                SqlCommand NuevaOrden2 = new SqlCommand("INSERT DetalleContieneProducto values ('" + IdDetalle + "'," + cantidad.ToString() + ",'" + idProducto + "')", conx);
+                NuevaOrden2.Prepare();
+
+                SqlDataReader resultado = NuevaOrden2.ExecuteReader();
+                nuevo = true;
+            }
 
 
         }
 
-        //List <string> idDetalle;
-        //List <int> cantidad;
-        //List <string> idproducto;
-
-        //public DetalleTieneProducto()
-        //{
-        //    SqlConnection conx = new SqlConnection(
-        //        "Data Source=LAPTOP-M1F5M6N0;Initial Catalog=DeliveryApp;Integrated Security=True;"
-        //        );
-
-
-        //    conx.Open();
-
-        //    SqlCommand consulta = new SqlCommand("Select idDetalle,cantidad,idProducto from DetalleContieneProducto", conx);
-
-        //    consulta.Prepare();
-        //    SqlDataReader resultado = consulta.ExecuteReader();
-
-        //    idDetalle = new List<string>();
-        //    cantidad = new List<int>();
-        //    idproducto = new List<string>();
-
-        //    int i = 0;
-        //    int cant = Cantidad();
-
-        //    while (resultado.Read() && i<cant)
-        //    {
-        //        idDetalle.Add("");
-        //        cantidad.Add(0);
-        //        idproducto.Add("");
-
-        //        idDetalle[i] = resultado.GetString(0);
-        //        cantidad[i] =int.Parse(resultado.GetValue(1).ToString());
-        //        idproducto[i] = resultado.GetString(2);
-
-        //        i++;
-        //    }
-        //    conx.Close();
-        //}
-
-        //public List<string> IdDetalle { get => idDetalle; set => idDetalle = value; }
-        //public List<int> Cantidad1 { get => cantidad; set => cantidad = value; }
-        //public List<string> Idproducto { get => idproducto; set => idproducto = value; }
 
         public int CantidadDetalles()
         {

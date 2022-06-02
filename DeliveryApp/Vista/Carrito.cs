@@ -15,8 +15,8 @@ namespace DeliveryApp.Vista
 {
     public partial class Carrito : Form
     {
-        Panel contenedor = new Panel();
-        CarritoC Carro = new CarritoC();
+        public Panel contenedor = new Panel();
+        public CarritoC Carro = new CarritoC();
 
         Solicita soli = new Solicita();
 
@@ -52,22 +52,25 @@ namespace DeliveryApp.Vista
             f.Show();
         }
 
-        private void Carrito_Load(object sender, EventArgs e)
+        public void Carrito_Load(object sender, EventArgs e)
         {
             int y = 0;
+
             pnlCarrito.AutoScroll = true;
             Carro.leer();
+            Carro.refrescarCarrito();
             soli.leer(Carro.IdUsuario, Carro.idOrden);
+            
             if (Carro.estatus == "nulo")
             {
                 //tabControl1.TabPages.Add(pnlCarrito);
                 //tabControl1.TabPages.Remove(pnlCarga);
                 tabControl1.SelectedTab = tabControl1.TabPages[0];
                 BRconfirmar.Text = "Confirmar";
+                BRconfirmar.Enabled = true;
             }
             else
             {
-                BRconfirmar.Enabled = false;
                 //tabControl1.TabPages.Add(pnlCarga);
                 //tabControl1.TabPages.Remove(pnlCarrito);
                 tabControl1.SelectedTab = tabControl1.TabPages[1];
@@ -81,11 +84,13 @@ namespace DeliveryApp.Vista
                         BRconfirmar.Text = "Cancelar";
                         break;
                     case "Aceptado":
+                        BRconfirmar.Enabled = false;
                         pnlBarraRoja.Width = (pnlBarraGris.Width / 3)*2;
                         pbEtapa.Image = Resources.etapa1;
                         lblProgreso.Text = "Pedido aceptado";
                         break;
                     case "en camino":
+                        BRconfirmar.Enabled = false;
                         pnlBarraRoja.Width = pnlBarraGris.Width;
                         pbEtapa.Image = Resources.etapa3;
                         lblProgreso.Text = "Pedido en camino";
@@ -98,33 +103,45 @@ namespace DeliveryApp.Vista
                         BRconfirmar.Text = "Confirmar";
                         break;
                 }
+                
             }
-            
+            if (Carro.nombreProd.Count == 0)
+                BRconfirmar.Enabled = false;
+
             if (Carro.idDetalle != "nulo")
             {
                 lblMonto.Text = Carro.detalle.Monto.ToString();
             }
-            if(lblMonto.Text == "0")
-            {
-                BRconfirmar.Enabled = false;
-            }
-            else
-            {
-                BRconfirmar.Enabled = true;
-            }
-            ////prueba
-            for(int n = 0; n < Carro.nombreProd.Count;n++)
+
+            for (int n = 0; n < Carro.nombreProd.Count; n++)
             {
                 PanelProducto prueba = new PanelProducto(Carro);
-                prueba.Crear_Panel_carrito(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y);
+                prueba.Crear_Panel_carrito(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y, this);
                 this.pnlCarrito.Controls.Add(prueba);
                 y += 82;
             }
-            
+
+            lblMonto.Text += " $";
+            //cargarCarrito();
         }
+
+        //public void cargarCarrito()
+        //{
+        //    int y = 0;
+        //    for (int n = 0; n < Carro.nombreProd.Count; n++)
+        //    {
+        //        PanelProducto prueba = new PanelProducto(Carro);
+        //        prueba.Crear_Panel_carrito(Carro.nombreProd[n], Carro.monto[n], Carro.cantidad[n], 0, y, this);
+        //        this.pnlCarrito.Controls.Add(prueba);
+        //        y += 82;
+        //    }
+        //    if (Carro.nombreProd.Count == 0)
+        //        BRconfirmar.Enabled = false;
+        //}
 
         private void BRconfirmar_Click(object sender, EventArgs e)
         {
+
             if (BRconfirmar.Text == "Confirmar")
             {
                 Carro.update(Carro.idDetalle, "pendiente");

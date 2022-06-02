@@ -125,6 +125,12 @@
     <Compile Include="Vista\ConsultaEspecificaEmpleados.Designer.cs">
       <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsultaEspecificaHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaHistorial.Designer.cs">
+      <DependentUpon>ConsultaEspecificaHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaEmpleados.resx">
       <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaHistorial.resx">
+      <DependentUpon>ConsultaEspecificaHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>

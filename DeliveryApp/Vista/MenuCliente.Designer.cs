@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -48,12 +47,18 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtFiltro = new CustomControls.RJControls.RJTextBox();
+            this.pnlFiltro = new System.Windows.Forms.Panel();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbPrecio = new System.Windows.Forms.RadioButton();
+            this.rdDisp = new System.Windows.Forms.RadioButton();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnlFiltro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -62,7 +67,8 @@
             this.panelPrincipal.Controls.Add(this.botonRedondo3);
             this.panelPrincipal.Controls.Add(this.botonRedondo1);
             this.panelPrincipal.Controls.Add(this.panel1);
-            this.panelPrincipal.Controls.Add(this.textBox1);
+            this.panelPrincipal.Controls.Add(this.txtFiltro);
+            this.panelPrincipal.Controls.Add(this.pnlFiltro);
             this.panelPrincipal.Location = new System.Drawing.Point(288, -1);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1426, 877);
@@ -98,6 +104,7 @@
             this.botonRedondo3.Text = "Buscar";
             this.botonRedondo3.TextColor = System.Drawing.Color.White;
             this.botonRedondo3.UseVisualStyleBackColor = false;
+            this.botonRedondo3.Click += new System.EventHandler(this.botonRedondo3_Click);
             // 
             // botonRedondo1
             // 
@@ -181,19 +188,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.textBox1.Location = new System.Drawing.Point(485, 153);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(406, 35);
-            this.textBox1.TabIndex = 39;
-            this.textBox1.Text = "      Encuentra lo que necesites...";
             // 
             // panelMenu
             // 
@@ -310,6 +304,79 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtFiltro.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtFiltro.BorderRadius = 10;
+            this.txtFiltro.BorderSize = 2;
+            this.txtFiltro.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.txtFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFiltro.Location = new System.Drawing.Point(496, 153);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFiltro.Multiline = false;
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtFiltro.PasswordChar = false;
+            this.txtFiltro.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtFiltro.PlaceholderText = "Encuentra lo que necesites...";
+            this.txtFiltro.Size = new System.Drawing.Size(362, 35);
+            this.txtFiltro.TabIndex = 43;
+            this.txtFiltro.Texts = "";
+            this.txtFiltro.UnderlinedStyle = false;
+            // 
+            // pnlFiltro
+            // 
+            this.pnlFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.pnlFiltro.Controls.Add(this.rdDisp);
+            this.pnlFiltro.Controls.Add(this.rbPrecio);
+            this.pnlFiltro.Controls.Add(this.rbNombre);
+            this.pnlFiltro.Location = new System.Drawing.Point(44, 152);
+            this.pnlFiltro.Name = "pnlFiltro";
+            this.pnlFiltro.Size = new System.Drawing.Size(442, 36);
+            this.pnlFiltro.TabIndex = 44;
+            // 
+            // rbNombre
+            // 
+            this.rbNombre.AutoSize = true;
+            this.rbNombre.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.rbNombre.Location = new System.Drawing.Point(8, 6);
+            this.rbNombre.Name = "rbNombre";
+            this.rbNombre.Size = new System.Drawing.Size(64, 24);
+            this.rbNombre.TabIndex = 0;
+            this.rbNombre.Text = "A - Z";
+            this.rbNombre.UseVisualStyleBackColor = true;
+            this.rbNombre.CheckedChanged += new System.EventHandler(this.rbNombre_CheckedChanged);
+            // 
+            // rbPrecio
+            // 
+            this.rbPrecio.AutoSize = true;
+            this.rbPrecio.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.rbPrecio.Location = new System.Drawing.Point(78, 6);
+            this.rbPrecio.Name = "rbPrecio";
+            this.rbPrecio.Size = new System.Drawing.Size(188, 24);
+            this.rbPrecio.TabIndex = 1;
+            this.rbPrecio.Text = "Menor a Mayor precio";
+            this.rbPrecio.UseVisualStyleBackColor = true;
+            this.rbPrecio.CheckedChanged += new System.EventHandler(this.rbPrecio_CheckedChanged);
+            // 
+            // rdDisp
+            // 
+            this.rdDisp.AutoSize = true;
+            this.rdDisp.Checked = true;
+            this.rdDisp.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.rdDisp.Location = new System.Drawing.Point(272, 6);
+            this.rdDisp.Name = "rdDisp";
+            this.rdDisp.Size = new System.Drawing.Size(138, 24);
+            this.rdDisp.TabIndex = 2;
+            this.rdDisp.TabStop = true;
+            this.rdDisp.Text = "Disponibilidad";
+            this.rdDisp.UseVisualStyleBackColor = true;
+            this.rdDisp.CheckedChanged += new System.EventHandler(this.rdDisp_CheckedChanged);
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,7 +391,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuCliente_Load);
             this.panelPrincipal.ResumeLayout(false);
-            this.panelPrincipal.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -332,6 +398,8 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnlFiltro.ResumeLayout(false);
+            this.pnlFiltro.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -345,7 +413,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel6;
@@ -356,5 +423,10 @@
         private System.Windows.Forms.Label lblNombreUsu;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel pnlMenu;
+        private CustomControls.RJControls.RJTextBox txtFiltro;
+        private System.Windows.Forms.Panel pnlFiltro;
+        private System.Windows.Forms.RadioButton rdDisp;
+        private System.Windows.Forms.RadioButton rbPrecio;
+        private System.Windows.Forms.RadioButton rbNombre;
     }
 }

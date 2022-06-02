@@ -121,6 +121,7 @@ namespace DeliveryApp
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
+                            Carro.Verificar(usuario.IdPersona.Trim());
                             MenuCliente menu = new MenuCliente(contenedor, Carro);
                             Carro.IdUsuario = usuario.IdPersona.Trim();
                             Carro.Usuario = usuario.Nombre.Trim();
@@ -175,7 +176,7 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Paola1234", "Paola1234_30");
+                    int tipoUsuario = Login.ingresar("Paola_30", "Paola1234_30");
 
                     switch (tipoUsuario)
                     {
@@ -220,8 +221,8 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Roberto1234", "Roberto1234_1");
-                    usuario = new Usuario("Roberto1234_1", "Roberto1234");
+                    int tipoUsuario = Login.ingresar("Roberto_1", "Roberto1234_1");
+                    usuario = new Usuario("Roberto1234_1", "Roberto_1");
 
                     switch (tipoUsuario)
                     {

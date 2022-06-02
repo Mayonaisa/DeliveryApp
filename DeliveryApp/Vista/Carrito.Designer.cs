@@ -29,34 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
+            this.BRconfirmar = new DeliveryApp.Recursos.botonRedondo();
             this.lblMonto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pnlCarrito = new System.Windows.Forms.TabPage();
             this.pnlCarga = new System.Windows.Forms.TabPage();
+            this.pbEtapa = new System.Windows.Forms.PictureBox();
+            this.lblProgreso = new System.Windows.Forms.Label();
             this.pnlBarraGris = new System.Windows.Forms.Panel();
             this.pnlBarraRoja = new System.Windows.Forms.Panel();
-            this.lblProgreso = new System.Windows.Forms.Label();
-            this.pbEtapa = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
-            this.BRconfirmar = new DeliveryApp.Recursos.botonRedondo();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pnlCarga.SuspendLayout();
-            this.pnlBarraGris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEtapa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlBarraGris.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +68,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1441, 96);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_211231;
+            this.pictureBox3.Location = new System.Drawing.Point(1360, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -100,33 +107,15 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "DeliveryApp";
             // 
-            // label2
+            // pictureBox2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(636, 152);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 29);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Dirección de envio";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(659, 192);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Nombre completo";
+            this.pictureBox2.Image = global::DeliveryApp.Properties.Resources.panel2_BackgroundImage;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -141,141 +130,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1441, 96);
             this.panel2.TabIndex = 11;
-            // 
-            // lblMonto
-            // 
-            this.lblMonto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMonto.AutoSize = true;
-            this.lblMonto.BackColor = System.Drawing.Color.White;
-            this.lblMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(49)))));
-            this.lblMonto.Location = new System.Drawing.Point(1059, 33);
-            this.lblMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(27, 29);
-            this.lblMonto.TabIndex = 15;
-            this.lblMonto.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(334, 33);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 29);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Total a pagar";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.pnlCarrito);
-            this.tabControl1.Controls.Add(this.pnlCarga);
-            this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl1.Location = new System.Drawing.Point(319, 238);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(826, 524);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 22;
-            // 
-            // pnlCarrito
-            // 
-            this.pnlCarrito.BackColor = System.Drawing.Color.White;
-            this.pnlCarrito.Location = new System.Drawing.Point(4, 5);
-            this.pnlCarrito.Name = "pnlCarrito";
-            this.pnlCarrito.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlCarrito.Size = new System.Drawing.Size(818, 515);
-            this.pnlCarrito.TabIndex = 0;
-            // 
-            // pnlCarga
-            // 
-            this.pnlCarga.BackColor = System.Drawing.Color.White;
-            this.pnlCarga.Controls.Add(this.pbEtapa);
-            this.pnlCarga.Controls.Add(this.lblProgreso);
-            this.pnlCarga.Controls.Add(this.pnlBarraGris);
-            this.pnlCarga.Location = new System.Drawing.Point(4, 5);
-            this.pnlCarga.Name = "pnlCarga";
-            this.pnlCarga.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlCarga.Size = new System.Drawing.Size(818, 515);
-            this.pnlCarga.TabIndex = 1;
-            // 
-            // pnlBarraGris
-            // 
-            this.pnlBarraGris.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlBarraGris.Controls.Add(this.pnlBarraRoja);
-            this.pnlBarraGris.Location = new System.Drawing.Point(6, 22);
-            this.pnlBarraGris.Name = "pnlBarraGris";
-            this.pnlBarraGris.Size = new System.Drawing.Size(806, 19);
-            this.pnlBarraGris.TabIndex = 0;
-            // 
-            // pnlBarraRoja
-            // 
-            this.pnlBarraRoja.BackColor = System.Drawing.Color.Red;
-            this.pnlBarraRoja.Location = new System.Drawing.Point(0, 0);
-            this.pnlBarraRoja.Name = "pnlBarraRoja";
-            this.pnlBarraRoja.Size = new System.Drawing.Size(263, 19);
-            this.pnlBarraRoja.TabIndex = 0;
-            // 
-            // lblProgreso
-            // 
-            this.lblProgreso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblProgreso.AutoSize = true;
-            this.lblProgreso.BackColor = System.Drawing.Color.White;
-            this.lblProgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgreso.ForeColor = System.Drawing.Color.Black;
-            this.lblProgreso.Location = new System.Drawing.Point(313, 270);
-            this.lblProgreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProgreso.Name = "lblProgreso";
-            this.lblProgreso.Size = new System.Drawing.Size(203, 29);
-            this.lblProgreso.TabIndex = 23;
-            this.lblProgreso.Text = "Pedido aceptado";
-            // 
-            // pbEtapa
-            // 
-            this.pbEtapa.Image = global::DeliveryApp.Properties.Resources.etapa1;
-            this.pbEtapa.Location = new System.Drawing.Point(364, 163);
-            this.pbEtapa.Name = "pbEtapa";
-            this.pbEtapa.Size = new System.Drawing.Size(98, 88);
-            this.pbEtapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEtapa.TabIndex = 24;
-            this.pbEtapa.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_212045;
-            this.pictureBox4.Location = new System.Drawing.Point(593, 149);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 39);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::DeliveryApp.Properties.Resources.Captura_de_pantalla_2022_05_09_211231;
-            this.pictureBox3.Location = new System.Drawing.Point(1360, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DeliveryApp.Properties.Resources.panel2_BackgroundImage;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // botonRedondo1
             // 
@@ -318,6 +172,109 @@
             this.BRconfirmar.UseVisualStyleBackColor = false;
             this.BRconfirmar.Click += new System.EventHandler(this.BRconfirmar_Click);
             // 
+            // lblMonto
+            // 
+            this.lblMonto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.BackColor = System.Drawing.Color.White;
+            this.lblMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(49)))));
+            this.lblMonto.Location = new System.Drawing.Point(1059, 33);
+            this.lblMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(27, 29);
+            this.lblMonto.TabIndex = 15;
+            this.lblMonto.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(334, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 29);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Total a pagar";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl1.Controls.Add(this.pnlCarrito);
+            this.tabControl1.Controls.Add(this.pnlCarga);
+            this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabControl1.Location = new System.Drawing.Point(316, 164);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(826, 524);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 22;
+            // 
+            // pnlCarrito
+            // 
+            this.pnlCarrito.BackColor = System.Drawing.Color.White;
+            this.pnlCarrito.Location = new System.Drawing.Point(4, 5);
+            this.pnlCarrito.Name = "pnlCarrito";
+            this.pnlCarrito.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlCarrito.Size = new System.Drawing.Size(818, 515);
+            this.pnlCarrito.TabIndex = 0;
+            // 
+            // pnlCarga
+            // 
+            this.pnlCarga.BackColor = System.Drawing.Color.White;
+            this.pnlCarga.Controls.Add(this.pbEtapa);
+            this.pnlCarga.Controls.Add(this.lblProgreso);
+            this.pnlCarga.Controls.Add(this.pnlBarraGris);
+            this.pnlCarga.Location = new System.Drawing.Point(4, 5);
+            this.pnlCarga.Name = "pnlCarga";
+            this.pnlCarga.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlCarga.Size = new System.Drawing.Size(818, 515);
+            this.pnlCarga.TabIndex = 1;
+            // 
+            // pbEtapa
+            // 
+            this.pbEtapa.Image = global::DeliveryApp.Properties.Resources.etapa1;
+            this.pbEtapa.Location = new System.Drawing.Point(364, 163);
+            this.pbEtapa.Name = "pbEtapa";
+            this.pbEtapa.Size = new System.Drawing.Size(98, 88);
+            this.pbEtapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEtapa.TabIndex = 24;
+            this.pbEtapa.TabStop = false;
+            // 
+            // lblProgreso
+            // 
+            this.lblProgreso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblProgreso.AutoSize = true;
+            this.lblProgreso.BackColor = System.Drawing.Color.White;
+            this.lblProgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgreso.ForeColor = System.Drawing.Color.Black;
+            this.lblProgreso.Location = new System.Drawing.Point(313, 270);
+            this.lblProgreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProgreso.Name = "lblProgreso";
+            this.lblProgreso.Size = new System.Drawing.Size(203, 29);
+            this.lblProgreso.TabIndex = 23;
+            this.lblProgreso.Text = "Pedido aceptado";
+            // 
+            // pnlBarraGris
+            // 
+            this.pnlBarraGris.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBarraGris.Controls.Add(this.pnlBarraRoja);
+            this.pnlBarraGris.Location = new System.Drawing.Point(6, 22);
+            this.pnlBarraGris.Name = "pnlBarraGris";
+            this.pnlBarraGris.Size = new System.Drawing.Size(806, 19);
+            this.pnlBarraGris.TabIndex = 0;
+            // 
+            // pnlBarraRoja
+            // 
+            this.pnlBarraRoja.BackColor = System.Drawing.Color.Red;
+            this.pnlBarraRoja.Location = new System.Drawing.Point(0, 0);
+            this.pnlBarraRoja.Name = "pnlBarraRoja";
+            this.pnlBarraRoja.Size = new System.Drawing.Size(263, 19);
+            this.pnlBarraRoja.TabIndex = 0;
+            // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,9 +283,6 @@
             this.ClientSize = new System.Drawing.Size(1440, 878);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Carrito";
@@ -337,18 +291,16 @@
             this.Load += new System.EventHandler(this.Carrito_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.pnlCarga.ResumeLayout(false);
             this.pnlCarga.PerformLayout();
-            this.pnlBarraGris.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbEtapa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlBarraGris.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -358,9 +310,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.Label label5;

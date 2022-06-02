@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data.Common;
 
 namespace DeliveryApp.Modelos
 {
@@ -16,6 +17,8 @@ namespace DeliveryApp.Modelos
         private string nombre = "";
         private string disponible = "";
         private SqlSingle precio = 0;
+
+        public List<string> orden = new List<string>();
 
         public string IdProducto { get => idProducto; set => idProducto = value; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -101,6 +104,98 @@ namespace DeliveryApp.Modelos
             }
 
             conx.Close();
+        }
+
+        public void OrdenNombre ()
+        {
+            orden.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select REPLACE(idProducto,'PROD',''),nombre,disponible,precio from Producto order by nombre ASC", conx);
+
+            using (var r = consulta.ExecuteReader())
+            {
+
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    orden.Add(s.GetString(0).Trim());
+                }
+            }
+
+        }
+
+        public void OrdenPrecio()
+        {
+            orden.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select REPLACE(idProducto,'PROD',''),nombre,disponible,precio from Producto order by precio ASC", conx);
+
+            using (var r = consulta.ExecuteReader())
+            {
+
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    orden.Add(s.GetString(0).Trim());
+                }
+            }
+
+        }
+
+        public void OrdenDisponibilidad()
+        {
+            orden.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select REPLACE(idProducto,'PROD',''),nombre,disponible,precio from Producto where disponible = 'Si'", conx);
+
+            using (var r = consulta.ExecuteReader())
+            {
+
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    orden.Add(s.GetString(0).Trim());
+                }
+            }
+
+        }
+
+        public void OrdenTexto(string texto)
+        {
+            orden.Clear();
+
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select REPLACE(idProducto,'PROD',''),nombre,disponible,precio from Producto where nombre like '%"+texto+"%' and disponible = 'Si'", conx);
+
+            using (var r = consulta.ExecuteReader())
+            {
+
+                foreach (DbDataRecord s in r)
+                {
+                    //string val = s.GetString(0);
+                    orden.Add(s.GetString(0).Trim());
+                }
+            }
+
         }
     }
 }
