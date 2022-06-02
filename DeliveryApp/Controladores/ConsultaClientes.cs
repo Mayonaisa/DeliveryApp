@@ -35,5 +35,16 @@ namespace DeliveryApp.Controladores
                 mensaje = ex.Message;
             }
         }
+        public static void ObtenerClienteIndi(string idOrden, ref Cliente C)
+        {
+            try
+            {
+                C.ClienteIndi(idOrden);
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
     }
 }

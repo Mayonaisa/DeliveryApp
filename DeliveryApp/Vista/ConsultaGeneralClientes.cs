@@ -16,11 +16,51 @@ namespace DeliveryApp.Vista
     {
         Cliente Cli=new Cliente();
         List<Cliente> LClientes=new List<Cliente>();
-        public ConsultaGeneralClientes()
+        Panel contenedor;
+        public ConsultaGeneralClientes(Panel p)
         {
+            contenedor = p;
             InitializeComponent();
+            dgvCliente.CellClick += dgvCliente_CellClick;
         }
+        private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1 || e.RowIndex == dgvCliente.Rows.Count - 1)
+            {
 
+            }
+            else
+            {
+                string error = null;
+                string ID = null;
+                ID = dgvCliente[0, e.RowIndex].Value.ToString().Trim();
+
+                //if (error != null)
+                //{
+                //    MessageBox.Show(error);
+                //}
+                ConsultaClientes.ObtenerClienteIndi(ID, ref Cli);
+                ConsutaEspecificaCliente C = new ConsutaEspecificaCliente(contenedor,Cli);
+                Desplegar(C);
+
+
+
+            }
+        }
+        public void Desplegar(Form f)
+        {
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = f.Width;
+            contenedor.Height = f.Height;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            contenedor.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
             dgvCliente.Rows.Clear();
