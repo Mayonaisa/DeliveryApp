@@ -176,7 +176,7 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Paola_30", "Paola1234_30");
+                    int tipoUsuario = Login.ingresar("Paola1234", "Paola1234_30");
 
                     switch (tipoUsuario)
                     {
@@ -221,8 +221,8 @@ namespace DeliveryApp
                     // login
                     tbxContraseña.BorderColor = borde;
 
-                    int tipoUsuario = Login.ingresar("Roberto_1", "Roberto1234_1");
-                    usuario = new Usuario("Roberto1234_1", "Roberto_1");
+                    int tipoUsuario = Login.ingresar("Roberto1234", "Roberto1234_1");
+                    usuario = new Usuario("Roberto1234_1", "Roberto1234");
 
                     switch (tipoUsuario)
                     {
@@ -239,8 +239,8 @@ namespace DeliveryApp
                             break;
                         case 3:
                             MessageBox.Show("recepcionista");
-                            ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
-                            Desplegar(menuR);
+                            //ContenedorEmpleado menuR = new ContenedorEmpleado(new Usuario(), contenedor);
+                            //Desplegar(menuR);
                             break;
                         case 4:
                             MessageBox.Show("usuario normal");
