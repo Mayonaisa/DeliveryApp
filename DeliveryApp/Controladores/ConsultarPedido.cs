@@ -84,6 +84,18 @@ namespace DeliveryApp.Controladores
                 mensaje=ex.Message;
             }
         }
+        public static void NuevoRegistroPedido(string Orden, string idDetalle, Pedido P,ref string mensaje)
+        {
+            try
+            {
+
+                P.PedidoNuevo(Orden, idDetalle);
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+        }
         public static bool ValidarEntrega(string idOrden, Entrega Ent,ref string mensaje)
         {
             if (Ent.ValidarEntrega(idOrden))

@@ -119,6 +119,27 @@ namespace DeliveryApp.Modelos
             
             conx.Close();
         }
+        public void PedidoNuevo(string idOrden, string idDetalle)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("insert into Pedido(idOrden,idDetalle) values('"+idOrden+"','"+idDetalle+"');", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (idOrden != null && idDetalle != null )
+            {
+
+            }
+            else
+            {
+                conx.Close();
+                throw new Exception("Error");
+            }
+        }
         public int Cantidad()
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);

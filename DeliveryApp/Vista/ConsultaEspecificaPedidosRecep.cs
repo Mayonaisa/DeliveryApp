@@ -188,9 +188,11 @@ namespace DeliveryApp.Vista
                 DateTime Actual = DateTime.Now;
                 Registra Reg=new Registra();
                 ConsultarPedido.NuevoRegistra(Pedidos.IOrden.IdOrden, Actual.ToString(), recepcionista.IdPersona, ref Reg, ref Error);
+                ConsultarPedido.NuevoRegistroPedido(Pedidos.IOrden.IdOrden,Pedidos.IDetalle.IdDetalle,Pedidos,ref Error);
                 if (Error == null)
                 {
                     ConsultarPedido.ConfirmarEntregapedido(Pedidos.IOrden.IdOrden, Pedidos);
+
                     txtEstatus.Texts = "Entregado";
                     MessageBox.Show("Pedido Concluido");
                     btnEntregado.Enabled = false;
