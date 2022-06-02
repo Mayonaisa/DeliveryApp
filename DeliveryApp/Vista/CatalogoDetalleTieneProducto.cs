@@ -19,12 +19,16 @@ namespace DeliveryApp.Vista
         Pedido pedidos;
         DetalleTieneProducto DetPed=new DetalleTieneProducto();
         List<DetalleTieneProducto> DetPedList=new List<DetalleTieneProducto>();
-        public CatalogoDetalleTieneProducto(Recepcionista r, Panel p)
+        string idc;
+
+        public CatalogoDetalleTieneProducto(Recepcionista r, Panel p, string id)
         {
             Rep = r;
             contenedor = p;
+            idc = id;
             InitializeComponent();
         }
+
         public void Desplegar(Form f)
         {
             if (contenedor.Controls.Count > 0)
@@ -39,21 +43,20 @@ namespace DeliveryApp.Vista
             f.Dock = DockStyle.Fill;
             f.Show();
         }
-        private void botonRedondo1_Click(object sender, EventArgs e)
+
+        private void CatalogoDetalleTieneProducto_Load(object sender, EventArgs e)
         {
-            string Mensaje=null;
-            dgvPedidos.Rows.Clear();
+            DetalleTieneProducto a = new DetalleTieneProducto(idc);
 
-            int cantidad = DetPed.CantidadDetalles();
-            ConsultarDetalleTieneProducto.ObtenerDetallesProductos(ref DetPedList,ref Mensaje,DetPed);
-            int i = 0;
+            tbxCantidad.Texts = a.Cantidad.ToString();
+            tbxIdp.Texts = a.IdProducto.ToString();
+            cbxId.Texts = a.IdDetalle.ToString();
+        }
 
-            while (i < cantidad)
-            {
-                dgvPedidos.Rows.Add(DetPedList[i].IdDetalle, DetPedList[i].Cantidad, DetPedList[i].IdProducto);
-                i++;
-            }
-
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ConsultaEspecificaDetalle ConPro = new ConsultaEspecificaDetalle(Rep, contenedor);
+            Desplegar(ConPro);
         }
     }
 }

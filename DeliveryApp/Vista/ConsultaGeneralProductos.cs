@@ -16,12 +16,23 @@ namespace DeliveryApp.Vista
     {
         List <Producto> LProductos=new List<Producto>();
         Producto Pro=new Producto();
-        public ConsultaGeneralProductos()
+        Panel contenedor = new Panel();
+        Recepcionista Rep = new Recepcionista();
+        string Mensaje;
+
+        public ConsultaGeneralProductos(Recepcionista r, Panel p)
         {
+            Rep = r;
+            contenedor = p;
             InitializeComponent();
         }
 
         private void botonRedondo1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ConsultaGeneralProductos_Load(object sender, EventArgs e)
         {
             dgvProductos.Rows.Clear();
             string Mensaje = null;
@@ -37,6 +48,54 @@ namespace DeliveryApp.Vista
             if (Mensaje != null)
             {
                 MessageBox.Show(Mensaje);
+            }
+        }
+
+        public void Desplegar(Form f)
+        {
+            if (contenedor.Controls.Count > 0)
+            {
+                contenedor.Controls.RemoveAt(0);
+            }
+            contenedor.Width = f.Width;
+            contenedor.Height = f.Height;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            contenedor.Controls.Add(f);
+            f.Dock = DockStyle.Fill;
+            f.Show();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            //ContenedorEmpleado menuR = new ContenedorEmpleado(Rep, contenedor);
+            //Desplegar(menuR);
+            MenuRecep_Admin Men = new MenuRecep_Admin(Rep, contenedor);
+            //ContenedorCatalogos.Controls.RemoveAt(0);
+            Desplegar(Men);
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //metodo que se creara dinamicamente para
+            if (e.RowIndex == -1)
+            {
+
+            }
+            else
+            {
+                string error = null;
+                string VehID = null;
+
+                VehID = dgvProductos[0, e.RowIndex].Value.ToString().Trim();
+                MenuProductos ConsultarProductos = new MenuProductos(contenedor,Rep,VehID);
+
+                if (error != null)
+                {
+                    MessageBox.Show(error);
+                }
+
+                Desplegar(ConsultarProductos);
             }
         }
     }

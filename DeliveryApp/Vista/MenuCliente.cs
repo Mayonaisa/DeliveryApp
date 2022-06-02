@@ -57,7 +57,7 @@ namespace DeliveryApp.Vista
             int y = 0;
             for(int i = 0; i < 40; i++)
             {
-                PanelProducto prueba = new PanelProducto(i, Carro);
+                PanelProducto prueba = new PanelProducto(i.ToString(), Carro);
                 prueba.Crear_Panel_menu(prueba.prod.Nombre, 25, y);
                 pnlMenu.Controls.Add(prueba);
                 y+=156;

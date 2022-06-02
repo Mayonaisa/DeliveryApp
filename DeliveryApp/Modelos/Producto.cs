@@ -22,13 +22,13 @@ namespace DeliveryApp.Modelos
         public string Disponible { get => disponible; set => disponible = value; }
         public SqlSingle Precio { get => precio; set => precio = value; }
         public Producto() { }
-        public Producto(int idnum)
+        public Producto(string idnum)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("select * from Producto where idProducto = 'PROD" + idnum.ToString() + "'", conx);
+            SqlCommand consulta = new SqlCommand("select * from Producto where idProducto = '" + idnum.ToString() + "'", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
