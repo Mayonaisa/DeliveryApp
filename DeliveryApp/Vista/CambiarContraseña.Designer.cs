@@ -55,10 +55,10 @@
             this.pnlContenedor.Controls.Add(this.pnlSuperior);
             this.pnlContenedor.Controls.Add(this.lblMensaje);
             this.pnlContenedor.ForeColor = System.Drawing.Color.White;
-            this.pnlContenedor.Location = new System.Drawing.Point(332, 33);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContenedor.Location = new System.Drawing.Point(443, 41);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(408, 609);
+            this.pnlContenedor.Size = new System.Drawing.Size(544, 750);
             this.pnlContenedor.TabIndex = 7;
             // 
             // btnEnviar
@@ -68,13 +68,15 @@
             this.btnEnviar.BorderColor = System.Drawing.Color.White;
             this.btnEnviar.BorderRadius = 20;
             this.btnEnviar.BorderSize = 0;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderSize = 0;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Sora", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(112, 443);
+            this.btnEnviar.Location = new System.Drawing.Point(149, 545);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(184, 50);
+            this.btnEnviar.Size = new System.Drawing.Size(245, 62);
             this.btnEnviar.TabIndex = 28;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.TextColor = System.Drawing.Color.White;
@@ -90,15 +92,15 @@
             this.tbxCorreo.BorderSize = 2;
             this.tbxCorreo.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tbxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxCorreo.Location = new System.Drawing.Point(79, 238);
-            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCorreo.Location = new System.Drawing.Point(105, 293);
+            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxCorreo.Multiline = false;
             this.tbxCorreo.Name = "tbxCorreo";
-            this.tbxCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxCorreo.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxCorreo.PasswordChar = false;
             this.tbxCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxCorreo.PlaceholderText = "Correo electronico";
-            this.tbxCorreo.Size = new System.Drawing.Size(250, 35);
+            this.tbxCorreo.Size = new System.Drawing.Size(333, 45);
             this.tbxCorreo.TabIndex = 27;
             this.tbxCorreo.Texts = "";
             this.tbxCorreo.UnderlinedStyle = false;
@@ -111,10 +113,9 @@
             this.lblRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegresar.Font = new System.Drawing.Font("Sora", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.lblRegresar.Location = new System.Drawing.Point(144, 514);
-            this.lblRegresar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegresar.Location = new System.Drawing.Point(192, 633);
             this.lblRegresar.Name = "lblRegresar";
-            this.lblRegresar.Size = new System.Drawing.Size(121, 20);
+            this.lblRegresar.Size = new System.Drawing.Size(158, 26);
             this.lblRegresar.TabIndex = 14;
             this.lblRegresar.Text = "Regresar al inicio";
             this.lblRegresar.Click += new System.EventHandler(this.Regresar_Click);
@@ -127,10 +128,9 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(102, 172);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(136, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 33);
+            this.label4.Size = new System.Drawing.Size(260, 42);
             this.label4.TabIndex = 9;
             this.label4.Text = "Enviar contraseña";
             // 
@@ -141,9 +141,9 @@
             this.pnlSuperior.Controls.Add(this.panel2);
             this.pnlSuperior.Controls.Add(this.label3);
             this.pnlSuperior.Location = new System.Drawing.Point(0, 1);
-            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(407, 111);
+            this.pnlSuperior.Size = new System.Drawing.Size(543, 137);
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
             // 
@@ -153,10 +153,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(113, 37);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(151, 46);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 37);
+            this.panel2.Size = new System.Drawing.Size(45, 46);
             this.panel2.TabIndex = 8;
             // 
             // label3
@@ -168,10 +168,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Sora", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(143, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(191, 47);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 33);
+            this.label3.Size = new System.Drawing.Size(192, 42);
             this.label3.TabIndex = 7;
             this.label3.Text = "DeliveryApp";
             // 
@@ -182,10 +181,9 @@
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblMensaje.ForeColor = System.Drawing.Color.Black;
-            this.lblMensaje.Location = new System.Drawing.Point(120, 352);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(160, 433);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 5;
             // 
             // pbxFondo
@@ -193,22 +191,22 @@
             this.pbxFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbxFondo.Image = global::DeliveryApp.Properties.Resources.delicious_food_frame_top_view;
             this.pbxFondo.Location = new System.Drawing.Point(0, 0);
-            this.pbxFondo.Margin = new System.Windows.Forms.Padding(2);
+            this.pbxFondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxFondo.Name = "pbxFondo";
-            this.pbxFondo.Size = new System.Drawing.Size(1072, 675);
+            this.pbxFondo.Size = new System.Drawing.Size(1429, 831);
             this.pbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxFondo.TabIndex = 8;
             this.pbxFondo.TabStop = false;
             // 
             // CambiarContraseña
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 675);
+            this.ClientSize = new System.Drawing.Size(1429, 831);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pbxFondo);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CambiarContraseña";
             this.Text = "CambiarContraseña";
             this.pnlContenedor.ResumeLayout(false);

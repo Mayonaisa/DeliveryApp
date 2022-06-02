@@ -39,6 +39,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.pnlInferior = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblOlvidar = new System.Windows.Forms.PictureBox();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlInferior.SuspendLayout();
@@ -178,6 +178,27 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.Red;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.Red;
+            this.rjButton3.BorderColor = System.Drawing.Color.White;
+            this.rjButton3.BorderRadius = 20;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(432, 576);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(96, 62);
+            this.rjButton3.TabIndex = 34;
+            this.rjButton3.Text = "Admin";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.Red;
@@ -253,6 +274,7 @@
             this.btnLogin.BorderColor = System.Drawing.Color.White;
             this.btnLogin.BorderRadius = 20;
             this.btnLogin.BorderSize = 0;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,6 +350,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Sora", 9.749999F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.label2.Location = new System.Drawing.Point(195, 500);
@@ -399,27 +422,6 @@
             this.lblOlvidar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.lblOlvidar.TabIndex = 8;
             this.lblOlvidar.TabStop = false;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.Red;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.Red;
-            this.rjButton3.BorderColor = System.Drawing.Color.White;
-            this.rjButton3.BorderRadius = 20;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Sora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(432, 576);
-            this.rjButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(96, 62);
-            this.rjButton3.TabIndex = 34;
-            this.rjButton3.Text = "Admin";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
             // 
             // LoginUsuario
             // 

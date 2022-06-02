@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.idPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nambre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Disp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,53 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1554, 779);
             this.panel2.TabIndex = 17;
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPro,
+            this.nambre,
+            this.Disp,
+            this.Preco});
+            this.dgvProductos.Location = new System.Drawing.Point(331, 3);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(912, 674);
+            this.dgvProductos.TabIndex = 4;
+            // 
+            // idPro
+            // 
+            this.idPro.HeaderText = "idProducto";
+            this.idPro.MinimumWidth = 6;
+            this.idPro.Name = "idPro";
+            this.idPro.ReadOnly = true;
+            this.idPro.Width = 125;
+            // 
+            // nambre
+            // 
+            this.nambre.HeaderText = "Nombre";
+            this.nambre.MinimumWidth = 6;
+            this.nambre.Name = "nambre";
+            this.nambre.ReadOnly = true;
+            this.nambre.Width = 125;
+            // 
+            // Disp
+            // 
+            this.Disp.HeaderText = "Disponible";
+            this.Disp.MinimumWidth = 6;
+            this.Disp.Name = "Disp";
+            this.Disp.ReadOnly = true;
+            this.Disp.Width = 125;
+            // 
+            // Preco
+            // 
+            this.Preco.HeaderText = "Precio";
+            this.Preco.MinimumWidth = 6;
+            this.Preco.Name = "Preco";
+            this.Preco.ReadOnly = true;
+            this.Preco.Width = 125;
             // 
             // botonRedondo1
             // 
@@ -92,53 +139,6 @@
             this.label1.Size = new System.Drawing.Size(142, 32);
             this.label1.TabIndex = 15;
             this.label1.Text = "Productos";
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPro,
-            this.nambre,
-            this.Disp,
-            this.Preco});
-            this.dgvProductos.Location = new System.Drawing.Point(331, 3);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(912, 773);
-            this.dgvProductos.TabIndex = 4;
-            // 
-            // idPro
-            // 
-            this.idPro.HeaderText = "idProducto";
-            this.idPro.MinimumWidth = 6;
-            this.idPro.Name = "idPro";
-            this.idPro.ReadOnly = true;
-            this.idPro.Width = 125;
-            // 
-            // nambre
-            // 
-            this.nambre.HeaderText = "Nombre";
-            this.nambre.MinimumWidth = 6;
-            this.nambre.Name = "nambre";
-            this.nambre.ReadOnly = true;
-            this.nambre.Width = 125;
-            // 
-            // Disp
-            // 
-            this.Disp.HeaderText = "Disponible";
-            this.Disp.MinimumWidth = 6;
-            this.Disp.Name = "Disp";
-            this.Disp.ReadOnly = true;
-            this.Disp.Width = 125;
-            // 
-            // Preco
-            // 
-            this.Preco.HeaderText = "Precio";
-            this.Preco.MinimumWidth = 6;
-            this.Preco.Name = "Preco";
-            this.Preco.ReadOnly = true;
-            this.Preco.Width = 125;
             // 
             // ConsultaGeneralProductos
             // 

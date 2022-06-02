@@ -113,12 +113,6 @@
     <Compile Include="Vista\CatalogoGeneralVehiculos.Designer.cs">
       <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Configuración.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Configuración.Designer.cs">
-      <DependentUpon>Configuración.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\ConsultaEspecificaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,12 +209,6 @@
     <Compile Include="Vista\RegistrarUsuario.Designer.cs">
       <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\MenuAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MenuAdministrador.Designer.cs">
-      <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\MenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,12 +235,6 @@
     </Compile>
     <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\Usuario.cs" />
-    <Compile Include="Vista\Pantalla Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Pantalla Principal.Designer.cs">
-      <DependentUpon>Pantalla Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\PantallaInicio.cs">
@@ -272,24 +254,6 @@
     </Compile>
     <Compile Include="Vista\ProductoV.Designer.cs">
       <DependentUpon>ProductoV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Registro1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Registro1.Designer.cs">
-      <DependentUpon>Registro1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Registro2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Registro2.Designer.cs">
-      <DependentUpon>Registro2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Registro3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Registro3.Designer.cs">
-      <DependentUpon>Registro3.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vista\Carrito.resx">
       <DependentUpon>Carrito.cs</DependentUpon>
@@ -353,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuRecep_Admin.resx">
       <DependentUpon>MenuRecep_Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Pantalla Principal.resx">
-      <DependentUpon>Pantalla Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
