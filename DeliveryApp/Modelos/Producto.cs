@@ -25,6 +25,32 @@ namespace DeliveryApp.Modelos
         public string Disponible { get => disponible; set => disponible = value; }
         public SqlSingle Precio { get => precio; set => precio = value; }
         public Producto() { }
+
+        public Producto(string idnum,int n)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select * from Producto where idProducto = 'PROD" + idnum.ToString() + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            if (resultado.Read())
+            {
+                IdProducto = resultado.GetString(0);
+                IdProducto = IdProducto.Trim();
+                Nombre = resultado.GetString(1);
+                Nombre = Nombre.Trim();
+                Nombre = Nombre.Replace('-', ' ');
+                Disponible = resultado.GetString(2);
+                Disponible = Disponible.Trim();
+                Precio = resultado.GetSqlSingle(3);
+
+                //prueba
+                //MessageBox.Show("si hay :)");
+            }
+        }
         public Producto(string idnum)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);

@@ -43,7 +43,7 @@ namespace DeliveryApp.Recursos
         {
             //idProducto = id;
             //idProducto = idProducto.Trim();
-            prod = new Producto(idnum);
+            prod = new Producto(idnum,2);
             Carro = c;
 
             //inicio una conexion y le doy los valores a nombreP y montoP
