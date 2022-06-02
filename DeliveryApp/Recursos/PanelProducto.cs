@@ -95,7 +95,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
             this.lblmonto.Location = new System.Drawing.Point(182, 67);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
-            this.lblmonto.Text = /*monto;*/prod.Precio.ToString();
+            this.lblmonto.Text = /*monto;*/prod.Precio.ToString() + "$";
 
             BRcantidad = new botonRedondo();
             this.Controls.Add(this.BRcantidad);
@@ -190,7 +190,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
             this.lblmonto.Location = new System.Drawing.Point(408, 26);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
-            this.lblmonto.Text = monto;
+            this.lblmonto.Text = monto + "$";
 
             BRcantidad = new botonRedondo();
             this.Controls.Add(this.BRcantidad);
@@ -241,7 +241,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
             this.lblmonto.Location = new System.Drawing.Point(420, 26);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
-            this.lblmonto.Text = monto;
+            this.lblmonto.Text = monto + "$";
 
             BRcantidad = new botonRedondo();
             this.Controls.Add(this.BRcantidad);
@@ -294,7 +294,7 @@ namespace DeliveryApp.Recursos
             this.lblmonto.ForeColor = Color.FromArgb(0, 184, 49);
             this.lblmonto.Location = new System.Drawing.Point(334, 26);
             this.lblmonto.Size = new System.Drawing.Size(219, 29);
-            this.lblmonto.Text = monto;
+            this.lblmonto.Text = monto + "$";
 
             BRcantidad = new botonRedondo();
             this.Controls.Add(this.BRcantidad);

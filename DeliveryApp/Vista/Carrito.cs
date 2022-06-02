@@ -58,6 +58,7 @@ namespace DeliveryApp.Vista
 
             pnlCarrito.AutoScroll = true;
             Carro.leer();
+            Carro.refrescarCarrito();
             soli.leer(Carro.IdUsuario, Carro.idOrden);
             
             if (Carro.estatus == "nulo")
