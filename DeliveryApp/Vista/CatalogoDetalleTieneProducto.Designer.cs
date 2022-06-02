@@ -48,10 +48,10 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(23, 87);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(247, 217);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1560, 48);
+            this.panel5.Size = new System.Drawing.Size(1170, 39);
             this.panel5.TabIndex = 18;
             // 
             // panel2
@@ -62,10 +62,10 @@
             this.panel2.Controls.Add(this.s);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(23, 91);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(247, 220);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1560, 770);
+            this.panel2.Size = new System.Drawing.Size(1170, 626);
             this.panel2.TabIndex = 19;
             // 
             // btnVolver
@@ -82,10 +82,10 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(24, 692);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Location = new System.Drawing.Point(18, 562);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(195, 57);
+            this.btnVolver.Size = new System.Drawing.Size(146, 46);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextColor = System.Drawing.Color.White;
@@ -103,9 +103,9 @@
             this.s.Controls.Add(this.cbxId);
             this.s.Dock = System.Windows.Forms.DockStyle.Top;
             this.s.Location = new System.Drawing.Point(0, 0);
-            this.s.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(1560, 672);
+            this.s.Size = new System.Drawing.Size(1170, 546);
             this.s.TabIndex = 0;
             // 
             // label8
@@ -113,9 +113,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label8.Location = new System.Drawing.Point(341, 171);
+            this.label8.Location = new System.Drawing.Point(256, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 24);
+            this.label8.Size = new System.Drawing.Size(85, 18);
             this.label8.TabIndex = 26;
             this.label8.Text = "Id de detalle";
             // 
@@ -128,15 +129,15 @@
             this.tbxCantidad.BorderSize = 2;
             this.tbxCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxCantidad.Location = new System.Drawing.Point(347, 294);
-            this.tbxCantidad.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxCantidad.Location = new System.Drawing.Point(260, 239);
+            this.tbxCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxCantidad.Multiline = false;
             this.tbxCantidad.Name = "tbxCantidad";
-            this.tbxCantidad.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.tbxCantidad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tbxCantidad.PasswordChar = false;
             this.tbxCantidad.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxCantidad.PlaceholderText = "";
-            this.tbxCantidad.Size = new System.Drawing.Size(403, 43);
+            this.tbxCantidad.Size = new System.Drawing.Size(302, 33);
             this.tbxCantidad.TabIndex = 25;
             this.tbxCantidad.Texts = "";
             this.tbxCantidad.UnderlinedStyle = false;
@@ -146,9 +147,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label5.Location = new System.Drawing.Point(812, 261);
+            this.label5.Location = new System.Drawing.Point(609, 212);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 24);
+            this.label5.Size = new System.Drawing.Size(102, 18);
             this.label5.TabIndex = 20;
             this.label5.Text = "Id de producto";
             // 
@@ -161,15 +163,15 @@
             this.tbxIdp.BorderSize = 2;
             this.tbxIdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxIdp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxIdp.Location = new System.Drawing.Point(817, 294);
-            this.tbxIdp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxIdp.Location = new System.Drawing.Point(613, 239);
+            this.tbxIdp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxIdp.Multiline = false;
             this.tbxIdp.Name = "tbxIdp";
-            this.tbxIdp.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.tbxIdp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tbxIdp.PasswordChar = false;
             this.tbxIdp.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxIdp.PlaceholderText = "";
-            this.tbxIdp.Size = new System.Drawing.Size(403, 43);
+            this.tbxIdp.Size = new System.Drawing.Size(302, 33);
             this.tbxIdp.TabIndex = 19;
             this.tbxIdp.Texts = "";
             this.tbxIdp.UnderlinedStyle = false;
@@ -179,9 +181,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label2.Location = new System.Drawing.Point(345, 261);
+            this.label2.Location = new System.Drawing.Point(259, 212);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 24);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 16;
             this.label2.Text = "Cantidad";
             // 
@@ -196,12 +199,11 @@
             this.cbxId.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.cbxId.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbxId.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxId.Location = new System.Drawing.Point(347, 203);
-            this.cbxId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbxId.MinimumSize = new System.Drawing.Size(267, 37);
+            this.cbxId.Location = new System.Drawing.Point(260, 165);
+            this.cbxId.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbxId.Name = "cbxId";
-            this.cbxId.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxId.Size = new System.Drawing.Size(873, 43);
+            this.cbxId.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxId.Size = new System.Drawing.Size(655, 35);
             this.cbxId.TabIndex = 1;
             this.cbxId.Texts = "";
             // 
@@ -209,10 +211,10 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(23, 74);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(247, 206);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1560, 65);
+            this.panel1.Size = new System.Drawing.Size(1170, 53);
             this.panel1.TabIndex = 17;
             // 
             // label1
@@ -220,24 +222,25 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(17, 23);
+            this.label1.Location = new System.Drawing.Point(13, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 29);
+            this.label1.Size = new System.Drawing.Size(175, 24);
             this.label1.TabIndex = 16;
             this.label1.Text = "Detalle especifico";
             // 
             // CatalogoDetalleTieneProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1600, 884);
+            this.ClientSize = new System.Drawing.Size(1660, 1011);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CatalogoDetalleTieneProducto";
             this.Text = "CatalogoDetalleTieneProducto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

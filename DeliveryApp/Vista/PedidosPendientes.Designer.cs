@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.botonRedondo1 = new DeliveryApp.Recursos.botonRedondo();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,8 +44,6 @@
             this.fechaSolici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
@@ -50,38 +51,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.botonRedondo1);
             this.panel2.Controls.Add(this.dgvPedidos);
-            this.panel2.Location = new System.Drawing.Point(12, 76);
+            this.panel2.Location = new System.Drawing.Point(27, 98);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1565, 783);
+            this.panel2.Size = new System.Drawing.Size(1606, 886);
             this.panel2.TabIndex = 8;
-            // 
-            // botonRedondo1
-            // 
-            this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
-            this.botonRedondo1.ButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.FlatAppearance.BorderSize = 0;
-            this.botonRedondo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.botonRedondo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.botonRedondo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo1.Font = new System.Drawing.Font("Sora", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo1.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo1.Location = new System.Drawing.Point(1271, 694);
-            this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.botonRedondo1.Size = new System.Drawing.Size(273, 70);
-            this.botonRedondo1.TabIndex = 1;
-            this.botonRedondo1.Text = "Consulta";
-            this.botonRedondo1.TextColor = System.Drawing.Color.White;
-            this.botonRedondo1.UseVisualStyleBackColor = false;
-            this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
             // 
             // dgvPedidos
             // 
-            this.dgvPedidos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvPedidos.AllowUserToAddRows = false;
+            this.dgvPedidos.AllowUserToDeleteRows = false;
+            this.dgvPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.dgvPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sora", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdOrden,
@@ -94,99 +84,34 @@
             this.fechaSolici,
             this.Colo,
             this.NCasa});
-            this.dgvPedidos.Location = new System.Drawing.Point(5, -1);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sora", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPedidos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPedidos.Location = new System.Drawing.Point(0, 0);
+            this.dgvPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPedidos.MultiSelect = false;
             this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.ReadOnly = true;
+            this.dgvPedidos.RowHeadersVisible = false;
             this.dgvPedidos.RowHeadersWidth = 51;
             this.dgvPedidos.RowTemplate.Height = 24;
-            this.dgvPedidos.Size = new System.Drawing.Size(1557, 572);
+            this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPedidos.Size = new System.Drawing.Size(1606, 886);
             this.dgvPedidos.TabIndex = 0;
-            // 
-            // IdOrden
-            // 
-            this.IdOrden.HeaderText = "idOrden";
-            this.IdOrden.MinimumWidth = 6;
-            this.IdOrden.Name = "IdOrden";
-            this.IdOrden.ReadOnly = true;
-            this.IdOrden.Width = 125;
-            // 
-            // IdDetalle
-            // 
-            this.IdDetalle.HeaderText = "idDetalle";
-            this.IdDetalle.MinimumWidth = 6;
-            this.IdDetalle.Name = "IdDetalle";
-            this.IdDetalle.ReadOnly = true;
-            this.IdDetalle.Width = 125;
-            // 
-            // monto
-            // 
-            this.monto.HeaderText = "Monto del pedido";
-            this.monto.MinimumWidth = 6;
-            this.monto.Name = "monto";
-            this.monto.ReadOnly = true;
-            this.monto.Width = 125;
-            // 
-            // estatus
-            // 
-            this.estatus.HeaderText = "Estatus";
-            this.estatus.MinimumWidth = 6;
-            this.estatus.Name = "estatus";
-            this.estatus.ReadOnly = true;
-            this.estatus.Width = 125;
-            // 
-            // Repa
-            // 
-            this.Repa.HeaderText = "Repartidor";
-            this.Repa.MinimumWidth = 6;
-            this.Repa.Name = "Repa";
-            this.Repa.ReadOnly = true;
-            this.Repa.Width = 125;
-            // 
-            // Vehi
-            // 
-            this.Vehi.HeaderText = "Vehiculo";
-            this.Vehi.MinimumWidth = 6;
-            this.Vehi.Name = "Vehi";
-            this.Vehi.ReadOnly = true;
-            this.Vehi.Width = 125;
-            // 
-            // Clie
-            // 
-            this.Clie.HeaderText = "Cliente";
-            this.Clie.MinimumWidth = 6;
-            this.Clie.Name = "Clie";
-            this.Clie.ReadOnly = true;
-            this.Clie.Width = 125;
-            // 
-            // fechaSolici
-            // 
-            this.fechaSolici.HeaderText = "Fecha solicitud";
-            this.fechaSolici.MinimumWidth = 6;
-            this.fechaSolici.Name = "fechaSolici";
-            this.fechaSolici.ReadOnly = true;
-            this.fechaSolici.Width = 125;
-            // 
-            // Colo
-            // 
-            this.Colo.HeaderText = "Colonia";
-            this.Colo.MinimumWidth = 6;
-            this.Colo.Name = "Colo";
-            this.Colo.ReadOnly = true;
-            this.Colo.Width = 125;
-            // 
-            // NCasa
-            // 
-            this.NCasa.HeaderText = "Numero de casa";
-            this.NCasa.MinimumWidth = 6;
-            this.NCasa.Name = "NCasa";
-            this.NCasa.ReadOnly = true;
-            this.NCasa.Width = 125;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(12, 62);
+            this.panel1.Location = new System.Drawing.Point(27, 86);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1562, 37);
+            this.panel1.Size = new System.Drawing.Size(1622, 16);
             this.panel1.TabIndex = 7;
             // 
             // label1
@@ -194,22 +119,104 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(23, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Pedidos pendientes";
             // 
+            // IdOrden
+            // 
+            this.IdOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdOrden.HeaderText = "idOrden";
+            this.IdOrden.MinimumWidth = 6;
+            this.IdOrden.Name = "IdOrden";
+            this.IdOrden.ReadOnly = true;
+            // 
+            // IdDetalle
+            // 
+            this.IdDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdDetalle.HeaderText = "idDetalle";
+            this.IdDetalle.MinimumWidth = 6;
+            this.IdDetalle.Name = "IdDetalle";
+            this.IdDetalle.ReadOnly = true;
+            // 
+            // monto
+            // 
+            this.monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.monto.HeaderText = "Monto del pedido";
+            this.monto.MinimumWidth = 6;
+            this.monto.Name = "monto";
+            this.monto.ReadOnly = true;
+            // 
+            // estatus
+            // 
+            this.estatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estatus.HeaderText = "Estatus";
+            this.estatus.MinimumWidth = 6;
+            this.estatus.Name = "estatus";
+            this.estatus.ReadOnly = true;
+            // 
+            // Repa
+            // 
+            this.Repa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Repa.HeaderText = "Repartidor";
+            this.Repa.MinimumWidth = 6;
+            this.Repa.Name = "Repa";
+            this.Repa.ReadOnly = true;
+            // 
+            // Vehi
+            // 
+            this.Vehi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Vehi.HeaderText = "Vehiculo";
+            this.Vehi.MinimumWidth = 6;
+            this.Vehi.Name = "Vehi";
+            this.Vehi.ReadOnly = true;
+            // 
+            // Clie
+            // 
+            this.Clie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Clie.HeaderText = "Cliente";
+            this.Clie.MinimumWidth = 6;
+            this.Clie.Name = "Clie";
+            this.Clie.ReadOnly = true;
+            // 
+            // fechaSolici
+            // 
+            this.fechaSolici.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaSolici.HeaderText = "Fecha solicitud";
+            this.fechaSolici.MinimumWidth = 6;
+            this.fechaSolici.Name = "fechaSolici";
+            this.fechaSolici.ReadOnly = true;
+            // 
+            // Colo
+            // 
+            this.Colo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Colo.HeaderText = "Colonia";
+            this.Colo.MinimumWidth = 6;
+            this.Colo.Name = "Colo";
+            this.Colo.ReadOnly = true;
+            // 
+            // NCasa
+            // 
+            this.NCasa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NCasa.HeaderText = "Numero de casa";
+            this.NCasa.MinimumWidth = 6;
+            this.NCasa.Name = "NCasa";
+            this.NCasa.ReadOnly = true;
+            // 
             // PedidosPendientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1600, 884);
+            this.ClientSize = new System.Drawing.Size(1660, 1011);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PedidosPendientes";
             this.Text = "PedidosPendientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -227,7 +234,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPedidos;
-        private Recursos.botonRedondo botonRedondo1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdOrden;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
