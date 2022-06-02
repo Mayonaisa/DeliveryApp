@@ -51,6 +51,7 @@ namespace DeliveryApp.Vista
                 ContenedorCatalogos.Controls.Add(Inicio);
                 Inicio.Dock = DockStyle.Fill;
                 Inicio.Show();
+                lblUsuario.Text ="Recepcionista";
             }
             else if (Ad.IdPersona != null)
             {
@@ -63,6 +64,7 @@ namespace DeliveryApp.Vista
                 ContenedorCatalogos.Controls.Add(Inicio);
                 Inicio.Dock = DockStyle.Fill;
                 Inicio.Show();
+                lblUsuario.Text = "Administrador";
             }
 
 

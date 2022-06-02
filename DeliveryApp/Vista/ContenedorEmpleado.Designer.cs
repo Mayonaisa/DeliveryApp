@@ -210,7 +210,7 @@
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.White;
-            this.lblfecha.Location = new System.Drawing.Point(1206, 12);
+            this.lblfecha.Location = new System.Drawing.Point(1145, 12);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(84, 32);
             this.lblfecha.TabIndex = 2;
@@ -222,9 +222,9 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.panel3.Controls.Add(this.lblUsuario);
-            this.panel3.Location = new System.Drawing.Point(1644, 4);
+            this.panel3.Location = new System.Drawing.Point(1563, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(264, 40);
+            this.panel3.Size = new System.Drawing.Size(345, 40);
             this.panel3.TabIndex = 2;
             // 
             // lblUsuario
@@ -232,7 +232,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(52, 5);
+            this.lblUsuario.Location = new System.Drawing.Point(86, 5);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(173, 29);
             this.lblUsuario.TabIndex = 1;
@@ -242,7 +242,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(1137, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(1076, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
