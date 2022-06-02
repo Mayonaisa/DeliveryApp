@@ -82,7 +82,6 @@ namespace DeliveryApp.Vista
             f.FormBorderStyle = FormBorderStyle.None;
             f.TopLevel = false;
             ContenedorCatalogos.Controls.Add(f);
-            //f.StartPosition = FormStartPosition.CenterParent;
             f.Dock = DockStyle.Fill;
             f.Show();
         }
