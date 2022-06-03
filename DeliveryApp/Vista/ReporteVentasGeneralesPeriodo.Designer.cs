@@ -44,11 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvReporte = new System.Windows.Forms.DataGridView();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.pTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ganancias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProVendidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
@@ -57,6 +52,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ganancias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProVendidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
@@ -257,36 +257,6 @@
             this.dgvCliente.Size = new System.Drawing.Size(1212, 623);
             this.dgvCliente.TabIndex = 3;
             // 
-            // pTotal
-            // 
-            this.pTotal.HeaderText = "Total de pedidos";
-            this.pTotal.Name = "pTotal";
-            this.pTotal.ReadOnly = true;
-            // 
-            // Ganancias
-            // 
-            this.Ganancias.HeaderText = "Total de ganancias";
-            this.Ganancias.Name = "Ganancias";
-            this.Ganancias.ReadOnly = true;
-            // 
-            // ProVendidos
-            // 
-            this.ProVendidos.HeaderText = "Productos vendidos";
-            this.ProVendidos.Name = "ProVendidos";
-            this.ProVendidos.ReadOnly = true;
-            // 
-            // Pnombre
-            // 
-            this.Pnombre.HeaderText = "Nombre del producto";
-            this.Pnombre.Name = "Pnombre";
-            this.Pnombre.ReadOnly = true;
-            // 
-            // Cant
-            // 
-            this.Cant.HeaderText = "Cantidad";
-            this.Cant.Name = "Cant";
-            this.Cant.ReadOnly = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
@@ -352,6 +322,41 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
+            // pTotal
+            // 
+            this.pTotal.HeaderText = "Total de pedidos";
+            this.pTotal.Name = "pTotal";
+            this.pTotal.ReadOnly = true;
+            this.pTotal.Width = 150;
+            // 
+            // Ganancias
+            // 
+            this.Ganancias.HeaderText = "Total de ganancias";
+            this.Ganancias.Name = "Ganancias";
+            this.Ganancias.ReadOnly = true;
+            this.Ganancias.Width = 150;
+            // 
+            // ProVendidos
+            // 
+            this.ProVendidos.HeaderText = "Productos vendidos";
+            this.ProVendidos.Name = "ProVendidos";
+            this.ProVendidos.ReadOnly = true;
+            this.ProVendidos.Width = 150;
+            // 
+            // Pnombre
+            // 
+            this.Pnombre.HeaderText = "Nombre del producto";
+            this.Pnombre.Name = "Pnombre";
+            this.Pnombre.ReadOnly = true;
+            this.Pnombre.Width = 150;
+            // 
+            // Cant
+            // 
+            this.Cant.HeaderText = "Cantidad";
+            this.Cant.Name = "Cant";
+            this.Cant.ReadOnly = true;
+            this.Cant.Width = 120;
+            // 
             // ReporteVentasGeneralesPeriodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,11 +390,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvReporte;
         private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ganancias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProVendidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pnombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJDatePicker dpkPeriodoFinal;
@@ -401,5 +401,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ganancias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProVendidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pnombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
     }
 }

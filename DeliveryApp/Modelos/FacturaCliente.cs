@@ -97,16 +97,18 @@ namespace DeliveryApp.Modelos
 
             conx.Close();
         }
-        public void TotalMonto(List<FacturaCliente> Ordenes, string id)
+        public decimal TotalMonto(List<FacturaCliente> Ordenes, string id)
         {
+            decimal total=0;
             foreach (FacturaCliente Orden in Ordenes)
             {
                 if (Orden.idOrden == id)
                 {
-                    this.total += Orden.monto;
+                    total += Orden.monto;
                 }
                 
             }
+            return total;
         }
 
     }

@@ -16,6 +16,7 @@ namespace DeliveryApp.Vista
     {
         Panel contenedor;
         List<FacturaCliente> Facturas;
+        List<FacturaCliente> FacturasCli;
         public ReciboCliente(Panel p)
         {
             contenedor = p;
@@ -24,15 +25,18 @@ namespace DeliveryApp.Vista
         }
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /// aqui se generan los datos del cliente que se le hace click
             if (e.RowIndex != -1)
             {
                 string id =Facturas[e.RowIndex].IdOrden;
-                List<FacturaCliente> FacturasCli=new List<FacturaCliente>();
+                FacturasCli = new List<FacturaCliente>();
                 new ConFactura().Facturar(ref FacturasCli,id);
+                decimal total = new FacturaCliente().TotalMonto(FacturasCli,id);
                 foreach (FacturaCliente F in FacturasCli)
                 {
-                    dgvReporte.Rows.Add(F.Cnombre1 + " " + F.Apaterno1 + " " + F.Amaterno1, F.Pnombre1, F.Monto, F.Cantidad);
+                    dgvReporte.Rows.Add(F.Cnombre1 + " " + F.Apaterno1 + " " + F.Amaterno1, F.Pnombre1,  F.Cantidad, F.Monto,total, F.RFC1);
                 }
+
                 
 
             }
@@ -44,9 +48,12 @@ namespace DeliveryApp.Vista
             new ConFactura().ListaFacturas(ref Facturas);
             foreach (FacturaCliente F in Facturas)
             {
+                
                 dgvCliente.Rows.Add(F.Cnombre1+" "+F.Apaterno1+" "+F.Amaterno1, F.Pnombre1,F.Monto,F.Cantidad);
             }
             
+          
+
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -64,10 +71,22 @@ namespace DeliveryApp.Vista
         {
 
         }
-
-        private void rjButton3_Click(object sender, EventArgs e)
+        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
 
+            DataGridView Ticket = dgvReporte;
+            Bitmap bmp = new Bitmap(Ticket.Width, Ticket.Height, Ticket.CreateGraphics());
+            Ticket.DrawToBitmap(bmp, new Rectangle(0, 0, Ticket.Width, Ticket.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)bmp.Height / (float)bmp.Width);
+            e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+            doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+            printPreviewDialog1.Document = doc;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }
