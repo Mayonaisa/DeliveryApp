@@ -30,15 +30,15 @@ namespace DeliveryApp.Modelos
         }
 
         public List<Usuario> Persona1 { get => Persona; set => Persona = value; }
-        internal List<Orden> Orden { get => orden; set => orden = value; }
-        internal List<Detalle> Detalle { get => detalle; set => detalle = value; }
-        internal List<Solicita> Solicitud { get => solicitud; set => solicitud = value; }
+        public List<Orden> Orden { get => orden; set => orden = value; }
+        public List<Detalle> Detalle { get => detalle; set => detalle = value; }
+        public List<Solicita> Solicitud { get => solicitud; set => solicitud = value; }
         public Usuario Ipersona1 { get => Ipersona; set => Ipersona = value; }
         public Orden IOrden { get => iOrden; set => iOrden = value; }
         public Detalle IDetalle { get => iDetalle; set => iDetalle = value; }
         public Solicita ISolicita { get => iSolicita; set => iSolicita = value; }
-        internal List<Direccion> Direc1 { get => Direc; set => Direc = value; }
-        internal Direccion IDire1 { get => IDire; set => IDire = value; }
+        public List<Direccion> Direc1 { get => Direc; set => Direc = value; }
+        public Direccion IDire1 { get => IDire; set => IDire = value; }
 
         public Pedido ()
         {

@@ -38,7 +38,7 @@ namespace DeliveryApp.Vista
         private void dgvPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //metodo que se creara dinamicamente para
-            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index && e.RowIndex != dgvPedidos.Rows.Count - 1)
+            if (e.ColumnIndex == dgvPedidos.Columns["estatusPed"].Index)
             {
                 
                 string PedID = null;
@@ -61,7 +61,7 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                if (e.RowIndex ==-1 || e.RowIndex==dgvPedidos.Rows.Count-1)
+                if (e.RowIndex ==-1 )
                 {
 
                 }
@@ -173,7 +173,7 @@ namespace DeliveryApp.Vista
                 ConsultarPedido.VehiculoEspecifico(pedidos.Orden[i].IdOrden, ref IVEH, ref Mensaje);
                 dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus, IREP.Nombre + " " + IREP.APaterno + " " + IREP.AMaterno, IVEH.Marca + " " + IVEH.Modelo + " " + IVEH.Año, pedidos.Persona1[i].Nombre + " " + pedidos.Persona1[i].APaterno + " " + pedidos.Persona1[i].AMaterno, pedidos.Solicitud[i].Fecha, pedidos.Direc1[i].Colonia, pedidos.Direc1[i].NumCasa);
 
-                if (dgvPedidos[3, i].Value.ToString().Trim() == "Aceptado" || dgvPedidos[3, i].Value.ToString().Trim() == "en camino")
+                if (dgvPedidos[3, i].Value.ToString().Trim() == "Aceptado" || dgvPedidos[3, i].Value.ToString().Trim() == "en camino" || dgvPedidos[3, i].Value.ToString().Trim() == "Entregado")
                 {
                     CambiarBoton(i);
                 }
@@ -184,5 +184,10 @@ namespace DeliveryApp.Vista
                 MessageBox.Show(Mensaje);
             }
         }
+
+        //private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+
+        //}
     }
 }

@@ -37,7 +37,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT * FROM Vehiculo WHERE idVehiculo='" + id+"'", conx);
+            SqlCommand consulta = new SqlCommand("SELECT V.idVehiculo,V.marca,V.placa,V.color,V.año,V.modelo,V.tipo from Entrega, Vehiculo V WHERE idOrden='" + id+"' and V.idVehiculo=Entrega.idVehiculo", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();

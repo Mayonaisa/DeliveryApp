@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace DeliveryApp.Modelos
 {
-    class Direccion
+    public class Direccion
     {
         private string idPersona, idDireccion;
         private string pais, estado, ciudad, calle1, calle2, colonia, numCasa;
