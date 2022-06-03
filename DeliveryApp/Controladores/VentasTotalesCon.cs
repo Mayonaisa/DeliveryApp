@@ -47,5 +47,29 @@ namespace DeliveryApp.Controladores
                 //mensaje = ex.Message;
             }
         }
+        public static void ObtenerVentasIndiPeriodo(string id, VentasTotales Vt, string inicial,string final)
+        {
+            try
+            {
+                Vt.VentasGlobalesPeriodo(id,inicial,final);
+
+            }
+            catch (Exception ex)
+            {
+                //mensaje = ex.Message;
+            }
+        }
+        public static void ObtenerVentasPeriodo(ref List<VentasTotales> LVtotales, string inicial, string final)
+        {
+            try
+            {
+                new VentasTotales().VentasGlobalesListaPeriodo(ref LVtotales,inicial,final);
+
+            }
+            catch (Exception ex)
+            {
+                //mensaje = ex.Message;
+            }
+        }
     }
 }

@@ -90,8 +90,80 @@ namespace DeliveryApp.Modelos
                     
                 }
                 i++;
-                conx.Close();
+                
             }
+            conx.Close();
+        }
+        public void VentasGlobalesListaPeriodo(ref List<VentasTotales> VT, string FechaInicial,string FechaFinal)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '"+FechaInicial+ "' and '"+FechaFinal+"' and idCliente = idUsuario group by nombre", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            while (resultado.Read())
+            {
+                VT.Add(new VentasTotales());
+                VT[i].idCliente = resultado.GetString(0).Trim();
+                VT[i].nombre = resultado.GetString(1).Trim();
+                VT[i].monto = int.Parse(resultado.GetValue(2).ToString());
+
+                SqlCommand consulta2 = new SqlCommand("select top 1 Usuario.nombre,cantidad,Producto.nombre from Usuario,Solicita,Detalle,DetalleContieneProducto,Producto  where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and Detalle.idDetalle = DetalleContieneProducto.idDetalle and DetalleContieneProducto.idProducto = Producto.idProducto and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '" + FechaInicial + "' and '" + FechaFinal + "' and idCliente = '" + VT[i].idCliente + "' order by cantidad desc", conx);
+
+                consulta2.Prepare();
+                SqlDataReader resultado2 = consulta2.ExecuteReader();
+
+                if (resultado2.Read())
+                {
+                    VT[i].cantidadProducto = int.Parse(resultado2.GetValue(1).ToString().Trim());
+                    VT[i].nombreProducto = resultado2.GetString(2).Trim();
+
+
+                }
+                i++;
+                
+            }
+            conx.Close();
+        }
+        public void VentasGlobalesPeriodo(string id, string FechaInicial, string FechaFinal)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("select nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '" + FechaInicial + "' and '" + FechaFinal + "' and idCliente = '"+id+"' group by nombre", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            int i = 0;
+            while (resultado.Read())
+            {
+                this.idCliente = resultado.GetString(0).Trim();
+                this.nombre = resultado.GetString(1).Trim();
+                this.monto = int.Parse(resultado.GetValue(2).ToString());
+
+                SqlCommand consulta2 = new SqlCommand("select top 1 Usuario.nombre,cantidad,Producto.nombre from Usuario,Solicita,Detalle,DetalleContieneProducto,Producto  where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and Detalle.idDetalle = DetalleContieneProducto.idDetalle and DetalleContieneProducto.idProducto = Producto.idProducto and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '" + FechaInicial + "' and '" + FechaFinal + "' and idCliente = '" + id + "' order by cantidad desc", conx);
+
+                consulta2.Prepare();
+                SqlDataReader resultado2 = consulta2.ExecuteReader();
+
+                if (resultado2.Read())
+                {
+                    this.cantidadProducto = int.Parse(resultado2.GetValue(1).ToString().Trim());
+                    this.nombreProducto = resultado2.GetString(2).Trim();
+
+
+                }
+                i++;
+
+            }
+            conx.Close();
         }
     }
 }
