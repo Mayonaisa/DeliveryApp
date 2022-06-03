@@ -57,8 +57,6 @@
             this.txtTotal = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new CustomControls.RJControls.RJTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,14 +65,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Sora", 14.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Location = new System.Drawing.Point(22, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.Size = new System.Drawing.Size(211, 29);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Pedidos";
+            this.label1.Text = "Consulta de Pedidos";
             // 
             // panel2
             // 
@@ -87,10 +85,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(245, 211);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(18, 70);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1170, 626);
+            this.panel2.Size = new System.Drawing.Size(1624, 922);
             this.panel2.TabIndex = 11;
             // 
             // btnEntregado
@@ -109,7 +107,7 @@
             this.btnEntregado.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntregado.ForeColor = System.Drawing.Color.White;
             this.btnEntregado.Location = new System.Drawing.Point(576, 539);
-            this.btnEntregado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEntregado.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntregado.Name = "btnEntregado";
             this.btnEntregado.Size = new System.Drawing.Size(263, 73);
             this.btnEntregado.TabIndex = 4;
@@ -133,7 +131,7 @@
             this.rjButton2.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
             this.rjButton2.Location = new System.Drawing.Point(274, 539);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(2);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(263, 73);
             this.rjButton2.TabIndex = 3;
@@ -157,7 +155,7 @@
             this.rjButton1.Font = new System.Drawing.Font("Sora", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(872, 539);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(263, 73);
             this.rjButton1.TabIndex = 2;
@@ -180,7 +178,7 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.txtCiudad);
             this.panel4.Location = new System.Drawing.Point(604, 54);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(531, 439);
             this.panel4.TabIndex = 1;
@@ -207,6 +205,7 @@
             this.txtNumCasa.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumCasa.ForeColor = System.Drawing.Color.White;
             this.txtNumCasa.Location = new System.Drawing.Point(151, 299);
+            this.txtNumCasa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCasa.Multiline = false;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -240,6 +239,7 @@
             this.txtColonia.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.White;
             this.txtColonia.Location = new System.Drawing.Point(148, 236);
+            this.txtColonia.Margin = new System.Windows.Forms.Padding(4);
             this.txtColonia.Multiline = false;
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -273,6 +273,7 @@
             this.txtCalle2.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle2.ForeColor = System.Drawing.Color.White;
             this.txtCalle2.Location = new System.Drawing.Point(148, 171);
+            this.txtCalle2.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle2.Multiline = false;
             this.txtCalle2.Name = "txtCalle2";
             this.txtCalle2.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -306,6 +307,7 @@
             this.txtCalle1.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle1.ForeColor = System.Drawing.Color.White;
             this.txtCalle1.Location = new System.Drawing.Point(148, 111);
+            this.txtCalle1.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle1.Multiline = false;
             this.txtCalle1.Name = "txtCalle1";
             this.txtCalle1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -339,6 +341,7 @@
             this.txtCiudad.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.ForeColor = System.Drawing.Color.White;
             this.txtCiudad.Location = new System.Drawing.Point(148, 51);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCiudad.Multiline = false;
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -366,7 +369,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtCliente);
             this.panel3.Location = new System.Drawing.Point(28, 54);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(531, 439);
             this.panel3.TabIndex = 0;
@@ -393,6 +396,7 @@
             this.txtHoraSol.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoraSol.ForeColor = System.Drawing.Color.White;
             this.txtHoraSol.Location = new System.Drawing.Point(170, 358);
+            this.txtHoraSol.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraSol.Multiline = false;
             this.txtHoraSol.Name = "txtHoraSol";
             this.txtHoraSol.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -416,7 +420,7 @@
             this.cmbxVehi.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxVehi.ListTextColor = System.Drawing.Color.DimGray;
             this.cmbxVehi.Location = new System.Drawing.Point(205, 297);
-            this.cmbxVehi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbxVehi.Margin = new System.Windows.Forms.Padding(2);
             this.cmbxVehi.MinimumSize = new System.Drawing.Size(150, 24);
             this.cmbxVehi.Name = "cmbxVehi";
             this.cmbxVehi.Size = new System.Drawing.Size(264, 33);
@@ -436,7 +440,7 @@
             this.cmbxRepart.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxRepart.ListTextColor = System.Drawing.Color.DimGray;
             this.cmbxRepart.Location = new System.Drawing.Point(205, 243);
-            this.cmbxRepart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbxRepart.Margin = new System.Windows.Forms.Padding(2);
             this.cmbxRepart.MinimumSize = new System.Drawing.Size(150, 24);
             this.cmbxRepart.Name = "cmbxRepart";
             this.cmbxRepart.Size = new System.Drawing.Size(264, 33);
@@ -458,7 +462,7 @@
             this.txtEstatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.txtEstatus.ListTextColor = System.Drawing.Color.DimGray;
             this.txtEstatus.Location = new System.Drawing.Point(298, 183);
-            this.txtEstatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEstatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstatus.MinimumSize = new System.Drawing.Size(150, 24);
             this.txtEstatus.Name = "txtEstatus";
             this.txtEstatus.Size = new System.Drawing.Size(170, 33);
@@ -524,6 +528,7 @@
             this.txtTotal.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.ForeColor = System.Drawing.Color.White;
             this.txtTotal.Location = new System.Drawing.Point(179, 111);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Multiline = false;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -557,6 +562,7 @@
             this.txtCliente.Font = new System.Drawing.Font("Sora", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.ForeColor = System.Drawing.Color.White;
             this.txtCliente.Location = new System.Drawing.Point(179, 51);
+            this.txtCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtCliente.Multiline = false;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -568,38 +574,16 @@
             this.txtCliente.Texts = "";
             this.txtCliente.UnderlinedStyle = false;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(153)))), ((int)(((byte)(84)))));
-            this.panel1.Location = new System.Drawing.Point(245, 200);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1170, 53);
-            this.panel1.TabIndex = 10;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(245, 211);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1170, 39);
-            this.panel5.TabIndex = 11;
-            // 
             // ConsultaEspecificaPedidosRecep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1660, 1011);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsultaEspecificaPedidosRecep";
             this.Text = "ConsultaEspecificaPedidosRecep";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -617,11 +601,9 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private CustomControls.RJControls.RJButton rjButton1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private CustomControls.RJControls.RJTextBox txtCliente;
         private System.Windows.Forms.Label label6;

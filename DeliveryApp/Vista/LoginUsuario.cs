@@ -153,7 +153,7 @@ namespace DeliveryApp
             }
             else
             {
-                MessageBox.Show("El usuario esta vacio");
+                MessageBox.Show("El usuario esta vacio o tiene pocos caracteres");
                 tbxCorreo.BorderColor = Color.Red;
             }
         }

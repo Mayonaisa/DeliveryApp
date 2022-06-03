@@ -62,5 +62,24 @@ namespace DeliveryApp.Vista
             ConsultaGeneralClientes Volver = new ConsultaGeneralClientes(contenedor);
             Desplegar(Volver);
         }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            // BORRAR
+
+            //ConsultaGeneralClientes Volver = new ConsultaGeneralClientes(contenedor);
+            //Desplegar(Volver);
+        }
+
+        private void rjButton1_Click_1(object sender, EventArgs e)
+        {
+            /// ACTUALZIAR
+            string id = Cliente.actualizarCliente(txtCliente.Texts, txtApa.Texts, txtAma.Texts, txtCorreo.Texts, txtCalle1.Texts, txtCalle2.Texts, txtColonia.Texts, txtNumCasa.Texts, txtCiudad.Texts, txtRFC.Texts);
+            MessageBox.Show(id);
+            ConsultaClientes.ObtenerClienteIndi(id, ref Cli);
+
+            ConsultaGeneralClientes Volver = new ConsultaGeneralClientes(contenedor);
+            Desplegar(Volver);
+        }
     }
 }

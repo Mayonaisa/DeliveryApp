@@ -142,5 +142,27 @@ namespace DeliveryApp.Modelos
             conx.Close();
         }
 
+        public static string actualizarCliente(string n, string ap, string am, string c, string c1, string c2, string col, string nc, string ciu)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_ActualizarEmpleado '" + n + "','" + ap + "','" + am + "','" + c + "','" + ciu + "','" + c1 + "','" + c2 + "','" + col + "','" + nc + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
+
     }
 }

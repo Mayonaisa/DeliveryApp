@@ -12,11 +12,11 @@ namespace DeliveryApp.Modelos
     {
         public Recepcionista()
         {
-            
+
         }
         public Recepcionista(Usuario usuario)
         {
-            this.IdPersona= usuario.IdPersona;
+            this.IdPersona = usuario.IdPersona;
         }
         public int cantidad()
         {
@@ -61,11 +61,11 @@ namespace DeliveryApp.Modelos
                 Rep.Add(new Recepcionista());
                 Rep[i].IdPersona = resultado.GetString(0).Trim();
                 Rep[i].Nombre = resultado.GetString(1).Trim();
-                Rep[i].APaterno =  resultado.GetString(2).Trim();
-                Rep[i].AMaterno =  resultado.GetString(3).Trim();
+                Rep[i].APaterno = resultado.GetString(2).Trim();
+                Rep[i].AMaterno = resultado.GetString(3).Trim();
                 Rep[i].Telefono = resultado.GetString(4).Trim();
                 Rep[i].Sexo = resultado.GetString(5).Trim();
-                Rep[i].Edad =int.Parse(resultado.GetValue(6).ToString());
+                Rep[i].Edad = int.Parse(resultado.GetValue(6).ToString());
                 Rep[i].Nomu = resultado.GetString(7).Trim();
 
                 //Rep[i].Dir = new Direccion();
@@ -89,7 +89,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("SELECT idRecepcionista, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,U.nombre,U.correo,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Recepcionista,Persona P,Direccion D, Usuario U where idUsuario='"+ RecepId + "' and P.idPersona='"+ RecepId + "' and D.idPersona='"+ RecepId + "'", conx);
+            SqlCommand consulta = new SqlCommand("SELECT idRecepcionista, p.nombre, aPaterno, aMaterno, telefono, sexo, Edad,U.nombre,U.correo,idDireccion,pais,estado,ciudad,calle1,calle2,colonia,numCasa from Recepcionista,Persona P,Direccion D, Usuario U where idUsuario='" + RecepId + "' and P.idPersona='" + RecepId + "' and D.idPersona='" + RecepId + "'", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
@@ -119,6 +119,28 @@ namespace DeliveryApp.Modelos
             }
 
             conx.Close();
+        }
+
+        public static string actualizarCliente(string n, string ap, string am, string c, string c1, string c2, string col, string nc, string ciu)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_ActualizarEmpleado '" + n + "','" + ap + "','" + am + "','" + c + "','" + ciu + "','" + c1 + "','" + c2 + "','" + col + "','" + nc + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
         }
     }
 }
