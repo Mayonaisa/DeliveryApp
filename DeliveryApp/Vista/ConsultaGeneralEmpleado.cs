@@ -185,106 +185,106 @@ namespace DeliveryApp.Vista
             //pnlRecibo.Hide();
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            dgvTicket.Rows.Clear();
-            dgvReporte.Rows.Clear();
-            List<RepEmpleados> repEmpleados = new List<RepEmpleados>();
-            if (rbtnRecepMes.Checked)
-            {
+        //private void btnReporte_Click(object sender, EventArgs e)
+        //{
+        //    dgvTicket.Rows.Clear();
+        //    dgvReporte.Rows.Clear();
+        //    List<RepEmpleados> repEmpleados = new List<RepEmpleados>();
+        //    if (rbtnRecepMes.Checked)
+        //    {
                 
-                int Registros=0;
-                new ReporteEmpleados().ReporteRecepcionista(ref repEmpleados);
-                int i = 0;
-                while (i < repEmpleados.Count)
-                {
-                    dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno+" "+ repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    i++;
-                }
+        //        int Registros=0;
+        //        new ReporteEmpleados().ReporteRecepcionista(ref repEmpleados);
+        //        int i = 0;
+        //        while (i < repEmpleados.Count)
+        //        {
+        //            dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno+" "+ repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            i++;
+        //        }
                 
-                System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-                printPreviewDialog1.Document = doc;
-                printPreviewDialog1.ShowDialog();
-                dgvEmpleados.Visible = false;
-                dgvReporte.Visible = true;
+        //        System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+        //        doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+        //        printPreviewDialog1.Document = doc;
+        //        printPreviewDialog1.ShowDialog();
+        //        dgvEmpleados.Visible = false;
+        //        dgvReporte.Visible = true;
 
-            }
-            else if (rBtnRecepAño.Checked)
-            {
-                int Registros = 0;
-                new ReporteEmpleados().ReporteRecepcionistaAño(ref repEmpleados);
-                int i = 0;
-                while (i < repEmpleados.Count)
-                {
-                    dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    i++;
-                }
+        //    }
+        //    else if (rBtnRecepAño.Checked)
+        //    {
+        //        int Registros = 0;
+        //        new ReporteEmpleados().ReporteRecepcionistaAño(ref repEmpleados);
+        //        int i = 0;
+        //        while (i < repEmpleados.Count)
+        //        {
+        //            dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            i++;
+        //        }
 
-                System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-                printPreviewDialog1.Document = doc;
-                printPreviewDialog1.ShowDialog();
-                dgvEmpleados.Visible = false;
-                dgvReporte.Visible = true;
-            }
-            else if (rBtnRepaMes.Checked)
-            {
-                int Registros = 0;
-                new ReporteEmpleados().ReporteRepartidor(ref repEmpleados);
-                int i = 0;
-                while (i < repEmpleados.Count)
-                {
-                    dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    i++;
-                }
+        //        System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+        //        doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+        //        printPreviewDialog1.Document = doc;
+        //        printPreviewDialog1.ShowDialog();
+        //        dgvEmpleados.Visible = false;
+        //        dgvReporte.Visible = true;
+        //    }
+        //    else if (rBtnRepaMes.Checked)
+        //    {
+        //        int Registros = 0;
+        //        new ReporteEmpleados().ReporteRepartidor(ref repEmpleados);
+        //        int i = 0;
+        //        while (i < repEmpleados.Count)
+        //        {
+        //            dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            i++;
+        //        }
 
-                System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-                printPreviewDialog1.Document = doc;
-                printPreviewDialog1.ShowDialog();
-                dgvEmpleados.Visible = false;
-                dgvReporte.Visible = true;
-            }
-            else if (rBtnRepaAño.Checked)
-            {
-                int Registros = 0;
-                new ReporteEmpleados().ReporteRepartidorAño(ref repEmpleados);
-                int i = 0;
-                while (i < repEmpleados.Count)
-                {
-                    dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
-                    i++;
-                }
+        //        System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+        //        doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+        //        printPreviewDialog1.Document = doc;
+        //        printPreviewDialog1.ShowDialog();
+        //        dgvEmpleados.Visible = false;
+        //        dgvReporte.Visible = true;
+        //    }
+        //    else if (rBtnRepaAño.Checked)
+        //    {
+        //        int Registros = 0;
+        //        new ReporteEmpleados().ReporteRepartidorAño(ref repEmpleados);
+        //        int i = 0;
+        //        while (i < repEmpleados.Count)
+        //        {
+        //            dgvTicket.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            dgvReporte.Rows.Add(repEmpleados[i].IdPersona, repEmpleados[i].Nombre + " " + repEmpleados[i].APaterno + " " + repEmpleados[i].AMaterno, repEmpleados[i].Registros1);
+        //            i++;
+        //        }
 
-                System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-                printPreviewDialog1.Document = doc;
-                printPreviewDialog1.ShowDialog();
-                dgvEmpleados.Visible = false;
-                dgvReporte.Visible = true;
-            }
-        }
-        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            DataGridView Ticket = dgvTicket;
-            Bitmap bmp = new Bitmap(Ticket.Width, Ticket.Height, Ticket.CreateGraphics());
-            Ticket.DrawToBitmap(bmp, new Rectangle(0, 0, Ticket.Width, Ticket.Height));
-            RectangleF bounds = e.PageSettings.PrintableArea;
-            float factor = ((float)bmp.Height / (float)bmp.Width);
-            e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
-        }
+        //        System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+        //        doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+        //        printPreviewDialog1.Document = doc;
+        //        printPreviewDialog1.ShowDialog();
+        //        dgvEmpleados.Visible = false;
+        //        dgvReporte.Visible = true;
+        //    }
+        //}
+        //private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        //{
+        //    DataGridView Ticket = dgvTicket;
+        //    Bitmap bmp = new Bitmap(Ticket.Width, Ticket.Height, Ticket.CreateGraphics());
+        //    Ticket.DrawToBitmap(bmp, new Rectangle(0, 0, Ticket.Width, Ticket.Height));
+        //    RectangleF bounds = e.PageSettings.PrintableArea;
+        //    float factor = ((float)bmp.Height / (float)bmp.Width);
+        //    e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        //}
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
             
             dgvEmpleados.Rows.Clear();
             dgvEmpleados.Visible = true;
-            dgvReporte.Visible = false;
+            //dgvReporte.Visible = false;
             string Mensaje = null;
             int max1 = Recep.cantidad();
             int max2 = Rep.cantidad();
@@ -313,50 +313,50 @@ namespace DeliveryApp.Vista
             }
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
+        //private void rjButton1_Click(object sender, EventArgs e)
+        //{
 
-            string Mensaje = null;
+        //    string Mensaje = null;
 
-            int p = 0, d = 0;
+        //    int p = 0, d = 0;
 
-            if (rbDis.Checked)
-            {
-                p = 0;
-                d = cbDis.SelectedIndex + 1;
-            }
-            if (rbPre.Checked)
-            {
-                d = 0;
-                p = cbPre.SelectedIndex + 1;
-            }
-            if (rbtodo.Checked)
-            {
-                p = 0; d = 0;
-            }
+        //    if (rbDis.Checked)
+        //    {
+        //        p = 0;
+        //        d = cbDis.SelectedIndex + 1;
+        //    }
+        //    if (rbPre.Checked)
+        //    {
+        //        d = 0;
+        //        p = cbPre.SelectedIndex + 1;
+        //    }
+        //    if (rbtodo.Checked)
+        //    {
+        //        p = 0; d = 0;
+        //    }
 
-            DataTable list = null;
-            dgvEmpleados.Columns.Clear();
+        //    DataTable list = null;
+        //    dgvEmpleados.Columns.Clear();
 
 
 
-            Repartidor.ListaProductosParametrizados(ref list, 0, d, p);
+        //    Repartidor.ListaProductosParametrizados(ref list, 0, d, p);
 
-            dgvEmpleados.DataSource = list;
+        //    dgvEmpleados.DataSource = list;
 
-            foreach (DataGridViewColumn c in dgvEmpleados.Columns)
-            {
-                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
+        //    foreach (DataGridViewColumn c in dgvEmpleados.Columns)
+        //    {
+        //        c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        //    }
 
-            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
+        //    dgvEmpleados.CellClick += dgvEmpleados_CellClick;
 
-            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
+        //    dgvEmpleados.CellClick += dgvEmpleados_CellClick;
 
-            if (Mensaje != null)
-            {
-                MessageBox.Show(Mensaje);
-            }
-        }
+        //    if (Mensaje != null)
+        //    {
+        //        MessageBox.Show(Mensaje);
+        //    }
+        //}
     }
 }

@@ -165,5 +165,11 @@ namespace DeliveryApp.Vista
             RegistrarVehiculo ConPro = new RegistrarVehiculo(contenedor, new Vehiculo());
             Desplegar(ConPro);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RegistrarVehiculo ConPro = new RegistrarVehiculo(contenedor, new Vehiculo());
+            Desplegar(ConPro);
+        }
     }
 }
