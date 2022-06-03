@@ -145,7 +145,7 @@ namespace DeliveryApp.Vista
             if (BRconfirmar.Text == "Confirmar")
             {
                 Carro.update(Carro.idDetalle, "pendiente");
-                string date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt");
+                string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss tt");
                 soli = new Solicita(Carro.IdUsuario, date, Carro.idOrden);
                 //tabControl1.TabPages.Add(pnlCarga);
                 //tabControl1.TabPages.Remove(pnlCarrito);

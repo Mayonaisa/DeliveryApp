@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeliveryApp.Controladores;
 using DeliveryApp.Modelos;
+using DeliveryApp.Vista;
 
 namespace DeliveryApp.Vista
 {
@@ -133,6 +134,12 @@ namespace DeliveryApp.Vista
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ReporteVentasTotales d = new ReporteVentasTotales(contenedor);
+            Desplegar(d);
         }
     }
 }

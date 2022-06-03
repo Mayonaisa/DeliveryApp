@@ -69,10 +69,13 @@
     <Compile Include="Controladores\RegistrarUsuario.cs" />
     <Compile Include="Controladores\ReporteEmpleados.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
+    <Compile Include="Controladores\VentasTotalesCon.cs" />
     <Compile Include="Modelos\Entrega.cs" />
+    <Compile Include="Modelos\ProductoMasComprado.cs" />
     <Compile Include="Modelos\Registra.cs" />
     <Compile Include="Modelos\Direccion.cs" />
     <Compile Include="Modelos\RepEmpleados.cs" />
+    <Compile Include="Modelos\VentasTotales.cs" />
     <Compile Include="Recursos\botonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -205,11 +208,11 @@
     <Compile Include="Vista\MenuRecep.Designer.cs">
       <DependentUpon>MenuRecep.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ReporteProductosVendidos.cs">
+    <Compile Include="Vista\ReporteVentasTotales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ReporteProductosVendidos.Designer.cs">
-      <DependentUpon>ReporteProductosVendidos.cs</DependentUpon>
+    <Compile Include="Vista\ReporteVentasTotales.Designer.cs">
+      <DependentUpon>ReporteVentasTotales.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\RegistrarUsuario.cs">
       <SubType>Form</SubType>
@@ -317,8 +320,8 @@
     <EmbeddedResource Include="Vista\MenuRecep.resx">
       <DependentUpon>MenuRecep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ReporteProductosVendidos.resx">
-      <DependentUpon>ReporteProductosVendidos.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\ReporteVentasTotales.resx">
+      <DependentUpon>ReporteVentasTotales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ProductoV.resx">
       <DependentUpon>ProductoV.cs</DependentUpon>

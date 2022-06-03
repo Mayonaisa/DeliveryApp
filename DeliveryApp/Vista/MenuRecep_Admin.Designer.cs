@@ -265,7 +265,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(287, 151);
             this.button9.TabIndex = 13;
-            this.button9.Text = "Reporte de los reportes por reportar";
+            this.button9.Text = "Facturas";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -294,7 +294,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(287, 151);
             this.button8.TabIndex = 12;
-            this.button8.Text = "Reporte de los reportes reportados";
+            this.button8.Text = "Reporte de cliente por periodo";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             // 
@@ -323,7 +323,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(287, 151);
             this.button7.TabIndex = 11;
-            this.button7.Text = "Reporte de reportes";
+            this.button7.Text = "Reporte de clientes ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             // 
@@ -351,7 +351,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(287, 151);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Reporte de productos vendidos";
+            this.button6.Text = "Reporte de ventas por periodo";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -383,6 +383,7 @@
             this.button5.Text = "Reporte de ventas totales";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel12
             // 
@@ -562,7 +563,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1660, 1011);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel5);
