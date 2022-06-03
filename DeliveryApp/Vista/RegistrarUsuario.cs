@@ -119,7 +119,7 @@ namespace DeliveryApp
                         int dob = int.Parse(dtpFechaNacim.Value.ToString("yyyyMMdd"));
                         int age = (now - dob) / 10000;
 
-                        string msg = DeliveryApp.Controladores.RegistrarUsuario.registrar(tbxUsuario.Texts, tbxContraseña.Texts, tbxCorreo.Texts, cbxPais.Texts, cbxEstado.Texts, cbxCiudad.Texts, cbxCalle1.Texts, cbxCalle2.Texts, cbxColonia.Texts, cbxNumCasa.Texts, tbxNombre.Texts, " ", tbxApaterno.Texts, tbxAmaterno.Texts, tbxTelefono.Texts, dtpFechaNacim.Value.ToString(), age, cbxSexo.Texts);
+                        string msg = DeliveryApp.Controladores.RegistrarUsuario.registrar(tbxUsuario.Texts, tbxContraseña.Texts, tbxCorreo.Texts, cbxPais.Texts, cbxEstado.Texts, cbxCiudad.Texts, cbxCalle1.Texts, cbxCalle2.Texts, cbxColonia.Texts, cbxNumCasa.Texts, tbxNombre.Texts, " ", tbxApaterno.Texts, tbxAmaterno.Texts, tbxTelefono.Texts, dtpFechaNacim.Value.ToString(), age, cbxSexo.Texts, tbxRFC.Texts);
                         MessageBox.Show(msg);
 
                         if (msg == "Se ha registrado correctamente")
@@ -186,7 +186,34 @@ namespace DeliveryApp
                                         if (val == 0)
                                         {
                                             tbxTelefono.BorderColor = borde;
-                                            return true;
+                                            val = DeliveryApp.Controladores.RegistrarUsuario.validarRFC(tbxRFC.Texts);
+
+                                            if (val == 3)
+                                            {
+                                                tbxRFC.BorderColor = Color.Red;
+                                                MessageBox.Show("El RFC esta vacio");
+                                                return false;
+                                            }
+                                            else
+                                            {
+                                                if (val == 0)
+                                                {
+                                                    tbxRFC.BorderColor = borde;
+                                                    return true;
+                                                }
+                                                else if (val == 1)
+                                                {
+                                                    tbxRFC.BorderColor = Color.Red;
+                                                    MessageBox.Show("El RFC tiene más de 15 digitos");
+                                                    return false;
+                                                }
+                                                else
+                                                {
+                                                    tbxRFC.BorderColor = Color.Red;
+                                                    MessageBox.Show("El RFC tiene caracteres no validos");
+                                                    return false;
+                                                }
+                                            }
                                         }
                                         else if (val == 1)
                                         {
@@ -253,7 +280,7 @@ namespace DeliveryApp
             if(val == 3)
             {
                 tbxUsuario.BorderColor = Color.Red;
-                MessageBox.Show("El nombre de usuario esta vacio");
+                MessageBox.Show("El nombre de usuario esta vacio o tiene pocos caracteres");
                 return false;
             }
             else

@@ -243,13 +243,13 @@ namespace DeliveryApp.Modelos
 			// registrar
 		}
 
-		public bool RegistrarUsuario(ref string msg)
+		public bool RegistrarUsuario(ref string msg, string rfc)
         {
 			SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
 
 			conx.Open();
 
-			SqlCommand consulta = new SqlCommand("EXEC Sp_CrearUsuario '"+this.Nomu+"','"+this.Nombre+"','"+this.APaterno+"','"+this.AMaterno+"','"+this.Telefono+"','"+this.FechaNac+"','"+this.correo+"','"+this.Sexo+"','"+this.Edad+"','"+this.contraseña+"','"+this.Dir.Pais+"','"+this.Dir.Estado+"','"+this.Dir.Ciudad+"','"+this.Dir.Calle1+"','"+this.Dir.Calle2+"','"+this.Dir.Colonia+"','"+this.Dir.NumCasa+"'",conx);
+			SqlCommand consulta = new SqlCommand("EXEC Sp_CrearUsuario '"+this.Nomu+"','"+this.Nombre+"','"+this.APaterno+"','"+this.AMaterno+"','"+this.Telefono+"','"+this.FechaNac+"','"+this.correo+"','"+this.Sexo+"','"+this.Edad+"','"+this.contraseña+"','"+this.Dir.Pais+"','"+this.Dir.Estado+"','"+this.Dir.Ciudad+"','"+this.Dir.Calle1+"','"+this.Dir.Calle2+"','"+this.Dir.Colonia+"','"+this.Dir.NumCasa+"','"+rfc+"'",conx);
 
 			consulta.Prepare();
 			SqlDataReader resultado = consulta.ExecuteReader();

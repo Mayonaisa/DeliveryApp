@@ -15,11 +15,11 @@ namespace DeliveryApp.Controladores
 
         }
 
-        public static string registrar(string nu, string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa, string nombre, string idPersona, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo)
+        public static string registrar(string nu, string contraseña, string correo, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numCasa, string nombre, string idPersona, string aPaterno, string aMaterno, string telefono, string fechaNac, int edad, string sexo, string rfc)
         {
             Usuario prueba = new Usuario(nu, contraseña, correo, pais, estado, ciudad, calle1, calle2, colonia, numCasa, nombre, idPersona, aPaterno, aMaterno, telefono, fechaNac, edad, sexo);
             string msg = "";
-            prueba.RegistrarUsuario(ref msg);
+            prueba.RegistrarUsuario(ref msg, rfc);
             return msg;
         }
 
@@ -82,6 +82,32 @@ namespace DeliveryApp.Controladores
                 if (Regex.IsMatch(telefono, @"\d*"))
                 {
                     if (telefono.Length >= 10 && telefono.Length <= 10)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+            else
+            {
+                return 3;
+            }
+        }
+
+        public static int validarRFC(string RFC)
+        {
+            if (RFC != "")
+            {
+                if (Regex.IsMatch(RFC, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+                {
+                    if (RFC.Length < 15)
                     {
                         return 0;
                     }
@@ -188,9 +214,9 @@ namespace DeliveryApp.Controladores
 
         public static int validarNomu(string numero)
         {
-            if (numero != "")
+            if (numero != "" && numero.Length >= 3)
             {
-                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$)"))
+                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9])[a-zA-Z0-9]$){0,20}"))
                 {
                     if (numero.Length <= 20)
                     {

@@ -36,37 +36,42 @@
             this.ContenedorCatalogos = new System.Windows.Forms.Panel();
             this.lblfecha = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(38)))), ((int)(((byte)(29)))));
             this.panel1.Controls.Add(this.rjButton3);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.MinimumSize = new System.Drawing.Size(260, 1080);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 1080);
             this.panel1.TabIndex = 0;
             // 
             // rjButton3
             // 
+            this.rjButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(38)))), ((int)(((byte)(30)))));
             this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(38)))), ((int)(((byte)(30)))));
             this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(38)))), ((int)(((byte)(29)))));
             this.rjButton3.BorderRadius = 0;
             this.rjButton3.BorderSize = 1;
             this.rjButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rjButton3.FlatAppearance.BorderSize = 0;
             this.rjButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -74,7 +79,7 @@
             this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
             this.rjButton3.Location = new System.Drawing.Point(0, 1009);
-            this.rjButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(2);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(260, 71);
             this.rjButton3.TabIndex = 4;
@@ -99,7 +104,7 @@
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(0, 69);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(260, 71);
             this.rjButton1.TabIndex = 0;
@@ -114,7 +119,8 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.MinimumSize = new System.Drawing.Size(260, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(260, 69);
             this.panel2.TabIndex = 1;
@@ -134,8 +140,8 @@
             // ContenedorCatalogos
             // 
             this.ContenedorCatalogos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ContenedorCatalogos.Location = new System.Drawing.Point(260, 69);
-            this.ContenedorCatalogos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ContenedorCatalogos.Location = new System.Drawing.Point(0, 69);
+            this.ContenedorCatalogos.Margin = new System.Windows.Forms.Padding(2);
             this.ContenedorCatalogos.Name = "ContenedorCatalogos";
             this.ContenedorCatalogos.Size = new System.Drawing.Size(1660, 1011);
             this.ContenedorCatalogos.TabIndex = 1;
@@ -157,15 +163,26 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.lblfecha);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(260, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1660, 69);
             this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.panel4.Controls.Add(this.lblUsuario);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1423, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(237, 69);
+            this.panel4.TabIndex = 4;
             // 
             // lblUsuario
             // 
@@ -180,27 +197,27 @@
             this.lblUsuario.Text = "Recepcionista";
             this.lblUsuario.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.panel4.Controls.Add(this.lblUsuario);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1423, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(237, 69);
-            this.panel4.TabIndex = 4;
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.ContenedorCatalogos);
+            this.panel5.Location = new System.Drawing.Point(260, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1660, 1080);
+            this.panel5.TabIndex = 3;
             // 
             // ContenedorEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.ContenedorCatalogos);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContenedorEmpleado";
             this.Text = "ContenedorEmpleado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -212,6 +229,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,5 +246,6 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton rjButton3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

@@ -25,7 +25,7 @@ namespace DeliveryApp.Vista
         }
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1 || e.RowIndex == dgvCliente.Rows.Count - 1)
+            if (e.RowIndex == -1)
             {
 
             }
@@ -91,10 +91,10 @@ namespace DeliveryApp.Vista
             ConsultaClientes.cantidadClientes(ref max, ref Cli);
             ConsultaClientes.ObtenerClientes(ref LClientes, ref Mensaje, Cli);
             int i = 0;
-            while (i < max)
+            foreach(Cliente cli in LClientes)
             {
-                dgvCliente.Rows.Add(LClientes[i].IdPersona, LClientes[i].Nombre + " " + LClientes[i].APaterno + " " + LClientes[i].AMaterno, LClientes[i].Telefono, LClientes[i].Sexo, LClientes[i].Edad, LClientes[i].Dir.Calle1, LClientes[i].Dir.Calle2, LClientes[i].Dir.Colonia, LClientes[i].Dir.NumCasa);
-                i++;
+                dgvCliente.Rows.Add(cli.IdPersona, cli.Nombre + " " + cli.APaterno + " " + cli.AMaterno, cli.Telefono, cli.Sexo, cli.Edad, cli.Dir.Calle1, cli.Dir.Calle2, cli.Dir.Colonia, cli.Dir.NumCasa);
+
             }
 
             if (Mensaje != null)

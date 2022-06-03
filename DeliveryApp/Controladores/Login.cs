@@ -58,9 +58,9 @@ namespace DeliveryApp.Controladores
 
         public static int validarNomu(string numero)
         {
-            if (numero != "")
+            if (numero != "" && numero.Length >= 3)
             {
-                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$)"))
+                if (Regex.IsMatch(numero, @"(^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9])[a-zA-Z0-9]$){0,20}"))
                 {
                     if (numero.Length <= 20)
                     {

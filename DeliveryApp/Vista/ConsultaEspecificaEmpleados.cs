@@ -34,6 +34,7 @@ namespace DeliveryApp.Vista
         {
             if (Recep.IdPersona != null)
             {
+
                 txtNom.Texts =Recep.Nombre;
                 txtApa.Texts =Recep.APaterno;
                 txtAma.Texts = Recep.AMaterno;
@@ -47,8 +48,8 @@ namespace DeliveryApp.Vista
             }
             else
             {
-                lblCorreo.Visible= false;
-                lblUsua.Visible= false;
+                lblCor.Visible= false;
+                lblUs.Visible= false;
                 txtCorreo.Visible = false;
                 txtUsua.Visible = false;
 
@@ -79,12 +80,39 @@ namespace DeliveryApp.Vista
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-
+            ConsultaGeneralEmpleado Volver = new ConsultaGeneralEmpleado(contenedor);
+            Desplegar(Volver);
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
             ConsultaGeneralEmpleado Volver = new ConsultaGeneralEmpleado(contenedor);
+            Desplegar(Volver);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ConsultaGeneralEmpleado Volver = new ConsultaGeneralEmpleado(contenedor);
+            Desplegar(Volver);
+        }
+
+        private void rjButton1_Click_1(object sender, EventArgs e)
+        {
+            /// ACTUALZIAR
+
+            if (Recep.IdPersona != null)
+            {
+
+                string id = Repartidor.actualizarCliente(txtNom.Texts, txtApa.Texts, txtAma.Texts, txtCorreo.Texts, txtCalle1.Texts, txtCalle2.Texts, txtColonia.Texts, txtNumCasa.Texts, txtCiudad.Texts);
+                MessageBox.Show(id);
+            }
+            else
+            {
+                string id = Repartidor.actualizarCliente(txtNom.Texts, txtApa.Texts, txtAma.Texts, txtCorreo.Texts, txtCalle1.Texts, txtCalle2.Texts, txtColonia.Texts, txtNumCasa.Texts, txtCiudad.Texts);
+                MessageBox.Show(id);
+            }
+
+            ConsultaGeneralClientes Volver = new ConsultaGeneralClientes(contenedor);
             Desplegar(Volver);
         }
     }
