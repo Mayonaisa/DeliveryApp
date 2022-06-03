@@ -203,6 +203,12 @@
     <Compile Include="Vista\MenuRecep.Designer.cs">
       <DependentUpon>MenuRecep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ReporteProductosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReporteProductosVendidos.Designer.cs">
+      <DependentUpon>ReporteProductosVendidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\RegistrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuRecep.resx">
       <DependentUpon>MenuRecep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ReporteProductosVendidos.resx">
+      <DependentUpon>ReporteProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ProductoV.resx">
       <DependentUpon>ProductoV.cs</DependentUpon>
