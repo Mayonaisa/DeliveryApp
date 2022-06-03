@@ -72,6 +72,7 @@
     <Compile Include="Modelos\Entrega.cs" />
     <Compile Include="Modelos\Registra.cs" />
     <Compile Include="Modelos\Direccion.cs" />
+    <Compile Include="Modelos\RepEmpleados.cs" />
     <Compile Include="Recursos\botonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>
