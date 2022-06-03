@@ -35,9 +35,10 @@ namespace DeliveryApp.Vista
             final = DFinal.ToString("yyyy-MM-dd");
             Ventas V=new Ventas();
             VentasTotalesCon.ReporteVentasPeriodo(V,inicial,final);
+            dgvCliente.Rows.Add(V.Ptotales1, V.Ganancias1, V.PVendidos1, V.Producto, V.Cantidad);
 
-            
-            
+
+
         }
         private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {

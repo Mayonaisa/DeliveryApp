@@ -170,5 +170,29 @@ namespace DeliveryApp.Vista
             ReporteVentasGeneralesPeriodo VP = new ReporteVentasGeneralesPeriodo(contenedor);
             Desplegar(VP);
         }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            ReporteVentasPeriodo RepPer=new ReporteVentasPeriodo(contenedor);
+            Desplegar(RepPer);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ReciboCliente Re = new ReciboCliente(contenedor);
+            Desplegar(Re);
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            ReporteVentasGenerales VentasGen = new ReporteVentasGenerales(contenedor);
+            Desplegar(VentasGen);
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            ReporteVentasGeneralesPeriodo VentasPer = new ReporteVentasGeneralesPeriodo(contenedor);
+            Desplegar(VentasPer);
+        }
     }
 }
