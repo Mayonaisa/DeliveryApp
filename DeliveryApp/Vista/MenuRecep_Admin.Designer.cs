@@ -323,9 +323,10 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(287, 151);
             this.button7.TabIndex = 11;
-            this.button7.Text = "Reporte de clientes ";
+            this.button7.Text = "Reporte de ventas ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel7
             // 
@@ -351,7 +352,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(287, 151);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Reporte de ventas por periodo";
+            this.button6.Text = "Reporte de clientes por periodo";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
@@ -381,7 +382,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(287, 151);
             this.button5.TabIndex = 10;
-            this.button5.Text = "Reporte de ventas totales";
+            this.button5.Text = "Reporte de clientes totales";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -458,6 +459,7 @@
             this.button13.Text = "Registrar \r\nProducto";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // panel15
             // 

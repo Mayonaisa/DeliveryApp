@@ -71,5 +71,9 @@ namespace DeliveryApp.Controladores
                 //mensaje = ex.Message;
             }
         }
+        public static void ReporteVentas(Ventas V)
+        {
+            V.VentasReporte();
+        }
     }
 }
