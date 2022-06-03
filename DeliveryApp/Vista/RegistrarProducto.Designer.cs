@@ -32,15 +32,18 @@
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btnVolver = new CustomControls.RJControls.RJButton();
             this.s = new System.Windows.Forms.Panel();
+            this.cbxDis = new CustomControls.RJControls.RJComboBox();
             this.txtNombre = new CustomControls.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxPrecio = new CustomControls.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxDis = new CustomControls.RJControls.RJComboBox();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.s.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -109,6 +112,8 @@
             // s
             // 
             this.s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.s.Controls.Add(this.pictureBox1);
+            this.s.Controls.Add(this.rjButton2);
             this.s.Controls.Add(this.cbxDis);
             this.s.Controls.Add(this.txtNombre);
             this.s.Controls.Add(this.label5);
@@ -122,6 +127,28 @@
             this.s.Size = new System.Drawing.Size(1624, 838);
             this.s.TabIndex = 0;
             // 
+            // cbxDis
+            // 
+            this.cbxDis.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxDis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.cbxDis.BorderSize = 2;
+            this.cbxDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbxDis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbxDis.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxDis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.cbxDis.Items.AddRange(new object[] {
+            "Sí",
+            "No"});
+            this.cbxDis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbxDis.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbxDis.Location = new System.Drawing.Point(861, 454);
+            this.cbxDis.MinimumSize = new System.Drawing.Size(200, 38);
+            this.cbxDis.Name = "cbxDis";
+            this.cbxDis.Padding = new System.Windows.Forms.Padding(2);
+            this.cbxDis.Size = new System.Drawing.Size(301, 38);
+            this.cbxDis.TabIndex = 28;
+            this.cbxDis.Texts = "Sí";
+            // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
@@ -131,7 +158,7 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Sora", 11.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.Location = new System.Drawing.Point(663, 335);
+            this.txtNombre.Location = new System.Drawing.Point(860, 290);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -149,7 +176,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label5.Location = new System.Drawing.Point(659, 387);
+            this.label5.Location = new System.Drawing.Point(856, 342);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
@@ -165,7 +192,7 @@
             this.tbxPrecio.BorderSize = 2;
             this.tbxPrecio.Font = new System.Drawing.Font("Sora", 11.25F);
             this.tbxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxPrecio.Location = new System.Drawing.Point(663, 414);
+            this.tbxPrecio.Location = new System.Drawing.Point(860, 369);
             this.tbxPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPrecio.Multiline = false;
             this.tbxPrecio.Name = "tbxPrecio";
@@ -183,7 +210,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label3.Location = new System.Drawing.Point(659, 309);
+            this.label3.Location = new System.Drawing.Point(856, 264);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
@@ -195,7 +222,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label2.Location = new System.Drawing.Point(661, 469);
+            this.label2.Location = new System.Drawing.Point(858, 424);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 18);
@@ -214,27 +241,38 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Registrar producto";
             // 
-            // cbxDis
+            // rjButton2
             // 
-            this.cbxDis.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbxDis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.cbxDis.BorderSize = 2;
-            this.cbxDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbxDis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbxDis.ForeColor = System.Drawing.Color.DimGray;
-            this.cbxDis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.cbxDis.Items.AddRange(new object[] {
-            "Sí",
-            "No"});
-            this.cbxDis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbxDis.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbxDis.Location = new System.Drawing.Point(664, 499);
-            this.cbxDis.MinimumSize = new System.Drawing.Size(200, 38);
-            this.cbxDis.Name = "cbxDis";
-            this.cbxDis.Padding = new System.Windows.Forms.Padding(2);
-            this.cbxDis.Size = new System.Drawing.Size(301, 38);
-            this.cbxDis.TabIndex = 28;
-            this.cbxDis.Texts = "Sí";
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(859, 528);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(303, 46);
+            this.rjButton2.TabIndex = 29;
+            this.rjButton2.Text = "Cargar imagen";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.pictureBox1.Location = new System.Drawing.Point(463, 273);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(301, 301);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // RegistrarProducto
             // 
@@ -251,6 +289,7 @@
             this.panel2.ResumeLayout(false);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +307,7 @@
         private CustomControls.RJControls.RJTextBox txtNombre;
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJComboBox cbxDis;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -105,5 +105,24 @@ namespace DeliveryApp.Vista
                 Desplegar(ConsultarProductos);
             }
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            dgvProductos.Rows.Clear();
+            string Mensaje = null;
+            int max = Pro.cantidad();
+            ConsultarProductos.ObtenerProducto(ref LProductos, ref Mensaje, Pro);
+            int i = 0;
+            while (i < max)
+            {
+                dgvProductos.Rows.Add(LProductos[i].IdProducto, LProductos[i].Nombre, LProductos[i].Disponible, LProductos[i].Precio);
+                i++;
+            }
+
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
+        }
     }
 }

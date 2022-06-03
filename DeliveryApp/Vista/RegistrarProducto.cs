@@ -59,6 +59,15 @@ namespace DeliveryApp.Vista
             if(validar())
             {
                 MessageBox.Show(Producto.registrar(txtNombre.Texts, cbxDis.Texts, tbxPrecio.Texts));
+                System.Reflection.Assembly thisExe = System.Reflection.Assembly.GetExecutingAssembly();
+                System.IO.Stream file =
+                    thisExe.GetManifestResourceStream("ZedGraph.Demo.ngc4414.jpg");
+
+                // If the resource is not present it will be null or empty
+                if (null != file)
+                {
+                    Image image = Image.FromStream(file);
+                }
             }
         }
 
@@ -107,6 +116,24 @@ namespace DeliveryApp.Vista
             {
                 MessageBox.Show("El nombre esta vacio");
                 return false;
+            }
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            string a = "";
+            OpenFileDialog BuscarImagen = new OpenFileDialog(); BuscarImagen.Filter = "Archivos de Imagen|*.jpg";
+            //Aquí incluiremos los filtros que queramos.
+            BuscarImagen.FileName = "";
+            BuscarImagen.Title = "Titulo del Dialogo";
+            BuscarImagen.InitialDirectory = "C:\\"; BuscarImagen.FileName = a;
+            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            {
+                /// Si esto se cumple, capturamos la propiedad File Name y la guardamos en el control
+                a = BuscarImagen.FileName; String Direccion = BuscarImagen.FileName; this.pictureBox1.ImageLocation = Direccion;
+                //Pueden usar tambien esta forma para cargar la Imagen solo activenla y comenten la linea donde se cargaba anteriormente 
+                //this.pictureBox1.ImageLocation = textBox1.Text;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }
