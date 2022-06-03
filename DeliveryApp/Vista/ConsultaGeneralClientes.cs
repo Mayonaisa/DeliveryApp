@@ -84,6 +84,8 @@ namespace DeliveryApp.Vista
 
         private void ConsultaGeneralClientes_Load(object sender, EventArgs e)
         {
+            cbDis.SelectedIndex = 0;
+            cbPre.SelectedIndex = 0;
             dgvCliente.Rows.Clear();
             string Mensaje = null;
             int max = 0;
@@ -96,6 +98,54 @@ namespace DeliveryApp.Vista
                 dgvCliente.Rows.Add(cli.IdPersona, cli.Nombre + " " + cli.APaterno + " " + cli.AMaterno, cli.Telefono, cli.Sexo, cli.Edad, cli.Dir.Calle1, cli.Dir.Calle2, cli.Dir.Colonia, cli.Dir.NumCasa);
 
             }
+
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+      
+            string Mensaje = null;
+            int max = Cli.cantidad();
+
+            int p = 0, d = 0;
+
+            if (rbDis.Checked)
+            {
+                p = 0;
+                d = cbDis.SelectedIndex + 1;
+            }
+            if (rbPre.Checked)
+            {
+                d = 0;
+                p = cbPre.SelectedIndex + 1;
+            }
+            if (rbtodo.Checked)
+            {
+                p = 0; d = 0;
+            }
+
+            DataTable list = null;
+            dgvCliente.Columns.Clear();
+
+            
+
+            Cliente.ListaProductosParametrizados(ref list, max, d, p);
+
+            dgvCliente.DataSource = list;
+
+            
+
+            foreach (DataGridViewColumn c in dgvCliente.Columns)
+            {
+                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;  
+            }
+
+            dgvCliente.CellClick += dgvCliente_CellClick;
+
 
             if (Mensaje != null)
             {

@@ -99,7 +99,8 @@ namespace DeliveryApp.Vista
 
         private void PedidosPendientes_Load(object sender, EventArgs e)
         {
-
+            cbDis.SelectedIndex = 0;
+            cbPre.SelectedIndex = 0;
             dgvPedidos.Rows.Clear();
             ConsultarPedido.ObtenerPedido(ref pedidos, ref Mensaje);
             int cantidad = 0;
@@ -114,6 +115,54 @@ namespace DeliveryApp.Vista
                 dgvPedidos.Rows.Add(pedidos.Orden[i].IdOrden, pedidos.Detalle[i].IdDetalle, pedidos.Detalle[i].Monto, pedidos.Orden[i].Estatus, IREP.Nombre + " " + IREP.APaterno + " " + IREP.AMaterno, IVEH.Marca + " " + IVEH.Modelo + " " + IVEH.Año, pedidos.Persona1[i].Nombre + " " + pedidos.Persona1[i].APaterno + " " + pedidos.Persona1[i].AMaterno, pedidos.Solicitud[i].Fecha, pedidos.Direc1[i].Colonia, pedidos.Direc1[i].NumCasa);
                 i++;
             }
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+            string Mensaje = null;
+
+
+            int p = 0, d = 0;
+
+            if (rbDis.Checked)
+            {
+                p = 0;
+                d = cbDis.SelectedIndex + 1;
+            }
+            if (rbPre.Checked)
+            {
+                d = 0;
+                p = cbPre.SelectedIndex + 1;
+            }
+            if (rbtodo.Checked)
+            {
+                p = 0; d = 0;
+            }
+
+            DataTable list = null;
+            dgvPedidos.Columns.Clear();
+
+
+
+            Pedido.ListaProductosParametrizados(ref list, 0, d, p);
+
+            dgvPedidos.DataSource = list;
+
+
+
+            foreach (DataGridViewColumn c in dgvPedidos.Columns)
+            {
+                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
+            dgvPedidos.CellClick += dgvPedidos_CellClick;
+
+
             if (Mensaje != null)
             {
                 MessageBox.Show(Mensaje);

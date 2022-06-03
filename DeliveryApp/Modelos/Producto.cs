@@ -26,6 +26,14 @@ namespace DeliveryApp.Modelos
         public SqlSingle Precio { get => precio; set => precio = value; }
         public Producto() { }
 
+        public Producto(string id, string n, string d, SqlSingle p)
+        {
+            IdProducto = id;
+            Nombre = n;
+            Disponible = d;
+            Precio = p;
+        }
+
         public Producto(string idnum,int n)
         {
             SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
@@ -127,6 +135,49 @@ namespace DeliveryApp.Modelos
                 Pro[i].disponible = resultado.GetString(2);
                 Pro[i].precio = resultado.GetSqlSingle(3);
                 i++;
+            }
+
+            conx.Close();
+        }
+
+        public static void ListaProductosParametrizados(ref List<Producto> Pro, int max, int d, int p)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            string condiciones = "";
+
+            if(d == 1)
+            {
+                condiciones = "SELECT * FROM Producto WHERE disponible = 'Si'";
+            }
+            else if (d == 2)
+            {
+                condiciones = "SELECT * FROM Producto WHERE disponible = 'No'";
+            }
+            else if (p == 1)
+            {
+                condiciones = "SELECT * FROM Producto ORDER BY precio ASC";
+            }
+            else if (p == 2)
+            {
+                condiciones = "SELECT * FROM Producto ORDER BY precio DESC";
+            }
+            else if(d== 0 && p == 0)
+            {
+                condiciones = "SELECT * FROM Producto";
+            }
+
+            //MessageBox.Show(condiciones);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand(condiciones, conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+            while (resultado.Read())
+            {
+                Pro.Add(new Producto(resultado.GetString(0), resultado.GetString(1), resultado.GetString(2), resultado.GetSqlSingle(3)));
             }
 
             conx.Close();

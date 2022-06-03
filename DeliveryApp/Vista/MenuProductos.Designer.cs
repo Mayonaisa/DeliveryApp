@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btnVolver = new CustomControls.RJControls.RJButton();
             this.s = new System.Windows.Forms.Panel();
+            this.tbxDisponibilidad = new CustomControls.RJControls.RJComboBox();
             this.txtId = new CustomControls.RJControls.RJTextBox();
             this.txtNombre = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxDisponibilidad = new CustomControls.RJControls.RJComboBox();
             this.panel2.SuspendLayout();
             this.s.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +49,6 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.rjButton2);
             this.panel2.Controls.Add(this.rjButton1);
             this.panel2.Controls.Add(this.btnVolver);
             this.panel2.Controls.Add(this.s);
@@ -61,29 +59,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1624, 922);
             this.panel2.TabIndex = 19;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.Brown;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Brown;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(1302, 857);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(146, 46);
-            this.rjButton2.TabIndex = 5;
-            this.rjButton2.Text = "Eliminar";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
             // 
             // rjButton1
             // 
@@ -150,6 +125,28 @@
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(1624, 838);
             this.s.TabIndex = 0;
+            // 
+            // tbxDisponibilidad
+            // 
+            this.tbxDisponibilidad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxDisponibilidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxDisponibilidad.BorderSize = 2;
+            this.tbxDisponibilidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.tbxDisponibilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbxDisponibilidad.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxDisponibilidad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxDisponibilidad.Items.AddRange(new object[] {
+            "Sí",
+            "No"});
+            this.tbxDisponibilidad.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.tbxDisponibilidad.ListTextColor = System.Drawing.Color.DimGray;
+            this.tbxDisponibilidad.Location = new System.Drawing.Point(484, 455);
+            this.tbxDisponibilidad.MinimumSize = new System.Drawing.Size(200, 38);
+            this.tbxDisponibilidad.Name = "tbxDisponibilidad";
+            this.tbxDisponibilidad.Padding = new System.Windows.Forms.Padding(2);
+            this.tbxDisponibilidad.Size = new System.Drawing.Size(302, 38);
+            this.tbxDisponibilidad.TabIndex = 29;
+            this.tbxDisponibilidad.Texts = "Sí";
             // 
             // txtId
             // 
@@ -279,28 +276,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Producto especifico";
             // 
-            // tbxDisponibilidad
-            // 
-            this.tbxDisponibilidad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxDisponibilidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxDisponibilidad.BorderSize = 2;
-            this.tbxDisponibilidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.tbxDisponibilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbxDisponibilidad.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDisponibilidad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxDisponibilidad.Items.AddRange(new object[] {
-            "Sí",
-            "No"});
-            this.tbxDisponibilidad.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.tbxDisponibilidad.ListTextColor = System.Drawing.Color.DimGray;
-            this.tbxDisponibilidad.Location = new System.Drawing.Point(484, 455);
-            this.tbxDisponibilidad.MinimumSize = new System.Drawing.Size(200, 38);
-            this.tbxDisponibilidad.Name = "tbxDisponibilidad";
-            this.tbxDisponibilidad.Padding = new System.Windows.Forms.Padding(2);
-            this.tbxDisponibilidad.Size = new System.Drawing.Size(302, 38);
-            this.tbxDisponibilidad.TabIndex = 29;
-            this.tbxDisponibilidad.Texts = "Sí";
-            // 
             // MenuProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +307,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJTextBox txtNombre;
-        private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJTextBox txtId;
         private CustomControls.RJControls.RJComboBox tbxDisponibilidad;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace DeliveryApp.Modelos
 {
@@ -160,6 +161,56 @@ namespace DeliveryApp.Modelos
                 conx.Close();
                 return "";
             }
+        }
+
+        public static void ListaProductosParametrizados(ref DataTable Pro, int max, int d, int p)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            string condiciones = "";
+
+            if (d == 1)
+            {
+                condiciones = "select * from Vehiculo WHERE tipo = 'Moto'";
+            }
+            else if (d == 2)
+            {
+                condiciones = "select * from Vehiculo WHERE tipo = 'Carro'";
+            }
+            else if (p == 1)
+            {
+                condiciones = "select * from Vehiculo ORDER BY año ASC";
+            }
+            else if (p == 2)
+            {
+                condiciones = "select * from Vehiculo ORDER BY año DESC";
+            }
+            else if (d == 0 && p == 0)
+            {
+                condiciones = "select * from Vehiculo";
+            }
+
+            //MessageBox.Show(condiciones);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand(condiciones, conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            Pro = new DataTable();
+            //string cadena;
+
+            if (resultado.HasRows)
+            {
+                //cadena = res.GetString(0);
+                //MessageBox.Show(cadena);
+                Pro.Load(resultado);
+                //Pro.Add(new Producto(resultado.GetString(0), resultado.GetString(1), resultado.GetString(2), resultado.GetSqlSingle(3)));
+            }
+
+            conx.Close();
         }
     }
 }

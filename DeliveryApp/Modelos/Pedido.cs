@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace DeliveryApp.Modelos
 {
@@ -279,6 +280,57 @@ namespace DeliveryApp.Modelos
 
             }
             
+
+            conx.Close();
+        }
+
+
+        public static void ListaProductosParametrizados(ref DataTable Pro, int max, int d, int p)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            string condiciones = "";
+
+            if (d == 1)
+            {
+                condiciones = "select * from Orden as o, Entrega as e, Repartidor as rep, Vehiculo as v, Detalle as d where(o.idOrden = e.idOrden and e.idRepartidor = rep.idRepartidor and e.idVehiculo = v.idVehiculo) and o.idDetalle = d.idDetalle and o.estatus = 'en camino'";
+            }
+            else if (d == 2)
+            {
+                condiciones = "select * from Orden as o, Entrega as e, Repartidor as rep, Vehiculo as v, Detalle as d where(o.idOrden = e.idOrden and e.idRepartidor = rep.idRepartidor and e.idVehiculo = v.idVehiculo) and o.idDetalle = d.idDetalle and o.estatus = 'entregado'";
+            }
+            else if (p == 1)
+            {
+                condiciones = "select * from Orden as o, Entrega as e, Repartidor as rep, Vehiculo as v, Detalle as d where(o.idOrden = e.idOrden and e.idRepartidor = rep.idRepartidor and e.idVehiculo = v.idVehiculo) and o.idDetalle = d.idDetalle ORDER BY monto ASC";
+            }
+            else if (p == 2)
+            {
+                condiciones = "select * from Orden as o, Entrega as e, Repartidor as rep, Vehiculo as v, Detalle as d where(o.idOrden = e.idOrden and e.idRepartidor = rep.idRepartidor and e.idVehiculo = v.idVehiculo) and o.idDetalle = d.idDetalle ORDER BY monto DESC";
+            }
+            else if (d == 0 && p == 0)
+            {
+                condiciones = "select * from Orden as o, Entrega as e, Repartidor as rep, Vehiculo as v, Detalle as d where(o.idOrden = e.idOrden and e.idRepartidor = rep.idRepartidor and e.idVehiculo = v.idVehiculo) and o.idDetalle = d.idDetalle";
+            }
+
+            //MessageBox.Show(condiciones);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand(condiciones, conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            Pro = new DataTable();
+            //string cadena;
+
+            if (resultado.HasRows)
+            {
+                //cadena = res.GetString(0);
+                //MessageBox.Show(cadena);
+                Pro.Load(resultado);
+                //Pro.Add(new Producto(resultado.GetString(0), resultado.GetString(1), resultado.GetString(2), resultado.GetSqlSingle(3)));
+            }
 
             conx.Close();
         }

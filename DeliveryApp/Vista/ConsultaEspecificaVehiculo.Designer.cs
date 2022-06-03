@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.btnVolver = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.s = new System.Windows.Forms.Panel();
+            this.tbxTipo = new CustomControls.RJControls.RJComboBox();
             this.tbxId = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.tbxPlaca = new CustomControls.RJControls.RJTextBox();
             this.tbxMarca = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxTipo = new CustomControls.RJControls.RJComboBox();
             this.panel2.SuspendLayout();
             this.s.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.rjButton3);
             this.panel2.Controls.Add(this.btnVolver);
             this.panel2.Controls.Add(this.rjButton1);
             this.panel2.Controls.Add(this.s);
@@ -67,29 +65,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1624, 922);
             this.panel2.TabIndex = 15;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.Brown;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.Brown;
-            this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.rjButton3.BorderRadius = 20;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
-            this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Bold);
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(1301, 857);
-            this.rjButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(146, 46);
-            this.rjButton3.TabIndex = 4;
-            this.rjButton3.Text = "Eliminar";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
             // 
             // btnVolver
             // 
@@ -162,6 +137,28 @@
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(1624, 838);
             this.s.TabIndex = 0;
+            // 
+            // tbxTipo
+            // 
+            this.tbxTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxTipo.BorderSize = 2;
+            this.tbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.tbxTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbxTipo.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxTipo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.tbxTipo.Items.AddRange(new object[] {
+            "carro",
+            "moto"});
+            this.tbxTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.tbxTipo.ListTextColor = System.Drawing.Color.DimGray;
+            this.tbxTipo.Location = new System.Drawing.Point(487, 372);
+            this.tbxTipo.MinimumSize = new System.Drawing.Size(200, 38);
+            this.tbxTipo.Name = "tbxTipo";
+            this.tbxTipo.Padding = new System.Windows.Forms.Padding(2);
+            this.tbxTipo.Size = new System.Drawing.Size(302, 38);
+            this.tbxTipo.TabIndex = 28;
+            this.tbxTipo.Texts = "carro";
             // 
             // tbxId
             // 
@@ -396,28 +393,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Consulta Vehiculo";
             // 
-            // tbxTipo
-            // 
-            this.tbxTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxTipo.BorderSize = 2;
-            this.tbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.tbxTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbxTipo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxTipo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.tbxTipo.Items.AddRange(new object[] {
-            "carro",
-            "moto"});
-            this.tbxTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.tbxTipo.ListTextColor = System.Drawing.Color.DimGray;
-            this.tbxTipo.Location = new System.Drawing.Point(487, 372);
-            this.tbxTipo.MinimumSize = new System.Drawing.Size(200, 38);
-            this.tbxTipo.Name = "tbxTipo";
-            this.tbxTipo.Padding = new System.Windows.Forms.Padding(2);
-            this.tbxTipo.Size = new System.Drawing.Size(302, 38);
-            this.tbxTipo.TabIndex = 28;
-            this.tbxTipo.Texts = "carro";
-            // 
             // ConsultaEspecificaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,7 +423,6 @@
         private CustomControls.RJControls.RJTextBox tbxPlaca;
         private CustomControls.RJControls.RJTextBox tbxMarca;
         private System.Windows.Forms.Label label3;
-        private CustomControls.RJControls.RJButton rjButton3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private CustomControls.RJControls.RJTextBox tbxAño;

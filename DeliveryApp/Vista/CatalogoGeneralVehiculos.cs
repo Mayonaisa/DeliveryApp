@@ -49,6 +49,9 @@ namespace DeliveryApp.Vista
 
         private void CatalogoGeneralVehiculos_Load(object sender, EventArgs e)
         {
+            cbDis.SelectedIndex = 0;
+            cbPre.SelectedIndex = 0;
+
             dgvVehiculo.Rows.Clear();
             string Mensaje = null;
             int max = Veh.cantidad();
@@ -115,6 +118,48 @@ namespace DeliveryApp.Vista
             MenuRecep_Admin Men = new MenuRecep_Admin(null, contenedor);
             //ContenedorCatalogos.Controls.RemoveAt(0);
             Desplegar(Men);
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+            string Mensaje = null;
+
+            int p = 0, d = 0;
+
+            if (rbDis.Checked)
+            {
+                p = 0;
+                d = cbDis.SelectedIndex + 1;
+            }
+            if (rbPre.Checked)
+            {
+                d = 0;
+                p = cbPre.SelectedIndex + 1;
+            }
+            if (rbtodo.Checked)
+            {
+                p = 0; d = 0;
+            }
+
+            DataTable list = null;
+            dgvVehiculo.Columns.Clear();
+
+
+
+            Vehiculo.ListaProductosParametrizados(ref list, 0, d, p);
+
+            dgvVehiculo.DataSource = list;
+
+            foreach (DataGridViewColumn c in dgvVehiculo.Columns)
+            {
+                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
         }
     }
 }

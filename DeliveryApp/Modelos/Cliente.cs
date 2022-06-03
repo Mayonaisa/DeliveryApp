@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace DeliveryApp.Modelos
 {
@@ -16,6 +17,7 @@ namespace DeliveryApp.Modelos
         {
 
         }
+
         public Cliente(Usuario usuario)
         {
             this.IdPersona = usuario.IdPersona;
@@ -146,6 +148,56 @@ namespace DeliveryApp.Modelos
                 conx.Close();
                 return "";
             }
+        }
+
+        public static void ListaProductosParametrizados(ref DataTable Pro, int max, int d, int p)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            string condiciones = "";
+
+            if (d == 1)
+            {
+                condiciones = "SELECT c.idCliente, p.nombre, p.telefono, p.sexo, p.edad, d.calle1, d.calle2, d.colonia, d.numCasa  FROM Cliente as c, Usuario as u, Persona as p, Direccion as d WHERE sexo = 'Masculino' and c.idCliente = u.idUsuario and u.idUsuario = p.idPersona and p.idPersona = d.idPersona";
+            }
+            else if (d == 2)
+            {
+                condiciones = "SELECT c.idCliente, p.nombre, p.telefono, p.sexo, p.edad, d.calle1, d.calle2, d.colonia, d.numCasa  FROM Cliente as c, Usuario as u, Persona as p, Direccion as d WHERE sexo = 'Femenino' and c.idCliente = u.idUsuario and u.idUsuario = p.idPersona and p.idPersona = d.idPersona";
+            }
+            else if (p == 1)
+            {
+                condiciones = "SELECT c.idCliente, p.nombre, p.telefono, p.sexo, p.edad, d.calle1, d.calle2, d.colonia, d.numCasa  FROM Cliente as c, Usuario as u, Persona as p, Direccion as d WHEREand c.idCliente = u.idUsuario and u.idUsuario = p.idPersona and p.idPersona = d.idPersona ORDER BY edad ASC";
+            }
+            else if (p == 2)
+            {
+                condiciones = "SELECT c.idCliente, p.nombre, p.telefono, p.sexo, p.edad, d.calle1, d.calle2, d.colonia, d.numCasa  FROM Cliente as c, Usuario as u, Persona as p, Direccion as d WHERE c.idCliente = u.idUsuario and u.idUsuario = p.idPersona and p.idPersona = d.idPersona ORDER BY edad DESC";
+            }
+            else if (d == 0 && p == 0)
+            {
+                condiciones = "SELECT c.idCliente, p.nombre, p.telefono, p.sexo, p.edad, d.calle1, d.calle2, d.colonia, d.numCasa  FROM Cliente as c, Usuario as u, Persona as p, Direccion as d WHERE c.idCliente = u.idUsuario and u.idUsuario = p.idPersona and p.idPersona = d.idPersona";
+            }
+
+            //MessageBox.Show(condiciones);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand(condiciones, conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            Pro = new DataTable();
+            //string cadena;
+
+            if (resultado.HasRows)
+            {
+                //cadena = res.GetString(0);
+                //MessageBox.Show(cadena);
+                Pro.Load(resultado);
+                //Pro.Add(new Producto(resultado.GetString(0), resultado.GetString(1), resultado.GetString(2), resultado.GetSqlSingle(3)));
+            }
+
+            conx.Close();
         }
     }
 }

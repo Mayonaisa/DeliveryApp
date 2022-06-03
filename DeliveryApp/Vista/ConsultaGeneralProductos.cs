@@ -41,6 +41,8 @@ namespace DeliveryApp.Vista
 
         private void ConsultaGeneralProductos_Load(object sender, EventArgs e)
         {
+            cbDis.SelectedIndex = 0;
+            cbPre.SelectedIndex = 0;
             dgvProductos.Rows.Clear();
             string Mensaje = null;
             int max = Pro.cantidad();
@@ -111,12 +113,31 @@ namespace DeliveryApp.Vista
             dgvProductos.Rows.Clear();
             string Mensaje = null;
             int max = Pro.cantidad();
-            ConsultarProductos.ObtenerProducto(ref LProductos, ref Mensaje, Pro);
-            int i = 0;
-            while (i < max)
+
+            int p = 0, d = 0;
+
+            if (rbDis.Checked)
             {
-                dgvProductos.Rows.Add(LProductos[i].IdProducto, LProductos[i].Nombre, LProductos[i].Disponible, LProductos[i].Precio);
-                i++;
+                p = 0;
+                d = cbDis.SelectedIndex + 1;
+            }
+            if (rbPre.Checked)
+            {
+                d = 0;
+                p = cbPre.SelectedIndex + 1;
+            }
+            if(rbtodo.Checked)
+            {
+                p = 0; d = 0;
+            }
+
+            List<Producto> list = new List<Producto>();
+            Producto.ListaProductosParametrizados(ref list, max, d, p);
+
+            foreach(Producto prod in list)
+            {
+                dgvProductos.Rows.Add(prod.IdProducto, prod.Nombre, prod.Disponible, prod.Precio);
+                //MessageBox.Show(prod.IdProducto + prod.Nombre + prod.Disponible.ToString() + prod.Precio.ToString());
             }
 
             if (Mensaje != null)

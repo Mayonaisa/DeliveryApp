@@ -107,6 +107,9 @@ namespace DeliveryApp.Vista
 
         private void ConsultaGeneralEmpleado_Load(object sender, EventArgs e)
         {
+            cbDis.SelectedIndex = 0;
+            cbPre.SelectedIndex = 0;
+
             dgvEmpleados.Rows.Clear();
             string Mensaje = null;
             int max1 = Recep.cantidad();
@@ -129,6 +132,52 @@ namespace DeliveryApp.Vista
                 dgvEmpleados.Rows.Add(LRep[a].IdPersona, LRep[a].Nombre + " " + LRep[a].APaterno + " " + LRep[a].AMaterno, LRep[a].Telefono, LRep[a].Sexo, LRep[a].Edad, "Repartidor");
                 a++;
             }
+
+            if (Mensaje != null)
+            {
+                MessageBox.Show(Mensaje);
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+            string Mensaje = null;
+
+            int p = 0, d = 0;
+
+            if (rbDis.Checked)
+            {
+                p = 0;
+                d = cbDis.SelectedIndex + 1;
+            }
+            if (rbPre.Checked)
+            {
+                d = 0;
+                p = cbPre.SelectedIndex + 1;
+            }
+            if (rbtodo.Checked)
+            {
+                p = 0; d = 0;
+            }
+
+            DataTable list = null;
+            dgvEmpleados.Columns.Clear();
+
+
+
+            Repartidor.ListaProductosParametrizados(ref list, 0, d, p);
+
+            dgvEmpleados.DataSource = list;
+
+            foreach (DataGridViewColumn c in dgvEmpleados.Columns)
+            {
+                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
+            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
+
+            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
 
             if (Mensaje != null)
             {
