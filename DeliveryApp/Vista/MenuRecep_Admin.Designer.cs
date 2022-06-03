@@ -354,6 +354,7 @@
             this.button6.Text = "Reporte de ventas por periodo";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // panel6
             // 
@@ -515,6 +516,7 @@
             this.button11.Text = "Registrar Repartidor";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel17
             // 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.Common;
 
 namespace DeliveryApp.Modelos
 {
@@ -101,11 +102,12 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("select nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '"+FechaInicial+ "' and '"+FechaFinal+"' and idCliente = idUsuario group by nombre", conx);
+            SqlCommand consulta = new SqlCommand("select idCliente,nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '" + FechaInicial+"' and '"+FechaFinal+"' and idCliente = idUsuario group by idCliente,nombre", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();
             int i = 0;
+            
             while (resultado.Read())
             {
                 VT.Add(new VentasTotales());
@@ -126,8 +128,8 @@ namespace DeliveryApp.Modelos
 
                 }
                 i++;
-                
             }
+
             conx.Close();
         }
         public void VentasGlobalesPeriodo(string id, string FechaInicial, string FechaFinal)
@@ -137,7 +139,7 @@ namespace DeliveryApp.Modelos
 
             conx.Open();
 
-            SqlCommand consulta = new SqlCommand("select nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '" + FechaInicial + "' and '" + FechaFinal + "' and idCliente = '"+id+"' group by nombre", conx);
+            SqlCommand consulta = new SqlCommand("select idCliente,nombre,SUM(monto)as monto from Usuario,Solicita,Detalle where Usuario.idUsuario = Solicita.idCliente and Solicita.idOrden = Detalle.idOrden and cast(left(fechaSolicitud, LEN(fechaSolicitud) - 15) as date) between '"+FechaInicial+"' and '"+FechaFinal+"' and idCliente = '"+id+"' group by idCliente, nombre", conx);
 
             consulta.Prepare();
             SqlDataReader resultado = consulta.ExecuteReader();

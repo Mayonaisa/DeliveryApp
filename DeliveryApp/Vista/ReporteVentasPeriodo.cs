@@ -16,7 +16,7 @@ namespace DeliveryApp.Vista
     {
         Panel contenedor;
         List<Cliente> Cli = new List<Cliente>();
-        List<VentasTotales> LVT = new List<VentasTotales>();
+        List<VentasTotales> LVT;
         public ReporteVentasPeriodo(Panel p)
         {
             contenedor = p;
@@ -27,21 +27,19 @@ namespace DeliveryApp.Vista
         {
             if (e.RowIndex != -1)
             {
-                //dgvReporte.Rows.Clear();
-                VentasTotales VT = new VentasTotales();
                 string id = dgvCliente[0, e.RowIndex].Value.ToString().Trim();
+                string inicial = null;
+                string final = null;
+                VentasTotales VentasT = new VentasTotales();
+                //string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss tt");
+                DateTime DInicial = dpkPeriodo.Value.Date;
+                DateTime DFinal = dpkPeriodoFinal.Value.Date;
 
-                dpkPeriodoFinal.MinDate = dpkPeriodo.Value;
-                string FechaIni = null;
-                string FechaFinal = null;
+                inicial = DInicial.ToString("yyyy-MM-dd");
+                final = DFinal.ToString("yyyy-MM-dd");
 
-                VentasTotalesCon.ObtenerVentasIndi(id, VT);
-                dgvReporte.Rows.Add(VT.IdCliente, VT.Nombre, VT.Monto, VT.CantidadProducto, VT.NombreProducto);
-                //System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-                //doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-                //printPreviewDialog1.Document = doc;
-                //printPreviewDialog1.ShowDialog();
-                //dgvReporte.Visible = true;
+                VentasTotalesCon.ObtenerVentasIndiPeriodo(id,VentasT, inicial, final);
+                dgvReporte.Rows.Add(VentasT.IdCliente, VentasT.Nombre, VentasT.Monto, VentasT.CantidadProducto, VentasT.NombreProducto);
 
             }
         }
@@ -61,14 +59,14 @@ namespace DeliveryApp.Vista
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            string mensaje = null;
-            VentasTotalesCon.ObtenerVentas(ref LVT);
-            int i = 0;
-            while (i < LVT.Count)
-            {
-                dgvCliente.Rows.Add(LVT[i].IdCliente, LVT[i].Nombre, LVT[i].Monto, LVT[i].CantidadProducto, LVT[i].NombreProducto);
-                i++;
-            }
+            //string mensaje = null;
+            //VentasTotalesCon.ObtenerVentas(ref LVT);
+            //int i = 0;
+            //while (i < LVT.Count)
+            //{
+            //    dgvCliente.Rows.Add(LVT[i].IdCliente, LVT[i].Nombre, LVT[i].Monto, LVT[i].CantidadProducto, LVT[i].NombreProducto);
+            //    i++;
+            //}
         }
 
         private void rjButton3_Click(object sender, EventArgs e)
@@ -87,9 +85,44 @@ namespace DeliveryApp.Vista
 
         private void ReporteVentasPeriodo_Load(object sender, EventArgs e)
         {
+            dgvCliente.Rows.Clear();
             string mensaje = null;
-            //VentasTotalesCon.ObtenerClientes(ref Cli, ref mensaje);
-            VentasTotalesCon.ObtenerVentas(ref LVT);
+            dpkPeriodoFinal.MinDate = dpkPeriodo.Value.Date;
+            string inicial = null;
+            string final = null;
+            LVT = new List<VentasTotales>();
+            //string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss tt");
+            DateTime DInicial=dpkPeriodo.Value.Date;
+            DateTime DFinal= dpkPeriodoFinal.Value.Date;
+
+            inicial = DInicial.ToString("yyyy-MM-dd");
+            final = DFinal.ToString("yyyy-MM-dd");
+
+            VentasTotalesCon.ObtenerVentasPeriodo(ref LVT,inicial,final);
+            int i = 0;
+            while (i < LVT.Count)
+            {
+                dgvCliente.Rows.Add(LVT[i].IdCliente, LVT[i].Nombre, LVT[i].Monto, LVT[i].CantidadProducto, LVT[i].NombreProducto);
+                i++;
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            dgvCliente.Rows.Clear();
+            string mensaje = null;
+            dpkPeriodoFinal.MinDate = dpkPeriodo.Value.Date;
+            string inicial = null;
+            string final = null;
+            LVT = new List<VentasTotales>();
+            //string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss tt");
+            DateTime DInicial = dpkPeriodo.Value.Date;
+            DateTime DFinal = dpkPeriodoFinal.Value.Date;
+
+            inicial = DInicial.ToString("yyyy-MM-dd");
+            final = DFinal.ToString("yyyy-MM-dd");
+
+            VentasTotalesCon.ObtenerVentasPeriodo(ref LVT, inicial, final);
             int i = 0;
             while (i < LVT.Count)
             {
