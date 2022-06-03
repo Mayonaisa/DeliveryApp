@@ -51,6 +51,7 @@ namespace DeliveryApp.Vista
             System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
             doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
             printPreviewDialog1.Document = doc;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }

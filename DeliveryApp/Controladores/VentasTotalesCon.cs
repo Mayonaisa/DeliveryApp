@@ -75,5 +75,9 @@ namespace DeliveryApp.Controladores
         {
             V.VentasReporte();
         }
+        public static void ReporteVentasPeriodo(Ventas V,string inicial, string final)
+        {
+            V.VentasReportePeriodo(inicial,final);
+        }
     }
 }

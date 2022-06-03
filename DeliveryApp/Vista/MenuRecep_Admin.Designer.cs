@@ -297,6 +297,7 @@
             this.button8.Text = "Reporte de cliente por periodo";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel8
             // 
