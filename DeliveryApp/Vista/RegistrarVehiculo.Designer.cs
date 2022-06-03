@@ -53,15 +53,13 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.btnVolver);
-            this.panel2.Controls.Add(this.rjButton1);
             this.panel2.Controls.Add(this.s);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(18, 70);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(24, 86);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1624, 922);
+            this.panel2.Size = new System.Drawing.Size(2165, 1135);
             this.panel2.TabIndex = 15;
             // 
             // btnVolver
@@ -76,12 +74,12 @@
             this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(17, 857);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Location = new System.Drawing.Point(34, 645);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(146, 46);
+            this.btnVolver.Size = new System.Drawing.Size(195, 57);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextColor = System.Drawing.Color.White;
@@ -100,12 +98,12 @@
             this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
             this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Bold);
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(1459, 857);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.rjButton1.Location = new System.Drawing.Point(277, 645);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(146, 46);
+            this.rjButton1.Size = new System.Drawing.Size(195, 57);
             this.rjButton1.TabIndex = 2;
             this.rjButton1.Text = "Registrar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -115,6 +113,9 @@
             // s
             // 
             this.s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.s.Controls.Add(this.rjButton1);
+            this.s.Controls.Add(this.label1);
+            this.s.Controls.Add(this.btnVolver);
             this.s.Controls.Add(this.tbxTipo);
             this.s.Controls.Add(this.label7);
             this.s.Controls.Add(this.tbxAño);
@@ -127,11 +128,10 @@
             this.s.Controls.Add(this.label2);
             this.s.Controls.Add(this.tbxPlaca);
             this.s.Controls.Add(this.tbxMarca);
-            this.s.Dock = System.Windows.Forms.DockStyle.Top;
             this.s.Location = new System.Drawing.Point(0, 0);
-            this.s.Margin = new System.Windows.Forms.Padding(2);
+            this.s.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(1624, 838);
+            this.s.Size = new System.Drawing.Size(2165, 1031);
             this.s.TabIndex = 0;
             // 
             // tbxTipo
@@ -148,23 +148,23 @@
             "moto"});
             this.tbxTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.tbxTipo.ListTextColor = System.Drawing.Color.DimGray;
-            this.tbxTipo.Location = new System.Drawing.Point(663, 184);
-            this.tbxTipo.MinimumSize = new System.Drawing.Size(200, 38);
+            this.tbxTipo.Location = new System.Drawing.Point(55, 157);
+            this.tbxTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxTipo.MinimumSize = new System.Drawing.Size(267, 47);
             this.tbxTipo.Name = "tbxTipo";
-            this.tbxTipo.Padding = new System.Windows.Forms.Padding(2);
-            this.tbxTipo.Size = new System.Drawing.Size(302, 38);
+            this.tbxTipo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxTipo.Size = new System.Drawing.Size(403, 47);
             this.tbxTipo.TabIndex = 26;
             this.tbxTipo.Texts = "carro";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label7.Location = new System.Drawing.Point(662, 523);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(54, 437);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 23);
+            this.label7.Size = new System.Drawing.Size(45, 24);
             this.label7.TabIndex = 24;
             this.label7.Text = "Año";
             // 
@@ -175,17 +175,17 @@
             this.tbxAño.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.tbxAño.BorderRadius = 0;
             this.tbxAño.BorderSize = 2;
-            this.tbxAño.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxAño.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxAño.Location = new System.Drawing.Point(663, 563);
-            this.tbxAño.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxAño.Location = new System.Drawing.Point(54, 463);
+            this.tbxAño.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxAño.Multiline = false;
             this.tbxAño.Name = "tbxAño";
-            this.tbxAño.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxAño.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxAño.PasswordChar = false;
             this.tbxAño.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxAño.PlaceholderText = "";
-            this.tbxAño.Size = new System.Drawing.Size(302, 38);
+            this.tbxAño.Size = new System.Drawing.Size(403, 43);
             this.tbxAño.TabIndex = 23;
             this.tbxAño.Texts = "";
             this.tbxAño.UnderlinedStyle = false;
@@ -193,12 +193,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label6.Location = new System.Drawing.Point(659, 428);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(54, 360);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 23);
+            this.label6.Size = new System.Drawing.Size(74, 24);
             this.label6.TabIndex = 22;
             this.label6.Text = "Modelo";
             // 
@@ -209,17 +208,17 @@
             this.tbxModelo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.tbxModelo.BorderRadius = 0;
             this.tbxModelo.BorderSize = 2;
-            this.tbxModelo.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxModelo.Location = new System.Drawing.Point(663, 468);
-            this.tbxModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxModelo.Location = new System.Drawing.Point(55, 389);
+            this.tbxModelo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxModelo.Multiline = false;
             this.tbxModelo.Name = "tbxModelo";
-            this.tbxModelo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxModelo.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxModelo.PasswordChar = false;
             this.tbxModelo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxModelo.PlaceholderText = "";
-            this.tbxModelo.Size = new System.Drawing.Size(302, 38);
+            this.tbxModelo.Size = new System.Drawing.Size(403, 43);
             this.tbxModelo.TabIndex = 21;
             this.tbxModelo.Texts = "";
             this.tbxModelo.UnderlinedStyle = false;
@@ -227,12 +226,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label5.Location = new System.Drawing.Point(659, 333);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(50, 283);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 23);
+            this.label5.Size = new System.Drawing.Size(55, 24);
             this.label5.TabIndex = 20;
             this.label5.Text = "Color";
             // 
@@ -243,17 +241,17 @@
             this.tbxColor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.tbxColor.BorderRadius = 0;
             this.tbxColor.BorderSize = 2;
-            this.tbxColor.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxColor.Location = new System.Drawing.Point(663, 373);
-            this.tbxColor.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxColor.Location = new System.Drawing.Point(55, 312);
+            this.tbxColor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxColor.Multiline = false;
             this.tbxColor.Name = "tbxColor";
-            this.tbxColor.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxColor.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxColor.PasswordChar = false;
             this.tbxColor.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxColor.PlaceholderText = "";
-            this.tbxColor.Size = new System.Drawing.Size(302, 38);
+            this.tbxColor.Size = new System.Drawing.Size(403, 43);
             this.tbxColor.TabIndex = 19;
             this.tbxColor.Texts = "";
             this.tbxColor.UnderlinedStyle = false;
@@ -261,36 +259,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label4.Location = new System.Drawing.Point(659, 618);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(54, 511);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 23);
+            this.label4.Size = new System.Drawing.Size(56, 24);
             this.label4.TabIndex = 18;
             this.label4.Text = "Placa";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label3.Location = new System.Drawing.Point(662, 238);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(54, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 23);
+            this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 17;
             this.label3.Text = "Marca";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sora", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label2.Location = new System.Drawing.Point(662, 143);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(54, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 23);
+            this.label2.Size = new System.Drawing.Size(151, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Tipo de vehiculo";
             // 
@@ -301,17 +296,17 @@
             this.tbxPlaca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.tbxPlaca.BorderRadius = 0;
             this.tbxPlaca.BorderSize = 2;
-            this.tbxPlaca.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxPlaca.Location = new System.Drawing.Point(663, 658);
-            this.tbxPlaca.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxPlaca.Location = new System.Drawing.Point(54, 539);
+            this.tbxPlaca.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxPlaca.Multiline = false;
             this.tbxPlaca.Name = "tbxPlaca";
-            this.tbxPlaca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxPlaca.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxPlaca.PasswordChar = false;
             this.tbxPlaca.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxPlaca.PlaceholderText = "";
-            this.tbxPlaca.Size = new System.Drawing.Size(302, 38);
+            this.tbxPlaca.Size = new System.Drawing.Size(403, 43);
             this.tbxPlaca.TabIndex = 2;
             this.tbxPlaca.Texts = "";
             this.tbxPlaca.UnderlinedStyle = false;
@@ -323,17 +318,17 @@
             this.tbxMarca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.tbxMarca.BorderRadius = 0;
             this.tbxMarca.BorderSize = 2;
-            this.tbxMarca.Font = new System.Drawing.Font("Sora", 11.25F);
+            this.tbxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tbxMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbxMarca.Location = new System.Drawing.Point(663, 278);
-            this.tbxMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxMarca.Location = new System.Drawing.Point(54, 234);
+            this.tbxMarca.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbxMarca.Multiline = false;
             this.tbxMarca.Name = "tbxMarca";
-            this.tbxMarca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxMarca.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbxMarca.PasswordChar = false;
             this.tbxMarca.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbxMarca.PlaceholderText = "";
-            this.tbxMarca.Size = new System.Drawing.Size(302, 38);
+            this.tbxMarca.Size = new System.Drawing.Size(403, 43);
             this.tbxMarca.TabIndex = 0;
             this.tbxMarca.Texts = "";
             this.tbxMarca.UnderlinedStyle = false;
@@ -341,24 +336,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sora", 14.25F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(22, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(23, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 29);
+            this.label1.Size = new System.Drawing.Size(206, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Registrar vehiculo";
             // 
             // RegistrarVehiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(1660, 1011);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegistrarVehiculo";
             this.Text = "ConsultaEspecificaVehiculo";
             this.Load += new System.EventHandler(this.ConsultaEspecificaVehiculo_Load);
@@ -366,7 +360,6 @@
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
