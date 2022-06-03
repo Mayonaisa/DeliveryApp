@@ -142,5 +142,50 @@ namespace DeliveryApp.Modelos
                 return "";
             }
         }
+
+        public static string registrar(string usuario, string nombre, string apaterno, string amaterno, string telefono, string fecha, string correo, string sexo, string edad, string contraseña, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numcasa)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_CrearRecepcionista '" + usuario+ "','" + nombre + "','" + apaterno + "','" + amaterno + "','" + telefono + "','" + fecha + "','" + correo + "','" + sexo + "','" + edad + "','" +contraseña+ "','" + pais + "','" + estado + "','" + ciudad + "','" + calle1 + "','" + calle2 + "','" + colonia + "','" + numcasa + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
+
+        public static string registrar2(string usuario, string nombre, string apaterno, string amaterno, string telefono, string fecha, string correo, string sexo, string edad, string contraseña, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numcasa)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_CrearAdmin '" + usuario + "','" + nombre + "','" + apaterno + "','" + amaterno + "','" + telefono + "','" + fecha + "','" + correo + "','" + sexo + "','" + edad + "','" + contraseña + "','" + pais + "','" + estado + "','" + ciudad + "','" + calle1 + "','" + calle2 + "','" + colonia + "','" + numcasa + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
+
     }
 }

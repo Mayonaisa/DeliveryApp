@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,7 +29,7 @@ namespace DeliveryApp.Vista
 
         private void ConsultaEspecificaVehiculo_Load(object sender, EventArgs e)
         {
-            cbxId.Texts = veh.IdVehiculo;
+            tbxId.Texts = veh.IdVehiculo;
             tbxAño.Texts = veh.Año;
             tbxColor.Texts = veh.Color;
             tbxMarca.Texts = veh.Marca;
@@ -54,15 +55,15 @@ namespace DeliveryApp.Vista
 
         private void cbxId_Enter(object sender, EventArgs e)
         {
-            string msg = "";
-            lve = new List<Vehiculo>();
-            ConsultarVehiculos.ObtenerVehiculos(ref lve, ref msg, veh);
+            //string msg = "";
+            //lve = new List<Vehiculo>();
+            //ConsultarVehiculos.ObtenerVehiculos(ref lve, ref msg, veh);
 
-            cbxId.Items.Clear();
-            foreach (Vehiculo v in lve)
-            {
-                cbxId.Items.Add(v.IdVehiculo);
-            }
+            //cbxId.Items.Clear();
+            //foreach (Vehiculo v in lve)
+            //{
+            //    cbxId.Items.Add(v.IdVehiculo);
+            //}
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -71,24 +72,33 @@ namespace DeliveryApp.Vista
             Desplegar(CatVeh);
         }
 
-        private void cbxId_OnSelectedIndexChanged(object sender, EventArgs e)
+        private void rjButton1_Click(object sender, EventArgs e)
         {
-            string error = null;
-            string VehID = null;
-
-            Vehiculo Veh = new Vehiculo();
-            VehID = cbxId.SelectedItem.ToString();
-
-            ConsultarVehiculos.VehiculoEspecifico(VehID, ref Veh, ref error);
-            ConsultaEspecificaVehiculo ConsultarVehiculo = new ConsultaEspecificaVehiculo(contenedor, Veh);
-
-            cbxId.Texts = Veh.IdVehiculo;
-            tbxAño.Texts = Veh.Año;
-            tbxColor.Texts = Veh.Color;
-            tbxMarca.Texts = Veh.Marca;
-            tbxModelo.Texts = Veh.Modelo;
-            tbxPlaca.Texts = Veh.Placa;
-            tbxTipo.Texts = Veh.Tipo;
+            if(tbxColor.Texts != "")
+            {
+                if (tbxColor.Texts.Length <= 15)
+                {
+                    if (Regex.IsMatch(tbxColor.Texts, @"^[\p{L} \.'\-]+$"))
+                        {
+                            MessageBox.Show(Vehiculo.actualizarCliente(tbxId.Texts, tbxTipo.Texts, tbxMarca.Texts, tbxPlaca.Texts, tbxColor.Texts, tbxModelo.Texts, tbxAño.Texts));
+                            CatalogoGeneralVehiculos CatVeh = new CatalogoGeneralVehiculos(contenedor);
+                            Desplegar(CatVeh);
+                        }
+                        else
+                        {
+                            MessageBox.Show("El color no es valido");
+                        }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("El color tiene mas de 15 caracteres");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El color esta vacio");
+            }
         }
     }
 }

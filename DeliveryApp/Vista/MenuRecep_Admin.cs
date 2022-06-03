@@ -129,5 +129,41 @@ namespace DeliveryApp.Vista
         {
 
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            PedidosAdmin ConPro = new PedidosAdmin(null, contenedor);
+            Desplegar(ConPro);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            RegistrarRecepcionista ConPro = new RegistrarRecepcionista(contenedor, new Recepcionista());
+            Desplegar(ConPro);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            RegistrarRepartidor ConPro = new RegistrarRepartidor(contenedor, new Recepcionista());
+            Desplegar(ConPro);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            RegistrarAdministrador ConPro = new RegistrarAdministrador(contenedor, new Recepcionista());
+            Desplegar(ConPro);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            RegistrarProducto ConPro = new RegistrarProducto(contenedor, new Administrador(), "");
+            Desplegar(ConPro);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            RegistrarVehiculo ConPro = new RegistrarVehiculo(contenedor, new Vehiculo());
+            Desplegar(ConPro);
+        }
     }
 }

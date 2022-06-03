@@ -29,7 +29,7 @@ namespace DeliveryApp.Vista
 
         private void MenuProductos_Load(object sender, EventArgs e)
         {
-            cbxId.Texts = pro.IdProducto;
+            txtId.Texts = pro.IdProducto;
             tbxDisponibilidad.Texts = pro.Disponible;
             tbxPrecio.Texts = pro.Precio.ToString();
             txtNombre.Texts = pro.Nombre;
@@ -55,6 +55,40 @@ namespace DeliveryApp.Vista
         {
             ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos(Rep, contenedor);
             Desplegar(ConPro);
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            if(f1())
+            {
+                MessageBox.Show(Producto.actualizarCliente(txtId.Texts, tbxPrecio.Texts, tbxDisponibilidad.Texts));
+                ConsultaGeneralProductos ConPro = new ConsultaGeneralProductos(Rep, contenedor);
+                Desplegar(ConPro);
+            }
+        }
+
+        private bool f1()
+        {
+            try
+            {
+                if(tbxPrecio.Texts != "")
+                {
+                    
+                    double a = Convert.ToDouble(tbxPrecio.Texts);
+                    return true;
+   
+                }
+                else
+                {
+                    MessageBox.Show("El precio esta vacio");
+                    return false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("El precio no es valido");
+                return false;
+            }
         }
     }
 }

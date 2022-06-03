@@ -164,5 +164,27 @@ namespace DeliveryApp.Modelos
             }
         }
 
+        public static string registrar(string nombre, string apaterno, string amaterno, string telefono, string fecha, string sexo, string edad, string pais, string estado, string ciudad, string calle1, string calle2, string colonia, string numcasa)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_CrearRepartidor '"+nombre+"','"+apaterno+"','"+amaterno+"','"+telefono+"','"+fecha+"','"+sexo+ "','"+edad+"','" +pais+"','"+estado+"','"+ciudad+ "','"+calle1+ "','"+calle2+ "','"+colonia+ "','"+numcasa+"'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
+
     }
 }

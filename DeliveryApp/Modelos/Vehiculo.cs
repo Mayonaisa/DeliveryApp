@@ -117,5 +117,49 @@ namespace DeliveryApp.Modelos
 
             conx.Close();
         }
+
+        public static string actualizarCliente(string id, string tipo, string marca, string placa, string color, string modelo, string año)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_ActualizarVehiculo '" + id + "','" + tipo + "','" + marca + "','" + placa + "','" + color + "','" + año + "','" + modelo + "'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
+
+        public static string registrar(string marca, string placa, string color, string año, string modelo, string tipo)
+        {
+            SqlConnection conx = new SqlConnection(ConfigurationManager.ConnectionStrings["conx"].ConnectionString);
+
+            conx.Open();
+
+            SqlCommand consulta = new SqlCommand("EXEC Sp_CrearVehiculo '" + marca + "','" + placa + "','" + color + "','" + año + "','" + modelo + "','"+tipo+"'", conx);
+
+            consulta.Prepare();
+            SqlDataReader resultado = consulta.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                return resultado.GetString(0);
+            }
+            else
+            {
+                conx.Close();
+                return "";
+            }
+        }
     }
 }

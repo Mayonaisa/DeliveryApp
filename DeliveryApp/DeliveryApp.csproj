@@ -113,6 +113,36 @@
     <Compile Include="Vista\CatalogoGeneralVehiculos.Designer.cs">
       <DependentUpon>CatalogoGeneralVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsultaEspecificaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaVehiculo.Designer.cs">
+      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarProducto.Designer.cs">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarAdministrador.Designer.cs">
+      <DependentUpon>RegistrarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarRepartidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarRepartidor.Designer.cs">
+      <DependentUpon>RegistrarRepartidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarRecepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarRecepcionista.Designer.cs">
+      <DependentUpon>RegistrarRecepcionista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ConsultaEspecificaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +154,12 @@
     </Compile>
     <Compile Include="Vista\ConsultaEspecificaHistorial.Designer.cs">
       <DependentUpon>ConsultaEspecificaHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaPedidosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultaEspecificaPedidosAdmin.Designer.cs">
+      <DependentUpon>ConsultaEspecificaPedidosAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultaEspecificaPedidosRecep.cs">
       <SubType>Form</SubType>
@@ -137,11 +173,11 @@
     <Compile Include="Vista\ConsultaEspecificaProductos.Designer.cs">
       <DependentUpon>ConsultaEspecificaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultaEspecificaVehiculo.cs">
+    <Compile Include="Vista\RegistrarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultaEspecificaVehiculo.Designer.cs">
-      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
+    <Compile Include="Vista\RegistrarVehiculo.Designer.cs">
+      <DependentUpon>RegistrarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultaGeneralClientes.cs">
       <SubType>Form</SubType>
@@ -202,6 +238,12 @@
     </Compile>
     <Compile Include="Vista\MenuRecep.Designer.cs">
       <DependentUpon>MenuRecep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PedidosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PedidosAdmin.Designer.cs">
+      <DependentUpon>PedidosAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\RegistrarUsuario.cs">
       <SubType>Form</SubType>
@@ -270,17 +312,35 @@
     <EmbeddedResource Include="Vista\ConsultaEspecificaDetalle.resx">
       <DependentUpon>ConsultaEspecificaDetalle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaVehiculo.resx">
+      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarProducto.resx">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarAdministrador.resx">
+      <DependentUpon>RegistrarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarRepartidor.resx">
+      <DependentUpon>RegistrarRepartidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarRecepcionista.resx">
+      <DependentUpon>RegistrarRecepcionista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaEmpleados.resx">
       <DependentUpon>ConsultaEspecificaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaHistorial.resx">
       <DependentUpon>ConsultaEspecificaHistorial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosAdmin.resx">
+      <DependentUpon>ConsultaEspecificaPedidosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaEspecificaPedidosRecep.resx">
       <DependentUpon>ConsultaEspecificaPedidosRecep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ConsultaEspecificaVehiculo.resx">
-      <DependentUpon>ConsultaEspecificaVehiculo.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\RegistrarVehiculo.resx">
+      <DependentUpon>RegistrarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultaGeneralClientes.resx">
       <DependentUpon>ConsultaGeneralClientes.cs</DependentUpon>
@@ -308,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuRecep.resx">
       <DependentUpon>MenuRecep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PedidosAdmin.resx">
+      <DependentUpon>PedidosAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ProductoV.resx">
       <DependentUpon>ProductoV.cs</DependentUpon>

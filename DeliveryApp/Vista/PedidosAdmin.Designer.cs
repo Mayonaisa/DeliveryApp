@@ -1,6 +1,6 @@
 ﻿namespace DeliveryApp.Vista
 {
-    partial class PedidosPendientes
+    partial class PedidosAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -192,11 +192,11 @@
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 29);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Pedidos pendientes";
+            this.label1.Text = "Pedidos";
             // 
-            // PedidosPendientes
+            // PedidosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "PedidosPendientes";
+            this.Name = "PedidosAdmin";
             this.Text = "PedidosPendientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PedidosPendientes_Load);
