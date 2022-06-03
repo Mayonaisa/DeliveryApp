@@ -67,6 +67,7 @@
     <Compile Include="Controladores\Carrito.cs" />
     <Compile Include="Controladores\RegistrarPedido.cs" />
     <Compile Include="Controladores\RegistrarUsuario.cs" />
+    <Compile Include="Controladores\ReporteEmpleados.cs" />
     <Compile Include="Controladores\SolicitarPedido.cs" />
     <Compile Include="Modelos\Entrega.cs" />
     <Compile Include="Modelos\Registra.cs" />
